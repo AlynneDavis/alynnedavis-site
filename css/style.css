@@ -130,6 +130,17 @@ p { margin-bottom: 1rem; }
 }
 .nav-cta:hover { background: var(--color-gold-dark) !important; transform: translateY(-1px); color: var(--color-white) !important; }
 
+.nav-cta-secondary {
+  border: 1.5px solid var(--color-gold) !important;
+  color: var(--color-gold-dark) !important;
+  padding: 10px 22px !important;
+  border-radius: 24px !important;
+  font-weight: 500;
+  font-size: 0.88rem !important;
+  transition: background 0.2s, color 0.2s, transform 0.15s !important;
+}
+.nav-cta-secondary:hover { background: var(--color-gold) !important; color: var(--color-white) !important; transform: translateY(-1px); }
+
 /* Mobile nav */
 .mobile-toggle {
   display: none;
@@ -162,6 +173,7 @@ p { margin-bottom: 1rem; }
   }
   .dropdown.open .dropdown-menu { display: block; }
   .nav-cta { text-align: center; margin-top: 12px; display: block; }
+  .nav-cta-secondary { text-align: center; margin-top: 8px; display: block; }
 }
 
 /* ---- Hero ---- */

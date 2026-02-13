@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Nourishment — 12-Week Coaching for Women Healing Their Relationship with Food</title>
+  <meta name="description" content="Soul Nourishment is a 12-week 1:1 coaching program for women ready to break free from emotional eating and binge eating through trauma-informed, holistic, nervous system-based healing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --midnight: #1a1714;
+      --espresso: #2c2520;
+      --warm-brown: #4a3f36;
+      --clay: #8b7355;
+      --honey: #c9943e;
+      --honey-light: #ddb566;
+      --honey-glow: rgba(201, 148, 62, 0.15);
+      --cream: #faf6f0;
+      --cream-deep: #f0e8db;
+      --cream-mid: #f5efe5;
+      --sand: #e8dfd2;
+      --text: #3d352e;
+      --text-soft: #6b5f52;
+      --white: #ffffff;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Libre Franklin', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: var(--honey); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--honey-light); }
+
+    /* ---- Utility ---- */
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .narrow { max-width: 720px; margin: 0 auto; }
+    .text-center { text-align: center; }
+
+    /* ---- Typography ---- */
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.2; color: var(--espresso); }
+    h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--honey);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    /* ---- Sticky Nav ---- */
+    .topbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26, 23, 20, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 14px 0;
+      transition: box-shadow 0.3s;
+    }
+    .topbar-inner {
+      max-width: 1080px; margin: 0 auto; padding: 0 24px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .topbar-brand {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--cream);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .topbar-brand em { color: var(--honey); font-style: italic; }
+    .topbar-cta {
+      background: var(--honey);
+      color: var(--midnight) !important;
+      padding: 10px 28px;
+      border-radius: 24px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.25s;
+    }
+    .topbar-cta:hover { background: var(--honey-light); transform: translateY(-1px); }
+
+    /* ---- Hero ---- */
+    .hero {
+      margin-top: 54px;
+      padding: 100px 0 80px;
+      background: linear-gradient(170deg, var(--midnight) 0%, var(--espresso) 40%, var(--warm-brown) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -15%;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(201,148,62,0.12) 0%, transparent 65%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%; left: -10%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(201,148,62,0.06) 0%, transparent 65%);
+      border-radius: 50%;
+    }
+    .hero-content { position: relative; z-index: 1; text-align: center; max-width: 780px; margin: 0 auto; }
+    .hero h1 { color: var(--cream); margin-bottom: 28px; }
+    .hero h1 em { color: var(--honey); font-style: italic; }
+    .hero p { color: rgba(250,246,240,0.75); font-size: 1.15rem; line-height: 1.85; max-width: 620px; margin: 0 auto 12px; }
+    .hero .subtext { font-size: 0.92rem; color: rgba(250,246,240,0.5); margin-top: 24px; font-style: italic; font-family: var(--font-display); }
+
+    .hero-cta {
+      display: inline-block;
+      margin-top: 40px;
+      background: var(--honey);
+      color: var(--midnight);
+      padding: 18px 44px;
+      border-radius: 32px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      transition: all 0.3s;
+      box-shadow: 0 4px 30px rgba(201,148,62,0.3);
+    }
+    .hero-cta:hover { background: var(--honey-light); transform: translateY(-2px); box-shadow: 0 8px 40px rgba(201,148,62,0.4); color: var(--midnight); }
+
+    /* ---- Sections ---- */
+    .section { padding: 88px 0; }
+    .section-dark { background: var(--espresso); color: var(--cream); }
+    .section-dark h2, .section-dark h3 { color: var(--cream); }
+    .section-dark p, .section-dark li { color: rgba(250,246,240,0.75); }
+    .section-warm { background: var(--cream-deep); }
+    .section-sand { background: var(--sand); }
+
+    /* ---- "Is This You" Section ---- */
+    .pain-points { max-width: 680px; margin: 40px auto 0; text-align: left; }
+    .pain-point {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 1.05rem;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .section-dark .pain-point { border-color: rgba(255,255,255,0.08); }
+    .pain-point::before {
+      content: '';
+      flex-shrink: 0;
+      width: 8px; height: 8px;
+      background: var(--honey);
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+
+    /* ---- Transformation ---- */
+    .transform-grid {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    .transform-col h3 { margin-bottom: 20px; }
+    .transform-col p { font-size: 0.95rem; color: var(--text-soft); line-height: 1.8; margin-bottom: 12px; }
+    .transform-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--honey);
+      padding-top: 48px;
+      font-family: var(--font-display);
+    }
+    @media (max-width: 700px) {
+      .transform-grid { grid-template-columns: 1fr; }
+      .transform-arrow { padding: 0; font-size: 1.5rem; transform: rotate(90deg); }
+    }
+
+    /* ---- What's Inside ---- */
+    .includes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .include-card {
+      background: var(--white);
+      border: 1px solid var(--sand);
+      border-radius: 14px;
+      padding: 36px 28px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .include-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+    .include-icon {
+      width: 48px; height: 48px;
+      background: var(--honey-glow);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+    }
+    .include-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .include-card p { font-size: 0.92rem; color: var(--text-soft); }
+
+    /* ---- Testimonials ---- */
+    .testimonial-stack { max-width: 680px; margin: 48px auto 0; }
+    .testimonial-item {
+      padding: 36px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .testimonial-item::before {
+      content: '"';
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      color: var(--honey);
+      opacity: 0.4;
+      position: absolute;
+      top: 8px; left: 24px;
+      line-height: 1;
+    }
+    .testimonial-item p { padding-top: 16px; font-style: italic; font-size: 1.02rem; line-height: 1.85; }
+    .testimonial-item .attr { font-style: normal; font-size: 0.85rem; margin-top: 14px; opacity: 0.5; }
+
+    /* ---- About / Credibility ---- */
+    .about-split { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+    .about-photo {
+      width: 300px; height: 380px;
+      background: var(--sand);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .about-photo-border {
+      position: absolute;
+      top: 12px; left: 12px; right: -12px; bottom: -12px;
+      border: 2px solid var(--honey);
+      border-radius: 14px;
+      z-index: -1;
+    }
+    .about-text h2 { margin-bottom: 20px; }
+    .about-text p { color: var(--text-soft); margin-bottom: 14px; }
+    .credentials { margin-top: 20px; font-size: 0.88rem; color: var(--clay); font-weight: 500; }
+
+    @media (max-width: 700px) {
+      .about-split { grid-template-columns: 1fr; }
+      .about-photo { width: 240px; height: 300px; margin: 0 auto; }
+    }
+
+    /* ---- Not For You ---- */
+    .not-for-you {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px;
+      background: var(--cream-mid);
+      border: 1px solid var(--sand);
+      border-radius: 14px;
+      margin-top: 48px;
+    }
+    .not-for-you h3 { margin-bottom: 16px; font-size: 1.25rem; }
+    .not-for-you p { font-size: 0.95rem; color: var(--text-soft); margin-bottom: 12px; }
+    .not-for-you .redirect { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--sand); font-size: 0.9rem; }
+    .not-for-you .redirect a { font-weight: 600; }
+
+    /* ---- Investment ---- */
+    .pricing-card {
+      max-width: 560px;
+      margin: 48px auto 0;
+      background: var(--white);
+      border: 2px solid var(--honey);
+      border-radius: 18px;
+      padding: 52px 44px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 16px 60px rgba(201,148,62,0.12);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--honey);
+      color: var(--midnight);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 6px 24px;
+      border-radius: 20px;
+    }
+    .pricing-card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+    .pricing-card .price {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: var(--espresso);
+      margin: 20px 0 8px;
+    }
+    .pricing-card .payment-plan { font-size: 0.9rem; color: var(--text-soft); margin-bottom: 28px; }
+    .pricing-includes { text-align: left; margin: 28px 0; padding: 28px 0; border-top: 1px solid var(--sand); border-bottom: 1px solid var(--sand); }
+    .pricing-includes li {
+      list-style: none;
+      padding: 8px 0;
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .pricing-includes li::before {
+      content: '✓';
+      color: var(--honey);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* ---- Application Form ---- */
+    .application-section { padding: 88px 0; background: linear-gradient(170deg, var(--espresso) 0%, var(--midnight) 100%); }
+    .app-form { max-width: 580px; margin: 48px auto 0; }
+    .field { margin-bottom: 22px; }
+    .field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(250,246,240,0.8);
+      margin-bottom: 8px;
+    }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+    .field input::placeholder, .field textarea::placeholder { color: rgba(250,246,240,0.3); }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none;
+      border-color: var(--honey);
+    }
+    .field textarea { resize: vertical; min-height: 100px; }
+    .field select option { background: var(--espresso); color: var(--cream); }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      background: var(--honey);
+      color: var(--midnight);
+      border: none;
+      border-radius: 28px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 12px;
+      box-shadow: 0 4px 24px rgba(201,148,62,0.3);
+    }
+    .submit-btn:hover { background: var(--honey-light); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(201,148,62,0.4); }
+
+    .form-note { text-align: center; font-size: 0.82rem; color: rgba(250,246,240,0.4); margin-top: 16px; font-style: italic; }
+
+    .form-success-msg {
+      display: none;
+      text-align: center;
+      padding: 40px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,148,62,0.3);
+      border-radius: 14px;
+    }
+    .form-success-msg h3 { color: var(--honey); margin-bottom: 12px; }
+    .form-success-msg p { color: rgba(250,246,240,0.7); }
+
+    /* ---- FAQ ---- */
+    .faq-list { max-width: 680px; margin: 48px auto 0; }
+    .faq-item { border-bottom: 1px solid var(--sand); }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0;
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      font-weight: 500;
+      color: var(--espresso);
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+    }
+    .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--honey); transition: transform 0.3s; flex-shrink: 0; margin-left: 16px; }
+    .faq-q.open::after { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+    .faq-a.open { max-height: 300px; padding-bottom: 22px; }
+
+    /* ---- Final CTA ---- */
+    .final-cta {
+      padding: 100px 0;
+      text-align: center;
+      background: linear-gradient(160deg, var(--cream-deep) 0%, var(--cream) 50%, var(--cream-mid) 100%);
+      position: relative;
+    }
+    .final-cta h2 { margin-bottom: 16px; }
+    .final-cta p { color: var(--text-soft); max-width: 520px; margin: 0 auto; }
+    .final-cta .hero-cta { margin-top: 36px; }
+
+    /* ---- Footer ---- */
+    .sf-footer {
+      padding: 40px 0;
+      background: var(--midnight);
+      text-align: center;
+      font-size: 0.82rem;
+      color: rgba(250,246,240,0.35);
+    }
+    .sf-footer a { color: rgba(250,246,240,0.5); }
+
+    /* ---- Animations ---- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 700px) {
+      .hero { padding: 72px 0 60px; }
+      .section { padding: 64px 0; }
+      .pricing-card { padding: 40px 28px; }
+      .about-split { gap: 36px; }
+      .topbar-brand { font-size: 1rem; }
+      .topbar-cta { padding: 8px 20px; font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Nav -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-brand"><em>Soul Nourishment</em> by Alynne Davis</div>
+      <a href="#apply" class="topbar-cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow">A 12-Week 1:1 Coaching Experience</span>
+        <h1>What if food could stop being the battlefield — and you could finally feel <em>free?</em></h1>
+        <p>Soul Nourishment is a trauma-informed, holistic coaching program for women ready to heal their relationship with food, their body, and themselves — without willpower, restriction, or shame.</p>
+        <p class="subtext">For women who are done managing symptoms and ready for root-level change.</p>
+        <a href="#apply" class="hero-cta">Apply for Your Spot</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Is This You -->
+  <section class="section section-dark">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">Sound familiar?</span>
+        <h2>You've tried everything.<br>Nothing has stuck.</h2>
+      </div>
+      <div class="pain-points reveal">
+        <div class="pain-point">You eat when you're not hungry and can't figure out why — then spend the next day punishing yourself with restriction or over-exercise.</div>
+        <div class="pain-point">You've read the books, done the programs, maybe even tried therapy — but you still feel controlled by food when stress, loneliness, or exhaustion hit.</div>
+        <div class="pain-point">You're high-functioning on the outside — but on the inside, you feel like you're constantly at war with your own body.</div>
+        <div class="pain-point">You know this isn't about food. But you don't know what it IS about, and you're exhausted from trying to figure it out alone.</div>
+        <div class="pain-point">You're terrified that this is just who you are — that you'll never have a "normal" relationship with food.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Truth -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="narrow reveal">
+        <span class="eyebrow">Here's what no one told you</span>
+        <h2>Emotional eating isn't a willpower problem. It's a nervous system response.</h2>
+        <p style="margin-top: 24px; color: var(--text-soft); font-size: 1.05rem;">Your brain learned to use food as safety. As comfort. As the one thing that was always available when nothing else felt stable. That pattern made sense once. But it doesn't have to run your life anymore.</p>
+        <p style="color: var(--text-soft); font-size: 1.05rem; margin-top: 14px;">Soul Nourishment doesn't teach you another meal plan or give you rules to follow. It helps you understand <strong>why</strong> you reach for food — and gently rewires the patterns at the root.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformation -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="eyebrow">The Shift</span>
+        <h2>Where You Are → Where You're Going</h2>
+      </div>
+      <div class="transform-grid reveal">
+        <div class="transform-col">
+          <h3 style="color: var(--clay);">Before Soul Nourishment</h3>
+          <p>Constant mental chatter about food and body</p>
+          <p>Bingeing or emotional eating cycles feel automatic</p>
+          <p>Shame spiral after every "slip"</p>
+          <p>Disconnected from your body's real signals</p>
+          <p>Exhausted from performing "fine" while falling apart inside</p>
+        </div>
+        <div class="transform-arrow">→</div>
+        <div class="transform-col">
+          <h3 style="color: var(--honey);">After Soul Nourishment</h3>
+          <p>Mental quiet — food takes up less space in your mind</p>
+          <p>You can feel an urge without acting on it</p>
+          <p>Self-compassion replaces the shame cycle</p>
+          <p>You trust your body and eat with presence</p>
+          <p>You feel grounded, connected, and free in your own skin</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Inside -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="eyebrow">Your 12-Week Container</span>
+        <h2>What's Inside Soul Nourishment</h2>
+      </div>
+      <div class="includes-grid reveal">
+        <div class="include-card">
+          <div class="include-icon">🤝</div>
+          <h3>Weekly 1:1 Sessions</h3>
+          <p>60-minute deep-dive sessions where we work with your nervous system, emotional patterns, and relationship with food at a pace that honors your process.</p>
+        </div>
+        <div class="include-card">
+          <div class="include-icon">🎨</div>
+          <h3>Expressive Arts Exercises</h3>
+          <p>Creative, body-based practices that help you access and release emotions words alone can't reach. No artistic skill needed — just willingness.</p>
+        </div>
+        <div class="include-card">
+          <div class="include-icon">🍽️</div>
+          <h3>Meal Support Guidance</h3>
+          <p>Practical, shame-free support around food — not a meal plan, but a compassionate framework for rebuilding trust with eating.</p>
+        </div>
+        <div class="include-card">
+          <div class="include-icon">💬</div>
+          <h3>Text Support Between Sessions</h3>
+          <p>Real-time access to me between sessions for moments when you need grounding, encouragement, or a gentle redirect.</p>
+        </div>
+        <div class="include-card">
+          <div class="include-icon">📓</div>
+          <h3>Guided Journaling Practice</h3>
+          <p>Curated prompts designed to deepen self-awareness, track patterns, and build a compassionate inner dialogue over time.</p>
+        </div>
+        <div class="include-card">
+          <div class="include-icon">🧘</div>
+          <h3>Nervous System Workshops</h3>
+          <p>Experiential workshops teaching you how to regulate your nervous system — so you can respond to stress without food as the default.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-dark">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">From Women Who Walked This Path</span>
+        <h2>Real Stories of Healing</h2>
+      </div>
+      <div class="testimonial-stack reveal">
+        <div class="testimonial-item">
+          <p>My teen daughter has never been this healthy. We have been fighting this for years with other eating disorder therapists. <strong>None were able to get it right until you.</strong></p>
+          <div class="attr">— Parents of a recovered teen eating disorder patient</div>
+        </div>
+        <div class="testimonial-item">
+          <p>I've been able to <strong>maintain my recovery for years</strong> because of you. From the bottom of our heart, thank you.</p>
+          <div class="attr">— Recovered adult eating disorder patient</div>
+        </div>
+        <div class="testimonial-item">
+          <p>I've had 4 different therapists and you've been the <strong>only therapist able to help me.</strong> Eternally, thank you!</p>
+          <div class="attr">— Client</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Credibility -->
+  <section class="section">
+    <div class="container">
+      <div class="about-split reveal">
+        <div class="about-photo" style="position: relative;">
+          <img src="images/alynne-davis-therapist-charlotte-nc.jpg" alt="Alynne Davis, trauma-informed therapist and coach in Charlotte, NC" loading="lazy">
+          <div class="about-photo-border"></div>
+        </div>
+        <div class="about-text">
+          <span class="eyebrow">Your Guide</span>
+          <h2>Hi, I'm Alynne.</h2>
+          <p>I'm a Licensed Clinical Mental Health Counselor with over ten years of experience helping women heal from eating disorders, trauma, and disconnection from themselves.</p>
+          <p>My approach isn't clinical cold. It's warm, creative, a little unconventional, and deeply human. I combine trauma-informed therapy, expressive arts, nervous system regulation, and holistic nutrition to help you heal at the root — not just manage symptoms.</p>
+          <p>I created Soul Nourishment because I watched too many women cycle through programs that treated the behavior without touching the pain underneath. You deserve better than another set of rules to follow.</p>
+          <div class="credentials">MA, LCMHC · Licensed in NC & SC · 10+ years specializing in eating disorders & trauma</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not For You -->
+  <section class="section section-warm">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">Honest Boundaries</span>
+        <h2>This Program Is Not for Everyone</h2>
+        <p style="color: var(--text-soft); max-width: 600px; margin: 16px auto 0;">Soul Nourishment is coaching, not therapy. It's built for women who are stable enough to do deep inner work — and ready to commit to 12 weeks of real change.</p>
+      </div>
+      <div class="not-for-you reveal">
+        <h3>Soul Nourishment is not the right fit if:</h3>
+        <p>You are currently in active crisis or experiencing acute mental health symptoms that require clinical intervention.</p>
+        <p>You need medical stabilization or a higher level of care for your eating disorder.</p>
+        <p>You are looking for a quick fix, meal plan, or weight loss program.</p>
+        <div class="redirect">
+          <strong>If you need clinical support</strong>, I also offer trauma-informed therapy through my practice. <a href="/eating-disorder-therapist" title="Eating disorder therapy with Alynne Davis">Learn about therapy services →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">Your Investment</span>
+        <h2>What It Costs to Come Home to Yourself</h2>
+      </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-badge">Limited Spots Available</div>
+        <h3>Soul Nourishment — 12-Week 1:1 Coaching</h3>
+        <div class="price">$4,000</div>
+        <div class="payment-plan">Payment plans available — ask during your discovery call</div>
+        <ul class="pricing-includes">
+          <li>12 weekly 1:1 coaching sessions (60 min each)</li>
+          <li>Text support between sessions</li>
+          <li>Nervous system regulation workshops</li>
+          <li>Guided journaling practice & prompts</li>
+          <li>Expressive arts exercises</li>
+          <li>Meal support guidance</li>
+          <li>Aftercare app access post-program</li>
+        </ul>
+        <a href="#apply" class="hero-cta" style="display: block; text-align: center;">Apply for Soul Nourishment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-warm">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">Questions</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q">Is this therapy or coaching?</button>
+          <div class="faq-a">Soul Nourishment is a coaching program, not therapy. It's designed for women who are emotionally stable but stuck in patterns with food. If you need clinical support, I also offer therapy services through my practice and can help you determine the right fit during your discovery call.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">I've tried other programs. How is this different?</button>
+          <div class="faq-a">Most programs treat the behavior — they give you rules, meal plans, and willpower strategies. Soul Nourishment works at the root: your nervous system, your emotional patterns, and the parts of you that learned to use food as safety. We don't just change what you eat. We change your relationship with why you eat.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do I need to be artistic for the expressive arts component?</button>
+          <div class="faq-a">Not at all. Expressive arts in this context isn't about making "good" art — it's about accessing emotions and body experiences through creative expression. There's no skill required, just willingness to explore.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What if I realize I need therapy instead?</button>
+          <div class="faq-a">That's completely okay and something we can navigate together. I also offer trauma-informed therapy through my clinical practice. If at any point we determine therapy is a better fit, I'll help you transition seamlessly.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is there a payment plan?</button>
+          <div class="faq-a">Yes. Payment plan options are available and can be discussed during your discovery call. I want this to be accessible for women who are ready for this work.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How do I know if I'm ready?</button>
+          <div class="faq-a">If you're reading this page and something in you is saying "this is what I've been looking for" — that's your answer. The application and discovery call are free, no-pressure conversations to make sure we're a good fit for each other.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="application-section" id="apply">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="eyebrow">Take the First Step</span>
+        <h2 style="color: var(--cream);">Apply for Soul Nourishment</h2>
+        <p style="color: rgba(250,246,240,0.6); max-width: 520px; margin: 16px auto 0;">This short application helps me understand where you are and whether Soul Nourishment is the right fit. If it is, I'll invite you to book a free discovery call.</p>
+      </div>
+      <div class="app-form reveal" id="application-form">
+        <div class="field">
+          <label for="app-name">Full Name</label>
+          <input type="text" id="app-name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="app-email">Email Address</label>
+          <input type="email" id="app-email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="field">
+          <label for="app-phone">Phone Number</label>
+          <input type="tel" id="app-phone" name="phone" placeholder="(555) 555-5555">
+        </div>
+        <div class="field">
+          <label for="app-struggle">What best describes your current struggle with food?</label>
+          <select id="app-struggle" name="struggle" required>
+            <option value="">Select one...</option>
+            <option value="emotional-eating">Emotional eating — I eat to cope with stress, loneliness, or difficult emotions</option>
+            <option value="binge-eating">Binge eating — I feel out of control around food regularly</option>
+            <option value="restrict-binge">Restrict-binge cycle — I swing between control and losing control</option>
+            <option value="body-disconnect">Body disconnection — I don't trust my hunger or fullness cues</option>
+            <option value="multiple">Multiple / all of the above</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="app-tried">What have you tried before? (therapy, programs, diets, etc.)</label>
+          <textarea id="app-tried" name="tried" placeholder="Share whatever feels relevant..."></textarea>
+        </div>
+        <div class="field">
+          <label for="app-ready">What would it mean for you to finally feel free around food?</label>
+          <textarea id="app-ready" name="ready" placeholder="There's no wrong answer here..."></textarea>
+        </div>
+        <div class="field">
+          <label for="app-crisis">Are you currently in crisis or experiencing active self-harm, suicidal thoughts, or acute mental health symptoms?</label>
+          <select id="app-crisis" name="crisis" required>
+            <option value="">Select one...</option>
+            <option value="no">No — I'm stable and ready for coaching</option>
+            <option value="unsure">I'm not sure — I'd like to discuss this</option>
+            <option value="yes">Yes — I may need clinical support</option>
+          </select>
+        </div>
+        <button type="button" class="submit-btn" onclick="submitApplication()">Submit My Application</button>
+        <p class="form-note">Free & no obligation. I'll review your application within 48 hours.</p>
+      </div>
+      <div class="form-success-msg" id="form-success">
+        <h3>Thank you for applying.</h3>
+        <p>I'll review your application personally and reach out within 48 hours. If Soul Nourishment is a fit, I'll send you a link to schedule your free discovery call.</p>
+        <p style="margin-top: 16px;">If you indicated you may need clinical support, I'll reach out with therapy options instead — you're not alone in this.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container reveal">
+      <span class="eyebrow">You've Read This Far for a Reason</span>
+      <h2>Your relationship with food can change.<br>It starts here.</h2>
+      <p>You don't need another diet. You don't need more discipline. You need someone who understands what's underneath — and knows how to help you heal it.</p>
+      <a href="#apply" class="hero-cta">Apply for Soul Nourishment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="sf-footer">
+    <div class="container">
+      <p>&copy; 2026 Alynne Davis, MA, LCMHC. All Rights Reserved. · <a href="/">alynnedavis.com</a> · <a href="/privacy-policy">Privacy Policy</a></p>
+      <p style="margin-top: 8px;">Soul Nourishment is a coaching program, not a substitute for therapy or medical treatment.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const a = q.nextElementSibling;
+        const isOpen = q.classList.contains('open');
+        document.querySelectorAll('.faq-q').forEach(x => { x.classList.remove('open'); x.nextElementSibling.classList.remove('open'); });
+        if (!isOpen) { q.classList.add('open'); a.classList.add('open'); }
+      });
+    });
+
+    // Application form submit
+    function submitApplication() {
+      const name = document.getElementById('app-name').value;
+      const email = document.getElementById('app-email').value;
+      const crisis = document.getElementById('app-crisis').value;
+
+      if (!name || !email) { alert('Please fill in your name and email.'); return; }
+      if (!crisis) { alert('Please answer the safety question.'); return; }
+
+      const data = {
+        name,
+        email,
+        phone: document.getElementById('app-phone').value,
+        struggle: document.getElementById('app-struggle').value,
+        tried: document.getElementById('app-tried').value,
+        ready: document.getElementById('app-ready').value,
+        crisis,
+        service: 'soul-nourishment-application'
+      };
+
+      // Send to Supabase
+      fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).catch(() => {});
+
+      document.getElementById('application-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
