@@ -192,23 +192,6 @@ p { margin-bottom: 1rem; }
   background: radial-gradient(circle, rgba(184,147,90,0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
-/* Decorative ginkgo leaves (homepage hero only) */
-.hero-ginkgo {
-  position: absolute;
-  pointer-events: none;
-}
-.hero-ginkgo-br {
-  width: 380px; height: 400px;
-  bottom: -40px; right: -30px;
-  opacity: 0.14;
-}
-.hero-ginkgo-tl {
-  width: 240px; height: 260px;
-  top: -20px; left: -15px;
-  opacity: 0.11;
-  transform: rotate(15deg);
-}
-
 .hero-content { position: relative; z-index: 1; max-width: 680px; }
 .hero h1 { margin-bottom: 24px; letter-spacing: -0.02em; }
 .hero p { font-size: 1.15rem; color: var(--color-text-light); margin-bottom: 8px; line-height: 1.8; }
@@ -399,7 +382,6 @@ p { margin-bottom: 1rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero { padding: 48px 0 64px; }
   .section { padding: 56px 0; }
-  .hero-ginkgo { display: none; }
 }
 
 /* ---- Form Messages ---- */
