@@ -51,7 +51,7 @@ if (form) {
     const data = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch('https://YOUR_SUPABASE_URL/functions/v1/contact', {
+      const res = await fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
