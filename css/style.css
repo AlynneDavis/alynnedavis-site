@@ -192,7 +192,19 @@ p { margin-bottom: 1rem; }
   background: radial-gradient(circle, rgba(184,147,90,0.08) 0%, transparent 70%);
   border-radius: 50%;
 }
+.hero .container { position: relative; }
 .hero-content { position: relative; z-index: 1; max-width: 680px; }
+.hero-ginkgo {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 380px;
+  height: auto;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
 .hero h1 { margin-bottom: 24px; letter-spacing: -0.02em; }
 .hero p { font-size: 1.15rem; color: var(--color-text-light); margin-bottom: 8px; line-height: 1.8; }
 .hero .location { font-size: 0.95rem; color: var(--color-gold-dark); font-weight: 500; margin-top: 20px; }
@@ -382,6 +394,10 @@ p { margin-bottom: 1rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero { padding: 48px 0 64px; }
   .section { padding: 56px 0; }
+}
+
+@media (max-width: 1024px) {
+  .hero-ginkgo { display: none; }
 }
 
 /* ---- Form Messages ---- */
