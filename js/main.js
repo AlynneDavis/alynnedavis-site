@@ -50,6 +50,14 @@ if (form) {
 
     const data = Object.fromEntries(new FormData(form));
 
+    // Honeypot check — if the hidden field is filled in, it's a bot
+    if (data.website) {
+      form.style.display = 'none';
+      document.querySelector('.form-success').style.display = 'block';
+      return;
+    }
+    delete data.website;
+
     try {
       const res = await fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
         method: 'POST',

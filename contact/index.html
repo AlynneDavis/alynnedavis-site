@@ -85,6 +85,11 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" placeholder="Tell me a little about what you're looking for..."></textarea>
               </div>
+              <!-- Honeypot field — hidden from real users, catches bots -->
+              <div class="form-group" style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
               <button type="submit" class="btn">Send Message</button>
               <div class="form-success" style="display:none;">Thank you for reaching out! I will get back to you within 24&ndash;48 hours.</div>
               <div class="form-error" style="display:none;">Something went wrong. Please try again or contact me directly at info@alynnedavis.com.</div>
