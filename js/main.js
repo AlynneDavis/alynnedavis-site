@@ -78,3 +78,73 @@ if (form) {
     }
   });
 }
+
+// Intensive inquiry form handler
+const intensiveForm = document.getElementById('intensive-form');
+if (intensiveForm) {
+  intensiveForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = intensiveForm.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const raw = Object.fromEntries(new FormData(intensiveForm));
+
+    // Honeypot check
+    if (raw.website) {
+      intensiveForm.style.display = 'none';
+      intensiveForm.closest('.content-narrow').querySelector('.form-success').style.display = 'block';
+      return;
+    }
+    delete raw.website;
+
+    // Format screening details into the message field for the existing contact endpoint
+    const message = [
+      '--- SELF-DISCOVERY INTENSIVE INQUIRY ---',
+      '',
+      'Location: ' + (raw.location || 'Not provided'),
+      'Format Preference: ' + (raw.format_preference || 'Not provided'),
+      'Age Range: ' + (raw.age_range || 'Not provided'),
+      'Therapy History: ' + (raw.therapy_history || 'Not provided'),
+      'Referral Source: ' + (raw.referral_source || 'Not provided'),
+      'Preferred Dates: ' + (raw.availability || 'Not provided'),
+      '',
+      'What they hope to understand or work through:',
+      raw.concerns || 'Not provided',
+      '',
+      'What a meaningful outcome would look like:',
+      raw.goals || 'Not provided',
+      '',
+      'Additional notes:',
+      raw.additional_notes || 'None',
+    ].join('\n');
+
+    const data = {
+      name: raw.name,
+      email: raw.email,
+      phone: raw.phone || '',
+      service: 'Self-Discovery Intensive',
+      message: message
+    };
+
+    try {
+      const res = await fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        intensiveForm.style.display = 'none';
+        intensiveForm.closest('.content-narrow').querySelector('.form-success').style.display = 'block';
+      } else {
+        throw new Error('Failed');
+      }
+    } catch (err) {
+      intensiveForm.closest('.content-narrow').querySelector('.form-error').style.display = 'block';
+      btn.textContent = original;
+      btn.disabled = false;
+    }
+  });
+}
