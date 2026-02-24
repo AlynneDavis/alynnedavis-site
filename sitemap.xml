@@ -69,6 +69,12 @@
   </url>
   <!-- Blog Posts -->
   <url>
+    <loc>https://alynnedavis.com/blog/food-scarcity-nervous-system/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://alynnedavis.com/blog/adhd-in-women-late-diagnosis/</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
