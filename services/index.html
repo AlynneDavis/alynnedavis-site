@@ -88,6 +88,48 @@
     }
   }
   </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know which therapy service is right for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many clients begin with a free consultation so we can talk about what you are experiencing and determine the most supportive approach. Whether that involves weekly therapy, expressive arts sessions, or a focused intensive, we will decide together what best supports your needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to have a diagnosis to start therapy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No diagnosis is required to begin therapy. Many women seek support simply because they feel overwhelmed, disconnected from themselves, or stuck in patterns that are no longer working."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer therapy in person or online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I offer both in-person therapy at my Charlotte, North Carolina office and secure virtual sessions for clients located anywhere in North Carolina and South Carolina."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I am an out-of-network provider. I can provide a superbill that clients may submit to their insurance company for possible reimbursement depending on their plan."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -112,7 +154,16 @@
             <li><a href="/intensives" title="The Self-Discovery Intensive">The Self-Discovery Intensive</a></li>
           </ul>
         </li>
-        <li><a href="/services" title="Therapy services and pricing">Services</a></li>
+        <li class="dropdown">
+          <a href="/services" class="dropdown-toggle" title="Therapy services">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/eating-disorder-therapy" title="Eating disorder therapy">Eating Disorder Therapy</a></li>
+            <li><a href="/trauma-therapy" title="Trauma therapy for women">Trauma Therapy</a></li>
+            <li><a href="/adhd-therapy-women-charlotte-nc" title="ADHD therapy for women">ADHD Therapy for Women</a></li>
+            <li><a href="/binge-eating-therapy-charlotte-nc" title="Binge eating therapy">Binge Eating Therapy</a></li>
+            <li><a href="/expressive-arts-therapy-charlotte-nc" title="Expressive arts therapy">Expressive Arts Therapy</a></li>
+          </ul>
+        </li>
         <li><a href="/testimonials" title="Client testimonials">Testimonials</a></li>
         <li><a href="/blog" title="Mental health blog">Blog</a></li>
         <li class="dropdown">
@@ -137,39 +188,60 @@
       <div class="container">
         <div class="fade-in">
           <h1>Therapy Services</h1>
-          <p>Individual therapy, expressive arts sessions, and intensive programs designed to support women through eating disorders, trauma, ADHD, and life transitions in Charlotte, NC.</p>
+          <p>Trauma-informed expressive arts therapy for women in Charlotte, NC. Explore the areas of support I offer and find the path that feels right for you.</p>
         </div>
       </div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="section" aria-label="Service offerings">
+    <!-- How We Can Work Together -->
+    <section class="section" aria-label="How we can work together">
       <div class="container">
         <div class="section-header fade-in">
           <h2>How We Can Work Together</h2>
-          <p>I offer several pathways into therapeutic work, each tailored to meet you where you are. Whether you're looking for weekly support or an immersive experience, there's a way forward that fits your life.</p>
+          <p>Many women come to therapy feeling disconnected from themselves, overwhelmed by anxiety or perfectionism, or stuck in patterns around food, control, or relationships. My therapy services are designed to support women in rebuilding trust with themselves through relational, trauma-informed, and body-centered approaches.</p>
+          <p>Whether you are seeking weekly therapy, expressive arts sessions, or a focused healing intensive, we can create a path forward that meets you where you are.</p>
         </div>
-        <div class="card-grid fade-in">
-          <div class="card">
-            <h3>Individual Therapy</h3>
-            <p>Weekly 50-minute sessions — the foundation of our work together. We'll use a blend of CBT, Internal Family Systems, and somatic awareness to address the patterns, beliefs, and experiences that are keeping you stuck.</p>
-            <p><strong>In-person in Charlotte, NC or virtual throughout NC and SC.</strong></p>
+      </div>
+    </section>
+
+    <!-- Areas I Specialize In -->
+    <section class="section" aria-label="Therapy specializations">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Areas I Specialize In</h2>
+          <p>My clinical work focuses on supporting women navigating complex relationships with their bodies, emotions, and identity. I specialize in trauma-informed therapy, eating disorder recovery, ADHD in women, body image healing, and major life transitions.</p>
+          <p>Each of the areas below represents a core focus of my work and reflects specialized training and experience supporting women in these challenges.</p>
+        </div>
+        <div class="service-grid fade-in">
+          <div class="service-card">
+            <h3>Eating Disorder Therapy</h3>
+            <p>Specialized treatment for binge eating, bulimia, ARFID, orthorexia, and disordered eating patterns. I understand the complexity of food, control, and identity, and I approach recovery with both clinical expertise and deep compassion.</p>
+            <a href="/eating-disorder-therapist" title="Learn more about eating disorder therapy">Learn More</a>
           </div>
-          <div class="card">
+          <div class="service-card">
+            <h3>Trauma Therapy</h3>
+            <p>Trauma-informed therapy for women navigating the effects of childhood experiences, relational trauma, complex PTSD, and adverse life events. We work at a pace that honors your nervous system and builds genuine safety from the inside out.</p>
+            <a href="/trauma-informed-womens-therapy" title="Learn more about trauma therapy for women">Learn More</a>
+          </div>
+          <div class="service-card">
+            <h3>ADHD Therapy for Women</h3>
+            <p>ADHD in women is frequently undiagnosed or masked by anxiety, perfectionism, and people-pleasing. I help women understand their ADHD, develop self-compassion, and build strategies that work with their brain rather than against it.</p>
+            <a href="/adhd-therapy-women-charlotte-nc" title="Learn more about ADHD therapy for women">Learn More</a>
+          </div>
+          <div class="service-card">
+            <h3>Binge Eating Therapy</h3>
+            <p>Binge eating is not about willpower. It is a response to something deeper. Therapy helps you understand what is driving the cycle, reconnect with your body, and build a relationship with food grounded in trust instead of fear.</p>
+            <a href="/binge-eating-therapy-charlotte-nc" title="Learn more about binge eating therapy">Learn More</a>
+          </div>
+          <div class="service-card">
             <h3>Expressive Arts Therapy</h3>
-            <p>Creative therapeutic sessions incorporating painting, movement, journaling, and music to access emotions and experiences that talk therapy alone may not reach. No artistic skill or experience is needed.</p>
-            <p><strong>Available as a standalone service or integrated into individual therapy.</strong></p>
+            <p>Creative modalities like art, movement, writing, and sensory exploration offer pathways to healing that go beyond words. Expressive arts therapy is especially powerful for women healing from trauma, grief, and disconnection from self.</p>
+            <a href="/expressive-arts-therapy-charlotte-nc" title="Learn more about expressive arts therapy">Learn More</a>
           </div>
-          <div class="card">
-            <h3>The Self-Discovery Intensive</h3>
-            <p>A guided 3-session experience using the MARI&#174; (Mandala Assessment Research Instrument) to access your inner world through creative expression and symbolic imagery. Includes discovery and parts mapping, somatic integration, and a Self-Discovery Journal to take home.</p>
-            <p><strong>In-person in Charlotte, NC or virtual.</strong></p>
-            <p><a href="/intensives" class="btn btn-outline" title="Learn more about the Self-Discovery Intensive">Learn More</a></p>
-          </div>
-          <div class="card">
-            <h3>Free 15-Minute Consultation</h3>
-            <p>Not sure where to start? Schedule a complimentary phone consultation to share what you're going through, ask questions, and see whether my approach feels like the right fit. No pressure, no obligation.</p>
-            <p><a href="/contact" class="btn btn-outline" title="Schedule a free consultation">Book Your Free Call</a></p>
+          <div class="service-card">
+            <h3>Self-Discovery Intensives</h3>
+            <p>A guided 3-session experience using the MARI assessment for women ready to go deeper. Includes creative assessment, parts mapping, somatic integration, and a Self-Discovery Journal to take home.</p>
+            <a href="/intensives" title="Learn more about Self-Discovery Intensives">Learn More</a>
           </div>
         </div>
       </div>
@@ -182,7 +254,7 @@
           <h2>Session Details and Logistics</h2>
 
           <h3>In-Person and Virtual Options</h3>
-          <p>I offer both in-person sessions at my Charlotte, NC office and virtual therapy sessions for clients located anywhere in <strong>North Carolina</strong> and <strong>South Carolina</strong>. Virtual sessions are conducted through a secure, HIPAA-compliant telehealth platform, providing the same quality of care from the comfort of your own space.</p>
+          <p>I offer both in-person sessions in Charlotte, NC and virtual therapy sessions for clients located anywhere in <strong>North Carolina</strong> and <strong>South Carolina</strong>. Virtual sessions are conducted through a secure, HIPAA-compliant telehealth platform, providing the same quality of care from the comfort of your own space.</p>
 
           <h3>Insurance and Payment</h3>
           <p>I am an out-of-network provider. This means I do not bill insurance directly, but I can provide a superbill (detailed receipt) that you can submit to your insurance company for potential out-of-network reimbursement. Many clients are surprised to find they receive significant reimbursement through their plans.</p>
@@ -190,54 +262,36 @@
           <p>If cost is a concern, I encourage you to reach out. I want to make sure the right support is accessible to you.</p>
 
           <h3>Getting Started</h3>
-          <p>The first step is a free 15-minute phone consultation. During this call, you'll have the opportunity to share a bit about what you're going through, ask any questions, and get a sense of whether my approach feels right for you. From there, we'll schedule your first full session and begin.</p>
+          <p>The first step is a free 15-minute phone consultation. During this call, you will have the opportunity to share a bit about what you are going through, ask any questions, and get a sense of whether my approach feels right for you. From there, we will schedule your first full session and begin.</p>
           <p><a href="/contact" class="btn mt-2" title="Schedule a free consultation">Schedule a Free Consultation</a></p>
         </div>
       </div>
     </section>
 
-    <!-- Specializations -->
-    <section class="section" aria-label="Therapy specializations">
-      <div class="container">
-        <div class="content-narrow fade-in">
-          <h2>Specializations</h2>
-          <p>My clinical work is focused on the issues that most deeply affect women — and that require specialized training, not just general talk therapy. I bring more than nine years of clinical experience to each of these areas.</p>
-
-          <div class="services-list">
-            <h3>Eating Disorders</h3>
-            <p>Specialized treatment for binge eating disorder, bulimia, ARFID (Avoidant/Restrictive Food Intake Disorder), orthorexia, and disordered eating patterns. I understand the complexity of food, control, and identity — and I approach recovery with both clinical expertise and deep compassion.</p>
-
-            <h3>Trauma and PTSD</h3>
-            <p>Trauma-informed therapy for women navigating the effects of childhood experiences, relational trauma, complex PTSD, and adverse life events. We work at a pace that honors your nervous system and builds genuine safety from the inside out.</p>
-
-            <h3>ADHD in Women</h3>
-            <p>ADHD in women is frequently undiagnosed or masked by anxiety, perfectionism, and people-pleasing. I help women understand their ADHD, develop self-compassion, and build strategies that work with their brain rather than against it.</p>
-
-            <h3>Body Image</h3>
-            <p>Healing your relationship with your body is central to healing your relationship with yourself. I support women in moving from chronic self-monitoring and body shame toward embodiment, acceptance, and trust.</p>
-
-            <h3>Perinatal Mood Disorders</h3>
-            <p>Pregnancy and postpartum bring enormous emotional shifts that deserve specialized support. I work with women experiencing perinatal anxiety, depression, and the identity changes that come with becoming a mother.</p>
-
-            <h3>Life Transitions</h3>
-            <p>Career changes, relationship shifts, loss, identity questions, and the quiet crises that don't always have a name — I support women through the transitions that shake the ground beneath them and help them find solid footing again.</p>
-
-            <h3>Women's Mental Health</h3>
-            <p>From perfectionism and burnout to self-worth and relational patterns, I understand the unique pressures women face. My practice offers a space to process, heal, and grow without performing or pretending.</p>
-          </div>
-        </div>
+    <!-- Local SEO -->
+    <section class="section" aria-label="Areas served">
+      <div class="content-narrow fade-in" style="text-align: center;">
+        <p>Alynne Davis offers trauma-informed expressive arts therapy for women in Charlotte, North Carolina and surrounding areas including Ballantyne, Matthews, South Charlotte, and nearby communities.</p>
       </div>
     </section>
 
-    <!-- Contact Info -->
-    <section class="section section-warm" aria-label="Contact information">
+    <!-- FAQ -->
+    <section class="section" aria-label="Frequently asked questions">
       <div class="container">
         <div class="content-narrow fade-in">
-          <h2>Reach Out</h2>
-          <p>I'd love to hear from you. Whether you're ready to schedule or just have questions, don't hesitate to get in touch.</p>
-          <p><strong>Phone:</strong> <a href="tel:+17407652480" title="Call Alynne Davis">(740) 765-2480</a></p>
-          <p><strong>Email:</strong> <a href="mailto:info@alynnedavis.com" title="Email Alynne Davis">info@alynnedavis.com</a></p>
-          <p><strong>Location:</strong> Charlotte, NC (serving North Carolina and South Carolina)</p>
+          <h2>Frequently Asked Questions</h2>
+
+          <h3>How do I know which therapy service is right for me?</h3>
+          <p>Many clients begin with a free consultation so we can talk about what you are experiencing and determine the most supportive approach. Whether that involves weekly therapy, expressive arts sessions, or a focused intensive, we will decide together what best supports your needs.</p>
+
+          <h3>Do I need to have a diagnosis to start therapy?</h3>
+          <p>No diagnosis is required to begin therapy. Many women seek support simply because they feel overwhelmed, disconnected from themselves, or stuck in patterns that are no longer working.</p>
+
+          <h3>Do you offer therapy in person or online?</h3>
+          <p>I offer both in-person therapy at my Charlotte, North Carolina office and secure virtual sessions for clients located anywhere in North Carolina and South Carolina.</p>
+
+          <h3>Do you accept insurance?</h3>
+          <p>I am an out-of-network provider. I can provide a superbill that clients may submit to their insurance company for possible reimbursement depending on their plan.</p>
         </div>
       </div>
     </section>
@@ -246,7 +300,7 @@
     <section class="cta-banner" aria-label="Schedule consultation">
       <div class="container fade-in">
         <h2>Take the First Step</h2>
-        <p>You don't need to have it all figured out. Schedule a free 15-minute consultation and let's talk about what you're going through — no pressure, no obligation, just an honest conversation about how therapy might help.</p>
+        <p>You do not need to have it all figured out. Schedule a free 15-minute consultation and let us talk about what you are going through. No pressure, no obligation, just an honest conversation about how therapy might help.</p>
         <a href="/contact" class="btn mt-4" title="Schedule your free therapy consultation">Schedule a Free Consultation</a>
       </div>
     </section>
