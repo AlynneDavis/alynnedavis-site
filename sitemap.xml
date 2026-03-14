@@ -67,7 +67,49 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://alynnedavis.com/sitemap/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
   <!-- Blog Posts -->
+  <url>
+    <loc>https://alynnedavis.com/blog/late-diagnosed-adhd-women/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alynnedavis.com/blog/feeling-too-much-in-relationships/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alynnedavis.com/blog/overthinking-everything-in-relationships/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alynnedavis.com/blog/why-women-feel-disconnected-from-their-bodies/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alynnedavis.com/blog/adhd-shows-up-differently-in-women/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://alynnedavis.com/blog/thoughts-about-food-body-take-over-your-mind/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://alynnedavis.com/blog/food-scarcity-nervous-system/</loc>
     <lastmod>2026-02-23</lastmod>
