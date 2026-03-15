@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is My Relationship With Food Normal? | Free Self-Reflection Guide | Alynne Davis</title>
+  <meta name="description" content="Is your relationship with food normal — or taking up more space than it should? Take this free, trauma-informed self-reflection guide created by an eating disorder therapist in Charlotte, NC.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alynnedavis.com/eating-disorder-quiz/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Is My Relationship With Food Normal?">
+  <meta property="og:description" content="A free, trauma-informed reflection tool to help you explore your relationship with food — with compassion, not judgment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alynnedavis.com/eating-disorder-quiz/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Alynne Davis Expressive Arts Counseling">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Is My Relationship With Food Normal?">
+  <meta name="twitter:description" content="A free, trauma-informed reflection tool to help you explore your relationship with food — with compassion, not judgment.">
+
+  <style>
+    /* ── Quiz Hero ── */
+    .quiz-hero {
+      margin-top: var(--nav-height);
+      padding: 80px 0 100px;
+      background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-warm) 55%, var(--color-bg-accent) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .quiz-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -10%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(184,147,90,0.07) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .quiz-hero-content {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .quiz-tag {
+      display: inline-block;
+      background: var(--color-bg-accent);
+      border: 1px solid var(--color-gold-light);
+      color: var(--color-gold-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .quiz-hero h1 { margin-bottom: 20px; }
+    .quiz-hero p {
+      color: var(--color-text-light);
+      font-size: 1.08rem;
+      line-height: 1.85;
+      margin-bottom: 10px;
+    }
+    .quiz-hero .btn { margin-top: 32px; }
+
+    /* ── How It Works ── */
+    .quiz-how {
+      padding: 56px 0 48px;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .quiz-how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .quiz-how-step { padding: 0 8px; }
+    .quiz-how-num {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      color: var(--color-gold-light);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .quiz-how-step h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--color-heading);
+    }
+    .quiz-how-step p {
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── Disclaimer Banner ── */
+    .quiz-disclaimer {
+      background: #fff9f2;
+      border-top: 1px solid #f2e0c8;
+      border-bottom: 1px solid #f2e0c8;
+      padding: 14px 0;
+    }
+    .quiz-disclaimer p {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin: 0;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .quiz-disclaimer a { color: var(--color-gold-dark); }
+
+    /* ── Assessment ── */
+    .quiz-assessment { padding: 72px 0; }
+    .quiz-intro { max-width: 600px; margin: 0 auto 52px; text-align: center; }
+    .quiz-intro h2 { margin-bottom: 14px; }
+    .quiz-intro p { color: var(--color-text-light); font-size: 0.97rem; margin: 0; }
+
+    .quiz-sections {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .quiz-section {
+      background: var(--color-white);
+      border: 1.5px solid var(--color-border);
+      border-radius: 16px;
+      padding: 40px 36px;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .quiz-section.has-checks {
+      border-color: var(--color-gold-light);
+      box-shadow: 0 4px 24px rgba(184,147,90,0.1);
+    }
+    .quiz-section-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+    .quiz-section-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--color-gold-light);
+      font-weight: 400;
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 36px;
+    }
+    .quiz-section-header h3 { margin: 0; font-size: clamp(1.2rem, 2.5vw, 1.55rem); }
+    .quiz-section-desc {
+      color: var(--color-text-light);
+      font-size: 0.96rem;
+      line-height: 1.75;
+      margin-bottom: 24px;
+      font-style: italic;
+      padding-left: 54px;
+    }
+
+    .quiz-check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .quiz-check-list li { border: none; padding: 0; }
+    .quiz-check-list label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      color: var(--color-text);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+    .quiz-check-list label:hover { background: var(--color-bg-warm); }
+    .quiz-check-list label.checked { font-weight: 500; }
+    .quiz-check-list input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      accent-color: var(--color-gold);
+      cursor: pointer;
+    }
+    .quiz-section-footer {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.82rem;
+      color: var(--color-gold-dark);
+      font-weight: 500;
+      min-height: 20px;
+    }
+
+    /* ── Progress / CTA ── */
+    .quiz-progress-wrap {
+      max-width: 760px;
+      margin: 40px auto 0;
+      text-align: center;
+      padding: 44px 40px;
+      background: var(--color-bg-warm);
+      border-radius: 16px;
+      border: 1px solid var(--color-border);
+    }
+    .quiz-progress-label {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--color-heading);
+      margin-bottom: 8px;
+    }
+    .quiz-progress-label span { color: var(--color-gold); }
+    .quiz-progress-sub {
+      color: var(--color-text-light);
+      font-size: 0.92rem;
+      margin-bottom: 28px;
+    }
+    .quiz-progress-wrap .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    /* ── Email Gate ── */
+    .quiz-gate {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--color-bg-accent) 0%, var(--color-bg-warm) 100%);
+      border-top: 1px solid var(--color-border);
+    }
+    .quiz-gate-inner {
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .quiz-gate-inner h2 { margin-bottom: 14px; }
+    .quiz-gate-intro {
+      color: var(--color-text-light);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .quiz-gate-form { text-align: left; }
+    .quiz-gate-form .btn {
+      width: 100%;
+      text-align: center;
+      display: block;
+      margin-top: 4px;
+    }
+    .quiz-privacy {
+      font-size: 0.78rem;
+      color: var(--color-text-light);
+      text-align: center;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+    .quiz-gate-error {
+      background: #fde8e8;
+      color: #8b2020;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      display: none;
+    }
+
+    /* ── Results ── */
+    .quiz-results { padding: 80px 0; }
+    .quiz-results-inner { max-width: 720px; margin: 0 auto; }
+    .quiz-result-tag {
+      display: inline-block;
+      background: var(--color-sage-light);
+      color: #385a2e;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .quiz-result-greeting {
+      font-size: 0.97rem;
+      color: var(--color-text-light);
+      margin-bottom: 6px;
+    }
+    .quiz-result-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+      color: var(--color-heading);
+      margin-bottom: 22px;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+    .quiz-result-desc {
+      color: var(--color-text-light);
+      font-size: 1.03rem;
+      line-height: 1.85;
+      margin-bottom: 36px;
+    }
+    .quiz-result-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .quiz-result-col {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+    .quiz-result-col h4 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--color-gold-dark);
+      margin-bottom: 16px;
+    }
+    .quiz-result-col ul { list-style: none; padding: 0; margin: 0; }
+    .quiz-result-col li {
+      font-size: 0.94rem;
+      color: var(--color-text-light);
+      padding: 8px 0 8px 18px;
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+      line-height: 1.55;
+    }
+    .quiz-result-col li:last-child { border-bottom: none; }
+    .quiz-result-col li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--color-gold);
+      font-size: 0.85rem;
+    }
+    .quiz-result-closing {
+      background: var(--color-bg-warm);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 36px;
+      color: var(--color-text);
+      font-size: 1rem;
+      line-height: 1.85;
+      font-style: italic;
+      border-left: 3px solid var(--color-gold-light);
+    }
+    .quiz-result-ctas {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .quiz-result-secondary {
+      color: var(--color-gold-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .quiz-result-secondary:hover { color: var(--color-gold); }
+
+    /* Secondary patterns */
+    .quiz-secondary-patterns {
+      margin-top: 48px;
+      padding-top: 36px;
+      border-top: 1px solid var(--color-border);
+    }
+    .quiz-secondary-patterns h3 { font-size: 1.35rem; margin-bottom: 8px; }
+    .quiz-secondary-intro {
+      color: var(--color-text-light);
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+    .quiz-secondary-item {
+      padding: 18px 22px;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background: var(--color-white);
+    }
+    .quiz-secondary-item h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .quiz-secondary-item p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+
+    /* ── Crisis Resources ── */
+    .quiz-crisis {
+      background: var(--color-bg-warm);
+      padding: 44px 0;
+      border-top: 1px solid var(--color-border);
+    }
+    .quiz-crisis-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .quiz-crisis-inner h3 { font-size: 1.15rem; margin-bottom: 16px; }
+    .quiz-crisis-inner p {
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+      margin-bottom: 6px;
+      line-height: 1.7;
+    }
+    .quiz-crisis-inner a { color: var(--color-gold-dark); font-weight: 500; }
+
+    @media (max-width: 768px) {
+      .quiz-how-steps { grid-template-columns: 1fr; gap: 24px; }
+      .quiz-section { padding: 28px 20px; }
+      .quiz-section-desc { padding-left: 0; }
+      .quiz-section-header { gap: 12px; }
+      .quiz-result-cols { grid-template-columns: 1fr; }
+      .quiz-result-ctas { flex-direction: column; align-items: flex-start; }
+      .quiz-progress-wrap { padding: 32px 24px; }
+      .quiz-gate-inner { padding: 0 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="/" class="logo-link" title="Alynne Davis Expressive Arts Counseling — Home">
+        <img src="/images/alynne-davis-logo.png" alt="Alynne Davis Expressive Arts Counseling logo" class="logo" width="160" height="44" loading="eager">
+      </a>
+      <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/about" title="About Alynne Davis, LCMHC">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" title="Therapy specializations">Therapy Types</a>
+          <ul class="dropdown-menu">
+            <li><a href="/eating-disorder-therapist" title="Eating disorder therapy in Charlotte, NC">Eating Disorder Therapy</a></li>
+            <li><a href="/trauma-informed-womens-therapy" title="Trauma-informed therapy for women">Trauma-Informed Women's Therapy</a></li>
+            <li><a href="/expressive-arts-therapy" title="Expressive arts therapy sessions">Expressive Arts Therapy</a></li>
+            <li><a href="/adhd-therapy" title="ADHD therapy for women and families">ADHD Therapy</a></li>
+            <li><a href="/intensives" title="The Self-Discovery Intensive">The Self-Discovery Intensive</a></li>
+          </ul>
+        </li>
+        <li><a href="/services" title="Therapy services and pricing">Services</a></li>
+        <li><a href="/testimonials" title="Client testimonials">Testimonials</a></li>
+        <li><a href="/blog" title="Mental health blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="/learn" class="dropdown-toggle" title="Mental health resource guides">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a href="/learn/trauma-therapy/" title="Trauma therapy for women guide">Trauma Therapy</a></li>
+            <li><a href="/learn/eating-disorder-recovery/" title="Eating disorder recovery resources">Eating Disorder Recovery</a></li>
+            <li><a href="/learn/adhd-in-women/" title="ADHD in women guide">ADHD in Women</a></li>
+            <li><a href="/learn/anxiety-nervous-system/" title="Anxiety and nervous system guide">Anxiety &amp; Nervous System</a></li>
+            <li><a href="/learn/relationships-boundaries/" title="Relationships and boundaries guide">Relationships &amp; Boundaries</a></li>
+            <li><a href="/learn/healing-modalities/" title="Therapy types and healing modalities">Healing Modalities</a></li>
+          </ul>
+        </li>
+        <li><a href="/soul-nourishment" class="nav-cta-secondary" title="Soul Nourishment coaching program">Soul Nourishment</a></li>
+        <li><a href="/contact" class="nav-cta" title="Schedule a free consultation">Free Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section class="quiz-hero">
+      <div class="container">
+        <div class="quiz-hero-content fade-in">
+          <span class="quiz-tag">Free Reflection Guide</span>
+          <h1>Is My Relationship With Food Normal?</h1>
+          <p>It&rsquo;s a question a lot of women ask — quietly, privately, wondering if what they experience around food is just &ldquo;how everyone feels&rdquo; or something worth paying attention to.</p>
+          <p>This free self-reflection guide explores five areas where eating struggles commonly show up. Check what resonates, and receive a personalized reflection at the end — not a diagnosis, just clarity.</p>
+          <a href="#begin" class="btn">Begin the Reflection &darr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How It Works ── -->
+    <section class="quiz-how">
+      <div class="container">
+        <div class="quiz-how-steps fade-in">
+          <div class="quiz-how-step">
+            <div class="quiz-how-num">01</div>
+            <h4>Read &amp; Reflect</h4>
+            <p>Read through each of the five sections and sit with what each one describes.</p>
+          </div>
+          <div class="quiz-how-step">
+            <div class="quiz-how-num">02</div>
+            <h4>Check What Resonates</h4>
+            <p>Check the experiences that feel true for you. There are no right or wrong answers.</p>
+          </div>
+          <div class="quiz-how-step">
+            <div class="quiz-how-num">03</div>
+            <h4>Receive Your Reflection</h4>
+            <p>Enter your email to unlock a personalized reflection based on your responses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Disclaimer ── -->
+    <div class="quiz-disclaimer" role="note">
+      <div class="container">
+        <p><strong>Please note:</strong> This tool is not a clinical assessment or diagnostic instrument. It&rsquo;s a self-reflection resource designed with care and compassion. It cannot and does not diagnose eating disorders. If you&rsquo;re in crisis or need immediate support, please contact the <a href="https://www.nationaleatingdisorders.org/help-support/contact-helpline" target="_blank" rel="noopener noreferrer">NEDA Helpline</a> at 1-800-931-2237, or text &ldquo;NEDA&rdquo; to 741741.</p>
+      </div>
+    </div>
+
+    <!-- ── Assessment Sections ── -->
+    <section class="quiz-assessment" id="begin">
+      <div class="container">
+
+        <div class="quiz-intro fade-in">
+          <h2>Explore Your Relationship With Food</h2>
+          <p>Read through each area below and check the experiences that feel true to you — even a little bit. You can check as many or as few as you&rsquo;d like.</p>
+        </div>
+
+        <div class="quiz-sections">
+
+          <!-- Section 1: Restriction & Control -->
+          <div class="quiz-section fade-in" data-section="restriction">
+            <div class="quiz-section-header">
+              <span class="quiz-section-num">01</span>
+              <h3>Control &amp; Restriction</h3>
+            </div>
+            <p class="quiz-section-desc">Some women relate to food through a set of rules &mdash; lists of &ldquo;good&rdquo; and &ldquo;bad&rdquo; foods, calorie limits, or restrictions that feel necessary to stay in control. What starts as structure can quietly become a cage.</p>
+            <ul class="quiz-check-list">
+              <li><label><input type="checkbox" data-section="restriction"> I have strict rules about what I&rsquo;m &ldquo;allowed&rdquo; to eat.</label></li>
+              <li><label><input type="checkbox" data-section="restriction"> Breaking a food rule leaves me feeling anxious, guilty, or like I&rsquo;ve failed.</label></li>
+              <li><label><input type="checkbox" data-section="restriction"> I sometimes feel most in control &mdash; or most like myself &mdash; when I&rsquo;m eating very little.</label></li>
+              <li><label><input type="checkbox" data-section="restriction"> I track calories, macros, or food intake in ways that feel compulsive or difficult to stop.</label></li>
+              <li><label><input type="checkbox" data-section="restriction"> I feel proud or safe when I restrict, and ashamed or like I&rsquo;ve failed when I don&rsquo;t.</label></li>
+            </ul>
+            <div class="quiz-section-footer" id="footer-restriction">&nbsp;</div>
+          </div>
+
+          <!-- Section 2: Emotional Eating -->
+          <div class="quiz-section fade-in" data-section="emotional">
+            <div class="quiz-section-header">
+              <span class="quiz-section-num">02</span>
+              <h3>Emotional Eating &amp; Food as Comfort</h3>
+            </div>
+            <p class="quiz-section-desc">For many women, food becomes one of the most reliable ways to cope with emotions that feel too big to sit with. Stress, loneliness, anxiety, boredom &mdash; food can quiet all of it, at least for a moment.</p>
+            <ul class="quiz-check-list">
+              <li><label><input type="checkbox" data-section="emotional"> I often eat when I&rsquo;m not physically hungry &mdash; especially when I&rsquo;m stressed, sad, or overwhelmed.</label></li>
+              <li><label><input type="checkbox" data-section="emotional"> Food is one of my main go-tos when I need to cope, self-soothe, or get through something hard.</label></li>
+              <li><label><input type="checkbox" data-section="emotional"> I eat differently when I&rsquo;m alone than when I&rsquo;m around other people.</label></li>
+              <li><label><input type="checkbox" data-section="emotional"> After eating to cope, I often feel shame, guilt, or disappointment in myself.</label></li>
+              <li><label><input type="checkbox" data-section="emotional"> I use food to reward myself or to numb out when things feel like too much.</label></li>
+            </ul>
+            <div class="quiz-section-footer" id="footer-emotional">&nbsp;</div>
+          </div>
+
+          <!-- Section 3: Binge Eating -->
+          <div class="quiz-section fade-in" data-section="binge">
+            <div class="quiz-section-header">
+              <span class="quiz-section-num">03</span>
+              <h3>Feeling Out of Control Around Food</h3>
+            </div>
+            <p class="quiz-section-desc">Binge eating isn&rsquo;t about willpower &mdash; it&rsquo;s often the nervous system&rsquo;s response to deprivation, stress, or emotional overload. The cycle of feeling out of control around food is exhausting, and most people carry it completely alone.</p>
+            <ul class="quiz-check-list">
+              <li><label><input type="checkbox" data-section="binge"> I sometimes eat much larger amounts than I intended to, even when I&rsquo;m actively trying not to.</label></li>
+              <li><label><input type="checkbox" data-section="binge"> During certain eating episodes, I feel like I can&rsquo;t stop, even when part of me wants to.</label></li>
+              <li><label><input type="checkbox" data-section="binge"> I eat quickly, in secret, or past the point of physical comfort.</label></li>
+              <li><label><input type="checkbox" data-section="binge"> Afterward, I feel deep shame, disgust, or depression &mdash; and quietly promise myself it won&rsquo;t happen again.</label></li>
+              <li><label><input type="checkbox" data-section="binge"> I&rsquo;ve tried to compensate for eating episodes by restricting, over-exercising, or purging.</label></li>
+            </ul>
+            <div class="quiz-section-footer" id="footer-binge">&nbsp;</div>
+          </div>
+
+          <!-- Section 4: Body Image -->
+          <div class="quiz-section fade-in" data-section="bodyimage">
+            <div class="quiz-section-header">
+              <span class="quiz-section-num">04</span>
+              <h3>Body Image &amp; Self-Worth</h3>
+            </div>
+            <p class="quiz-section-desc">How you feel about your body can shape everything &mdash; what you wear, where you go, how you show up in relationships. When your sense of worth is tied to your body, it&rsquo;s worth paying close attention.</p>
+            <ul class="quiz-check-list">
+              <li><label><input type="checkbox" data-section="bodyimage"> My mood is heavily affected by how my body looks or feels on a given day.</label></li>
+              <li><label><input type="checkbox" data-section="bodyimage"> I avoid mirrors, photos, or situations where my body might be seen or judged.</label></li>
+              <li><label><input type="checkbox" data-section="bodyimage"> I check my body frequently &mdash; pinching, measuring, comparing &mdash; in ways that feel distressing.</label></li>
+              <li><label><input type="checkbox" data-section="bodyimage"> I believe I&rsquo;d feel better about myself, or that life would open up, if my body looked different.</label></li>
+              <li><label><input type="checkbox" data-section="bodyimage"> I&rsquo;ve avoided social situations, intimacy, or opportunities because of how I feel in my body.</label></li>
+            </ul>
+            <div class="quiz-section-footer" id="footer-bodyimage">&nbsp;</div>
+          </div>
+
+          <!-- Section 5: Mental Load / Preoccupation -->
+          <div class="quiz-section fade-in" data-section="mentalload">
+            <div class="quiz-section-header">
+              <span class="quiz-section-num">05</span>
+              <h3>Food Thoughts &amp; Mental Preoccupation</h3>
+            </div>
+            <p class="quiz-section-desc">When food and eating take up most of your mental energy &mdash; even when you&rsquo;re not eating &mdash; it affects your ability to be present, to focus, to enjoy your life. You might not even realize how much space it takes up until you stop and look.</p>
+            <ul class="quiz-check-list">
+              <li><label><input type="checkbox" data-section="mentalload"> I think about food, eating, or my body for most of the day.</label></li>
+              <li><label><input type="checkbox" data-section="mentalload"> Eating situations &mdash; restaurants, social events, travel &mdash; create significant anxiety for me.</label></li>
+              <li><label><input type="checkbox" data-section="mentalload"> I feel guilty or ashamed after eating certain foods, even when I &ldquo;let myself&rdquo; have them.</label></li>
+              <li><label><input type="checkbox" data-section="mentalload"> I&rsquo;ve noticed that worrying about food interferes with my ability to focus on other things.</label></li>
+              <li><label><input type="checkbox" data-section="mentalload"> People in my life have expressed concern about my relationship with food or my body.</label></li>
+            </ul>
+            <div class="quiz-section-footer" id="footer-mentalload">&nbsp;</div>
+          </div>
+
+        </div><!-- /.quiz-sections -->
+
+        <!-- ── Progress / See Results ── -->
+        <div class="quiz-progress-wrap fade-in">
+          <p class="quiz-progress-label">You&rsquo;ve reflected on <span id="check-count">0</span> experiences.</p>
+          <p class="quiz-progress-sub">When you&rsquo;re ready, click below to receive your personalized reflection.</p>
+          <button class="btn" id="see-reflection-btn" disabled>See My Personalized Reflection &darr;</button>
+        </div>
+
+      </div>
+    </section><!-- /.quiz-assessment -->
+
+    <!-- ── Email Gate ── -->
+    <section class="quiz-gate" id="quiz-gate" style="display:none;" aria-live="polite">
+      <div class="container">
+        <div class="quiz-gate-inner">
+          <span class="quiz-tag">Almost There</span>
+          <h2>Your Reflection Is Ready</h2>
+          <p class="quiz-gate-intro">Enter your name and email below. Your personalized reflection will appear right here on this page &mdash; no waiting for an inbox.</p>
+          <div class="quiz-gate-error" id="quiz-gate-error">Something went wrong. Please try again.</div>
+          <form id="quiz-email-form" class="quiz-gate-form" novalidate>
+            <!-- Honeypot -->
+            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+            <div class="form-group">
+              <label for="quiz-first-name">First Name</label>
+              <input type="text" id="quiz-first-name" name="name" placeholder="Your first name" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="quiz-email-input">Email Address</label>
+              <input type="email" id="quiz-email-input" name="email" placeholder="your@email.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="btn">Reveal My Reflection &darr;</button>
+            <p class="quiz-privacy">Your information is private and will never be shared. You can unsubscribe at any time.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Results ── -->
+    <section class="quiz-results" id="quiz-results" style="display:none;" aria-live="polite">
+      <!-- Populated by JavaScript -->
+    </section>
+
+    <!-- ── Bottom CTA Banner ── -->
+    <section class="cta-banner fade-in" id="quiz-cta-bottom" style="display:none;">
+      <div class="container">
+        <h2>Ready to Take the Next Step?</h2>
+        <p>I offer eating disorder therapy for women in Charlotte, NC and virtually across North Carolina. A free consultation is a chance to talk about what you&rsquo;re experiencing and whether working together might be a good fit &mdash; no commitment required.</p>
+        <a href="/contact" class="btn btn-primary" title="Schedule a free therapy consultation">Schedule Your Free Consultation</a>
+      </div>
+    </section>
+
+    <!-- ── Crisis Resources ── -->
+    <section class="quiz-crisis">
+      <div class="container">
+        <div class="quiz-crisis-inner">
+          <h3>Need Support Right Now?</h3>
+          <p>If you&rsquo;re struggling and need immediate support, please reach out. You don&rsquo;t have to wait.</p>
+          <p><strong>NEDA Helpline:</strong> <a href="tel:18009312237">1-800-931-2237</a> &mdash; Call or chat at <a href="https://www.nationaleatingdisorders.org/help-support/contact-helpline" target="_blank" rel="noopener noreferrer">nationaleatingdisorders.org</a></p>
+          <p><strong>Crisis Text Line:</strong> Text &ldquo;NEDA&rdquo; to <a href="sms:741741">741741</a></p>
+          <p><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or text <a href="tel:988">988</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/images/alynne-davis-logo-white.png" alt="Alynne Davis Expressive Arts Counseling" width="140" height="38" loading="lazy">
+          <p>Trauma-informed expressive arts therapy for women in Charlotte, NC. Specializing in eating disorders, trauma, ADHD, and body image.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/about" title="About Alynne Davis">About</a></li>
+            <li><a href="/services" title="Therapy services">Services</a></li>
+            <li><a href="/testimonials" title="Client testimonials">Testimonials</a></li>
+            <li><a href="/blog" title="Mental health blog">Blog</a></li>
+            <li><a href="/contact" title="Contact and schedule consultation">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Specializations</h4>
+          <ul class="footer-links">
+            <li><a href="/eating-disorder-therapist" title="Eating disorder therapy">Eating Disorder Therapy</a></li>
+            <li><a href="/trauma-informed-womens-therapy" title="Trauma therapy for women">Trauma-Informed Therapy</a></li>
+            <li><a href="/expressive-arts-therapy" title="Expressive arts therapy">Expressive Arts Therapy</a></li>
+            <li><a href="/adhd-therapy" title="ADHD therapy">ADHD Therapy</a></li>
+            <li><a href="/intensives" title="The Self-Discovery Intensive">Intensives</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Alynne Davis, MA, LCMHC. All Rights Reserved. &mdash; <a href="/privacy-policy" title="Privacy policy">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+  <script>
+  (function() {
+
+    // ── State ──
+    const scores = { restriction: 0, emotional: 0, binge: 0, bodyimage: 0, mentalload: 0 };
+
+    // ── Checkbox logic ──
+    document.querySelectorAll('.quiz-check-list input[type="checkbox"]').forEach(function(cb) {
+      cb.addEventListener('change', function() {
+        var sec = cb.dataset.section;
+        if (cb.checked) {
+          scores[sec]++;
+          cb.closest('label').classList.add('checked');
+        } else {
+          scores[sec]--;
+          cb.closest('label').classList.remove('checked');
+        }
+
+        var total = Object.values(scores).reduce(function(a,b){ return a+b; }, 0);
+
+        // Update counter
+        document.getElementById('check-count').textContent = total;
+
+        // Enable/disable button
+        var btn = document.getElementById('see-reflection-btn');
+        btn.disabled = (total === 0);
+
+        // Section visual highlight
+        var sectionEl = cb.closest('.quiz-section');
+        sectionEl.classList.toggle('has-checks', scores[sec] > 0);
+
+        // Section footer text
+        var footerEl = document.getElementById('footer-' + sec);
+        if (footerEl) {
+          if (scores[sec] > 0) {
+            footerEl.textContent = scores[sec] + ' item' + (scores[sec] > 1 ? 's' : '') + ' resonated in this area';
+          } else {
+            footerEl.innerHTML = '&nbsp;';
+          }
+        }
+      });
+    });
+
+    // ── See Reflection button ──
+    document.getElementById('see-reflection-btn').addEventListener('click', function() {
+      var gate = document.getElementById('quiz-gate');
+      gate.style.display = 'block';
+      setTimeout(function() {
+        gate.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    });
+
+    // ── Email form submission ──
+    document.getElementById('quiz-email-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button[type="submit"]');
+      var errorEl = document.getElementById('quiz-gate-error');
+      btn.textContent = 'One moment\u2026';
+      btn.disabled = true;
+      errorEl.style.display = 'none';
+
+      var data = Object.fromEntries(new FormData(form));
+
+      // Honeypot
+      if (data.website) {
+        showResults(data.name);
+        return;
+      }
+      delete data.website;
+
+      // Build score summary
+      var total = Object.values(scores).reduce(function(a,b){ return a+b; }, 0);
+      var dominant = getDominantPattern();
+      var scoresSummary = Object.entries(scores).map(function(e){ return e[0] + ':' + e[1]; }).join(', ');
+
+      // Submit lead to Supabase (silent fail — always show results)
+      try {
+        await fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone: '',
+            service: 'Eating Disorder Quiz Lead',
+            message: 'Quiz completed \u2014 ' + total + ' items checked. Scores: ' + scoresSummary + '. Dominant pattern: ' + dominant + '.'
+          })
+        });
+      } catch(err) {
+        // silent fail
+      }
+
+      showResults(data.name);
+    });
+
+    // ── Pattern logic ──
+    function getDominantPattern() {
+      var total = Object.values(scores).reduce(function(a,b){ return a+b; }, 0);
+      if (total === 0) return 'neutral';
+      if (total <= 2) return 'low';
+
+      var maxScore = Math.max.apply(null, Object.values(scores));
+      var leaders = Object.keys(scores).filter(function(k){ return scores[k] === maxScore && scores[k] > 0; });
+
+      if (leaders.length >= 3) return 'complex';
+      if (leaders.length === 1) return leaders[0];
+      return 'complex';
+    }
+
+    function getSecondaryPatterns() {
+      var dominant = getDominantPattern();
+      return Object.entries(scores)
+        .filter(function(e){ return e[1] >= 2 && e[0] !== dominant; })
+        .sort(function(a,b){ return b[1] - a[1]; })
+        .map(function(e){ return e[0]; })
+        .slice(0, 3);
+    }
+
+    // ── Result profiles ──
+    var profiles = {
+      restriction: {
+        tag: 'Pattern Identified: Control &amp; Restriction',
+        title: 'Your Relationship With Food May Be Shaped by Rules and Control',
+        desc: 'What you\u2019re describing often shows up as a need to control what goes in \u2014 through rules, restrictions, or careful tracking. This isn\u2019t a character flaw. It\u2019s often the mind\u2019s way of creating safety when other things feel uncertain or overwhelming. The more rigid the rules become, the more of your life they quietly take over.',
+        feels: [
+          'Feeling safest when eating very little or \u201cperfectly\u201d',
+          'Anxiety, guilt, or a sense of failure when you break a food rule',
+          'A kind of pride tied to restriction \u2014 even when your body is asking for more'
+        ],
+        support: [
+          'Understanding the deeper need underneath the control',
+          'Building a gentler, more flexible relationship with food',
+          'Reconnecting with your body\u2019s actual hunger and fullness signals'
+        ],
+        closing: 'Restriction and food rules often protect something tender underneath. With the right support, you can start to loosen the grip \u2014 not all at once, but gently, at a pace that feels safe for you.'
+      },
+      emotional: {
+        tag: 'Pattern Identified: Emotional Eating',
+        title: 'Food May Be Your Primary Way of Managing Hard Emotions',
+        desc: 'When emotions feel too big, too confusing, or too risky to sit with, food can become one of the most reliable ways to quiet them \u2014 even temporarily. This isn\u2019t weakness. It\u2019s a coping strategy your nervous system learned, often long before you had better tools. The problem isn\u2019t that you reach for food; it\u2019s that it may feel like the only thing that works.',
+        feels: [
+          'Reaching for food when stressed, lonely, bored, or emotionally overwhelmed',
+          'Using food to reward, comfort, or numb yourself through something hard',
+          'Shame or regret after eating to cope \u2014 even when it worked, in the moment'
+        ],
+        support: [
+          'Learning to recognize and name emotions before they drive eating',
+          'Building a wider toolkit for regulating your nervous system',
+          'Healing the underlying emotional patterns that keep you coming back to food'
+        ],
+        closing: 'Emotional eating isn\u2019t about willpower. It\u2019s about learning to be with yourself differently \u2014 and that\u2019s real, learnable work. Some of the most meaningful work there is.'
+      },
+      binge: {
+        tag: 'Pattern Identified: Binge Eating &amp; Loss of Control',
+        title: 'You May Be Caught in a Cycle That Leaves You Feeling Out of Control and Ashamed',
+        desc: 'The cycle of binge eating \u2014 the buildup of tension, the loss of control, the deep shame that follows, the resolve to \u201cdo better\u201d \u2014 is one of the most exhausting and isolating experiences there is. Most people carry it completely alone, convinced it\u2019s somehow their fault. It\u2019s not. This is a treatable, well-understood pattern \u2014 not a character flaw.',
+        feels: [
+          'Eating past the point of wanting to stop, even when you\u2019re actively trying not to',
+          'Hiding your eating, or eating very differently when you\u2019re alone',
+          'The aftermath: shame, self-disgust, quiet promises to yourself that tomorrow will be different'
+        ],
+        support: [
+          'Breaking the restrict-binge-shame cycle at its roots, not just managing the surface behavior',
+          'Understanding what\u2019s actually driving the loss of control (it\u2019s almost never lack of willpower)',
+          'Building a relationship with food that has room for all foods \u2014 without the chaos'
+        ],
+        closing: 'This is one of the most treatable \u2014 and most misunderstood \u2014 struggles there is. You deserve support that actually understands it, and doesn\u2019t just tell you to eat less or try harder.'
+      },
+      bodyimage: {
+        tag: 'Pattern Identified: Body Image &amp; Self-Worth',
+        title: 'Your Relationship With Your Body May Be at the Heart of Your Struggles',
+        desc: 'When the way you see your body is tied to your worth, your safety, or your right to take up space \u2014 every day can feel like a battle. Body image struggles don\u2019t always look like eating disorders on the surface, but they shape almost everything: what you wear, where you go, who you let in, how much you believe you deserve.',
+        feels: [
+          'Spending significant mental energy on how your body looks or compares to others',
+          'Avoiding situations, intimacy, or opportunities because of how you feel in your body',
+          'Believing you\u2019d finally feel okay \u2014 finally feel like enough \u2014 if your body just looked different'
+        ],
+        support: [
+          'Exploring where the beliefs about your body actually came from',
+          'Building a relationship with your body based on trust and care instead of appearance',
+          'Reconnecting with your body as a home \u2014 not a problem to fix'
+        ],
+        closing: 'Healing your relationship with your body is one of the most profound things you can do \u2014 not just for how you eat, but for how you live, love, and show up in the world.'
+      },
+      mentalload: {
+        tag: 'Pattern Identified: Food Preoccupation',
+        title: 'Food May Be Occupying Far More Mental Space Than You Realize',
+        desc: 'When most of your mental energy goes to food \u2014 what you ate, what you\u2019ll eat, what you shouldn\u2019t have eaten, how you\u2019ll make up for it \u2014 it quietly takes you out of your own life. You might not fully realize how much space it takes up until you stop and imagine what it would feel like to actually be free of it.',
+        feels: [
+          'Planning your day around food, or dreading situations where eating feels out of your control',
+          'Guilt and self-monitoring that follow you into meals, social events, and quiet moments',
+          'A sense that your relationship with food is never quite \u201cright\u201d \u2014 even on the \u201cgood\u201d days'
+        ],
+        support: [
+          'Understanding what the preoccupation is protecting you from \u2014 because it\u2019s always protecting something',
+          'Reducing the mental noise so you can be actually present in your life',
+          'Building a relationship with food that doesn\u2019t require constant vigilance to maintain'
+        ],
+        closing: 'You deserve a life where food is just food \u2014 not the thing everything else revolves around. That quiet, spacious relationship with eating? It\u2019s possible. And it\u2019s worth working toward.'
+      },
+      complex: {
+        tag: 'Pattern Identified: Layered &amp; Complex',
+        title: 'Your Relationship With Food Is Layered \u2014 and That Makes Complete Sense',
+        desc: 'What you\u2019re describing touches multiple areas \u2014 restriction and emotional eating, body image and mental preoccupation \u2014 and that\u2019s actually very common. Struggles with food rarely fit neatly into one category. They\u2019re often woven through our whole experience of ourselves, shifting with the season, the stress level, the relationship we\u2019re in.',
+        feels: [
+          'No single pattern quite captures it \u2014 it\u2019s a combination, and it shifts',
+          'It\u2019s hard to explain to others because it doesn\u2019t fit the \u201ctypical\u201d story',
+          'Some days restriction, some days eating to cope, some days the noise about your body \u2014 sometimes all at once'
+        ],
+        support: [
+          'A therapeutic approach that doesn\u2019t try to fit you into a box',
+          'Exploring the full complexity of your relationship with food \u2014 all of it, without judgment',
+          'Getting to the root of what\u2019s underneath, across all the ways it shows up'
+        ],
+        closing: 'Complex presentations deserve nuanced support. You don\u2019t have to simplify your experience to get help \u2014 or wait until it fits a neat category before you\u2019re \u201callowed\u201d to reach out.'
+      },
+      low: {
+        tag: 'Reflection: Something Worth Noticing',
+        title: 'Something Brought You Here \u2014 and That\u2019s Worth Paying Attention To',
+        desc: 'You may not be checking many of the boxes, and that\u2019s okay. But the fact that you\u2019re here, exploring this, suggests there\u2019s something worth sitting with. Sometimes it\u2019s a quiet nagging feeling. Sometimes it\u2019s noticing that your relationship with food could feel more peaceful \u2014 even if it doesn\u2019t feel like a \u201cproblem.\u201d',
+        feels: [
+          'A vague sense that food and eating don\u2019t feel fully neutral',
+          'Occasional moments of guilt, restriction, or eating to cope',
+          'Wondering if what you\u2019re experiencing is \u201cnormal\u201d \u2014 or worth paying attention to'
+        ],
+        support: [
+          'A space to explore what\u2019s there without labeling it or making it bigger than it is',
+          'Understanding your patterns before they become harder to shift',
+          'Building a truly nourishing relationship with food \u2014 not just the absence of symptoms'
+        ],
+        closing: 'You don\u2019t have to be \u201csick enough\u201d to deserve support. Curiosity is always enough of a reason to reach out.'
+      }
+    };
+
+    var secondaryNames = {
+      restriction: 'Control &amp; Restriction',
+      emotional: 'Emotional Eating',
+      binge: 'Binge Eating &amp; Loss of Control',
+      bodyimage: 'Body Image &amp; Self-Worth',
+      mentalload: 'Food Preoccupation'
+    };
+
+    var secondaryDescs = {
+      restriction: 'You also checked several items related to food rules and restriction. This pattern often travels alongside others, and is worth exploring as part of the fuller picture.',
+      emotional: 'You also checked several items related to using food to manage emotions. Emotional eating frequently shows up alongside other patterns.',
+      binge: 'You also checked several items related to feeling out of control around food. This cycle often intersects with restriction, emotional eating, and body image struggles.',
+      bodyimage: 'You also checked several items related to body image. How we feel about our bodies shapes our relationship with food in deep, often invisible ways.',
+      mentalload: 'You also checked several items related to food preoccupation. The mental noise around eating is often a signal worth paying attention to, even when the behavior itself seems manageable.'
+    };
+
+    // ── Render results ──
+    function showResults(fullName) {
+      document.getElementById('quiz-gate').style.display = 'none';
+
+      var pattern = getDominantPattern();
+      var profile = profiles[pattern] || profiles['low'];
+      var secondaries = getSecondaryPatterns();
+      var firstName = (fullName || '').split(' ')[0];
+
+      // Build secondary patterns HTML
+      var secondaryHTML = '';
+      if (secondaries.length > 0) {
+        secondaryHTML = '<div class="quiz-secondary-patterns">'
+          + '<h3>Other Areas Worth Exploring</h3>'
+          + '<p class="quiz-secondary-intro">You also checked several items in these areas. It\u2019s common for multiple patterns to show up together \u2014 and all of them deserve attention.</p>'
+          + secondaries.map(function(s) {
+              return '<div class="quiz-secondary-item">'
+                + '<h4>' + secondaryNames[s] + '</h4>'
+                + '<p>' + secondaryDescs[s] + '</p>'
+                + '</div>';
+            }).join('')
+          + '</div>';
+      }
+
+      var greetingHTML = firstName
+        ? '<p class="quiz-result-greeting">Hi ' + firstName + ',</p>'
+        : '';
+
+      var resultsEl = document.getElementById('quiz-results');
+      resultsEl.innerHTML = '<div class="container"><div class="quiz-results-inner">'
+        + '<span class="quiz-result-tag">' + profile.tag + '</span>'
+        + greetingHTML
+        + '<h2 class="quiz-result-title">' + profile.title + '</h2>'
+        + '<p class="quiz-result-desc">' + profile.desc + '</p>'
+        + '<div class="quiz-result-cols">'
+          + '<div class="quiz-result-col">'
+            + '<h4>What This Often Feels Like</h4>'
+            + '<ul>' + profile.feels.map(function(f){ return '<li>' + f + '</li>'; }).join('') + '</ul>'
+          + '</div>'
+          + '<div class="quiz-result-col">'
+            + '<h4>What Support Can Offer</h4>'
+            + '<ul>' + profile.support.map(function(s){ return '<li>' + s + '</li>'; }).join('') + '</ul>'
+          + '</div>'
+        + '</div>'
+        + '<div class="quiz-result-closing">' + profile.closing + '</div>'
+        + '<div class="quiz-result-ctas">'
+          + '<a href="/contact" class="btn">Schedule a Free Consultation</a>'
+          + '<a href="/eating-disorder-therapist" class="quiz-result-secondary">Learn about eating disorder therapy \u2192</a>'
+        + '</div>'
+        + secondaryHTML
+        + '</div></div>';
+
+      resultsEl.style.display = 'block';
+
+      // Show bottom CTA
+      document.getElementById('quiz-cta-bottom').style.display = 'block';
+
+      setTimeout(function() {
+        resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
+
+  })();
+  </script>
+
+</body>
+</html>

@@ -294,6 +294,7 @@ p { margin-bottom: 1rem; }
 }
 .page-hero h1 { margin-bottom: 16px; }
 .page-hero p { color: var(--color-text-light); max-width: 600px; margin: 0 auto; }
+.page-hero .hero-content { margin: 0 auto; text-align: center; }
 
 /* ---- Content Pages ---- */
 .content-section { padding: 60px 0; }
