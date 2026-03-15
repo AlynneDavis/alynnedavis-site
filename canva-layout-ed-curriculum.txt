@@ -1,0 +1,685 @@
+CANVA WORKBOOK LAYOUT GUIDE
+Eating Disorder Recovery Curriculum — 14 Sessions
+Alynne Davis, MA, LCMHC
+
+================================================================================
+TOTAL ESTIMATED PAGES: 97
+================================================================================
+
+Document Size: US Letter (8.5 x 11 in) — Portrait
+Recommended Canva Template: "Workbook" or "Document (US Letter)"
+Brand Colors: Gold (#b8935a), Sage (#8a9a7b), Cream (#faf8f5), Warm BG (#f5f0ea),
+              Text (#3a3330), Light text (#6b5f56)
+Fonts: Cormorant Garamond (headings) + DM Sans (body)
+
+================================================================================
+PAGE TYPE TEMPLATES (Create these 7 templates in Canva, then duplicate as needed)
+================================================================================
+
+TEMPLATE A — COVER PAGE
+  Text boxes: 3
+  [1] Title — large, centered, Cormorant Garamond
+  [2] Subtitle — smaller, centered, DM Sans
+  [3] Author / credentials — bottom, DM Sans
+
+TEMPLATE B — SESSION DIVIDER PAGE
+  Text boxes: 4
+  [1] Session number — large accent text (e.g., "Session 1"), Cormorant Garamond
+  [2] Session title — large heading, Cormorant Garamond
+  [3] Theme — italic one-liner, DM Sans italic
+  [4] Modality tags — small badges/chips (e.g., "CBT-E | Somatic Experiencing")
+  Design note: Use a gold or sage accent bar, background in cream/warm tone
+
+TEMPLATE C — CONTENT PAGE (Goals, Talking Points, Clinical Notes)
+  Text boxes: 3
+  [1] Section heading — (e.g., "Session Goals" or "Therapist Guide"), Cormorant Garamond
+  [2] Subheading — (e.g., "Talking Points" or "Clinical Notes"), DM Sans bold
+  [3] Body content — bullet list or paragraph, DM Sans regular
+  Design note: Left-aligned, generous margins, sage or gold accent line on left
+
+TEMPLATE D — EXERCISE PAGE
+  Text boxes: 4
+  [1] Exercise title with timing — (e.g., "IN-SESSION EXERCISE: Body Map (30 min)")
+  [2] Materials list — italic or boxed callout, DM Sans
+  [3] Numbered steps — body text, DM Sans
+  [4] Facilitator note or tip — small callout box at bottom
+  Design note: Number each step clearly, consider light background for materials box
+
+TEMPLATE E — CLIENT TAKE-HOME / WORKSHEET PAGE
+  Text boxes: 4
+  [1] Heading — "Client Take-Home" or exercise name, Cormorant Garamond
+  [2] Instructions / description — DM Sans
+  [3] Worksheet content — (rating scale, fill-in prompts, or writing space)
+  [4] Journaling prompt — styled as a callout/quote box with sage or gold border
+  Design note: Leave generous white space for writing. This is the page clients
+  will actually fill out.
+
+TEMPLATE F — GROUP ADAPTATION PAGE
+  Text boxes: 2
+  [1] Heading — "Group Adaptation", Cormorant Garamond
+  [2] Content — paragraph, DM Sans
+  Design note: Can use a sage background tint to visually distinguish from
+  individual content
+
+TEMPLATE G — TABLE OF CONTENTS / LIST PAGE
+  Text boxes: 2
+  [1] Page title — Cormorant Garamond
+  [2] List content — numbered or bulleted, DM Sans
+  Design note: Add page numbers once layout is finalized
+
+================================================================================
+PAGE-BY-PAGE BREAKDOWN
+================================================================================
+
+----- FRONT MATTER (6 pages) -----
+
+Page 1 — COVER PAGE [Template A]
+  Text boxes: 3
+  [1] "Eating Disorder Recovery Curriculum"
+  [2] "A Trauma-Informed, Multimodal Treatment Guide | 14 Sessions"
+  [3] "Alynne Davis, MA, LCMHC | Alynne Davis Expressive Arts Counseling"
+
+Page 2 — TITLE / CREDITS PAGE [Custom]
+  Text boxes: 4
+  [1] Full title
+  [2] Author credentials and practice info
+  [3] Modality certifications (CBT/CBT-E, Expressive Arts Therapy, etc.)
+  [4] Copyright notice: "(c) 2026 Alynne Davis. All Rights Reserved."
+
+Page 3 — TABLE OF CONTENTS [Template G]
+  Text boxes: 2
+  [1] "Table of Contents"
+  [2] Session list (1-7) with page numbers
+
+Page 4 — TABLE OF CONTENTS continued [Template G]
+  Text boxes: 2
+  [1] (continued)
+  [2] Session list (8-14) with page numbers + back matter
+
+Page 5 — HOW TO USE THIS WORKBOOK [Template C]
+  Text boxes: 3
+  [1] "How to Use This Workbook"
+  [2] "For Therapists"
+  [3] Description of format, modality tags, session structure, pacing notes
+
+Page 6 — CURRICULUM OVERVIEW [Template C]
+  Text boxes: 3
+  [1] "Curriculum Overview"
+  [2] "Core Modalities"
+  [3] Overview paragraph + modality descriptions
+
+
+----- SESSION 1: WELCOME & ASSESSMENT (6 pages) -----
+
+Page 7 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+  [1] "Session 1"
+  [2] "Welcome & Assessment"
+  [3] "Building safety, understanding the story, and establishing a foundation for healing."
+  [4] "CBT-E | Somatic Experiencing"
+
+Page 8 — SESSION GOALS + TALKING POINTS [Template C]
+  Text boxes: 3
+  [1] "Session Goals"
+  [2] 4 bullet points (establish rapport, gather food history, introduce CBT-E, assess nervous system)
+  [3] Blank or decorative element
+
+Page 9 — THERAPIST GUIDE [Template C]
+  Text boxes: 3
+  [1] "Therapist Guide"
+  [2] "Talking Points" + 4 bullets
+  [3] "Clinical Notes" + 4 bullets
+
+Page 10 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Nervous System Baseline Check-In (15 minutes)"
+  [2] Materials: (none needed for this exercise)
+  [3] 5 numbered steps
+  [4] Tip: reference window of tolerance visual
+
+Page 11 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Food Story Timeline"
+  [2] Instructions paragraph
+  [3] Space/lines for client to create their timeline
+  [4] Journaling Prompt: "What did food mean in my family growing up?..."
+
+Page 12 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+  [1] "Group Adaptation"
+  [2] Adaptation instructions paragraph
+
+
+----- SESSION 2: UNDERSTANDING YOUR NERVOUS SYSTEM & FOOD (6 pages) -----
+
+Page 13 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+  [1] "Session 2"
+  [2] "Understanding Your Nervous System & Food"
+  [3] "Learning the language of your body and how dysregulation shapes eating patterns."
+  [4] "Somatic Experiencing | CBT | Expressive Arts"
+
+Page 14 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+  [1] "Session Goals" + 4 bullets
+  [2] "Talking Points" + 4 bullets
+  [3] (content continues)
+
+Page 15 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+  [1] "Clinical Notes"
+  [2] 3 bullet points
+  [3] Decorative or space
+
+Page 16 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Three-State Body Map (25 minutes)"
+  [2] "Materials: Three body outline drawings, colored pencils/markers"
+  [3] 5 numbered steps
+  [4] Processing questions
+
+Page 17 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Nervous System Eating Log"
+  [2] Instructions paragraph
+  [3] Log template (columns: Date | Nervous System State | What I Ate | What I Noticed)
+  [4] Journaling Prompt: "When my body feels unsafe or overwhelmed..."
+
+Page 18 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+  [1] "Group Adaptation"
+  [2] Adaptation paragraph
+
+
+----- SESSION 3: FOOD MORALIZATION & SCARCITY THINKING (7 pages) -----
+
+Page 19 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 20 — SESSION GOALS + TALKING POINTS [Template C]
+  Text boxes: 3
+  [1] "Session Goals" + 4 bullets
+  [2] "Talking Points" + 4 longer bullets
+  [3] (content continues if needed)
+
+Page 21 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 22 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Food Beliefs Collage (30 minutes)"
+  [2] "Materials: Magazines, scissors, glue sticks, large paper, markers"
+  [3] 5 numbered steps
+  [4] Processing prompts
+
+Page 23 — CLIENT TAKE-HOME page 1 [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: CBT Thought Record — Food Rules Edition"
+  [2] Instructions
+  [3] 6-column thought record template (Situation | Automatic Thought | Emotion & Body Sensation | Evidence For | Evidence Against | Balanced Thought)
+  [4] (column headers)
+
+Page 24 — CLIENT TAKE-HOME page 2 [Template E]
+  Text boxes: 3
+  [1] Blank thought record rows for client to fill in
+  [2] Additional blank rows
+  [3] Journaling Prompt: "If food had no moral value..."
+
+Page 25 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 4: THE RESTRICTION-BINGE CYCLE (6 pages) -----
+
+Page 26 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 27 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+  [1] "Session Goals" + 4 bullets
+  [2] "Talking Points" + 4 bullets (includes CBT-E cycle description)
+  [3] "Clinical Notes" + 3 bullets
+
+Page 28 — THERAPIST GUIDE continued [Template C]
+  Text boxes: 3
+  (additional clinical context if first page is full)
+
+Page 29 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Meeting the Restrictor — IFS Parts Work (25 minutes)"
+  [2] Grounding intro
+  [3] 6 numbered steps
+  [4] Closing somatic check-in note
+
+Page 30 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Cycle Mapping"
+  [2] Instructions to draw personalized restriction-binge cycle
+  [3] Blank circular diagram space (or dotted guide)
+  [4] Journaling Prompt: "If the part of me that restricts could talk..."
+
+Page 31 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 5: EMOTIONAL EATING VS. HUNGER (6 pages) -----
+
+Page 32 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 33 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 34 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 35 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "The Hunger-Fullness Body Scan (20 minutes)"
+  [2] Focus areas: stomach, throat, chest, jaw
+  [3] 5 numbered steps
+  [4] Hunger scale reference (1-10)
+
+Page 36 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Curiosity Eating Practice"
+  [2] Instructions for mindful meal practice
+  [3] Tracking space (Before hunger level | Midway check-in | After fullness level)
+  [4] Journaling Prompt: "When I eat for emotional reasons..."
+
+Page 37 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 6: TRAUMA & EATING — THE CONNECTION (6 pages) -----
+
+Page 38 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 39 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 40 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 41 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Parts Mapping Around Food (30 minutes)"
+  [2] "Materials: Large paper, colored markers/pencils"
+  [3] 6 numbered steps
+  [4] Processing questions
+
+Page 42 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Letter to a Part"
+  [2] Instructions
+  [3] Writing space / lined area
+  [4] Journaling Prompt: "If my eating patterns could tell a story..."
+
+Page 43 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 7: BODY IMAGE & THE INNER CRITIC (7 pages) -----
+
+Page 44 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 45 — SESSION GOALS + TALKING POINTS [Template C]
+  Text boxes: 3
+
+Page 46 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 47 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Body Map — What My Body Carries (30 minutes)"
+  [2] "Materials: Large paper, body outline, colored pencils, markers, pastels"
+  [3] 6 numbered steps
+  [4] Processing prompts + somatic check-in
+
+Page 48 — CLIENT TAKE-HOME page 1 [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Inner Critic Log"
+  [2] Instructions for logging inner critic statements
+  [3] Log template (What the critic said | Whose voice is it? | What is it protecting?)
+  [4] Blank rows for entries
+
+Page 49 — CLIENT TAKE-HOME page 2 [Template E]
+  Text boxes: 3
+  [1] "Body Neutrality Daily Practice"
+  [2] 7 daily practice lines (Day 1-7 with body-neutral statement space)
+  [3] Journaling Prompt: "If my body could write me a letter..."
+
+Page 50 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 8: ADHD & BINGE EATING CONNECTION (6 pages) -----
+
+Page 51 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 52 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 53 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 54 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Urge Surfing with Somatic Awareness (20 minutes)"
+  [2] Intro/context
+  [3] 6 numbered steps
+  [4] Debrief questions
+
+Page 55 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Dopamine Menu"
+  [2] Instructions
+  [3] Three categories with fill-in space:
+      "Appetizers (5 min or less):" ___
+      "Entrees (15-30 min):" ___
+      "Specials (longer/planned):" ___
+  [4] Journaling Prompt: "When I reach for food and I'm not hungry..."
+
+Page 56 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 9: POSTPARTUM BODY & IDENTITY (6 pages) -----
+
+Page 57 — SESSION DIVIDER [Template B]
+  Text boxes: 5
+  [1-4] Standard divider
+  [5] Note: "Skip this session if not relevant to the client."
+
+Page 58 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 59 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 60 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Identity Collage — Then, Now, and Becoming (30 minutes)"
+  [2] "Materials: Three pieces of paper, magazines, glue, markers, photos (optional)"
+  [3] 5 numbered steps
+  [4] Somatic check-in prompts
+
+Page 61 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Body Gratitude Practice"
+  [2] Daily practice instructions
+  [3] 7 daily gratitude lines (Day 1-7: "Thank you for ___")
+  [4] Journaling Prompt: "What would it mean to stop punishing my body..."
+
+Page 62 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 10: NOURISHMENT BEYOND FOOD (7 pages) -----
+
+Page 63 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 64 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 65 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 66 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Nourishment Painting (25 minutes)"
+  [2] "Materials: Watercolors or tempera paint, large paper, brushes, water cups"
+  [3] 5 numbered steps
+  [4] Processing questions
+
+Page 67 — CLIENT TAKE-HOME page 1 [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Soul Nourishment Inventory"
+  [2] "Rate each area 1-10 (1 = completely depleted, 10 = deeply nourished)"
+  [3] 7 rating items with scales:
+      Emotional connection: ___/10
+      Creative expression: ___/10
+      Physical rest: ___/10
+      Joyful movement: ___/10
+      Spiritual/meaning: ___/10
+      Relational intimacy: ___/10
+      Play and pleasure: ___/10
+  [4] "For the lowest-scoring area, identify one small action:"
+
+Page 68 — CLIENT TAKE-HOME page 2 [Template E]
+  Text boxes: 3
+  [1] Action planning space
+  [2] Writing space
+  [3] Journaling Prompt: "Beyond food, what is my soul hungry for..."
+
+Page 69 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 11: BUILDING A SUSTAINABLE RELATIONSHIP WITH FOOD (6 pages) -----
+
+Page 70 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 71 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 72 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 73 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Mealtime Nervous System Check-In (20 minutes)"
+  [2] Three phases: Before, During, After
+  [3] 5 numbered steps with check-in prompts
+  [4] Debrief questions
+
+Page 74 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: My Eating Rhythm"
+  [2] Instructions (not a meal plan — a rhythm)
+  [3] Weekly rhythm planner:
+      Morning: ___
+      Mid-morning: ___
+      Lunch: ___
+      Afternoon: ___
+      Dinner: ___
+      Evening: ___
+      Nervous system check-in notes: ___
+  [4] Journaling Prompt: "What would my relationship with food look like..."
+
+Page 75 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 12: RELAPSE PREVENTION & NERVOUS SYSTEM TOOLKIT (7 pages) -----
+
+Page 76 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 77 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 78 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 79 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Create Your Regulation Toolkit (30 minutes)"
+  [2] "Materials: Card stock, markers, small box or envelope"
+  [3] 7 numbered steps with card categories
+  [4] Practice prompt
+
+Page 80 — CLIENT TAKE-HOME page 1 [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: My Relapse Prevention Plan"
+  [2] "1. My early warning signs:" + 5 blank lines
+  [3] "2. My high-risk situations:" + 5 blank lines
+  [4] "3. My go-to regulation strategies:" + 5 blank lines
+
+Page 81 — CLIENT TAKE-HOME page 2 [Template E]
+  Text boxes: 3
+  [1] "4. People I can reach out to:" + 3 lines (Name | Phone/contact)
+  [2] "5. What I want to remember about my healing:" + writing space
+  [3] Journaling Prompt: "What do I know now about myself..."
+
+Page 82 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 13: INTEGRATION & EXPRESSIVE ARTS CULMINATION (6 pages) -----
+
+Page 83 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 84 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 85 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 86 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Healing Journey Creative Project (35 minutes)"
+  [2] "Materials: All available art supplies"
+  [3] 5 numbered steps with prompt options
+  [4] Processing questions + somatic celebration guide
+
+Page 87 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Letter to Yourself"
+  [2] Instructions: "Write a letter to the you who walked into the first session..."
+  [3] Full-page writing space (lined or dotted)
+  [4] Journaling Prompt: "What does healing look like for me now?..."
+
+Page 88 — GROUP ADAPTATION [Template F]
+  Text boxes: 2
+
+
+----- SESSION 14: CLOSING & CONTINUED CARE (6 pages) -----
+
+Page 89 — SESSION DIVIDER [Template B]
+  Text boxes: 4
+
+Page 90 — SESSION GOALS + THERAPIST GUIDE [Template C]
+  Text boxes: 3
+
+Page 91 — CLINICAL NOTES [Template C]
+  Text boxes: 3
+
+Page 92 — IN-SESSION EXERCISE [Template D]
+  Text boxes: 4
+  [1] "Somatic Celebration & Parts Gratitude (20 minutes)"
+  [2] Grounding intro
+  [3] 5 numbered steps
+  [4] Closing moment guide
+
+Page 93 — CLIENT TAKE-HOME [Template E]
+  Text boxes: 4
+  [1] "Client Take-Home: Continued Care Commitments"
+  [2] "1. One thing I will continue doing:" ___
+      "2. One thing I will reach for when things get hard:" ___
+      "3. One way I will nourish my soul this month:" ___
+  [3] Writing space
+  [4] Final Journaling Prompt: "If I could go back to the beginning..."
+
+
+----- BACK MATTER (4 pages) -----
+
+Page 94 — RESOURCES & REFERENCES [Template G]
+  Text boxes: 2
+  [1] "Resources & Continued Support"
+  [2] Recommended books, websites, support options, Soul Nourishment program info
+
+Page 95 — NOTES PAGE [Custom]
+  Text boxes: 1
+  [1] "Notes" heading — rest is lined/dotted writing space
+
+Page 96 — NOTES PAGE [Custom]
+  Text boxes: 1
+  [1] Additional writing space
+
+Page 97 — CLOSING / ABOUT [Template A variant]
+  Text boxes: 4
+  [1] Practice name: "Alynne Davis Expressive Arts Counseling"
+  [2] Credentials + specializations
+  [3] Website / contact info
+  [4] Copyright + "Created with CBT/CBT-E, Expressive Arts Therapy, Somatic Experiencing & IFS"
+
+
+================================================================================
+SUMMARY
+================================================================================
+
+TOTAL PAGES: 97
+
+Front Matter:                  6 pages
+Session 1 (Welcome):          6 pages    (18 text boxes)
+Session 2 (Nervous System):   6 pages    (19 text boxes)
+Session 3 (Food Moralization): 7 pages    (22 text boxes)
+Session 4 (Restriction-Binge): 6 pages   (20 text boxes)
+Session 5 (Emotional Eating):  6 pages    (19 text boxes)
+Session 6 (Trauma & Eating):   6 pages    (19 text boxes)
+Session 7 (Body Image):        7 pages    (23 text boxes)
+Session 8 (ADHD & Binge):      6 pages    (19 text boxes)
+Session 9 (Postpartum Body):   6 pages    (20 text boxes)
+Session 10 (Nourishment):      7 pages    (21 text boxes)
+Session 11 (Sustainable Food):  6 pages   (19 text boxes)
+Session 12 (Relapse Prevention):7 pages   (21 text boxes)
+Session 13 (Integration):      6 pages    (19 text boxes)
+Session 14 (Closing):          6 pages    (18 text boxes)
+Back Matter:                   4 pages
+
+================================================================================
+CANVA TIPS
+================================================================================
+
+1. CREATE 7 MASTER TEMPLATES FIRST
+   Build Templates A through G (listed above) as your first 7 pages in Canva.
+   Then duplicate and fill as you go. This saves enormous time.
+
+2. CONSISTENT SPACING
+   - Top margin: 0.75 in
+   - Side margins: 1 in
+   - Between text boxes: 0.3-0.5 in
+   - Bottom margin: 0.75 in
+
+3. TEXT SIZES (recommended)
+   - Session number: 16-18pt DM Sans, gold color
+   - Session title: 32-36pt Cormorant Garamond
+   - Section headings: 22-26pt Cormorant Garamond
+   - Subheadings: 14-16pt DM Sans bold
+   - Body text: 11-12pt DM Sans
+   - Journaling prompts: 12pt DM Sans italic
+   - Modality tags: 10pt DM Sans, uppercase
+
+4. VISUAL CONSISTENCY
+   - Session divider pages: cream/warm background with gold accent bar
+   - Exercise pages: white background with sage left border
+   - Take-home pages: white background with gold left border
+   - Group adaptation pages: light sage tint background
+   - Journaling prompts: always in a callout box with gold or sage border
+
+5. FILLABLE ELEMENTS
+   For take-home worksheets, use:
+   - Dotted lines for short answers (______)
+   - Lined boxes for longer writing
+   - Circle/checkbox elements for rating scales
+   - Table grids for logs and trackers
+
+6. OPTIONAL ADDITIONS
+   - Decorative botanical/organic illustrations between sections
+   - Small modality icons next to tags (brain for CBT, palette for Expressive Arts,
+     body for Somatic, puzzle for IFS)
+   - Pull quotes from the curriculum in accent boxes
+   - Page numbers in footer (DM Sans, 9pt, centered)
+
+================================================================================
+QUICK-START: If you want a shorter version (client workbook only, no therapist
+guide sections), remove the Therapist Guide and Clinical Notes pages. This
+reduces each session to 3-4 pages, for a total of approximately 55-60 pages.
+================================================================================

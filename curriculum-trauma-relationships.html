@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trauma &amp; Relationships Curriculum | Alynne Davis, LCMHC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #faf8f5;
+      --color-bg-warm: #f5f0ea;
+      --color-bg-accent: #ede6dc;
+      --color-text: #3a3330;
+      --color-text-light: #6b5f56;
+      --color-heading: #2c2420;
+      --color-gold: #b8935a;
+      --color-gold-light: #d4b98a;
+      --color-gold-dark: #96773e;
+      --color-sage: #8a9a7b;
+      --color-sage-light: #c5d1bb;
+      --color-cream: #f9f5ef;
+      --color-white: #ffffff;
+      --color-border: #e4ddd4;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.7; }
+    h1, h2, h3, h4, h5 { font-family: var(--font-display); color: var(--color-heading); line-height: 1.25; font-weight: 500; }
+
+    .curriculum-header {
+      background: linear-gradient(135deg, var(--color-bg-warm), var(--color-bg-accent));
+      padding: 60px 40px;
+      text-align: center;
+      border-bottom: 3px solid var(--color-gold);
+    }
+    .curriculum-header h1 { font-size: 2.6rem; margin-bottom: 10px; }
+    .curriculum-header .subtitle { font-size: 1.15rem; color: var(--color-text-light); font-style: italic; font-family: var(--font-display); }
+    .curriculum-header .meta { margin-top: 20px; font-size: 0.9rem; color: var(--color-text-light); }
+    .curriculum-header .meta span { display: inline-block; margin: 0 12px; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 30px; }
+
+    .overview { padding: 40px 0; border-bottom: 1px solid var(--color-border); }
+    .overview h2 { font-size: 1.8rem; margin-bottom: 16px; color: var(--color-gold-dark); }
+    .overview p { margin-bottom: 12px; }
+
+    .modality-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+    .modality-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+    }
+    .tag-cbt { background: #e8d5b7; color: #6b4e2a; }
+    .tag-ea { background: #d4c5e2; color: #4a3660; }
+    .tag-se { background: #c5d1bb; color: #3d5030; }
+    .tag-ifs { background: #bdd8e0; color: #2a5060; }
+
+    .session {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--color-border);
+      page-break-inside: avoid;
+    }
+    .session:last-child { border-bottom: none; }
+    .session-number {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .session h2 { font-size: 1.9rem; margin-bottom: 8px; }
+    .session-theme {
+      font-style: italic;
+      color: var(--color-text-light);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+    .session-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+
+    .section-block { margin-bottom: 28px; }
+    .section-block h3 {
+      font-size: 1.25rem;
+      color: var(--color-gold-dark);
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .section-block h4 { font-size: 1.05rem; color: var(--color-heading); margin: 14px 0 8px; }
+    .section-block ul, .section-block ol { padding-left: 24px; margin-bottom: 12px; }
+    .section-block li { margin-bottom: 6px; }
+    .section-block p { margin-bottom: 10px; }
+
+    .therapist-guide { background: var(--color-bg-warm); padding: 20px 24px; border-radius: 8px; border-left: 4px solid var(--color-gold); }
+    .exercise-block { background: var(--color-white); padding: 20px 24px; border-radius: 8px; border: 1px solid var(--color-border); }
+    .takehome-block { background: #f0f4ed; padding: 20px 24px; border-radius: 8px; border-left: 4px solid var(--color-sage); }
+    .group-block { background: #eef3f8; padding: 16px 20px; border-radius: 8px; border-left: 4px solid #7a9ab5; font-size: 0.92rem; }
+
+    .timing { display: inline-block; background: var(--color-gold-light); color: var(--color-white); padding: 2px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; margin-bottom: 10px; }
+
+    .footer-doc {
+      text-align: center;
+      padding: 40px;
+      color: var(--color-text-light);
+      font-size: 0.85rem;
+      border-top: 2px solid var(--color-gold);
+      margin-top: 40px;
+    }
+
+    @media print {
+      body { font-size: 11pt; }
+      .curriculum-header { padding: 30px 20px; }
+      .session { page-break-inside: avoid; }
+      .container { max-width: 100%; padding: 0 20px; }
+    }
+    @media (max-width: 600px) {
+      .curriculum-header { padding: 40px 20px; }
+      .curriculum-header h1 { font-size: 2rem; }
+      .modality-legend { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="curriculum-header">
+  <h1>Trauma &amp; Relationships Curriculum</h1>
+  <p class="subtitle">Healing Attachment Wounds, Rebuilding Boundaries &amp; Reclaiming Your Relational Self</p>
+  <div class="meta">
+    <span>16 Sessions</span> &middot;
+    <span>Alynne Davis, MA, LCMHC</span> &middot;
+    <span>Individual &amp; Group Adaptable</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <section class="overview">
+    <h2>Curriculum Overview</h2>
+    <p>This 16-session curriculum provides a deep, trauma-informed exploration of how early experiences shape adult relationships, boundaries, and sense of self. It integrates Cognitive Behavioral Therapy (CBT), Expressive Arts Therapy, Somatic Experiencing, and Internal Family Systems (IFS) to help women understand their relational patterns, heal attachment wounds, recover from narcissistic and emotionally unavailable relationships, and build the capacity for earned secure attachment.</p>
+    <p>Each session includes a therapist guide with clinical talking points, an in-session exercise with step-by-step instructions, a client take-home activity, and group adaptation notes. Sessions are designed to be paced to the client&rsquo;s nervous system &mdash; safety comes first, always.</p>
+
+    <h3 style="margin-top: 24px; font-size: 1.15rem; color: var(--color-gold-dark);">Modality Key</h3>
+    <div class="modality-legend">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+    </div>
+  </section>
+
+  <!-- SESSION 1 -->
+  <section class="session">
+    <div class="session-number">Session 1</div>
+    <h2>Welcome &amp; Safety Building</h2>
+    <p class="session-theme">Before we can heal, we have to feel safe enough to begin.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Establish therapeutic rapport and a felt sense of safety in the room</li>
+        <li>Gather a paced trauma history without overwhelming the client&rsquo;s nervous system</li>
+        <li>Introduce the treatment framework and what the client can expect</li>
+        <li>Assess the client&rsquo;s current nervous system baseline and window of tolerance</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Name the courage it takes to begin: &ldquo;Coming here is not a sign of weakness. It&rsquo;s one of the bravest things you can do.&rdquo;</li>
+        <li>Explain the pacing philosophy: &ldquo;We will not rush. Your nervous system sets the pace, not a timeline. Healing is not about going as deep as fast as possible &mdash; it&rsquo;s about going at the speed of safety.&rdquo;</li>
+        <li>Briefly introduce the four modalities: CBT for understanding thought patterns, Expressive Arts for expressing what words can&rsquo;t, Somatic Experiencing for healing through the body, and IFS for understanding the parts of you that developed to survive</li>
+        <li>Set expectations: &ldquo;Some sessions will feel hard. Some will feel lighter. Both are part of healing. You are always allowed to pause, slow down, or say &lsquo;not today.&rsquo;&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Do not push for detailed trauma disclosure in Session 1 &mdash; assess gently and let the client lead</li>
+        <li>Watch for signs of hyperarousal (rapid speech, difficulty sitting still, hypervigilance) or hypoarousal (flat affect, dissociation, foggy responses)</li>
+        <li>Some clients will arrive highly defended &mdash; honor the protector parts without trying to bypass them</li>
+        <li>Begin building the somatic vocabulary: &ldquo;What do you notice in your body right now?&rdquo;</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Creating a Safe Place</h3>
+      <span class="timing">20 minutes</span>
+      <ol>
+        <li>Guide the client into a comfortable, grounded position. Invite them to notice where their body makes contact with the chair, the floor, the armrests.</li>
+        <li>Ask: &ldquo;Think of a place &mdash; real or imagined &mdash; where you feel completely safe. It could be a room, a landscape, a memory, or something you&rsquo;ve never seen but can imagine.&rdquo;</li>
+        <li>Explore with all senses: &ldquo;What do you see there? What sounds are present? What is the temperature? What textures surround you? Is anyone with you, or are you alone?&rdquo;</li>
+        <li>Somatic anchoring: &ldquo;As you picture this place, notice what happens in your body. Where do you feel the safety? Can you let that sensation expand?&rdquo;</li>
+        <li>Create a physical anchor: &ldquo;Touch your thumb and forefinger together while holding this feeling. This becomes your anchor &mdash; a quick way to access this sensation outside of session.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Safe Place Practice &amp; Somatic Check-In</h4>
+      <p>Practice your safe place visualization once daily this week. Use the physical anchor (thumb and forefinger) to reconnect with the feeling. Before bed, do a brief body scan: start at your head and move slowly down, noticing where you hold tension, numbness, or ease.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What does safety feel like in my body? When was the last time I felt truly safe? What would it mean to feel that way more often?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Begin with a group check-in: each member shares one word about how they feel arriving today. Conduct the safe place visualization as a guided group exercise (members work internally). Skip detailed trauma histories (save for individual sessions). Establish group agreements: confidentiality, respect for pacing, the right to pass, and no advice-giving. Close with a collective grounding breath.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 2 -->
+  <section class="session">
+    <div class="session-number">Session 2</div>
+    <h2>Understanding Your Nervous System</h2>
+    <p class="session-theme">Your body has been keeping score &mdash; learning its language is the first step to freedom.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Introduce polyvagal theory and the three nervous system states in accessible language</li>
+        <li>Help the client identify their dominant stress response: fight, flight, freeze, or fawn</li>
+        <li>Introduce the window of tolerance concept</li>
+        <li>Build foundational somatic awareness skills</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Three states: &ldquo;Safe and connected&rdquo; (ventral vagal) &mdash; you can think clearly, connect with others, feel present. &ldquo;Fight or flight&rdquo; (sympathetic) &mdash; your body is mobilized, anxious, irritable, ready to run or react. &ldquo;Shutdown&rdquo; (dorsal vagal) &mdash; you feel numb, disconnected, foggy, collapsed.</li>
+        <li>The four F&rsquo;s: fight (anger, control, aggression), flight (anxiety, busyness, avoidance), freeze (dissociation, numbness, paralysis), fawn (people-pleasing, compliance, merging with others&rsquo; needs)</li>
+        <li>Window of tolerance: &ldquo;There&rsquo;s a zone where you can handle stress without losing yourself. Trauma narrows that window. Our work together is about widening it &mdash; slowly, safely.&rdquo;</li>
+        <li>Normalize: &ldquo;Your nervous system developed these responses to keep you alive. They were brilliant survival strategies. We&rsquo;re not trying to eliminate them &mdash; we&rsquo;re trying to give you more choices.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Many clients will recognize their dominant pattern immediately &mdash; fawn is extremely common in women who have experienced relational trauma</li>
+        <li>Some clients live primarily in dorsal vagal (shutdown) and may present as &ldquo;fine&rdquo; when they are actually dissociated</li>
+        <li>Use simple metaphors: the nervous system as a smoke detector that&rsquo;s been set too sensitive</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Mapping My Nervous System States</h3>
+      <span class="timing">25 minutes</span>
+      <p><strong>Materials:</strong> Body outline template, colored markers</p>
+      <ol>
+        <li>Provide three body outlines labeled: &ldquo;Safe &amp; Connected,&rdquo; &ldquo;Activated (Fight/Flight),&rdquo; and &ldquo;Shutdown (Freeze/Collapse).&rdquo;</li>
+        <li>Using colors, shapes, and words, invite the client to map what each state feels like in their body. &ldquo;Where does fight show up? What color is your freeze?&rdquo;</li>
+        <li>Add a fourth body outline: &ldquo;Fawn.&rdquo; Map where people-pleasing lives in the body. This is often the most revealing for women with relational trauma.</li>
+        <li>Discuss: &ldquo;Which state is most familiar? Which one feels the most like &lsquo;home&rsquo; &mdash; even if it&rsquo;s not comfortable?&rdquo;</li>
+        <li>Introduce one regulation tool: the bilateral self-hug (cross arms over chest, alternately tap each shoulder). Practice together.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Nervous System State Tracker</h4>
+      <p>Three times this week (morning, afternoon, evening), pause and identify your nervous system state: Safe &amp; Connected, Fight/Flight, Shutdown, or Fawn. Write one word about what triggered it and one word about what you need. This is awareness practice, not a test.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;Which nervous system state feels most like &lsquo;home&rsquo; to me? When did I first learn to live there? What would it be like to spend more time in &lsquo;safe and connected&rsquo;?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Teach polyvagal theory as a group lesson with visual aids. Create individual body maps but invite voluntary sharing: &ldquo;Which state is most familiar to you?&rdquo; Most group members will relate to fawn &mdash; normalize this powerfully. Practice the bilateral self-hug together and close with a collective grounding exercise.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 3 -->
+  <section class="session">
+    <div class="session-number">Session 3</div>
+    <h2>Trauma Responses vs. Personality Traits</h2>
+    <p class="session-theme">What you thought was &ldquo;just who you are&rdquo; might be how you survived.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Use CBT to reframe longstanding patterns as trauma adaptations rather than personality flaws</li>
+        <li>Introduce IFS and the concept of protector parts</li>
+        <li>Begin separating &ldquo;who I am&rdquo; from &ldquo;what I had to become to survive&rdquo;</li>
+        <li>Reduce shame by externalizing survival strategies</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Common traits that are actually trauma responses: hypervigilance reframed as &ldquo;I&rsquo;m just observant,&rdquo; people-pleasing as &ldquo;I&rsquo;m just nice,&rdquo; emotional numbing as &ldquo;I&rsquo;m low-maintenance,&rdquo; hyperindependence as &ldquo;I don&rsquo;t need anyone&rdquo;</li>
+        <li>CBT reframing: &ldquo;These aren&rsquo;t character flaws or personality traits you were born with. They are adaptations &mdash; brilliant strategies your nervous system developed to keep you safe in an unsafe environment.&rdquo;</li>
+        <li>IFS introduction: &ldquo;Inside you, there are parts &mdash; protectors that developed in childhood to keep you safe, and exiles that carry the pain those protectors are guarding. We&rsquo;re going to get to know them.&rdquo;</li>
+        <li>The distinction: &ldquo;You are not your trauma responses. You are the Self underneath &mdash; the part of you that is curious, compassionate, calm, and whole. Our work is about reconnecting with that Self.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>This session can be profoundly destabilizing &mdash; clients may grieve the identity they&rsquo;ve built around trauma responses</li>
+        <li>Go slowly. Some clients aren&rsquo;t ready to let go of these identities &mdash; the protector serves a function</li>
+        <li>Watch for the &ldquo;so everything about me is trauma?&rdquo; response &mdash; clarify that not everything is a trauma response; we&rsquo;re exploring the patterns that cause suffering</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: The &ldquo;Trait or Trauma&rdquo; Exploration</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>Create two columns on paper: &ldquo;Things I&rsquo;ve always believed about myself&rdquo; and &ldquo;What this might actually be.&rdquo;</li>
+        <li>Invite the client to list traits or patterns they&rsquo;ve always seen as &ldquo;just me&rdquo;: perfectionism, independence, sensitivity, caretaking, avoidance, etc.</li>
+        <li>For each one, explore: &ldquo;When did this pattern start? Was there a time in your life when this was necessary for survival? What would have happened if you hadn&rsquo;t developed this?&rdquo;</li>
+        <li>IFS: &ldquo;Can you meet the part of you that carries this pattern? How old does it feel? What is it protecting you from?&rdquo;</li>
+        <li>Close with a compassion statement: &ldquo;These parts of me kept me alive. I can thank them and still choose something different now.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Parts Awareness Journal</h4>
+      <p>This week, when you notice a strong reaction, pattern, or behavior, pause and ask: &ldquo;Is this me, or is this a part of me that developed to survive?&rdquo; You don&rsquo;t have to change anything &mdash; just notice with curiosity.</p>
+      <p>Write down one pattern you now see differently after today&rsquo;s session.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;If my survival strategies could speak, what would they say? What were they protecting me from? What do they need me to know?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Provide psychoeducation on trauma responses vs. personality traits as a group. Invite members to share (without pressure): &ldquo;What&rsquo;s one trait you always thought was just &lsquo;you&rsquo; that might actually be a survival response?&rdquo; The shared recognition in the room is often deeply healing. Introduce IFS concepts as a group, using the protector/exile framework.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 4 -->
+  <section class="session">
+    <div class="session-number">Session 4</div>
+    <h2>The Fawn Response &amp; People-Pleasing</h2>
+    <p class="session-theme">When being &ldquo;nice&rdquo; is actually a survival strategy &mdash; and it&rsquo;s exhausting you.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore the fawn response as a trauma survival strategy, not a personality trait</li>
+        <li>Use IFS to meet the pleaser part with compassion and curiosity</li>
+        <li>Track fawn patterns somatically &mdash; where does compliance live in the body?</li>
+        <li>Create an expressive arts piece giving voice to the fawn</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>The fawn response: &ldquo;When fight, flight, and freeze didn&rsquo;t work &mdash; or weren&rsquo;t safe &mdash; you learned a fourth option: fawn. You learned to survive by becoming what others needed. You read the room, anticipated needs, suppressed your own, and made yourself indispensable.&rdquo;</li>
+        <li>People-pleasing as self-erasure: &ldquo;You&rsquo;ve been so busy being who everyone else needs you to be that you may have lost touch with who you actually are and what you actually need.&rdquo;</li>
+        <li>The cost: chronic exhaustion, resentment, loss of identity, inability to say no, attracting exploitative relationships, feeling invisible despite being endlessly available</li>
+        <li>IFS: &ldquo;The pleaser part has worked tirelessly. It believes your safety depends on everyone else being happy. Let&rsquo;s find out what it&rsquo;s protecting you from.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Fawn is the most common and least recognized trauma response in women &mdash; naming it often brings enormous relief</li>
+        <li>Clients may resist seeing their &ldquo;niceness&rdquo; as a trauma response &mdash; it&rsquo;s tied to identity and relational worth</li>
+        <li>Track the fawn somatically: it often shows up as tension in the throat (silencing), stomach (swallowing feelings), or chest (compressed self)</li>
+        <li>The pleaser part often carries the belief: &ldquo;If I stop being useful, I will be abandoned&rdquo;</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Drawing the Fawn</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> Paper, colored pencils, markers, pastels</p>
+      <ol>
+        <li>Invite the client to draw or paint their fawn response. It might be an image, a character, a scene, or an abstract representation. &ldquo;If your people-pleasing had a form, what would it look like?&rdquo;</li>
+        <li>After drawing, explore: &ldquo;How old is this part? When did it first appear? What was happening in your life when you learned that fawning kept you safe?&rdquo;</li>
+        <li>IFS dialogue with the drawing: &ldquo;What does this part want you to know? What is it afraid would happen if it stopped? What does it need from you?&rdquo;</li>
+        <li>Somatic tracking: &ldquo;As you look at this drawing, where do you feel it in your body? What sensation is present?&rdquo;</li>
+        <li>Offer a compassionate message to the part: &ldquo;Thank you for protecting me. I understand why you did what you did. I&rsquo;m learning that I can be loved without disappearing.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Fawn Awareness Practice</h4>
+      <p>This week, notice moments when you automatically say yes, agree, or suppress your own needs to keep the peace. You don&rsquo;t have to change the behavior yet &mdash; just notice it. Write down:</p>
+      <ul>
+        <li>What happened (the situation)</li>
+        <li>What you said or did (the fawn response)</li>
+        <li>What you actually felt or needed (the truth underneath)</li>
+        <li>What you noticed in your body</li>
+      </ul>
+      <p><strong>Journaling Prompt:</strong> &ldquo;Who taught me that my worth depends on being useful? What would it mean to be loved just for existing?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Discuss the fawn response as a group &mdash; this is almost always the most activated and resonant session in a women&rsquo;s group. Create individual drawings and share them (the visual representation often speaks louder than words). Invite the group reflection: &ldquo;Where did we learn this? What would it be like to put the fawn down, even for a moment?&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 5 -->
+  <section class="session">
+    <div class="session-number">Session 5</div>
+    <h2>Attachment Wounds &amp; Love Templates</h2>
+    <p class="session-theme">The blueprint for how you love was written before you had a choice.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Provide psychoeducation on attachment styles and how early relationships create &ldquo;love templates&rdquo;</li>
+        <li>Help the client identify their attachment style and its origins</li>
+        <li>Create an expressive arts relationship timeline</li>
+        <li>Connect childhood patterns to adult relational choices</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Attachment styles: secure (I am lovable, others are reliable), anxious (I am not enough, I must earn love), avoidant (I can only rely on myself, closeness is dangerous), disorganized (I need you and I&rsquo;m terrified of you)</li>
+        <li>Love templates: &ldquo;Your earliest caregivers taught you what love looks like, feels like, and costs. If love came with conditions, criticism, chaos, or absence, your nervous system internalized that as &lsquo;normal.&rsquo;&rdquo;</li>
+        <li>The painful truth: &ldquo;We are often drawn to partners who feel familiar &mdash; not because they are healthy, but because our nervous system recognizes them. Intensity gets confused with intimacy. Chaos gets confused with passion.&rdquo;</li>
+        <li>Hope: &ldquo;Attachment styles are not destiny. You can develop earned secure attachment through awareness, healing, and practicing new relational patterns.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>This session often brings up significant grief &mdash; &ldquo;My parents couldn&rsquo;t give me what I needed&rdquo;</li>
+        <li>Avoid pathologizing attachment styles &mdash; they were adaptive responses to the environment</li>
+        <li>Some clients may identify with multiple styles in different relationships &mdash; this is normal</li>
+        <li>Be prepared for anger toward caregivers &mdash; hold space without fixing</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Relationship Timeline</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> Long paper or taped-together sheets, markers, stickers</p>
+      <ol>
+        <li>Create a timeline starting from earliest childhood to now. Mark key relationships: parents/caregivers, siblings, first friendships, first romantic relationship, significant partnerships, current relationships.</li>
+        <li>For each relationship, note: &ldquo;What did love feel like here? What did I have to do to receive love? What happened when I expressed a need?&rdquo;</li>
+        <li>Use colors to mark emotional qualities: warmth, safety, fear, loneliness, obligation, confusion.</li>
+        <li>Look for patterns: &ldquo;What themes repeat? What role do you play across relationships? Where do you see your attachment style show up?&rdquo;</li>
+        <li>Somatic check-in: &ldquo;As you look at this timeline, where does your body hold the most reaction?&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Love Template Reflection</h4>
+      <p>Think about your three most significant relationships (romantic or otherwise). For each one, write:</p>
+      <ul>
+        <li>What initially drew you to this person</li>
+        <li>What role you played in the relationship</li>
+        <li>How love was expressed (or withheld)</li>
+        <li>How the relationship echoes your earliest attachment experiences</li>
+      </ul>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What did I learn about love as a child? What do I wish I had learned instead? What kind of love do I want to learn now?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Teach attachment theory as a group with examples. Create individual timelines (these stay private unless members choose to share). Discuss as a group: &ldquo;How many of us see the same pattern repeating?&rdquo; Normalize the grief that arises. Close with grounding.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 6 -->
+  <section class="session">
+    <div class="session-number">Session 6</div>
+    <h2>Narcissistic Relationship Recovery: The Fog</h2>
+    <p class="session-theme">Emerging from the confusion and reclaiming your reality.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Provide psychoeducation on narcissistic relationship dynamics and trauma bonding</li>
+        <li>Use CBT for reality recalibration &mdash; separating what was real from what was manufactured</li>
+        <li>Validate the client&rsquo;s experience somatically &mdash; &ldquo;Your body always knew&rdquo;</li>
+        <li>Name the gaslighting effects and begin restoring trust in one&rsquo;s own perception</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>The fog: &ldquo;When you&rsquo;re in a narcissistic relationship, reality becomes distorted. What you saw, felt, and experienced was systematically denied, minimized, or twisted until you stopped trusting yourself.&rdquo;</li>
+        <li>Trauma bonding: &ldquo;The cycle of idealization, devaluation, and intermittent reinforcement creates a biochemical bond that is as powerful as any addiction. Leaving isn&rsquo;t about willpower &mdash; it&rsquo;s about neurochemistry.&rdquo;</li>
+        <li>Gaslighting effects: self-doubt, confusion, over-apologizing, difficulty making decisions, second-guessing every perception, feeling &ldquo;crazy&rdquo;</li>
+        <li>CBT reality check: &ldquo;Let&rsquo;s look at what actually happened &mdash; not their version, not the version you were told to believe &mdash; but what your body, your gut, your own eyes and ears witnessed.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Many clients still love the narcissistic partner or feel ambivalent &mdash; do not pathologize this; it&rsquo;s trauma bonding</li>
+        <li>Some clients may not identify their relationship as narcissistic &mdash; use descriptive language rather than diagnostic labels</li>
+        <li>This session can trigger acute grief, anger, or shame &mdash; pace carefully</li>
+        <li>Skip or modify this session if the client has not experienced narcissistic relationship dynamics</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Reality Recalibration</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>Create two columns: &ldquo;What they told me was true&rdquo; and &ldquo;What I actually experienced.&rdquo;</li>
+        <li>Help the client list specific instances where reality was distorted: &ldquo;They said I was too sensitive, but I was responding to real cruelty. They said no one would love me, but I am deeply lovable. They said it was my fault, but their behavior was a choice.&rdquo;</li>
+        <li>For each item, ask: &ldquo;What did your body tell you in that moment? Did you feel the truth in your gut, even when your mind was confused?&rdquo;</li>
+        <li>Somatic validation: &ldquo;Your body never lied to you. It was sending signals the whole time. We are going to practice trusting those signals again.&rdquo;</li>
+        <li>Close with a grounding statement: &ldquo;I know what I lived. My experience is real. I am not crazy.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>My Truth List</h4>
+      <p>Write a list of things you know to be true about your experience &mdash; things that were denied, minimized, or twisted. Start each statement with &ldquo;I know that...&rdquo;</p>
+      <p>When self-doubt creeps in, read this list aloud to yourself.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What did my body try to tell me that I wasn&rsquo;t allowed to listen to? What would it mean to trust myself again?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Provide psychoeducation on narcissistic dynamics and trauma bonding as a group. Create individual reality recalibration lists. If the group feels safe, invite members to share one &ldquo;I know that...&rdquo; statement. The collective witnessing of each other&rsquo;s truth is profoundly healing. Close with somatic grounding.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 7 -->
+  <section class="session">
+    <div class="session-number">Session 7</div>
+    <h2>Narcissistic Recovery: Anger &amp; Grief</h2>
+    <p class="session-theme">You are allowed to be angry. You are allowed to grieve. Both are part of taking yourself back.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Create space for healthy anger expression &mdash; a crucial step in narcissistic recovery</li>
+        <li>Process grief for the relationship you thought you had, the time lost, and the person you were before</li>
+        <li>Use expressive arts for safe anger and grief expression</li>
+        <li>Conduct IFS exile work to tend to the wounded parts</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Permission for anger: &ldquo;You were taught to suppress your anger. In the relationship, your anger was punished, dismissed, or turned against you. But anger is a healthy, protective emotion. It tells you that a boundary was crossed. You are allowed to feel it.&rdquo;</li>
+        <li>The grief is multilayered: grief for the relationship you hoped for, grief for the person you thought they were, grief for the parts of yourself you lost, grief for the time and energy spent</li>
+        <li>Anger and grief often cycle: &ldquo;Some days you&rsquo;ll feel furious. Other days, devastated. Some days, both at once. All of this is normal and necessary.&rdquo;</li>
+        <li>IFS: &ldquo;There are exile parts that carry the pain of what happened. And protectors that have been guarding them fiercely. Today, we gently tend to both.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Anger can be frightening for women who learned it wasn&rsquo;t safe &mdash; offer multiple expression modalities</li>
+        <li>Watch for the &ldquo;I should be over this by now&rdquo; narrative &mdash; challenge it with compassion</li>
+        <li>Some clients may need multiple sessions on anger and grief &mdash; honor the pace</li>
+        <li>Have grounding tools ready; this session can access deep pain</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Expressive Anger &amp; Grief</h3>
+      <span class="timing">35 minutes</span>
+      <p><strong>Materials:</strong> Large paper, paint (red, black, bold colors), brushes, music option, clay/playdough</p>
+      <ol>
+        <li>Offer the client a choice of expressive anger modalities:
+          <ul>
+            <li><strong>Painting:</strong> Use bold, aggressive strokes to paint the anger. No representation needed &mdash; just color, force, and movement.</li>
+            <li><strong>Clay:</strong> Squeeze, pound, tear, and reshape clay as an expression of anger.</li>
+            <li><strong>Movement:</strong> Stomping, pushing against a wall, shaking hands vigorously.</li>
+            <li><strong>Writing:</strong> An unsent letter to the narcissistic partner. No filter, no politeness.</li>
+          </ul>
+        </li>
+        <li>Allow 15 minutes of uninterrupted expression.</li>
+        <li>Transition to grief: &ldquo;Now, soften. What lives underneath the anger? What are you grieving?&rdquo;</li>
+        <li>If appropriate, allow the art to shift: overlay softer colors on the anger painting, reshape the clay into something tender, write a second letter to the self.</li>
+        <li>Close with somatic grounding and IFS: &ldquo;Thank the part that raged. Thank the part that grieves. Both are taking you home to yourself.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Anger &amp; Grief Journal</h4>
+      <p>This week, give yourself 10 minutes to sit with whatever emotion arises about the relationship. You might write, draw, or simply feel. Set a timer so the emotion has a container. When the timer ends, do one grounding activity (cold water on hands, feet on floor, safe place visualization).</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What am I most angry about? What am I most sad about? What do I need to grieve before I can move forward?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Offer the anger expression exercise with music playing (to create a safe container). Members work individually but share the space. After the exercise, invite voluntary sharing of the art (not the story). Close with a group grief acknowledgment: &ldquo;We honor what was lost. We honor what was survived. We honor what is being reclaimed.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 8 -->
+  <section class="session">
+    <div class="session-number">Session 8</div>
+    <h2>Attracting Emotionally Unavailable Partners</h2>
+    <p class="session-theme">Understanding why intensity feels like love &mdash; and learning the difference.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Use CBT to identify and challenge the pattern of attraction to emotionally unavailable partners</li>
+        <li>Distinguish between intensity and intimacy, chemistry and compatibility</li>
+        <li>Explore how the nervous system confuses activation with connection</li>
+        <li>Use IFS parts mapping to understand what draws the client to unavailability</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>The intensity trap: &ldquo;If love growing up was unpredictable, intermittent, or something you had to earn, then a steady, available partner can feel boring or &lsquo;wrong.&rsquo; Your nervous system is wired to interpret anxiety as attraction and unpredictability as passion.&rdquo;</li>
+        <li>The pattern: over-functioning to earn love, reading crumbs of attention as meaningful, confusing emotional labor with connection, feeling most alive when pursuing someone who pulls away</li>
+        <li>CBT: identify the core beliefs driving the pattern (&ldquo;I have to prove my worth,&rdquo; &ldquo;If I love hard enough, they&rsquo;ll change,&rdquo; &ldquo;I don&rsquo;t deserve consistent love&rdquo;)</li>
+        <li>Somatic lens: &ldquo;Notice the difference between a calm, warm feeling in your chest (safety) and a buzzy, anxious feeling in your stomach (activation). Your body knows the difference even when your heart doesn&rsquo;t.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Clients may feel ashamed of this pattern &mdash; normalize it as neurologically driven</li>
+        <li>False vulnerability from partners is a common trap &mdash; distinguish between genuine openness and performative emotional display</li>
+        <li>Some clients may be currently in a relationship with an unavailable partner &mdash; approach with sensitivity</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Intensity vs. Intimacy Map</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>Create two columns: &ldquo;Intensity (what feels like love but isn&rsquo;t)&rdquo; and &ldquo;Intimacy (what healthy love actually looks like).&rdquo;</li>
+        <li>Populate together:
+          <ul>
+            <li>Intensity: highs and lows, chasing, anxiety as excitement, grand gestures followed by withdrawal, feeling like you&rsquo;re never enough</li>
+            <li>Intimacy: consistency, calm presence, mutual vulnerability, repair after conflict, feeling seen without performing</li>
+          </ul>
+        </li>
+        <li>IFS parts mapping: &ldquo;Which part of you is drawn to intensity? What does it believe about love? Where did it learn this?&rdquo;</li>
+        <li>Somatic practice: recall a moment of intensity (notice body activation) vs. a moment of genuine safety (notice body settling). &ldquo;Your body knows the difference.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Relationship Pattern Audit</h4>
+      <p>Look at your last 3 significant relationships or dating experiences. For each one, write:</p>
+      <ul>
+        <li>Was the primary feeling intensity or intimacy?</li>
+        <li>Was this person consistently available or intermittently attentive?</li>
+        <li>Did I feel safe, or did I feel like I had to earn their love?</li>
+        <li>What body sensation did I associate with this person?</li>
+      </ul>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What would it feel like to be chosen by someone who doesn&rsquo;t make me work for it? Why does that thought feel uncomfortable?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create the intensity vs. intimacy map as a group brainstorm on a whiteboard. Discuss: &ldquo;How many of us confuse anxiety with chemistry?&rdquo; Practice the somatic body scan (intensity vs. safety) as a group. Pair members for a brief check-in: &ldquo;What do you want love to feel like going forward?&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 9 -->
+  <section class="session">
+    <div class="session-number">Session 9</div>
+    <h2>Boundaries: Understanding Why They Feel Impossible</h2>
+    <p class="session-theme">You don&rsquo;t struggle with boundaries because you&rsquo;re weak. You struggle because saying no once meant losing love.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore why boundaries feel terrifying from a nervous system perspective</li>
+        <li>Trace boundary difficulty back to family system origins</li>
+        <li>Practice somatic boundary exercises</li>
+        <li>Challenge CBT beliefs about what boundaries mean (&ldquo;I&rsquo;m selfish,&rdquo; &ldquo;They&rsquo;ll leave,&rdquo; &ldquo;I&rsquo;m being mean&rdquo;)</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Why boundaries feel impossible: &ldquo;If saying no as a child led to punishment, withdrawal of love, or escalation, your nervous system learned that boundaries are dangerous. Setting a boundary now can feel like you&rsquo;re risking everything &mdash; even when you&rsquo;re an adult who can survive someone&rsquo;s disappointment.&rdquo;</li>
+        <li>Family system origins: enmeshment (&ldquo;we don&rsquo;t have secrets&rdquo;), parentification (you took care of everyone else), role reversal (you became the adult), emotional incest (you were a parent&rsquo;s emotional partner)</li>
+        <li>CBT beliefs about boundaries: &ldquo;Boundaries are selfish&rdquo; (reframe: boundaries are self-respect). &ldquo;If I say no, they&rsquo;ll leave&rdquo; (reframe: if they leave because of a boundary, they were accessing you, not loving you). &ldquo;I&rsquo;m being mean&rdquo; (reframe: you are being honest)</li>
+        <li>Somatic reality: &ldquo;When you think about setting a boundary, what happens in your body? That fear, that guilt, that urge to take it back &mdash; that&rsquo;s your nervous system remembering a time when boundaries weren&rsquo;t safe.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>This is one of the most important sessions in the curriculum &mdash; spend extra time here if needed</li>
+        <li>Clients who fawn will have the hardest time with boundaries &mdash; connect this back to Session 4</li>
+        <li>Boundaries are a practice, not a one-time event &mdash; set realistic expectations</li>
+        <li>The guilt after setting a boundary is the fawn response protesting &mdash; normalize this</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Somatic Boundary Practice</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>Physical boundary exercise: have the client stand. Stand facing them at a comfortable distance. Slowly walk toward them and ask: &ldquo;Tell me when to stop. Notice what happens in your body as I get closer.&rdquo; (Use chairs if preferred.)</li>
+        <li>Debrief: &ldquo;Where did you feel the boundary? Was it easy or hard to say stop? What did your body do?&rdquo;</li>
+        <li>Verbal boundary practice: offer three scenarios and practice saying a boundary aloud:
+          <ul>
+            <li>&ldquo;I need some time to think about that before I give you an answer.&rdquo;</li>
+            <li>&ldquo;I love you, and I&rsquo;m not available for that conversation right now.&rdquo;</li>
+            <li>&ldquo;No.&rdquo; (Just no. Notice what it feels like.)</li>
+          </ul>
+        </li>
+        <li>Somatic tracking: &ldquo;After saying each boundary, what do you notice in your body? Guilt? Relief? Fear? All of the above?&rdquo;</li>
+        <li>IFS: &ldquo;Which part is most afraid of boundaries? What does it need to hear?&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Boundary Beliefs Inventory</h4>
+      <p>Write down your top 3 beliefs about boundaries (e.g., &ldquo;Boundaries are mean,&rdquo; &ldquo;Good people don&rsquo;t say no,&rdquo; &ldquo;If I have boundaries, I&rsquo;ll end up alone&rdquo;). For each one, write where you learned it and one piece of evidence that challenges it.</p>
+      <p>This week, practice one micro-boundary: pause before saying yes, say &ldquo;let me think about it,&rdquo; or decline one small request.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What was I taught about boundaries growing up? Who benefited from me not having them? What becomes possible when I do?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Discuss boundary beliefs as a group and normalize the difficulty. Practice the somatic boundary exercise in pairs (one walks toward, the other says stop). Role-play verbal boundaries together. Close with: &ldquo;A boundary is not a wall. It is a bridge with a gate that you control.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 10 -->
+  <section class="session">
+    <div class="session-number">Session 10</div>
+    <h2>Boundaries: Practice &amp; Integration</h2>
+    <p class="session-theme">From understanding to embodiment &mdash; making boundaries feel possible in your body, not just your mind.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Practice small, supported boundary-setting with somatic anchoring</li>
+        <li>Process guilt, fear, and the fawn response that follow boundary-setting</li>
+        <li>Use IFS to work with the guilt that accompanies healthy boundaries</li>
+        <li>Role-play real-life boundary scenarios</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>The guilt is normal: &ldquo;If you feel guilty after setting a boundary, it doesn&rsquo;t mean you did something wrong. It means your nervous system is doing what it learned to do &mdash; alerting you that something &lsquo;dangerous&rsquo; just happened. The guilt is the old program. It will soften with practice.&rdquo;</li>
+        <li>Boundary categories: time boundaries, emotional boundaries, physical boundaries, energy boundaries, conversational boundaries</li>
+        <li>The difference between a boundary and a wall: &ldquo;Boundaries are flexible and relational. Walls are rigid and isolating. We&rsquo;re building boundaries, not walls.&rdquo;</li>
+        <li>Somatic anchoring before, during, and after: feet on the floor before you speak, hand on your belly while you set it, slow exhale after</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Review the client&rsquo;s micro-boundary practice from the take-home &mdash; celebrate any attempt, no matter how small</li>
+        <li>Some clients will have tried and experienced backlash &mdash; process the relational impact</li>
+        <li>The IFS guilt work is crucial &mdash; the guilty part is often a young exile or a fawn protector</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Boundary Role-Play &amp; Somatic Anchoring</h3>
+      <span class="timing">30 minutes</span>
+      <ol>
+        <li>Identify 2&ndash;3 real-life situations where the client needs to set a boundary (with a family member, partner, friend, coworker).</li>
+        <li>For each situation, craft a boundary statement together. Keep it simple, direct, and compassionate.</li>
+        <li>Role-play: the therapist plays the other person (or the client rehearses alone). Before speaking, ground: feet on floor, one slow breath.</li>
+        <li>After each boundary, track the body: &ldquo;What do you notice? Where is the guilt? Where is the relief?&rdquo;</li>
+        <li>IFS: &ldquo;Can you find the part that feels guilty? What does it believe? What does it need to hear from Self?&rdquo;</li>
+        <li>Practice the &ldquo;after boundary&rdquo; self-soothing: bilateral tapping, hand on heart, affirmation: &ldquo;I can be loving and have boundaries. Both are true.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Boundary Practice Log</h4>
+      <p>This week, set one intentional boundary (it can be small). Write down:</p>
+      <ul>
+        <li>The situation</li>
+        <li>What I said</li>
+        <li>What I felt in my body before, during, and after</li>
+        <li>What the other person&rsquo;s response was</li>
+        <li>What I need to remind myself when the guilt arrives</li>
+      </ul>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What becomes possible in my relationships when I am honest about my needs? What might I gain by risking someone&rsquo;s discomfort?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Practice boundary role-play in pairs: one member plays themselves, the other plays the person they need to set a boundary with. Switch. Debrief as a group: &ldquo;What was that like? What did you notice in your body?&rdquo; Normalize the guilt and the relief. Close with a group affirmation: &ldquo;I am allowed to take up space.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 11 -->
+  <section class="session">
+    <div class="session-number">Session 11</div>
+    <h2>Family Systems &amp; Generational Patterns</h2>
+    <p class="session-theme">You are not just healing your own wounds &mdash; you are breaking a chain.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore family system dynamics: enmeshment, parentification, scapegoating, golden child</li>
+        <li>Create a family mapping exercise to visualize relational patterns</li>
+        <li>Identify generational patterns and inherited beliefs about love, worth, and relationships</li>
+        <li>Process grief for the family you needed vs. the family you had</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Family roles: &ldquo;In dysfunctional family systems, children are assigned roles. The caretaker, the peacemaker, the scapegoat, the invisible child, the golden child. These roles served the family system &mdash; but they may have cost you your authentic self.&rdquo;</li>
+        <li>Enmeshment: &ldquo;When boundaries didn&rsquo;t exist in your family, you learned that your feelings and your parent&rsquo;s feelings were the same thing. Separating feels like betrayal.&rdquo;</li>
+        <li>Parentification: &ldquo;If you were the emotional caretaker of your parent, you learned that your job was to manage others&rsquo; emotions. Your own needs became invisible &mdash; even to yourself.&rdquo;</li>
+        <li>Generational transmission: &ldquo;Your parents likely learned their patterns from their parents. This isn&rsquo;t about blame &mdash; it&rsquo;s about awareness. You are the one who gets to break the pattern.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>This session can trigger intense loyalty conflicts (&ldquo;I love my parents even though...&rdquo;) &mdash; hold both truths</li>
+        <li>Some clients may not be ready to see their family system clearly &mdash; respect the pace</li>
+        <li>Grief for the childhood that should have been is one of the deepest griefs &mdash; allow space for it</li>
+        <li>Use IFS to work with the loyal protector that resists &ldquo;blaming&rdquo; the family</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Family Collage &amp; Role Mapping</h3>
+      <span class="timing">35 minutes</span>
+      <p><strong>Materials:</strong> Large paper, magazines, markers, glue, scissors</p>
+      <ol>
+        <li>Create a visual map of the family system. Place family members (as images, words, or symbols) on the page. Show proximity, distance, alliances, and conflicts through placement.</li>
+        <li>Label each person&rsquo;s role in the family system: caretaker, peacemaker, emotional dumping ground, invisible child, etc.</li>
+        <li>Draw arrows showing the flow of emotional labor: who took care of whom? Where were boundaries absent?</li>
+        <li>Identify generational patterns: &ldquo;Did your mother play a similar role in her family? What about her mother?&rdquo;</li>
+        <li>Somatic check-in: &ldquo;As you look at this map, what do you feel? Where does your body hold this family?&rdquo;</li>
+        <li>Close with a declaration: &ldquo;I see the pattern. I did not create it. And I am choosing something different.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Generational Pattern Reflection</h4>
+      <p>Think about the women in your family (mother, grandmothers, aunts). For each one, consider:</p>
+      <ul>
+        <li>What role did she play in her family?</li>
+        <li>What did she sacrifice for love or belonging?</li>
+        <li>What pattern did she pass down?</li>
+        <li>What pattern are you choosing to break?</li>
+      </ul>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What did I inherit from my family that I want to keep? What did I inherit that I&rsquo;m ready to release? What do I want to pass on instead?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create individual family maps. Discuss family roles as a group: &ldquo;How many of us were the caretaker? The peacemaker?&rdquo; The shared experience of parentification and enmeshment is powerfully normalizing. Close with: &ldquo;We are the generation that heals.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 12 -->
+  <section class="session">
+    <div class="session-number">Session 12</div>
+    <h2>Somatic Trauma Processing</h2>
+    <p class="session-theme">The body remembers what the mind has tried to forget. This is where we listen.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Engage in deeper somatic trauma processing: pendulation, titration, and discharge</li>
+        <li>Build the client&rsquo;s capacity to be with sensation without becoming overwhelmed</li>
+        <li>Process stored body memories related to trauma and relational wounding</li>
+        <li>Strengthen somatic resources for ongoing healing</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Pendulation: &ldquo;Healing isn&rsquo;t about diving into the pain and staying there. It&rsquo;s about moving gently between discomfort and resource &mdash; touching the hard thing, then returning to safety. Back and forth, like a pendulum.&rdquo;</li>
+        <li>Titration: &ldquo;We take the trauma in small doses &mdash; not because you can&rsquo;t handle it, but because your nervous system heals better with gentle, paced exposure rather than flooding.&rdquo;</li>
+        <li>Discharge: &ldquo;When trapped survival energy is released, the body may shake, tremble, sigh deeply, yawn, or feel waves of heat or cold. This is not distress &mdash; it&rsquo;s completion. Your body is finishing what it couldn&rsquo;t finish before.&rdquo;</li>
+        <li>Resource building: &ldquo;Before we go deeper, we make sure you have a strong foundation. Your safe place, your grounding tools, your somatic anchors &mdash; these are your lifeline.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>This session requires clinical judgment about readiness &mdash; the client should have established somatic resources from earlier sessions</li>
+        <li>Watch for signs of dissociation and be ready to bring the client back to the present</li>
+        <li>Do not push past the client&rsquo;s window of tolerance &mdash; less is more in somatic processing</li>
+        <li>Some clients may not be ready for this level of processing &mdash; offer a gentler alternative</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Guided Somatic Processing</h3>
+      <span class="timing">30 minutes</span>
+      <ol>
+        <li><strong>Resource anchor (5 min):</strong> Begin with the safe place visualization. Establish grounding. Ensure the client feels stable.</li>
+        <li><strong>Tracking (5 min):</strong> &ldquo;Scan your body slowly. Where do you notice sensation today? It might be tension, tightness, heaviness, numbness, or even a slight buzz. Just notice without trying to change it.&rdquo;</li>
+        <li><strong>Titration (10 min):</strong> Gently approach one area of sensation. &ldquo;Stay with it for just a moment. What happens when you give it attention? Does it change, move, intensify, or soften?&rdquo; If intensity rises, return to the safe place. Then approach again. Pendulate.</li>
+        <li><strong>Discharge (5 min):</strong> Watch for natural discharge: sighing, yawning, trembling, heat, tears. Normalize: &ldquo;That&rsquo;s your body releasing. Let it happen.&rdquo;</li>
+        <li><strong>Integration (5 min):</strong> Return to grounding. Feet on floor. Slow breath. &ldquo;You are here. You are safe. That was then. This is now.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Gentle Body Check-In</h4>
+      <p>This week, practice one brief body scan daily (5 minutes). Simply notice what is present without trying to fix or process. If you encounter intensity, return to your safe place or grounding anchor. This is about building the muscle of awareness, not diving into processing on your own.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What is my body trying to tell me? Where does it hold the stories I haven&rsquo;t been able to speak? What would it feel like to let my body lead the healing?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Conduct a guided group body scan and resource-building exercise. Do not do deep somatic processing in a group setting. Focus on tracking, resourcing, and grounding. Normalize the body&rsquo;s responses. Close with a collective bilateral self-hug.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 13 -->
+  <section class="session">
+    <div class="session-number">Session 13</div>
+    <h2>The Inner Critic &amp; Internalized Voices</h2>
+    <p class="session-theme">The cruelest voice in your head isn&rsquo;t yours. It was planted there &mdash; and it can be uprooted.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Use CBT cognitive restructuring to challenge the inner critic&rsquo;s messages</li>
+        <li>Use IFS to unburden the critic &mdash; understanding whose voice it really is</li>
+        <li>Create an expressive arts dialogue with the critic</li>
+        <li>Build a compassionate counter-voice</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>The inner critic&rsquo;s origin: &ldquo;The voice that tells you you&rsquo;re not enough, too much, unlovable, or fundamentally flawed &mdash; that voice was not born with you. It was given to you by someone who couldn&rsquo;t hold your wholeness.&rdquo;</li>
+        <li>CBT: identify the critic&rsquo;s most common messages. Test them against evidence. Challenge them with balanced, compassionate alternatives.</li>
+        <li>IFS: &ldquo;The inner critic is a protector part. It internalized the critical voice to try to keep you safe: &lsquo;If I criticize you first, maybe the world won&rsquo;t hurt you.&rsquo; It meant well, but it&rsquo;s been working overtime.&rdquo;</li>
+        <li>Unburdening: &ldquo;We can help this part let go of the role it&rsquo;s been carrying. It doesn&rsquo;t have to be the critic forever. It can become something else &mdash; a protector, a truth-teller, a mentor.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>The inner critic is often the most entrenched part &mdash; it won&rsquo;t soften in one session</li>
+        <li>Some clients are so fused with the critic they can&rsquo;t separate from it &mdash; IFS helps create distance</li>
+        <li>Watch for the critic activating during the session itself (&ldquo;I&rsquo;m not doing this right&rdquo;)</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Dialogue with the Critic</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> Two different colored pens, paper, or two chairs</p>
+      <ol>
+        <li>Externalize the critic: &ldquo;If your inner critic were a character, what would it look like? What tone of voice does it use? Whose voice does it sound like?&rdquo;</li>
+        <li>Written dialogue: using two colors, write a conversation between the critic and the Self. The critic speaks in one color, Self responds in another.
+          <ul>
+            <li>Critic: &ldquo;You&rsquo;re not enough.&rdquo;</li>
+            <li>Self: &ldquo;I hear you. I understand why you believe that. But I am enough, even when it doesn&rsquo;t feel like it.&rdquo;</li>
+          </ul>
+        </li>
+        <li>Continue for 5&ndash;7 exchanges. Notice what shifts.</li>
+        <li>Somatic tracking: &ldquo;What happens in your body when the critic speaks? What happens when Self responds?&rdquo;</li>
+        <li>Close: &ldquo;Thank you, critic, for trying to protect me. I see you. And I&rsquo;m building a new voice now.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Critic Tracking &amp; Compassionate Counter-Voice</h4>
+      <p>This week, when you hear the inner critic, pause and write down what it says. Then write a compassionate response &mdash; what would a wise, loving version of you say back?</p>
+      <p>Practice one daily self-compassion statement: &ldquo;I am doing my best. My best is enough.&rdquo;</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;Whose voice is my inner critic, really? What would it feel like to replace that voice with my own?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Write individual dialogues with the critic. If the group feels safe, invite members to read one exchange aloud. The group can offer: &ldquo;What would you say to her critic?&rdquo; &mdash; hearing others defend you is often more powerful than defending yourself. Close with a group affirmation circle.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 14 -->
+  <section class="session">
+    <div class="session-number">Session 14</div>
+    <h2>High-Functioning Anxiety &amp; Hypervigilance</h2>
+    <p class="session-theme">You are not anxious because you&rsquo;re broken. You are anxious because you once had to be.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore high-functioning anxiety as a trauma adaptation</li>
+        <li>Address perfectionism, imposter syndrome, and hypervigilance</li>
+        <li>Use CBT to challenge anxiety-driven thought patterns</li>
+        <li>Practice somatic release of stored anxiety</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>High-functioning anxiety as a trauma response: &ldquo;If your environment was unpredictable, you learned to anticipate everything. You became the most prepared, most organized, most on top of things person in the room &mdash; not because you love planning, but because failing to anticipate once meant something terrible.&rdquo;</li>
+        <li>Hypervigilance: &ldquo;You scan every room for danger. You read every tone of voice. You notice every micro-expression. This isn&rsquo;t anxiety disorder &mdash; it&rsquo;s a surveillance system your nervous system built to keep you safe.&rdquo;</li>
+        <li>Perfectionism and imposter syndrome: &ldquo;If I&rsquo;m perfect, no one can criticize me. If no one criticizes me, I&rsquo;m safe.&rdquo; But perfection is an impossible standard, and the imposter feeling is the gap between who you perform and who you are.</li>
+        <li>CBT: &ldquo;What is the thought? What is the evidence? What is the cost of this level of vigilance? What would be &lsquo;good enough&rsquo;?&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Clients may not want to let go of the anxiety &mdash; it feels productive. Honor this while exploring the cost.</li>
+        <li>Hypervigilance is exhausting but often invisible to others &mdash; validate the invisible labor</li>
+        <li>IFS: the vigilant part is one of the hardest-working protectors &mdash; it needs tremendous gratitude before it can rest</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Releasing the Vigilant Part</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>IFS: invite the client to notice the vigilant/anxious part. &ldquo;Where does it live in your body? What does it feel like? How long has it been working?&rdquo;</li>
+        <li>Thank it: &ldquo;This part has been standing guard for years. Maybe decades. It has never taken a break. Let&rsquo;s acknowledge how exhausted it must be.&rdquo;</li>
+        <li>Ask: &ldquo;What is this part afraid will happen if it lets down its guard? What does it need to feel safe enough to rest?&rdquo;</li>
+        <li>Offer the part an experiment: &ldquo;For the next 2 minutes, you can rest. Self is here. Nothing bad will happen in the next 2 minutes.&rdquo;</li>
+        <li>Somatic release: let the body soften. Jaw unclenches. Shoulders drop. Eyes soften. Breath deepens. Notice what happens.</li>
+        <li>Debrief: &ldquo;What was that like? Was it possible? What did you notice?&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Anxiety Inventory &amp; Rest Practice</h4>
+      <p>Write down your top 5 anxiety-driven behaviors (over-preparing, checking, controlling, anticipating worst-case scenarios). For each one, write: &ldquo;What am I afraid will happen if I stop?&rdquo;</p>
+      <p>Practice: let one thing be imperfect this week. Let one text go unsent. Let one plan stay unmade. Notice what happens (usually, nothing).</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What would my life look like if I didn&rsquo;t have to be on guard all the time? What would I do with all that freed-up energy?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Discuss high-functioning anxiety as a group &mdash; ask: &ldquo;How many of you are the person everyone thinks has it all together?&rdquo; Conduct the IFS exercise as a guided visualization. Practice the 2-minute rest together. Challenge the group to let one thing be imperfect this week and report back.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 15 -->
+  <section class="session">
+    <div class="session-number">Session 15</div>
+    <h2>Rebuilding: Earned Secure Attachment</h2>
+    <p class="session-theme">You were not born with secure attachment &mdash; but you can build it. It is earned, and you are earning it.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore what healthy relationships look and feel like &mdash; in the body, not just the mind</li>
+        <li>Identify green flags and what genuine safety feels like somatically</li>
+        <li>Practice relational skills: repair, vulnerability, presence</li>
+        <li>Create an expressive arts vision for future relationships</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Earned secure attachment: &ldquo;You may not have received secure attachment as a child, but through this work &mdash; through therapy, through awareness, through practicing new patterns &mdash; you are earning it. Secure attachment is not a gift you&rsquo;re born with. It&rsquo;s a skill you can build.&rdquo;</li>
+        <li>Green flags: consistency, accountability, repair after rupture, respect for your boundaries, curiosity about your inner world, presence without performance, feeling calm (not just excited) in their company</li>
+        <li>Somatic: &ldquo;Healthy love doesn&rsquo;t feel like anxiety. It feels like a warm, steady exhale. Your body will tell you the difference &mdash; we&rsquo;ve been practicing listening.&rdquo;</li>
+        <li>Relational skills: how to have difficult conversations, how to repair after conflict, how to be vulnerable without over-sharing, how to receive care without deflecting</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Some clients may grieve that they have to &ldquo;earn&rdquo; what others received freely &mdash; hold space for this</li>
+        <li>Healthy love may initially feel boring or &ldquo;wrong&rdquo; because it&rsquo;s unfamiliar &mdash; normalize this</li>
+        <li>This session is forward-looking and hopeful &mdash; let it be lighter in tone</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Vision for My Relational Future</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> Magazines, paper, glue, markers, colored pencils</p>
+      <ol>
+        <li>Create a vision collage or drawing of the relationships you want in your life. Not just romantic &mdash; friendships, family dynamics, community, the relationship with yourself.</li>
+        <li>Include: how you want to feel in relationships, the qualities you want in others, the version of you that shows up, the boundaries that are in place.</li>
+        <li>Practice one relational skill: the therapist offers a vulnerability prompt (&ldquo;I feel scared when...&rdquo;) and the client practices responding from Self: present, curious, compassionate.</li>
+        <li>Somatic check-in: &ldquo;When you look at this vision, what does your body do? Does it settle? Expand? Soften?&rdquo;</li>
+        <li>Name one step toward this vision that you can take this week.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Green Flags &amp; Relational Vision</h4>
+      <p>Write a list of your non-negotiable green flags &mdash; the qualities and behaviors you now know are essential for healthy relationships. Then write a letter to your future partner, friend, or community &mdash; describing the love you are now capable of both giving and receiving.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What kind of partner/friend am I becoming through this healing? What kind of love am I now capable of giving and receiving?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create individual vision collages. Share one quality from each person&rsquo;s vision board. Practice vulnerability prompts in pairs. Close with: &ldquo;The love you are building starts in this room &mdash; with the safety, honesty, and boundaries you are practicing together.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 16 -->
+  <section class="session">
+    <div class="session-number">Session 16</div>
+    <h2>Integration &amp; Closing</h2>
+    <p class="session-theme">You are not the same woman who walked through that door. Honor her &mdash; and honor who you are becoming.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Reflect on the full arc of treatment and honor the transformation</li>
+        <li>Create a culminating expressive arts project</li>
+        <li>Conduct a parts check-in to witness internal shifts</li>
+        <li>Discuss continued care and create a resource toolkit</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Reflect: &ldquo;When you arrived at Session 1, what did you believe about yourself, about love, about your worth? What do you believe now?&rdquo;</li>
+        <li>IFS parts check-in: &ldquo;Let&rsquo;s visit the parts we met: the fawn, the inner critic, the hypervigilant protector, the exiles. How are they now? Have they softened? Have they found new roles?&rdquo;</li>
+        <li>Name the growth: &ldquo;You learned to understand your nervous system, name your patterns, set boundaries, process grief and anger, and envision relationships built on safety instead of survival. That is extraordinary.&rdquo;</li>
+        <li>Next steps: ongoing therapy, the Self-Discovery Intensive, Soul Nourishment coaching, support groups, periodic check-ins, or stepping to maintenance</li>
+        <li>Leave the door open: &ldquo;Healing is not linear. There will be hard days. You are always welcome back.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Endings can activate attachment wounds &mdash; this is a therapeutic opportunity</li>
+        <li>Some clients may need continued treatment; this curriculum is a foundation, not a ceiling</li>
+        <li>The creative project should feel celebratory and honoring</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Reclaiming My Story</h3>
+      <span class="timing">35 minutes</span>
+      <p><strong>Materials:</strong> All available art supplies, special paper or canvas, envelopes</p>
+      <ol>
+        <li>Invite the client to create a piece that represents their healing journey. Any medium. Any form. Suggested prompts:
+          <ul>
+            <li>&ldquo;Create a before and after &mdash; not of your life circumstances, but of your inner landscape.&rdquo;</li>
+            <li>&ldquo;Create something that represents what you have reclaimed.&rdquo;</li>
+            <li>&ldquo;Write a letter from your present self to the woman who walked in on day one.&rdquo;</li>
+          </ul>
+        </li>
+        <li>Allow 20 minutes for creation.</li>
+        <li>Witness: &ldquo;Tell me about what you made. What does it mean to you?&rdquo;</li>
+        <li>Somatic celebration: hand on heart. Slow breath. &ldquo;You showed up. Again and again. For yourself. That is the most radical act of love.&rdquo;</li>
+        <li>Close with a moment of silence and gratitude.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Three Commitments to My Healing Self</h4>
+      <p>Write down three commitments for the next chapter:</p>
+      <ol>
+        <li>One boundary I will continue to honor</li>
+        <li>One somatic practice I will keep using</li>
+        <li>One truth about myself that I will not let anyone take from me</li>
+      </ol>
+      <p><strong>Final Journaling Prompt:</strong> &ldquo;If I could go back to the beginning and tell myself one thing about this journey, what would it be? What does the woman I am becoming want me to know?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create individual projects and host a group gallery or reading. After each share, the group offers one word of witnessing. Create a closing ritual: each member names one thing they are reclaiming. If the group created artwork throughout the curriculum, display it as a gallery of transformation. Exchange something small &mdash; a written affirmation, a stone, a bead &mdash; as a reminder of what was built together. Close with a collective breath and a moment of silence for every woman who chose to heal.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer-doc">
+  <p><strong>Trauma &amp; Relationships Curriculum</strong></p>
+  <p>Created by Alynne Davis, MA, LCMHC &bull; Alynne Davis Expressive Arts Counseling</p>
+  <p>Integrating CBT, Expressive Arts Therapy, Somatic Experiencing &amp; IFS</p>
+  <p>&copy; 2026 Alynne Davis. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

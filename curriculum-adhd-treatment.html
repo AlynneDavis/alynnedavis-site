@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHD Treatment Curriculum | Alynne Davis, LCMHC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #faf8f5;
+      --color-bg-warm: #f5f0ea;
+      --color-bg-accent: #ede6dc;
+      --color-text: #3a3330;
+      --color-text-light: #6b5f56;
+      --color-heading: #2c2420;
+      --color-gold: #b8935a;
+      --color-gold-light: #d4b98a;
+      --color-gold-dark: #96773e;
+      --color-sage: #8a9a7b;
+      --color-sage-light: #c5d1bb;
+      --color-cream: #f9f5ef;
+      --color-white: #ffffff;
+      --color-border: #e4ddd4;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.7; }
+    h1, h2, h3, h4, h5 { font-family: var(--font-display); color: var(--color-heading); line-height: 1.25; font-weight: 500; }
+
+    .curriculum-header {
+      background: linear-gradient(135deg, var(--color-bg-warm), var(--color-bg-accent));
+      padding: 60px 40px;
+      text-align: center;
+      border-bottom: 3px solid var(--color-gold);
+    }
+    .curriculum-header h1 { font-size: 2.6rem; margin-bottom: 10px; }
+    .curriculum-header .subtitle { font-size: 1.15rem; color: var(--color-text-light); font-style: italic; font-family: var(--font-display); }
+    .curriculum-header .meta { margin-top: 20px; font-size: 0.9rem; color: var(--color-text-light); }
+    .curriculum-header .meta span { display: inline-block; margin: 0 12px; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 30px; }
+
+    .overview { padding: 40px 0; border-bottom: 1px solid var(--color-border); }
+    .overview h2 { font-size: 1.8rem; margin-bottom: 16px; color: var(--color-gold-dark); }
+    .overview p { margin-bottom: 12px; }
+
+    .modality-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+    .modality-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+    }
+    .tag-cbt { background: #e8d5b7; color: #6b4e2a; }
+    .tag-ea { background: #d4c5e2; color: #4a3660; }
+    .tag-se { background: #c5d1bb; color: #3d5030; }
+    .tag-ifs { background: #bdd8e0; color: #2a5060; }
+
+    .session {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--color-border);
+      page-break-inside: avoid;
+    }
+    .session:last-child { border-bottom: none; }
+    .session-number {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .session h2 { font-size: 1.9rem; margin-bottom: 8px; }
+    .session-theme {
+      font-style: italic;
+      color: var(--color-text-light);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+    .session-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+
+    .section-block { margin-bottom: 28px; }
+    .section-block h3 {
+      font-size: 1.25rem;
+      color: var(--color-gold-dark);
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .section-block h4 { font-size: 1.05rem; color: var(--color-heading); margin: 14px 0 8px; }
+    .section-block ul, .section-block ol { padding-left: 24px; margin-bottom: 12px; }
+    .section-block li { margin-bottom: 6px; }
+    .section-block p { margin-bottom: 10px; }
+
+    .therapist-guide { background: var(--color-bg-warm); padding: 20px 24px; border-radius: 8px; border-left: 4px solid var(--color-gold); }
+    .exercise-block { background: var(--color-white); padding: 20px 24px; border-radius: 8px; border: 1px solid var(--color-border); }
+    .takehome-block { background: #f0f4ed; padding: 20px 24px; border-radius: 8px; border-left: 4px solid var(--color-sage); }
+    .group-block { background: #eef3f8; padding: 16px 20px; border-radius: 8px; border-left: 4px solid #7a9ab5; font-size: 0.92rem; }
+
+    .timing { display: inline-block; background: var(--color-gold-light); color: var(--color-white); padding: 2px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; margin-bottom: 10px; }
+
+    .footer-doc {
+      text-align: center;
+      padding: 40px;
+      color: var(--color-text-light);
+      font-size: 0.85rem;
+      border-top: 2px solid var(--color-gold);
+      margin-top: 40px;
+    }
+
+    @media print {
+      body { font-size: 11pt; }
+      .curriculum-header { padding: 30px 20px; }
+      .session { page-break-inside: avoid; }
+      .container { max-width: 100%; padding: 0 20px; }
+    }
+    @media (max-width: 600px) {
+      .curriculum-header { padding: 40px 20px; }
+      .curriculum-header h1 { font-size: 2rem; }
+      .modality-legend { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="curriculum-header">
+  <h1>ADHD Treatment Curriculum</h1>
+  <p class="subtitle">A Holistic, Nervous System&ndash;Centered Guide for Women</p>
+  <div class="meta">
+    <span>12 Sessions</span> &middot;
+    <span>Alynne Davis, MA, LCMHC</span> &middot;
+    <span>Individual &amp; Group Adaptable</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <section class="overview">
+    <h2>Curriculum Overview</h2>
+    <p>This 12-session curriculum offers a holistic, trauma-informed approach to ADHD treatment designed specifically for women. It integrates Cognitive Behavioral Therapy (CBT), Expressive Arts Therapy, Somatic Experiencing, and Internal Family Systems (IFS) to address the full experience of ADHD &mdash; not just attention and focus, but emotional dysregulation, masking, burnout, identity, relationships, and the nervous system patterns beneath it all.</p>
+    <p>Each session includes a therapist guide with clinical talking points, an in-session exercise with step-by-step instructions, a client take-home activity, and group adaptation notes. Sessions are designed to honor the ADHD brain rather than fix it.</p>
+
+    <h3 style="margin-top: 24px; font-size: 1.15rem; color: var(--color-gold-dark);">Modality Key</h3>
+    <div class="modality-legend">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+    </div>
+  </section>
+
+  <!-- SESSION 1 -->
+  <section class="session">
+    <div class="session-number">Session 1</div>
+    <h2>Welcome &amp; Understanding Your ADHD Brain</h2>
+    <p class="session-theme">You are not broken. Your brain just works differently &mdash; and that is worth understanding.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Establish rapport and create a safe, non-judgmental space for ADHD exploration</li>
+        <li>Provide psychoeducation on ADHD in women &mdash; especially late diagnosis</li>
+        <li>Validate the client&rsquo;s experience and challenge the narrative of personal failure</li>
+        <li>Assess current nervous system baseline and daily functioning</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Many women with ADHD spend decades believing they are lazy, too sensitive, or &ldquo;not trying hard enough.&rdquo; Name this pattern and externalize it: &ldquo;That&rsquo;s not who you are. That&rsquo;s what an undiagnosed brain difference looks like in a world not designed for it.&rdquo;</li>
+        <li>Explain why ADHD is often missed in women: inattentive presentation, masking, compensatory strategies, overlap with anxiety and depression</li>
+        <li>ADHD is not just about attention &mdash; it affects emotional regulation, time perception, energy management, sensory processing, and relationships</li>
+        <li>Introduce the idea that treatment is about building a life that works with the ADHD brain, not against it</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Late-diagnosed women often carry significant grief, anger, or relief &mdash; hold space for all of it</li>
+        <li>Watch for the &ldquo;but I&rsquo;m not that bad&rdquo; minimization &mdash; many women have been dismissed by providers before</li>
+        <li>Some clients may not have a formal diagnosis; validate their experience regardless</li>
+        <li>Conduct a somatic baseline: &ldquo;Where is your nervous system right now? Buzzy? Scattered? Flat? Wired?&rdquo;</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: ADHD Timeline &mdash; Looking Back with New Eyes</h3>
+      <span class="timing">20 minutes</span>
+      <ol>
+        <li>Invite the client to create a simple timeline of their life, marking key moments where ADHD may have been present &mdash; even before they had a name for it.</li>
+        <li>Prompts: &ldquo;When did you first feel different from others? When did school, work, or relationships feel harder than they should? When were you told you weren&rsquo;t living up to your potential?&rdquo;</li>
+        <li>After completing the timeline, revisit each moment through the ADHD lens: &ldquo;What if this wasn&rsquo;t a character flaw? What if your brain was simply working differently, and no one knew?&rdquo;</li>
+        <li>Somatic check-in: &ldquo;As you look at this timeline, what happens in your body? Is there grief? Relief? Anger? All of the above?&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>ADHD Self-Discovery Journal</h4>
+      <p>This week, begin noticing moments in your daily life where ADHD shows up &mdash; not just the struggles, but the strengths. Write down:</p>
+      <ul>
+        <li>One moment where ADHD made something harder</li>
+        <li>One moment where your ADHD brain did something amazing (creativity, hyperfocus, spontaneity, empathy)</li>
+        <li>One thing you now understand differently about yourself</li>
+      </ul>
+      <p><strong>Journaling Prompt:</strong> &ldquo;If I had known about ADHD earlier, what might have been different? What do I want to do with this knowledge now?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Begin with a group check-in: each member shares one word about how they feel arriving today. Provide ADHD psychoeducation as a mini-lecture with interactive elements (ask the group to raise hands or nod if they relate). Replace the individual timeline with a group exercise: &ldquo;What&rsquo;s one thing you wish people understood about ADHD?&rdquo; Write answers on a shared board.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 2 -->
+  <section class="session">
+    <div class="session-number">Session 2</div>
+    <h2>The Nervous System &amp; ADHD</h2>
+    <p class="session-theme">Your brain isn&rsquo;t broken &mdash; your nervous system is wired for intensity.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Introduce polyvagal theory through an ADHD-specific lens</li>
+        <li>Help clients understand why their nervous system seeks stimulation, novelty, and intensity</li>
+        <li>Build foundational somatic awareness of ADHD-related dysregulation states</li>
+        <li>Practice grounding techniques suited to the ADHD brain</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>The ADHD nervous system is often caught between two extremes: understimulated (bored, foggy, unmotivated) and overstimulated (overwhelmed, flooded, shut down). The &ldquo;just right&rdquo; zone can feel very narrow.</li>
+        <li>Explain why ADHD brains seek intensity: &ldquo;Your brain produces less dopamine and norepinephrine at baseline. It&rsquo;s not that you can&rsquo;t pay attention &mdash; it&rsquo;s that your brain needs more stimulation to activate attention.&rdquo;</li>
+        <li>Traditional grounding exercises (sit still, breathe slowly) can feel torturous for ADHD brains. Offer movement-based, sensory-rich alternatives.</li>
+        <li>Introduce the concept of ADHD-friendly regulation: cold water, intense music, fidgets, proprioceptive input (pushing against a wall), brief bursts of movement</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>ADHD clients may struggle with the &ldquo;slow down and notice&rdquo; format of somatic work &mdash; adapt by keeping exercises short and interactive</li>
+        <li>Hyperarousal and hypoarousal can flip rapidly in ADHD &mdash; help clients recognize both states</li>
+        <li>Some clients may have been told their dysregulation is &ldquo;just anxiety&rdquo; &mdash; validate that it may be ADHD-driven</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: ADHD Nervous System Map</h3>
+      <span class="timing">25 minutes</span>
+      <p><strong>Materials:</strong> Large paper, colored markers</p>
+      <ol>
+        <li>Draw a horizontal spectrum on the paper. Label the left end &ldquo;Understimulated / Foggy / Flat&rdquo; and the right end &ldquo;Overstimulated / Flooded / Wired.&rdquo; Mark the center as &ldquo;The Sweet Spot.&rdquo;</li>
+        <li>Ask: &ldquo;Where do you spend most of your time on this spectrum? What does each end feel like in your body?&rdquo;</li>
+        <li>Under each zone, write what the client does to cope: &ldquo;When I&rsquo;m understimulated, I [scroll, snack, procrastinate]. When I&rsquo;m overstimulated, I [shut down, snap, cry, hide].&rdquo;</li>
+        <li>Explore: &ldquo;What helps you get to the sweet spot? What nudges you there?&rdquo;</li>
+        <li>Introduce 3 ADHD-friendly grounding tools and practice one together:
+          <ul>
+            <li><strong>Cold activation:</strong> Hold ice cubes or splash cold water on face</li>
+            <li><strong>Proprioceptive input:</strong> Push palms against the wall for 10 seconds, then release</li>
+            <li><strong>Bilateral movement:</strong> Cross-body tapping (tap left knee with right hand, alternate)</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Nervous System Tracking Log</h4>
+      <p>Three times a day (morning, afternoon, evening), pause and rate where you are on the spectrum: Understimulated &mdash; Sweet Spot &mdash; Overstimulated. Notice what you&rsquo;re doing, what you need, and what (if anything) helps shift your state. Keep it brief &mdash; a word or two is enough.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What does my nervous system need that I haven&rsquo;t been giving it? What would change if I listened to it more often?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create individual spectrum maps but share insights as a group: &ldquo;Where do most of us spend our time?&rdquo; Practice all three ADHD-friendly grounding tools together and vote on which one the group liked best. Build a group &ldquo;regulation menu&rdquo; on a whiteboard with everyone&rsquo;s contributions.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 3 -->
+  <section class="session">
+    <div class="session-number">Session 3</div>
+    <h2>Emotional Dysregulation: The Hidden Core</h2>
+    <p class="session-theme">ADHD isn&rsquo;t just about focus. It&rsquo;s about feeling everything at full volume.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Validate emotional dysregulation as a core feature of ADHD, not a secondary symptom</li>
+        <li>Explore emotional flooding, rapid mood shifts, and rejection sensitive dysphoria (RSD)</li>
+        <li>Use IFS to meet the emotional parts that feel &ldquo;too much&rdquo;</li>
+        <li>Build CBT and somatic tools for emotional regulation</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Emotional dysregulation in ADHD is neurological, not a personality flaw: &ldquo;Your brain processes emotions more intensely and has a harder time regulating the volume. You feel everything deeply and quickly &mdash; and it&rsquo;s not because you&rsquo;re dramatic.&rdquo;</li>
+        <li>Introduce RSD: &ldquo;Rejection sensitive dysphoria is the intense, almost physical pain that comes from perceived rejection, criticism, or failure. It can feel like your world is ending over something others would brush off.&rdquo;</li>
+        <li>Emotional flooding: &ldquo;Sometimes emotions arrive so fast and so intensely that your thinking brain goes offline. You react before you can think. This isn&rsquo;t immaturity &mdash; it&rsquo;s neurology.&rdquo;</li>
+        <li>IFS lens: &ldquo;There are parts of you that carry these intense emotions. Other parts try desperately to control them &mdash; through people-pleasing, perfectionism, withdrawal, or numbing. Let&rsquo;s meet both.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Many women with ADHD have been told they&rsquo;re &ldquo;too sensitive&rdquo; or &ldquo;overreacting&rdquo; &mdash; this session may bring up significant grief or anger</li>
+        <li>RSD can be extremely painful to discuss &mdash; normalize it thoroughly before diving in</li>
+        <li>Watch for shame spirals when discussing emotional reactivity</li>
+        <li>Some clients may be highly defended against emotional vulnerability &mdash; honor the protector</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: The Emotional Flood Map</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>Ask the client to recall a recent emotional flooding moment &mdash; a time emotions hit fast and hard.</li>
+        <li>Map it together:
+          <ul>
+            <li><strong>Trigger:</strong> What happened? (It may seem &ldquo;small&rdquo; to others)</li>
+            <li><strong>Body:</strong> Where did you feel it? (chest, throat, face, stomach)</li>
+            <li><strong>Emotion:</strong> What was the emotion? (often shame, rejection, overwhelm)</li>
+            <li><strong>Reaction:</strong> What did you do? (snap, cry, shut down, people-please)</li>
+            <li><strong>Aftermath:</strong> How did you feel after? (guilt, exhaustion, confusion)</li>
+          </ul>
+        </li>
+        <li>IFS exploration: &ldquo;Can you notice the part that flooded? And the part that reacted? What does each one need?&rdquo;</li>
+        <li>Introduce a micro-pause practice: &ldquo;Between trigger and reaction, there&rsquo;s a tiny gap. We&rsquo;re going to practice making that gap a little bigger.&rdquo; Practice: name the emotion (&ldquo;This is RSD&rdquo;), place a hand on the body, take one slow breath.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Emotional Flooding Log</h4>
+      <p>This week, when you notice an emotional flood (or afterward), write down:</p>
+      <ul>
+        <li>What triggered it (even if it seems small)</li>
+        <li>What the emotion was (name it)</li>
+        <li>Where you felt it in your body</li>
+        <li>What you did in response</li>
+        <li>What you wish you could have done differently (no judgment &mdash; just curiosity)</li>
+      </ul>
+      <p><strong>Journaling Prompt:</strong> &ldquo;When did I first learn that my emotions were &lsquo;too much&rsquo;? Whose voice told me that? What would it feel like to believe my emotions are exactly the right size for me?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Provide psychoeducation on emotional dysregulation and RSD as a group. Invite members to share (without details): &ldquo;How many of you have been told you&rsquo;re too sensitive?&rdquo; Practice the micro-pause tool together. Pair members for a brief partner exercise: one shares a trigger, the other validates it. Switch.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 4 -->
+  <section class="session">
+    <div class="session-number">Session 4</div>
+    <h2>The Burnout Cycle</h2>
+    <p class="session-theme">Understanding why you crash after doing everything &mdash; and how to break the pattern.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Map the ADHD burnout cycle: hyperfocus &rarr; overcommitment &rarr; exhaustion &rarr; collapse &rarr; shame &rarr; repeat</li>
+        <li>Identify the client&rsquo;s personal burnout pattern using CBT behavioral analysis</li>
+        <li>Build somatic awareness of burnout signals before they hit crisis</li>
+        <li>Create an expressive arts piece mapping the cycle</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>The ADHD burnout cycle: &ldquo;Hyperfocus feels productive and exciting. You take on everything because in that moment you genuinely believe you can do it all. Then the energy crashes, the tasks pile up, shame floods in, and you collapse. After recovering, you overcommit again to prove you&rsquo;re not lazy. The cycle repeats.&rdquo;</li>
+        <li>CBT lens: identify the core beliefs driving overcommitment (&ldquo;If I don&rsquo;t do everything, I&rsquo;m worthless,&rdquo; &ldquo;I have to prove I&rsquo;m capable,&rdquo; &ldquo;If I say no, they&rsquo;ll see I&rsquo;m a fraud&rdquo;)</li>
+        <li>Somatic signals of approaching burnout: jaw clenching, shallow breathing, racing thoughts that don&rsquo;t produce action, emotional flatness, body heaviness</li>
+        <li>Introduce the concept of sustainable pacing: &ldquo;What if the goal isn&rsquo;t to do more, but to do what matters at a pace your nervous system can sustain?&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Clients may resist pacing because hyperfocus feels like their superpower &mdash; honor this while exploring the cost</li>
+        <li>Burnout often coincides with losing interest (dopamine drop) &mdash; normalize this as neurological</li>
+        <li>Women with ADHD often burnout from invisible labor (emotional caretaking, mental load) not just work tasks</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Mapping My Burnout Cycle</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> Large paper, markers, colored pencils</p>
+      <ol>
+        <li>Draw a large circle on the paper. Divide it into phases: Hyperfocus/Excitement &rarr; Overcommitment &rarr; Early Warning Signs &rarr; Exhaustion/Collapse &rarr; Shame/Self-Criticism &rarr; Recovery &rarr; (back to Hyperfocus).</li>
+        <li>For each phase, ask the client to write or draw:
+          <ul>
+            <li>What it looks like externally (behavior)</li>
+            <li>What it feels like internally (emotion + body sensation)</li>
+            <li>What they tell themselves (thoughts/beliefs)</li>
+          </ul>
+        </li>
+        <li>Ask: &ldquo;Where in this cycle do you have the most awareness? Where do you tend to lose yourself?&rdquo;</li>
+        <li>Identify the &ldquo;exit ramp&rdquo;: &ldquo;Where could you intervene before the crash? What would that look like?&rdquo;</li>
+        <li>Somatic anchoring: practice identifying one early body signal of burnout and create a plan for what to do when they feel it.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Burnout Early Warning System</h4>
+      <p>Create a personal &ldquo;early warning sign&rdquo; list &mdash; the subtle signals your body and mind give you before burnout hits. Write down 5 signs and post them where you&rsquo;ll see them (phone wallpaper, mirror, planner).</p>
+      <p>This week, practice one &ldquo;micro-rest&rdquo; each day: 5&ndash;10 minutes of intentional nothing. Not scrolling. Not productive rest. Just being.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What am I afraid will happen if I slow down? What belief drives me to keep pushing past my limits?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Draw the burnout cycle on a whiteboard as a group, with members calling out their experiences at each phase. The shared recognition (&ldquo;You do that too?!&rdquo;) is powerfully normalizing. Create individual early warning sign lists and share the top sign with the group. Practice a group micro-rest together (5 minutes of guided silence or gentle music).</p>
+    </div>
+  </section>
+
+  <!-- SESSION 5 -->
+  <section class="session">
+    <div class="session-number">Session 5</div>
+    <h2>ADHD Masking &amp; Identity</h2>
+    <p class="session-theme">Who are you underneath the mask you built to survive?</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore ADHD masking: what it is, why women do it, and the cost</li>
+        <li>Use IFS to meet the &ldquo;mask&rdquo; as a protector part</li>
+        <li>Create an expressive arts piece exploring masked vs. authentic self</li>
+        <li>Begin grief work for the years spent hiding</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>ADHD masking: &ldquo;From a young age, many women with ADHD learn to camouflage their symptoms. You build systems, smile through overwhelm, over-prepare, and perform neurotypicality at an exhausting cost.&rdquo;</li>
+        <li>The mask serves a purpose: it protected you from judgment, rejection, and being seen as &ldquo;less than.&rdquo; It is not something to be ashamed of &mdash; it is a survival strategy.</li>
+        <li>The cost of masking: chronic exhaustion, identity confusion (&ldquo;Who am I without the mask?&rdquo;), delayed diagnosis, burnout, anxiety, depression</li>
+        <li>IFS: &ldquo;The mask is a part. It has worked incredibly hard to keep you safe. Let&rsquo;s meet it with gratitude, and then explore who lives underneath.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>This session often brings up deep grief &mdash; &ldquo;I don&rsquo;t even know who I am without the mask&rdquo;</li>
+        <li>Some clients may feel terrified of unmasking &mdash; reassure that this is a gradual, safe process</li>
+        <li>Unmasking doesn&rsquo;t mean being unmasked everywhere &mdash; it&rsquo;s about having the choice</li>
+        <li>Watch for dissociation if the identity exploration feels overwhelming</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: The Mask &amp; What Lives Beneath</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> Paper plate or cardstock, markers, paint, collage materials, second sheet of paper</p>
+      <ol>
+        <li>On the front of the paper plate, create the &ldquo;mask&rdquo;: the version of yourself the world sees. Use words, images, colors, and expressions that represent how you present to others.</li>
+        <li>On the back, create &ldquo;underneath&rdquo;: the parts of you that the mask hides. The overwhelm, the chaos, the sensitivity, the creativity, the exhaustion, the real you.</li>
+        <li>IFS process: Hold the mask up. &ldquo;Talk to this part. What has it been doing for you? What is it afraid would happen if it came off?&rdquo;</li>
+        <li>Turn it over. &ldquo;What does this part need? What does it want the world to know?&rdquo;</li>
+        <li>Somatic check-in: &ldquo;When you hold the mask up, what happens in your body? When you put it down, what shifts?&rdquo;</li>
+        <li>Close with a compassion practice: &ldquo;Thank you, mask, for protecting me. I&rsquo;m learning that I can be safe without you, too.&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Unmasking Micro-Practice</h4>
+      <p>This week, choose one small, safe moment to let the mask soften. It might be:</p>
+      <ul>
+        <li>Telling someone &ldquo;I&rsquo;m actually feeling overwhelmed right now&rdquo;</li>
+        <li>Not over-preparing for something and letting yourself be imperfect</li>
+        <li>Letting your home be messy when a friend visits</li>
+        <li>Saying &ldquo;I forgot&rdquo; without a lengthy excuse</li>
+      </ul>
+      <p>Notice what happens &mdash; in your body, in the relationship, in your sense of self.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;Who would I be if I didn&rsquo;t have to perform normalcy? What parts of me have been waiting to be seen?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create individual masks. If the group feels safe, host a &ldquo;reveal&rdquo; exercise: each member shows the front of their mask, then flips it over to show the back. The group witnesses each reveal without commentary, then offers one word of recognition. This is often a profoundly moving group experience.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 6 -->
+  <section class="session">
+    <div class="session-number">Session 6</div>
+    <h2>Executive Function &amp; Daily Life</h2>
+    <p class="session-theme">Building systems that work with your brain, not against it.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Provide practical CBT strategies for executive function challenges</li>
+        <li>Externalize organizational systems using creative tools</li>
+        <li>Challenge the belief that needing external structure means failure</li>
+        <li>Build self-compassion around daily functioning struggles</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Executive function is the brain&rsquo;s CEO: planning, prioritizing, starting, switching, and finishing tasks. In ADHD, the CEO is unreliable &mdash; not absent, but inconsistent.</li>
+        <li>External structure is not a crutch &mdash; it&rsquo;s a prosthetic: &ldquo;You wouldn&rsquo;t shame someone with poor vision for wearing glasses. Alarms, lists, timers, and body doubles are your glasses.&rdquo;</li>
+        <li>CBT behavioral strategies:
+          <ul>
+            <li><strong>Body doubling:</strong> working alongside someone (even virtually) for accountability</li>
+            <li><strong>Time blocking:</strong> assigning tasks to specific windows (with buffers)</li>
+            <li><strong>The 2-minute rule:</strong> if it takes less than 2 minutes, do it now</li>
+            <li><strong>Task initiation trick:</strong> commit to just 5 minutes; momentum often takes over</li>
+          </ul>
+        </li>
+        <li>Challenge the all-or-nothing pattern: &ldquo;You don&rsquo;t have to organize your whole life today. One small system that works is worth more than a perfect system you&rsquo;ll abandon.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Executive function strategies must be ADHD-friendly: visual, novel, low-barrier, flexible</li>
+        <li>Many clients have tried and &ldquo;failed&rdquo; at planners, apps, and systems &mdash; normalize this and reframe it</li>
+        <li>Shame around daily functioning is often profound &mdash; &ldquo;Everyone else can just do these things&rdquo;</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Visual Task Board</h3>
+      <span class="timing">25 minutes</span>
+      <p><strong>Materials:</strong> Large paper or poster board, sticky notes (3 colors), markers</p>
+      <ol>
+        <li>Create a simple three-column board: &ldquo;To Do,&rdquo; &ldquo;Doing,&rdquo; &ldquo;Done.&rdquo;</li>
+        <li>On sticky notes, write current tasks/responsibilities. Use colors:
+          <ul>
+            <li>Green = things that feel doable</li>
+            <li>Yellow = things you&rsquo;re avoiding (task initiation struggle)</li>
+            <li>Pink = things that feel overwhelming</li>
+          </ul>
+        </li>
+        <li>For each yellow/pink note, ask: &ldquo;What makes this hard to start? What&rsquo;s the smallest possible first step?&rdquo;</li>
+        <li>Practice breaking one overwhelming task into 3&ndash;5 bite-sized steps.</li>
+        <li>Celebrate: move one note to &ldquo;Done&rdquo; (even if it&rsquo;s just &ldquo;showed up to this session&rdquo;).</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Executive Function Experiment</h4>
+      <p>Choose ONE strategy from today&rsquo;s session and try it for the week. Not all of them &mdash; just one. Options:</p>
+      <ul>
+        <li>Set a timer for 5 minutes and start one avoided task</li>
+        <li>Use body doubling (FaceTime a friend, go to a coffee shop, use a virtual coworking space)</li>
+        <li>Create a sticky note task board at home</li>
+        <li>Try the 2-minute rule for 3 days</li>
+      </ul>
+      <p>Notice what works and what doesn&rsquo;t &mdash; with curiosity, not judgment.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What would change if I stopped expecting my brain to work like a neurotypical brain and started building a life designed for the brain I actually have?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create individual task boards and share strategies. Pair members as &ldquo;accountability partners&rdquo; for the week. Brainstorm ADHD-friendly systems as a group &mdash; the collective creativity of ADHD brains often generates brilliant solutions. Close with each member naming one small step they&rsquo;ll take this week.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 7 -->
+  <section class="session">
+    <div class="session-number">Session 7</div>
+    <h2>ADHD &amp; Relationships</h2>
+    <p class="session-theme">Understanding how ADHD shapes the way you love, connect, and protect yourself.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore how ADHD affects communication, intimacy, and conflict in relationships</li>
+        <li>Address rejection sensitive dysphoria in relational contexts</li>
+        <li>Practice boundary-setting with IFS parts awareness</li>
+        <li>Build somatic tools for relational triggers</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>ADHD in relationships: &ldquo;You might hyperfocus on a partner early on (the thrill of novelty and dopamine), then struggle to maintain that intensity. You might forget conversations, miss cues, or feel like you&rsquo;re constantly letting someone down.&rdquo;</li>
+        <li>RSD in relationships is devastating: a partner&rsquo;s tone of voice, a text left on read, or gentle feedback can feel like total rejection</li>
+        <li>Common relational patterns: over-apologizing, people-pleasing to prevent rejection, withdrawing when overwhelmed, emotional flooding during conflict</li>
+        <li>CBT communication tools: &ldquo;I feel ___ when ___ because ___.&rdquo; Practice stating needs without over-explaining or apologizing.</li>
+        <li>Boundaries: &ldquo;Many women with ADHD say yes to everything because saying no feels like inviting rejection. Let&rsquo;s explore who that boundary would actually serve.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Some clients may have been told by partners that they&rsquo;re &ldquo;too much&rdquo; &mdash; tread carefully here</li>
+        <li>ADHD relational patterns can be misattributed to character flaws by both the client and their partners</li>
+        <li>Watch for parentified dynamics where the client over-manages the relationship</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: RSD Relational Trigger Map</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>Ask the client to identify 3 recent moments when RSD was activated in a relationship (partner, friend, family member, coworker).</li>
+        <li>For each, map:
+          <ul>
+            <li><strong>What happened:</strong> (the actual event)</li>
+            <li><strong>What my RSD told me:</strong> (the story: &ldquo;They don&rsquo;t care,&rdquo; &ldquo;I&rsquo;m too much&rdquo;)</li>
+            <li><strong>What I felt in my body:</strong> (chest tightness, heat in face, stomach drop)</li>
+            <li><strong>What I did:</strong> (withdrew, over-apologized, lashed out, froze)</li>
+            <li><strong>What was probably true:</strong> (CBT reality check)</li>
+          </ul>
+        </li>
+        <li>IFS: &ldquo;Can you meet the part that felt rejected? What does it need to hear from you?&rdquo;</li>
+        <li>Practice one boundary statement: &ldquo;I need a moment before I respond.&rdquo; Feel it in the body. Notice what comes up.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Relational ADHD Awareness</h4>
+      <p>This week, notice one moment where ADHD affected a relationship interaction. Write down:</p>
+      <ul>
+        <li>What happened</li>
+        <li>Was RSD involved?</li>
+        <li>What did you need in that moment?</li>
+        <li>What would you like to do differently next time (not perfectly &mdash; just differently)?</li>
+      </ul>
+      <p>Also practice one micro-boundary: a small &ldquo;not right now,&rdquo; &ldquo;let me think about that,&rdquo; or &ldquo;I need a minute.&rdquo;</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;In my closest relationships, what am I most afraid they&rsquo;ll discover about me? What would it feel like to be loved with my ADHD fully visible?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Discuss ADHD relational patterns as a group and normalize them. Practice communication statements together in pairs. Role-play boundary scenarios (one member plays the friend/partner, another practices responding). Debrief somatically: &ldquo;What happened in your body when you said the boundary?&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 8 -->
+  <section class="session">
+    <div class="session-number">Session 8</div>
+    <h2>ADHD &amp; Eating Patterns</h2>
+    <p class="session-theme">Understanding the dopamine-food connection and building nourishing rhythms.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore the ADHD-eating connection: dopamine seeking, forgotten meals, binge patterns</li>
+        <li>Build a flexible, ADHD-friendly meal rhythm using CBT planning tools</li>
+        <li>Develop somatic awareness of hunger and fullness (especially when hyperfocusing)</li>
+        <li>Address shame around eating patterns with compassion</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Three ADHD eating patterns: (1) forgetting to eat during hyperfocus, then crashing and bingeing; (2) eating for stimulation when bored or understimulated; (3) emotional eating to regulate overwhelming feelings</li>
+        <li>The dopamine connection: &ldquo;Your brain seeks dopamine. Food &mdash; especially sugar, carbs, and highly palatable foods &mdash; delivers it fast. This isn&rsquo;t a lack of willpower. It&rsquo;s neurochemistry.&rdquo;</li>
+        <li>ADHD-friendly meal support: alarms for meals, prepped grab-and-go options, visual meal reminders, eating with someone (body doubling for meals)</li>
+        <li>Body awareness: &ldquo;Many women with ADHD don&rsquo;t notice hunger until they&rsquo;re ravenous, and don&rsquo;t notice fullness until they&rsquo;re stuffed. We&rsquo;re going to practice tuning in to the middle range.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>If the client has a co-occurring eating disorder, reference the Eating Disorder Recovery curriculum for deeper work</li>
+        <li>ADHD medication can affect appetite significantly &mdash; explore this if relevant</li>
+        <li>Avoid rigid meal plans; ADHD brains need flexibility and novelty</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: ADHD Meal Rhythm Design</h3>
+      <span class="timing">20 minutes</span>
+      <p><strong>Materials:</strong> Paper, markers, sticky notes</p>
+      <ol>
+        <li>Map a typical day: &ldquo;Walk me through yesterday. When did you eat? When did you forget? When did you reach for food out of boredom or overwhelm?&rdquo;</li>
+        <li>Identify the gaps and the floods.</li>
+        <li>Design an ADHD-friendly meal rhythm together:
+          <ul>
+            <li>Set phone alarms for meal times (even if you&rsquo;re not hungry &mdash; check in)</li>
+            <li>Prep &ldquo;grab-and-go&rdquo; options for hyperfocus days</li>
+            <li>Build in novelty (rotate meals, try new foods) to keep the ADHD brain engaged</li>
+            <li>Create a visual meal reminder (sticky note on laptop, phone wallpaper)</li>
+          </ul>
+        </li>
+        <li>Practice one somatic hunger check-in: &ldquo;Right now, on a scale of 1&ndash;10, how hungry are you? How do you know?&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Meal Rhythm Experiment</h4>
+      <p>Try using meal alarms for 3 days this week. When the alarm goes off, pause and check in: &ldquo;Am I hungry? When did I last eat? What does my body need?&rdquo; You don&rsquo;t have to eat a full meal &mdash; even a small check-in with your body is progress.</p>
+      <p>Also create a &ldquo;Dopamine Menu&rdquo; (non-food version): a list of quick, stimulating activities for when your brain is seeking the food-dopamine hit (cold water, 3-minute dance break, step outside, fidget toy).</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;How has ADHD shaped my relationship with food? What would it feel like to nourish myself consistently, without judgment?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Normalize ADHD eating patterns as a group discussion. Create individual Dopamine Menus and share ideas. Pair members to brainstorm grab-and-go meal ideas. If appropriate, share a group snack and practice a mindful eating moment together.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 9 -->
+  <section class="session">
+    <div class="session-number">Session 9</div>
+    <h2>Sensory Regulation &amp; the Body</h2>
+    <p class="session-theme">Your body holds wisdom &mdash; learning to listen to it through sensation, movement, and creativity.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore sensory processing differences common in ADHD</li>
+        <li>Build somatic regulation practices that honor the ADHD need for movement and sensory input</li>
+        <li>Use expressive arts for sensory exploration and creative regulation</li>
+        <li>Develop a personalized sensory toolkit</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Many women with ADHD are sensory-sensitive: overwhelmed by noise, textures, crowds, or light &mdash; or sensory-seeking: needing strong input to feel regulated (loud music, intense flavors, physical pressure)</li>
+        <li>Movement is medicine for the ADHD brain: &ldquo;Your body was designed to move. Sitting still isn&rsquo;t regulation for you &mdash; it&rsquo;s suppression.&rdquo;</li>
+        <li>Somatic regulation for ADHD should be active, not passive: walking while processing, squeezing a stress ball during conversation, rocking, fidgeting</li>
+        <li>Expressive arts as regulation: painting, clay work, and music offer sensory-rich, dopamine-friendly regulation that engages the ADHD brain</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Some clients may not realize their sensory sensitivities are ADHD-related &mdash; this can be a revelatory session</li>
+        <li>Honor that some environments (open offices, crowded stores, family gatherings) are genuinely dysregulating &mdash; not just &ldquo;uncomfortable&rdquo;</li>
+        <li>Sensory needs shift depending on stress, sleep, hormones, and time of day</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Sensory Exploration Station</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> Clay or playdough, textured fabrics, essential oils, ice cubes, stress balls, music (headphones), drawing supplies</p>
+      <ol>
+        <li>Set up 4&ndash;5 &ldquo;stations&rdquo; with different sensory experiences:
+          <ul>
+            <li><strong>Touch:</strong> clay/playdough, textured fabrics, stress balls</li>
+            <li><strong>Smell:</strong> essential oils (lavender for calming, peppermint for alertness)</li>
+            <li><strong>Temperature:</strong> ice cubes, warm tea mug</li>
+            <li><strong>Movement:</strong> stretching, wall push-ups, cross-body tapping</li>
+            <li><strong>Creative:</strong> free drawing with bold colors, drumming/tapping rhythm</li>
+          </ul>
+        </li>
+        <li>Invite the client to spend 3&ndash;4 minutes at each station, noticing: &ldquo;Does this calm me, energize me, or overwhelm me?&rdquo;</li>
+        <li>Debrief: &ldquo;What surprised you? What felt most regulating? What do you want to bring into your daily life?&rdquo;</li>
+        <li>Create a personalized &ldquo;sensory kit&rdquo; list: 3&ndash;5 sensory tools the client will gather for home/work/car.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Build Your Sensory Kit</h4>
+      <p>Gather 3&ndash;5 items for a small sensory kit you can keep in your bag, desk, or car. Suggestions:</p>
+      <ul>
+        <li>A fidget toy or textured stone</li>
+        <li>Essential oil roller (peppermint or lavender)</li>
+        <li>A pair of earplugs or noise-canceling earbuds</li>
+        <li>A small piece of dark chocolate (taste regulation)</li>
+        <li>A favorite playlist cued up on your phone</li>
+      </ul>
+      <p>Use at least one item from your kit daily this week and notice how it affects your regulation.</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What sensory experiences overwhelm me? What sensory experiences ground me? How can I build more of the grounding ones into my day?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Set up stations around the room and let the group rotate through them. This is a high-energy, interactive session that works beautifully in groups. Debrief as a circle: &ldquo;What was your favorite station and why?&rdquo; Collaboratively build a &ldquo;group sensory menu&rdquo; on a whiteboard.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 10 -->
+  <section class="session">
+    <div class="session-number">Session 10</div>
+    <h2>High-Functioning Anxiety &amp; ADHD</h2>
+    <p class="session-theme">When perfectionism is the coping strategy your ADHD brain built to survive.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Explore the overlap between high-functioning anxiety and ADHD in women</li>
+        <li>Use CBT to challenge perfectionism as a compensatory strategy</li>
+        <li>Meet the &ldquo;overachiever part&rdquo; through IFS with compassion</li>
+        <li>Introduce rest as a radical, nervous system&ndash;regulating practice</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>High-functioning anxiety in ADHD women: &ldquo;The anxiety isn&rsquo;t separate from the ADHD. It&rsquo;s often a compensatory strategy: you developed anxiety to manage what your executive function couldn&rsquo;t. The anxiety keeps you on time, keeps you prepared, keeps you performing &mdash; at a tremendous cost.&rdquo;</li>
+        <li>Perfectionism as a mask: &ldquo;If I do everything perfectly, no one will see the chaos inside. If I over-prepare, I can prevent the mistakes my ADHD brain might make.&rdquo;</li>
+        <li>CBT: identify perfectionist thought patterns (&ldquo;If it&rsquo;s not perfect, it&rsquo;s a failure,&rdquo; &ldquo;Everyone else manages this easily,&rdquo; &ldquo;If I rest, everything will fall apart&rdquo;)</li>
+        <li>The radical act of rest: &ldquo;For a woman with ADHD and anxiety, choosing to rest is not laziness. It is a nervous system revolution. Your body has been on high alert for years. It deserves to soften.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Clients may not want to let go of the anxiety &mdash; it feels productive and protective</li>
+        <li>Distinguish between ADHD-driven anxiety and generalized anxiety disorder (they can co-occur)</li>
+        <li>Rest may trigger guilt, fear, or even panic &mdash; process this somatically</li>
+        <li>The overachiever part has been working overtime &mdash; it needs gratitude before it can be asked to rest</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Meeting the Overachiever</h3>
+      <span class="timing">25 minutes</span>
+      <ol>
+        <li>Guide the client into a grounded state (ADHD-friendly: feet pressing into floor, hands squeezing armrest, then releasing).</li>
+        <li>Invite them to notice the part that drives perfection and over-preparation: &ldquo;Where does it live in your body? What does it look like or feel like?&rdquo;</li>
+        <li>IFS dialogue: &ldquo;How long has this part been working? What is it afraid would happen if it stopped? What does it need to hear from you?&rdquo;</li>
+        <li>Offer the part a message: &ldquo;Thank you for keeping me safe. You&rsquo;ve worked so hard. I&rsquo;m learning that I can be enough without being perfect.&rdquo;</li>
+        <li>Somatic practice: &ldquo;What would it feel like to let your shoulders drop? To unclench your jaw? To let this moment be good enough?&rdquo;</li>
+        <li>Close with a 2-minute rest practice: eyes closed (or softened), no task, no plan, just breathing.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Imperfection Experiment &amp; Rest Practice</h4>
+      <p>This week, try two experiments:</p>
+      <ol>
+        <li><strong>Intentional imperfection:</strong> Choose one task and do it at 80% instead of 110%. Notice what happens &mdash; does the world end? Does anyone notice? What does your body do?</li>
+        <li><strong>Daily rest:</strong> Take 5 minutes of intentional, non-productive rest each day. Not scrolling, not planning, not &ldquo;resting productively.&rdquo; Just being. Set a timer if it helps.</li>
+      </ol>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What if good enough actually is good enough? What would I do with the energy I currently spend on perfection?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Discuss the anxiety-ADHD overlap as a group. Ask: &ldquo;How many of you use anxiety as an organizing tool?&rdquo; Conduct the IFS exercise as a guided visualization. Practice the 2-minute rest together &mdash; normalize the discomfort. Challenge the group: &ldquo;What&rsquo;s one thing you can do at 80% this week?&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- SESSION 11 -->
+  <section class="session">
+    <div class="session-number">Session 11</div>
+    <h2>Building Your Holistic ADHD Toolkit</h2>
+    <p class="session-theme">Gathering everything you&rsquo;ve learned into a toolkit designed for your unique brain.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Create a personalized, visual ADHD toolkit integrating all modalities</li>
+        <li>Review and consolidate strategies from across the curriculum</li>
+        <li>Include somatic regulation practices, CBT tools, and expressive arts resources</li>
+        <li>Address nutrition awareness and holistic self-care specific to ADHD</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Review the journey: &ldquo;We&rsquo;ve covered a lot &mdash; nervous system regulation, emotional dysregulation, burnout, masking, executive function, relationships, eating, sensory needs, and anxiety. What has stuck with you? What has shifted?&rdquo;</li>
+        <li>The toolkit should be ADHD-friendly: visual, colorful, accessible, and placed where the client will actually see it</li>
+        <li>Holistic ADHD care includes: movement, nutrition, sleep, creative expression, connection, nature, and rest &mdash; not just strategies for productivity</li>
+        <li>Nutrition awareness for ADHD: protein-rich meals support dopamine production; regular eating prevents crashes; omega-3 fatty acids support brain function; hydration matters more than most realize</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>This session is about empowerment &mdash; the client is the expert on their own brain</li>
+        <li>Encourage them to include strategies that actually work for them, not aspirational ones</li>
+        <li>The toolkit can be a physical object (poster, card deck, journal page) or digital (phone note, wallpaper)</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Create Your Visual ADHD Toolkit</h3>
+      <span class="timing">35 minutes</span>
+      <p><strong>Materials:</strong> Large poster board, markers, stickers, magazine cutouts, card stock, index cards</p>
+      <ol>
+        <li>Create a colorful, visual toolkit poster or card set organized by category:
+          <ul>
+            <li><strong>When I&rsquo;m understimulated:</strong> (dopamine-boosting strategies)</li>
+            <li><strong>When I&rsquo;m overwhelmed:</strong> (calming, grounding tools)</li>
+            <li><strong>When I&rsquo;m emotionally flooded:</strong> (IFS, somatic, micro-pause)</li>
+            <li><strong>When I can&rsquo;t start a task:</strong> (executive function hacks)</li>
+            <li><strong>When I&rsquo;m burning out:</strong> (rest, boundaries, warning signs)</li>
+            <li><strong>When I need connection:</strong> (people, places, activities)</li>
+            <li><strong>Daily nourishment:</strong> (meals, movement, sleep, creativity)</li>
+          </ul>
+        </li>
+        <li>Fill in each category with specific, personalized strategies from across the curriculum.</li>
+        <li>Make it beautiful and ADHD-friendly: color-coded, illustrated, sticky-note-able.</li>
+        <li>Practice using it: &ldquo;You just got home from a hard day and you feel wired and scattered. Which category do you go to? What do you pick?&rdquo;</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Toolkit Installation</h4>
+      <p>This week, put your toolkit where you will see it daily. Options:</p>
+      <ul>
+        <li>Hang the poster in your bedroom or office</li>
+        <li>Photograph it and set it as your phone wallpaper</li>
+        <li>Carry the index cards in your bag</li>
+        <li>Create a digital version in your notes app</li>
+      </ul>
+      <p>Use the toolkit at least once this week. After using it, write a one-line reflection: &ldquo;I tried ___ and it helped me feel ___.&rdquo;</p>
+      <p><strong>Journaling Prompt:</strong> &ldquo;What do I know about my brain now that I didn&rsquo;t know 11 weeks ago? What has changed in how I relate to my ADHD?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create individual toolkits side by side, sharing ideas and materials. Host a group &ldquo;show and tell&rdquo; where each member shares one strategy from their toolkit. Build a group &ldquo;master toolkit&rdquo; on a shared poster that everyone photographs. Exchange ADHD-friendly nutrition ideas and recipes.</p>
+    </div>
+  </section>
+
+  <!-- SESSION 12 -->
+  <section class="session">
+    <div class="session-number">Session 12</div>
+    <h2>Integration &amp; Celebration</h2>
+    <p class="session-theme">Honoring your ADHD brain &mdash; not despite its differences, but because of them.</p>
+    <div class="session-tags">
+      <span class="modality-tag tag-ea">Expressive Arts</span>
+      <span class="modality-tag tag-ifs">IFS</span>
+      <span class="modality-tag tag-se">Somatic Experiencing</span>
+      <span class="modality-tag tag-cbt">CBT</span>
+    </div>
+
+    <div class="section-block">
+      <h3>Session Goals</h3>
+      <ul>
+        <li>Reflect on the full arc of treatment and celebrate growth</li>
+        <li>Create a culminating expressive arts project honoring the journey</li>
+        <li>Conduct a parts check-in to see what has shifted internally</li>
+        <li>Discuss continued care and ongoing support</li>
+      </ul>
+    </div>
+
+    <div class="section-block therapist-guide">
+      <h3>Therapist Guide</h3>
+      <p><strong>Talking Points:</strong></p>
+      <ul>
+        <li>Reflect: &ldquo;When you walked in for Session 1, what did you believe about yourself and your ADHD? What do you believe now?&rdquo;</li>
+        <li>IFS parts check-in: &ldquo;Let&rsquo;s revisit the parts we met &mdash; the mask, the overachiever, the emotional parts, the critic. How are they now? Have any of them softened, shifted, or found new roles?&rdquo;</li>
+        <li>Name the strengths: ADHD brains are creative, empathetic, passionate, spontaneous, resilient, and deeply perceptive. These are not consolation prizes &mdash; they are genuine gifts.</li>
+        <li>Discuss next steps: ongoing therapy, ADHD coaching, support groups, check-ins, the Self-Discovery Intensive, or stepping to maintenance</li>
+        <li>Leave the door open: &ldquo;ADHD doesn&rsquo;t go away, and neither does my support. You are always welcome back.&rdquo;</li>
+      </ul>
+      <p><strong>Clinical Notes:</strong></p>
+      <ul>
+        <li>Endings can be hard for ADHD brains &mdash; transitions are difficult by nature. Give extra time to process.</li>
+        <li>Some clients may minimize progress &mdash; gently reflect back what you&rsquo;ve witnessed</li>
+        <li>The creative project should feel celebratory, not heavy. This is about honoring, not processing trauma.</li>
+      </ul>
+    </div>
+
+    <div class="section-block exercise-block">
+      <h3>In-Session Exercise: Love Letter to My ADHD Brain</h3>
+      <span class="timing">30 minutes</span>
+      <p><strong>Materials:</strong> All available art supplies, special paper or cardstock, envelopes</p>
+      <ol>
+        <li>Invite the client to create a &ldquo;love letter&rdquo; to their ADHD brain. It can take any form:
+          <ul>
+            <li>A written letter</li>
+            <li>A painting or drawing</li>
+            <li>A collage</li>
+            <li>A poem or song</li>
+            <li>A list: &ldquo;Things I want my brain to know&rdquo;</li>
+          </ul>
+        </li>
+        <li>Prompts if needed:
+          <ul>
+            <li>&ldquo;Dear brain, I used to think you were broken. Now I know...&rdquo;</li>
+            <li>&ldquo;Thank you for [creativity, intensity, empathy, resilience].&rdquo;</li>
+            <li>&ldquo;I&rsquo;m sorry I spent so many years fighting you. Here&rsquo;s what I want to do differently...&rdquo;</li>
+          </ul>
+        </li>
+        <li>Allow 15&ndash;20 minutes for creation.</li>
+        <li>Invite the client to read or show their piece. Witness it with warmth and celebration.</li>
+        <li>Close with a somatic celebration: deep breath, hand on heart, a moment of gratitude for showing up, session after session, in a world not built for their brain.</li>
+      </ol>
+    </div>
+
+    <div class="section-block takehome-block">
+      <h3>Client Take-Home</h3>
+      <h4>Three Commitments to My ADHD Self</h4>
+      <p>Write down three commitments for the next chapter:</p>
+      <ol>
+        <li>One way I will honor my nervous system daily</li>
+        <li>One thing I will reach for when ADHD feels hard (from my toolkit)</li>
+        <li>One ADHD strength I will lean into this month</li>
+      </ol>
+      <p>Keep your love letter somewhere you can read it on the days when your brain feels like the enemy.</p>
+      <p><strong>Final Journaling Prompt:</strong> &ldquo;If I could talk to the little girl who first felt different, what would I tell her? What does she need to hear from the woman I am becoming?&rdquo;</p>
+    </div>
+
+    <div class="section-block group-block">
+      <h3>Group Adaptation</h3>
+      <p>Create love letters individually, then host a group &ldquo;reading&rdquo; or &ldquo;gallery.&rdquo; After each share, the group offers one word of celebration. Create a closing ritual: each member names one ADHD superpower they&rsquo;re taking with them. If the group created artwork throughout the curriculum, display it as a gallery. Exchange contact information if members want to stay connected. Close with a collective deep breath and a moment of silence honoring every brain in the room.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer-doc">
+  <p><strong>ADHD Treatment Curriculum</strong></p>
+  <p>Created by Alynne Davis, MA, LCMHC &bull; Alynne Davis Expressive Arts Counseling</p>
+  <p>Integrating CBT, Expressive Arts Therapy, Somatic Experiencing &amp; IFS</p>
+  <p>&copy; 2026 Alynne Davis. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
