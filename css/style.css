@@ -402,6 +402,55 @@ p { margin-bottom: 1rem; }
   .contact-split { grid-template-columns: 1fr; gap: 40px; }
 }
 
+/* ---- Glossary ---- */
+.glossary-index {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin: 28px 0 40px;
+  padding: 20px 24px;
+  background: var(--color-bg-warm);
+  border-radius: 10px;
+}
+.glossary-index a {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-gold-dark);
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.glossary-index a:hover { background: var(--color-gold); color: var(--color-white); }
+.glossary-letter {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-gold);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 6px;
+  margin: 40px 0 16px;
+}
+.glossary-list { margin-bottom: 8px; }
+.glossary-list dt {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-heading);
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+.glossary-list dd {
+  margin-left: 0;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-left: 3px solid var(--color-bg-accent);
+  padding-left: 14px;
+}
+.glossary-list dd a { color: var(--color-gold-dark); font-weight: 500; }
+.glossary-list dd a:hover { color: var(--color-gold); }
+.glossary-divider { border: none; border-top: 2px solid var(--color-border); margin: 48px 0; }
+
 /* ---- CTA Banner ---- */
 .cta-banner {
   padding: 72px 0;
