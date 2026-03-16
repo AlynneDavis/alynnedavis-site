@@ -174,16 +174,18 @@
     }
     .etsy-art-tile {
       aspect-ratio: 1;
-      background: var(--color-bg-accent);
       border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-gold);
-      font-size: 0.8rem;
-      font-style: italic;
-      text-align: center;
-      padding: 12px;
+      overflow: hidden;
+    }
+    .etsy-art-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .etsy-art-tile img:hover {
+      transform: scale(1.04);
     }
   </style>
 </head>
@@ -309,11 +311,19 @@
               Visit My Etsy Shop
             </a>
           </div>
-          <div class="etsy-placeholder" aria-hidden="true">
-            <div class="etsy-art-tile">Original paintings</div>
-            <div class="etsy-art-tile">Process art prints</div>
-            <div class="etsy-art-tile">Healing imagery</div>
-            <div class="etsy-art-tile">Expressive art</div>
+          <div class="etsy-placeholder">
+            <div class="etsy-art-tile">
+              <img src="/images/art-picasso-inspired.jpg" alt="Picasso-inspired original painting by Alynne Davis" loading="lazy">
+            </div>
+            <div class="etsy-art-tile">
+              <img src="/images/art-deception.png" alt="Deception — original healing art by Alynne Davis" loading="lazy">
+            </div>
+            <div class="etsy-art-tile">
+              <img src="/images/art-roosted-and-resting.jpg" alt="Roosted and Resting — original process art by Alynne Davis" loading="lazy">
+            </div>
+            <div class="etsy-art-tile">
+              <img src="/images/art-women-of-grief.png" alt="Women of Grief — original healing art by Alynne Davis" loading="lazy">
+            </div>
           </div>
         </div>
 
