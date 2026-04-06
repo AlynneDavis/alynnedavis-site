@@ -85,6 +85,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
+  <url>
+    <loc>https://alynnedavis.com/free-guide/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog Posts -->
   <url>
     <loc>https://alynnedavis.com/blog/adhd-women-eating-disorders/</loc>
