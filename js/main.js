@@ -38,6 +38,23 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// Submit form data to Zoho CRM Web-to-Lead
+function postToZoho(fields) {
+  const fd = new FormData();
+  fd.append('xnQsjsdp', '438ba04b77681d7713f5393235a0faf3068b83adb61a6a1ace2f45e1481e5088');
+  fd.append('xmIwtLD', 'f8c5b63d6cca8ce26432ba5b108efac4dc5a45bedeb6cb42fa5ca20f1115127b2eb84c2804a12b7c7a8e1d423de13ea5');
+  fd.append('actionType', 'TGVhZHM=');
+  fd.append('returnURL', 'null');
+  for (const [key, val] of Object.entries(fields)) fd.append(key, val);
+  return fetch('https://crm.zoho.com/crm/WebToLeadForm', { method: 'POST', body: fd });
+}
+
+function splitName(fullName) {
+  const parts = fullName.trim().split(/\s+/);
+  if (parts.length === 1) return { first: '', last: parts[0] };
+  return { first: parts.slice(0, -1).join(' '), last: parts[parts.length - 1] };
+}
+
 // Contact form handler
 const form = document.getElementById('contact-form');
 if (form) {
@@ -59,18 +76,16 @@ if (form) {
     delete data.website;
 
     try {
-      const res = await fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+      const { first, last } = splitName(data.name || '');
+      await postToZoho({
+        'First Name': first,
+        'Last Name': last || data.name,
+        'Email': data.email || '',
+        'Phone': data.phone || '',
+        'Description': (data.service ? 'Service: ' + data.service + '\n\n' : '') + (data.message || '')
       });
-
-      if (res.ok) {
-        form.style.display = 'none';
-        document.querySelector('.form-success').style.display = 'block';
-      } else {
-        throw new Error('Failed');
-      }
+      form.style.display = 'none';
+      document.querySelector('.form-success').style.display = 'block';
     } catch (err) {
       document.querySelector('.form-error').style.display = 'block';
       btn.textContent = original;
@@ -99,8 +114,7 @@ if (intensiveForm) {
     }
     delete raw.website;
 
-    // Format screening details into the message field for the existing contact endpoint
-    const message = [
+    const description = [
       '--- SELF-DISCOVERY INTENSIVE INQUIRY ---',
       '',
       'Location: ' + (raw.location || 'Not provided'),
@@ -120,27 +134,17 @@ if (intensiveForm) {
       raw.additional_notes || 'None',
     ].join('\n');
 
-    const data = {
-      name: raw.name,
-      email: raw.email,
-      phone: raw.phone || '',
-      service: 'Self-Discovery Intensive',
-      message: message
-    };
-
     try {
-      const res = await fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+      const { first, last } = splitName(raw.name || '');
+      await postToZoho({
+        'First Name': first,
+        'Last Name': last || raw.name,
+        'Email': raw.email || '',
+        'Phone': raw.phone || '',
+        'Description': description
       });
-
-      if (res.ok) {
-        intensiveForm.style.display = 'none';
-        intensiveForm.closest('.content-narrow').querySelector('.form-success').style.display = 'block';
-      } else {
-        throw new Error('Failed');
-      }
+      intensiveForm.style.display = 'none';
+      intensiveForm.closest('.content-narrow').querySelector('.form-success').style.display = 'block';
     } catch (err) {
       intensiveForm.closest('.content-narrow').querySelector('.form-error').style.display = 'block';
       btn.textContent = original;
