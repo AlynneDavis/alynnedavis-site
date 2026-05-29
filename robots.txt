@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# Block legacy WordPress system paths (site migrated from WordPress to static HTML)
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-json/
+Disallow: /wp-login.php
+Disallow: /wp-*.php
+Disallow: /author/
+Disallow: /cdn-cgi/
+
+# Block WordPress-style pagination patterns
+Disallow: /*/page/
+Disallow: /page/
+
 Sitemap: https://alynnedavis.com/sitemap.xml
