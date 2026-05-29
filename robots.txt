@@ -14,4 +14,9 @@ Disallow: /cdn-cgi/
 Disallow: /*/page/
 Disallow: /page/
 
+# Block WordPress query parameters
+Disallow: /*?sort=
+Disallow: /*?post_type=
+Disallow: /*?sort=2d
+
 Sitemap: https://alynnedavis.com/sitemap.xml
