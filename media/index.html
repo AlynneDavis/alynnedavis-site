@@ -94,19 +94,17 @@
     }
 
     .podcast-icon {
-      width: 72px;
-      height: 72px;
-      background: var(--color-bg-accent);
+      width: 120px;
+      height: 120px;
       border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
       flex-shrink: 0;
     }
-    .podcast-icon svg {
-      width: 36px;
-      height: 36px;
-      fill: var(--color-gold);
+    .podcast-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .podcast-meta .show-name {
@@ -279,11 +277,8 @@
         <h2>Listen to Recent Appearances</h2>
 
         <article class="podcast-card" aria-label="Health and Wellness Trailblazers episode">
-          <div class="podcast-icon" aria-hidden="true">
-            <!-- microphone icon -->
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 1a4 4 0 0 1 4 4v6a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm-6 9a6 6 0 0 0 12 0h2a8 8 0 0 1-7 7.93V21h3v2H8v-2h3v-3.07A8 8 0 0 1 4 10h2z"/>
-            </svg>
+          <div class="podcast-icon">
+            <img src="/images/health-wellness-trailblazers-podcast.png" alt="Health and Wellness Trailblazers podcast cover art" width="120" height="120" loading="lazy">
           </div>
           <div class="podcast-meta">
             <p class="show-name">Health and Wellness Trailblazers</p>
@@ -324,10 +319,8 @@
         </article>
 
         <article class="podcast-card" aria-label="Voice of the Voiceless episode">
-          <div class="podcast-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 1a4 4 0 0 1 4 4v6a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm-6 9a6 6 0 0 0 12 0h2a8 8 0 0 1-7 7.93V21h3v2H8v-2h3v-3.07A8 8 0 0 1 4 10h2z"/>
-            </svg>
+          <div class="podcast-icon">
+            <img src="/images/voice-of-the-voiceless-podcast.png" alt="Voice of the Voiceless podcast cover art" width="120" height="120" loading="lazy">
           </div>
           <div class="podcast-meta">
             <p class="show-name">Voice of the Voiceless</p>
