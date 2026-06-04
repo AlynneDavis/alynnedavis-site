@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media & Podcast Appearances | Alynne Davis, PLLC</title>
+  <meta name="description" content="Podcast appearances and media features with Alynne Davis, LCMHC — therapist specializing in eating disorders, trauma, and expressive arts therapy in Charlotte, NC.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alynnedavis.com/media/">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alynne Davis, LCMHC",
+    "url": "https://alynnedavis.com",
+    "jobTitle": "Licensed Clinical Mental Health Counselor",
+    "worksFor": {
+      "@type": "MentalHealthBusiness",
+      "name": "Alynne Davis, PLLC"
+    },
+    "sameAs": [
+      "https://podcasts.apple.com/us/podcast/health-and-wellness-trailblazers/id1734826884",
+      "https://open.spotify.com/show/6tMruqPFs2tOZDcZeOutdm"
+    ]
+  }
+  </script>
+
+  <style>
+    .media-hero {
+      background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-warm) 50%, var(--color-bg-accent) 100%);
+      padding: clamp(60px, 10vw, 100px) 0 60px;
+      text-align: center;
+    }
+    .media-hero .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-gold-dark);
+      margin-bottom: 16px;
+    }
+    .media-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 500;
+      color: var(--color-heading);
+      margin-bottom: 20px;
+    }
+    .media-hero p {
+      font-size: 1.1rem;
+      color: var(--color-text-light);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .section-media {
+      padding: clamp(60px, 8vw, 96px) 0;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-gold-dark);
+      margin-bottom: 12px;
+    }
+    .section-media h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 500;
+      margin-bottom: 48px;
+      color: var(--color-heading);
+    }
+
+    .podcast-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: clamp(28px, 4vw, 44px);
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 640px) {
+      .podcast-card { grid-template-columns: 1fr; gap: 20px; }
+    }
+
+    .podcast-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--color-bg-accent);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .podcast-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: var(--color-gold);
+    }
+
+    .podcast-meta .show-name {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-gold-dark);
+      margin-bottom: 6px;
+    }
+    .podcast-meta h3 {
+      font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+      font-weight: 500;
+      color: var(--color-heading);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .podcast-meta p {
+      color: var(--color-text-light);
+      line-height: 1.75;
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .listen-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .listen-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .listen-btn-apple {
+      background: var(--color-heading);
+      color: var(--color-white) !important;
+    }
+    .listen-btn-apple:hover {
+      background: #1a1410;
+      transform: translateY(-1px);
+      color: var(--color-white) !important;
+    }
+    .listen-btn-spotify {
+      background: #1DB954;
+      color: var(--color-white) !important;
+    }
+    .listen-btn-spotify:hover {
+      background: #17a349;
+      transform: translateY(-1px);
+      color: var(--color-white) !important;
+    }
+    .listen-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .topics-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .topic-tag {
+      background: var(--color-bg-accent);
+      color: var(--color-gold-dark);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+    }
+
+    .cta-strip {
+      background: var(--color-bg-warm);
+      border-top: 1px solid var(--color-border);
+      padding: clamp(48px, 7vw, 80px) 0;
+      text-align: center;
+    }
+    .cta-strip h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 16px;
+    }
+    .cta-strip p {
+      color: var(--color-text-light);
+      max-width: 520px;
+      margin: 0 auto 28px;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="/" class="logo-link" title="Alynne Davis Expressive Arts Counseling — Home">
+        <img src="/images/alynne-davis-logo.png" alt="Alynne Davis Expressive Arts Counseling logo" class="logo" width="160" height="44" loading="eager">
+      </a>
+      <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/about" title="About Alynne Davis, LCMHC">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" title="Therapy specializations">Therapy Types</a>
+          <ul class="dropdown-menu">
+            <li><a href="/eating-disorder-therapist" title="Eating disorder therapy in Charlotte, NC">Eating Disorder Therapy</a></li>
+            <li><a href="/trauma-informed-womens-therapy" title="Trauma-informed therapy for women">Trauma-Informed Women's Therapy</a></li>
+            <li><a href="/expressive-arts-therapy" title="Expressive arts therapy sessions">Expressive Arts Therapy</a></li>
+            <li><a href="/adhd-therapy" title="ADHD therapy for women and families">ADHD Therapy</a></li>
+            <li><a href="/intensives" title="The Self-Discovery Intensive" style="color:#b89c6e;font-weight:600;">✦ Self-Discovery Intensive</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/services" class="dropdown-toggle" title="Therapy services">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/eating-disorder-therapy" title="Eating disorder therapy">Eating Disorder Therapy</a></li>
+            <li><a href="/trauma-therapy" title="Trauma therapy for women">Trauma Therapy</a></li>
+            <li><a href="/adhd-therapy-women-charlotte-nc" title="ADHD therapy for women">ADHD Therapy for Women</a></li>
+            <li><a href="/binge-eating-therapy-charlotte-nc" title="Binge eating therapy">Binge Eating Therapy</a></li>
+            <li><a href="/expressive-arts-therapy-charlotte-nc" title="Expressive arts therapy">Expressive Arts Therapy</a></li>
+            <li><a href="/deep-healing-sessions" title="Deep healing sessions and intensives" style="color:#b89c6e;font-weight:600;">✦ Deep Healing Sessions &amp; Intensives</a></li>
+          </ul>
+        </li>
+        <li><a href="/testimonials" title="Client testimonials">Testimonials</a></li>
+        <li><a href="/blog" title="Mental health blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="/learn" class="dropdown-toggle" title="Mental health resource guides">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a href="/learn/trauma-therapy/" title="Trauma therapy for women guide">Trauma Therapy</a></li>
+            <li><a href="/learn/eating-disorder-recovery/" title="Eating disorder recovery resources">Eating Disorder Recovery</a></li>
+            <li><a href="/learn/adhd-in-women/" title="ADHD in women guide">ADHD in Women</a></li>
+            <li><a href="/learn/anxiety-nervous-system/" title="Anxiety and nervous system guide">Anxiety &amp; Nervous System</a></li>
+            <li><a href="/learn/relationships-boundaries/" title="Relationships and boundaries guide">Relationships &amp; Boundaries</a></li>
+            <li><a href="/learn/healing-modalities/" title="Therapy types and healing modalities">Healing Modalities</a></li>
+            <li><a href="/eating-disorder-quiz" title="Is My Relationship With Food Normal? — Free self-reflection guide">Food &amp; Body Quiz</a></li>
+            <li><a href="/free-guide" title="Free guide — Beyond the Scale: The Truth About Food, Weight &amp; Recovery" style="color:#b89c6e;font-weight:600;">✦ Free Guide</a></li>
+          </ul>
+        </li>
+        <li><a href="/shop" title="Shop — Soul Nourishment Journal &amp; Healing Art">Shop</a></li>
+        <li><a href="/soul-nourishment" class="nav-cta-secondary" title="Embodied Nourishment coaching program">Embodied Nourishment</a></li>
+        <li><a href="/contact" class="nav-cta" title="Schedule a free consultation">Free Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="media-hero" aria-label="Media appearances">
+      <div class="container">
+        <p class="eyebrow">Media &amp; Podcast Appearances</p>
+        <h1>Alynne in the Conversation</h1>
+        <p>Sharing insight on healing your relationship with food, trauma, and whole-person wellbeing — wherever women are listening.</p>
+      </div>
+    </section>
+
+    <section class="section-media" aria-label="Podcast appearances">
+      <div class="container">
+        <p class="section-label">Podcast Episodes</p>
+        <h2>Listen to Recent Appearances</h2>
+
+        <article class="podcast-card" aria-label="Health and Wellness Trailblazers episode">
+          <div class="podcast-icon" aria-hidden="true">
+            <!-- microphone icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 1a4 4 0 0 1 4 4v6a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm-6 9a6 6 0 0 0 12 0h2a8 8 0 0 1-7 7.93V21h3v2H8v-2h3v-3.07A8 8 0 0 1 4 10h2z"/>
+            </svg>
+          </div>
+          <div class="podcast-meta">
+            <p class="show-name">Health and Wellness Trailblazers</p>
+            <h3>Heal Your Relationship with Food for a Healthier Body, Mind and Life</h3>
+            <div class="topics-list" aria-label="Topics covered">
+              <span class="topic-tag">Eating Disorders</span>
+              <span class="topic-tag">Body Image</span>
+              <span class="topic-tag">Trauma-Informed Care</span>
+              <span class="topic-tag">Expressive Arts Therapy</span>
+              <span class="topic-tag">Food &amp; Body Healing</span>
+            </div>
+            <p>In this episode, Alynne talks about what it really means to heal your relationship with food — moving beyond diet culture, understanding the emotional and trauma roots of disordered eating, and what a whole-person approach to recovery actually looks like. If you've ever felt stuck in cycles with food or your body, this conversation is for you.</p>
+            <div class="listen-links">
+              <a href="https://podcasts.apple.com/us/podcast/health-and-wellness-trailblazers/id1734826884"
+                 class="listen-btn listen-btn-apple"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 title="Listen on Apple Podcasts — Health and Wellness Trailblazers">
+                <!-- Apple Podcasts icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm0 2a1 1 0 0 1 .993.883L13 9.5v2.086l1.293-1.293a1 1 0 0 1 1.497 1.32l-.083.094-3 3a1 1 0 0 1-1.32.083l-.094-.083-3-3a1 1 0 0 1 1.32-1.497l.094.083L11 11.586V9.5a1 1 0 0 1 1-1z"/>
+                </svg>
+                Listen on Apple Podcasts
+              </a>
+              <a href="https://open.spotify.com/show/6tMruqPFs2tOZDcZeOutdm?si=5190b609a28949a1"
+                 class="listen-btn listen-btn-spotify"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 title="Listen on Spotify — Health and Wellness Trailblazers">
+                <!-- Spotify icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+                Listen on Spotify
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="cta-strip" aria-label="Work with Alynne">
+      <div class="container">
+        <h2>Ready to Begin Your Own Healing?</h2>
+        <p>If something in this conversation resonated with you, I'd love to connect. I offer a free 20-minute consultation for women exploring therapy in Charlotte, NC or via telehealth across North Carolina and South Carolina.</p>
+        <a href="/contact" class="btn" title="Schedule a free consultation with Alynne Davis">Schedule a Free Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/images/alynne-davis-logo-white.png" alt="Alynne Davis Expressive Arts Counseling" width="140" height="38" loading="lazy">
+          <p>Trauma-informed expressive arts therapy for women in Charlotte, NC. Specializing in eating disorders, trauma, ADHD, and body image.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/about" title="About Alynne Davis">About</a></li>
+            <li><a href="/services" title="Therapy services">Services</a></li>
+            <li><a href="/testimonials" title="Client testimonials">Testimonials</a></li>
+            <li><a href="/blog" title="Mental health blog">Blog</a></li>
+            <li><a href="/learn" title="Mental health resource guides">Learn</a></li>
+            <li><a href="/free-guide" title="Free guide — Beyond the Scale">Free Guide</a></li>
+            <li><a href="/eating-disorder-glossary" title="Eating disorder glossary">ED Glossary</a></li>
+            <li><a href="/shop" title="Shop — Soul Nourishment journal and healing art">Shop</a></li>
+            <li><a href="/contact" title="Contact and schedule consultation">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Specializations</h4>
+          <ul class="footer-links">
+            <li><a href="/eating-disorder-therapist" title="Eating disorder therapy">Eating Disorder Therapy</a></li>
+            <li><a href="/trauma-informed-womens-therapy" title="Trauma therapy for women">Trauma-Informed Therapy</a></li>
+            <li><a href="/expressive-arts-therapy" title="Expressive arts therapy">Expressive Arts Therapy</a></li>
+            <li><a href="/adhd-therapy" title="ADHD therapy">ADHD Therapy</a></li>
+            <li><a href="/perinatal-therapy" title="Perinatal therapy — prenatal and postpartum support">Perinatal Therapy</a></li>
+            <li><a href="/intensives" title="The Self-Discovery Intensive">Intensives</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Alynne Davis, MA, LCMHC. All Rights Reserved. — <a href="/privacy-policy" title="Privacy policy">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
