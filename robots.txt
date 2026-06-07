@@ -18,5 +18,10 @@ Disallow: /page/
 Disallow: /*?sort=
 Disallow: /*?post_type=
 Disallow: /*?sort=2d
+Disallow: /*?page=
+
+# Block legacy pages
+Disallow: /coming-soon/
+Disallow: /coming-soon
 
 Sitemap: https://alynnedavis.com/sitemap.xml
