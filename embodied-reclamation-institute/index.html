@@ -197,6 +197,10 @@
     @media (max-width: 640px) {
       .offers-grid { grid-template-columns: 1fr; }
     }
+    @media (max-width: 700px) {
+      .eri-founder-grid { grid-template-columns: 1fr !important; }
+      .eri-intro-grid { grid-template-columns: 1fr !important; }
+    }
 
     .dark-section {
       background: #1e1c18;
@@ -294,6 +298,7 @@
           </ul>
         </li>
         <li><a href="/shop" title="Shop — Soul Nourishment Journal &amp; Healing Art">Shop</a></li>
+        <li><a href="/embodied-reclamation-institute" title="Embodied Reclamation Institute — coaching">Coaching</a></li>
         <li><a href="/soul-nourishment" class="nav-cta-secondary" title="Embodied Nourishment coaching program">Embodied Nourishment</a></li>
         <li><a href="/contact" class="nav-cta" title="Schedule a free consultation">Free Consultation</a></li>
       </ul>
@@ -318,15 +323,21 @@
     <!-- What This Is -->
     <section class="section" aria-label="About the Embodied Reclamation Institute">
       <div class="container">
-        <div class="content-narrow fade-in">
-          <p style="font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#b89c6e;margin:0 0 20px;">What This Is</p>
-          <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.4vw,1.6rem);color:#2c2c2c;line-height:1.65;margin:0 0 24px;">There is a version of you that existed before the survival patterns took over.</p>
-          <p>Before the shame stories. Before the attachment wounds shaped how you moved through the world. Before you learned to shrink, perform, over-function, or disappear just to feel safe.</p>
-          <p>She didn&rsquo;t go anywhere. She&rsquo;s been waiting.</p>
-          <p>The Embodied Reclamation Institute exists for one reason: to give you a structured, somatic, and deeply personal path back to her.</p>
-          <p>This is not about fixing what&rsquo;s broken. You are not broken.</p>
-          <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;color:#2c2c2c;margin:32px 0 0;">This is about <em>remembering.</em></p>
+        <div class="fade-in eri-intro-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1000px;margin:0 auto;">
+          <div>
+            <p style="font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#b89c6e;margin:0 0 20px;">What This Is</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.4vw,1.6rem);color:#2c2c2c;line-height:1.65;margin:0 0 24px;">There is a version of you that existed before the survival patterns took over.</p>
+            <p>Before the shame stories. Before the attachment wounds shaped how you moved through the world. Before you learned to shrink, perform, over-function, or disappear just to feel safe.</p>
+            <p>She didn&rsquo;t go anywhere. She&rsquo;s been waiting.</p>
+            <p>The Embodied Reclamation Institute exists for one reason: to give you a structured, somatic, and deeply personal path back to her.</p>
+            <p>This is not about fixing what&rsquo;s broken. You are not broken.</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;color:#2c2c2c;margin:32px 0 0;">This is about <em>remembering.</em></p>
+          </div>
+          <div>
+            <img src="/images/somatic-therapy-what-to-expect.jpg" alt="A woman in a peaceful, reflective moment — embodied healing work" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;" loading="lazy">
+          </div>
         </div>
+        <style>@media(max-width:700px){.eri-two-col{grid-template-columns:1fr!important;}}</style>
       </div>
     </section>
 
@@ -397,7 +408,11 @@
     <!-- About the Founder -->
     <section class="section section-warm" aria-label="About Alynne Davis">
       <div class="container">
-        <div class="content-narrow fade-in">
+        <div class="fade-in eri-founder-grid" style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;max-width:900px;margin:0 auto;">
+          <div style="flex-shrink:0;">
+            <img src="/images/alynne-davis-therapist-charlotte-nc.jpg" alt="Alynne Davis, LCMHC — founder of the Embodied Reclamation Institute" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;" loading="lazy">
+          </div>
+          <div>
           <p style="font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#b89c6e;margin:0 0 20px;">Who Built This &mdash; and Why</p>
           <h2>About the Founder</h2>
           <p style="margin-top:24px;">I&rsquo;m Alynne Davis &mdash; embodied leader, founder of the Embodied Reclamation Institute, and creator of the RRR Method.</p>
@@ -408,7 +423,8 @@
           <div style="margin-top:32px;">
             <a href="/about" class="btn" title="Learn more about Alynne Davis">Learn More About Alynne</a>
           </div>
-        </div>
+          </div><!-- end text col -->
+        </div><!-- end grid -->
       </div>
     </section>
 
