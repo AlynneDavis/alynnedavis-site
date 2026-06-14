@@ -529,7 +529,7 @@
       } catch(e) {}
     }
 
-    document.getElementById('reclamation-optin-form').addEventListener('submit', async function(e) {
+    document.getElementById('reclamation-optin-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('optin-name').value.trim();
       const email = document.getElementById('optin-email').value.trim();
@@ -541,29 +541,9 @@
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      try {
-        const res = await fetch('https://lujkqnqpxjznfczslnjr.supabase.co/functions/v1/contact-form', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name,
-            email,
-            message: 'Reclamation Assessment Opt-in',
-            form_type: 'reclamation_assessment'
-          })
-        });
-        if (res.ok) {
-          submitToZoho(name, email);
-          this.style.display = 'none';
-          document.getElementById('optin-success').style.display = 'block';
-        } else {
-          throw new Error('Server error');
-        }
-      } catch {
-        btn.textContent = 'Send Me the Guide';
-        btn.disabled = false;
-        document.getElementById('optin-error').style.display = 'block';
-      }
+      submitToZoho(name, email);
+      this.style.display = 'none';
+      document.getElementById('optin-success').style.display = 'block';
     });
   </script>
 </body>
