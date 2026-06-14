@@ -390,22 +390,26 @@
           </ul>
 
           <!-- Opt-in form -->
-          <form class="optin-form" id="reclamation-optin-form" novalidate>
+          <form class="optin-form" id="reclamation-optin-form" method="POST" action="https://zujep-zgpm.maillist-manage.com/weboptin.zc" target="_self">
             <div class="form-row">
-              <input type="text" id="optin-name" name="first_name" placeholder="Your first name" required>
-              <input type="email" id="optin-email" name="email" placeholder="Your email address" required>
+              <input type="text" id="optin-name" name="FIRSTNAME" placeholder="Your first name" required>
+              <input type="email" id="optin-email" name="CONTACT_EMAIL" placeholder="Your email address" required>
             </div>
-            <!-- Honeypot -->
-            <div style="position:absolute;left:-9999px;height:0;overflow:hidden;" aria-hidden="true">
-              <input type="text" name="website" tabindex="-1" autocomplete="off">
-            </div>
+            <input type="hidden" name="submitType" value="optinCustomView">
+            <input type="hidden" name="emailReportId" value="">
+            <input type="hidden" name="formType" value="QuickForm">
+            <input type="hidden" name="zx" value="133b9bf30">
+            <input type="hidden" name="zcvers" value="3.0">
+            <input type="hidden" name="oldListIds" value="">
+            <input type="hidden" name="mode" value="OptinCreateView">
+            <input type="hidden" name="zcld" value="112b6b96937d13f59">
+            <input type="hidden" name="zctd" value="112b6b96937a107a9">
+            <input type="hidden" name="zc_Url" value="zujep-zgpm.maillist-manage.com">
+            <input type="hidden" name="zc_trackCode" value="ZCFORMVIEW">
+            <input type="hidden" name="zc_formIx" value="3z5ae69b46b9ff6894c43d313023d448a42deef867e7f7f3b797c4379d4fa58422">
+            <input type="hidden" name="viewFrom" value="URL_ACTION">
             <button type="submit" class="btn-submit">Send Me the Guide</button>
             <p class="privacy">No spam, ever. Unsubscribe anytime. Your information is safe.</p>
-            <div class="form-success-msg" id="optin-success">
-              <strong>You&rsquo;re in — check your inbox.</strong>
-              Your self-assessment guide is on its way. While you wait, you can also <a href="/downloads/where-are-you-reclamation-assessment.pdf" download style="color:#b89c6e;">download it directly here</a>.
-            </div>
-            <div class="form-error-msg" id="optin-error">Something went wrong. Please try again or email me at <a href="mailto:info@alynnedavis.com" style="color:#b89c6e;">info@alynnedavis.com</a>.</div>
           </form>
         </div>
 
