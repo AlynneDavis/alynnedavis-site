@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEJNSTR437"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NEJNSTR437');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Guide Is On Its Way | Alynne Davis</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .thankyou-hero {
+      background: #1e1c18;
+      padding: 100px 20px 80px;
+      text-align: center;
+    }
+    .thankyou-hero .eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #b89c6e;
+      margin: 0 0 18px;
+    }
+    .thankyou-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      color: #fff;
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+    .thankyou-hero p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.98rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    .download-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      padding: 48px 44px;
+      max-width: 560px;
+      margin: -32px auto 0;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .download-card { padding: 32px 24px; margin: -20px 16px 0; }
+    }
+    .download-card .icon {
+      font-size: 2.5rem;
+      margin: 0 0 16px;
+    }
+    .download-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #2c2c2c;
+      margin: 0 0 10px;
+    }
+    .download-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.7;
+      margin: 0 0 28px;
+    }
+    .btn-download {
+      display: inline-block;
+      padding: 16px 40px;
+      background: #b89c6e;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-download:hover { background: #a08858; color: #fff; }
+    .download-note {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: #bbb;
+      margin: 14px 0 0;
+    }
+
+    .whats-next {
+      max-width: 640px;
+      margin: 56px auto 0;
+      padding: 0 20px;
+    }
+    .whats-next h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2c2c2c;
+      margin: 0 0 20px;
+      text-align: center;
+    }
+    .next-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .next-steps li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #faf8f4;
+      border-radius: 8px;
+      padding: 18px 20px;
+    }
+    .step-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #b89c6e;
+      background: rgba(184,156,110,0.12);
+      border-radius: 4px;
+      padding: 3px 8px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .next-steps li p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .next-steps li strong {
+      color: #2c2c2c;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.92rem;
+    }
+
+    .discovery-cta {
+      background: #1e1c18;
+      border-radius: 10px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 640px;
+      margin: 40px auto 64px;
+    }
+    .discovery-cta p.eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #b89c6e;
+      margin: 0 0 14px;
+    }
+    .discovery-cta h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 500;
+      color: #fff;
+      margin: 0 0 14px;
+      line-height: 1.3;
+    }
+    .discovery-cta p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      margin: 0 0 28px;
+      line-height: 1.7;
+    }
+    .btn-discovery {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #b89c6e;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-discovery:hover { background: #a08858; color: #fff; }
+    .discovery-cta .no-obligation {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      margin: 14px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="/" class="logo-link" title="Alynne Davis Expressive Arts Counseling — Home">
+        <img src="/images/alynne-davis-logo.png" alt="Alynne Davis Expressive Arts Counseling logo" class="logo" width="160" height="44" loading="eager">
+      </a>
+      <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/about" title="About Alynne Davis, LCMHC">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" title="Therapy specializations">Therapy Types</a>
+          <ul class="dropdown-menu">
+            <li><a href="/eating-disorder-therapist">Eating Disorder Therapy</a></li>
+            <li><a href="/trauma-informed-womens-therapy">Trauma-Informed Women's Therapy</a></li>
+            <li><a href="/expressive-arts-therapy">Expressive Arts Therapy</a></li>
+            <li><a href="/adhd-therapy">ADHD Therapy</a></li>
+            <li><a href="/intensives" style="color:#b89c6e;font-weight:600;">✦ Self-Discovery Intensive</a></li>
+          </ul>
+        </li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="/learn" class="dropdown-toggle">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a href="/learn/trauma-therapy/">Trauma Therapy</a></li>
+            <li><a href="/learn/eating-disorder-recovery/">Eating Disorder Recovery</a></li>
+            <li><a href="/learn/adhd-in-women/">ADHD in Women</a></li>
+            <li><a href="/learn/anxiety-nervous-system/">Anxiety &amp; Nervous System</a></li>
+            <li><a href="/learn/relationships-boundaries/">Relationships &amp; Boundaries</a></li>
+            <li><a href="/learn/healing-modalities/">Healing Modalities</a></li>
+            <li><a href="/eating-disorder-quiz">Food &amp; Body Quiz</a></li>
+            <li><a href="/free-guide" style="color:#b89c6e;font-weight:600;">✦ Free Guide</a></li>
+          </ul>
+        </li>
+        <li><a href="/shop">Shop</a></li>
+        <li class="dropdown">
+          <a href="/embodied-reclamation-institute" class="dropdown-toggle">Coaching</a>
+          <ul class="dropdown-menu">
+            <li><a href="/embodied-reclamation-institute">Embodied Reclamation Institute</a></li>
+            <li><a href="/embodied-reclamation-institute/coaching">1:1 Coaching</a></li>
+            <li><a href="/soul-nourishment">Embodied Nourishment</a></li>
+          </ul>
+        </li>
+        <li><a href="/contact" class="nav-cta">Free Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="thankyou-hero" aria-label="Thank you">
+      <div class="container">
+        <p class="eyebrow">You&rsquo;re In</p>
+        <h1>Your Guide Is On Its Way.</h1>
+        <p>Check your inbox &mdash; the self-assessment guide is heading to you now. While you wait, you can download it directly below.</p>
+      </div>
+    </section>
+
+    <section style="padding:0 20px 48px;background:#f5f0e8;">
+      <div class="container">
+
+        <!-- Download card -->
+        <div class="download-card fade-in">
+          <div class="icon">📄</div>
+          <h2>Download Your Guide</h2>
+          <p>Don&rsquo;t want to wait for the email? Download <em>Where Are You in Your Reclamation?</em> directly right now.</p>
+          <a href="/downloads/where-are-you-reclamation-assessment.pdf" download class="btn-download">Download the PDF</a>
+          <p class="download-note">A copy is also on its way to your inbox.</p>
+        </div>
+
+        <!-- What's next -->
+        <div class="whats-next fade-in">
+          <h3>What Happens Next</h3>
+          <ul class="next-steps">
+            <li>
+              <span class="step-num">NOW</span>
+              <p><strong>Read the self-assessment</strong>Check the statements that resonate in your body &mdash; not the ones you think should resonate. See which phase of the RRR Method you&rsquo;re in.</p>
+            </li>
+            <li>
+              <span class="step-num">NEXT</span>
+              <p><strong>Watch your inbox over the next few days</strong>You&rsquo;ll receive three emails from me &mdash; one for each phase of the RRR Method &mdash; going deeper into what that phase looks and feels like, and what becomes possible when you move through it.</p>
+            </li>
+            <li>
+              <span class="step-num">WHEN READY</span>
+              <p><strong>If something in this resonated deeply</strong>Schedule a discovery call. It&rsquo;s a relaxed, no-pressure conversation to explore whether 1:1 Embodied Reclamation Coaching is the right next step for you.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Discovery call CTA -->
+        <div class="discovery-cta fade-in">
+          <p class="eyebrow">Ready to Go Deeper?</p>
+          <h3>Schedule a Discovery Call</h3>
+          <p>A relaxed, no-pressure conversation to explore whether 1:1 Embodied Reclamation Coaching is the right fit for you right now. There is no obligation &mdash; just a conversation.</p>
+          <a href="/contact" class="btn-discovery">Schedule Your Discovery Call</a>
+          <p class="no-obligation">No obligation. Just a conversation.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/images/alynne-davis-logo-white.png" alt="Alynne Davis Expressive Arts Counseling" width="140" height="38" loading="lazy">
+          <p>Trauma-informed expressive arts therapy for women in Charlotte, NC.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Coaching</h4>
+          <ul class="footer-links">
+            <li><a href="/embodied-reclamation-institute">Embodied Reclamation Institute</a></li>
+            <li><a href="/embodied-reclamation-institute/coaching">1:1 Coaching</a></li>
+            <li><a href="/reclamation-assessment" style="color:#b89c6e;">✦ Free Assessment Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Alynne Davis, MA, LCMHC. All Rights Reserved. &mdash; <a href="/privacy-policy">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
