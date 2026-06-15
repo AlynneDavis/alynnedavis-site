@@ -390,24 +390,11 @@
           </ul>
 
           <!-- Opt-in form -->
-          <form class="optin-form" id="reclamation-optin-form" method="POST" action="https://zujep-zgpm.maillist-manage.com/weboptin.zc" target="_self">
+          <form class="optin-form" id="reclamation-optin-form" novalidate>
             <div class="form-row">
-              <input type="text" id="optin-name" name="FIRSTNAME" placeholder="Your first name" required>
-              <input type="email" id="optin-email" name="CONTACT_EMAIL" placeholder="Your email address" required>
+              <input type="text" id="optin-name" placeholder="Your first name" required>
+              <input type="email" id="optin-email" placeholder="Your email address" required>
             </div>
-            <input type="hidden" name="submitType" value="optinCustomView">
-            <input type="hidden" name="emailReportId" value="">
-            <input type="hidden" name="formType" value="QuickForm">
-            <input type="hidden" name="zx" value="133b9bf30">
-            <input type="hidden" name="zcvers" value="3.0">
-            <input type="hidden" name="oldListIds" value="">
-            <input type="hidden" name="mode" value="OptinCreateView">
-            <input type="hidden" name="zcld" value="112b6b96937d13f59">
-            <input type="hidden" name="zctd" value="112b6b96937a107a9">
-            <input type="hidden" name="zc_Url" value="zujep-zgpm.maillist-manage.com">
-            <input type="hidden" name="zc_trackCode" value="ZCFORMVIEW">
-            <input type="hidden" name="zc_formIx" value="3z5ae69b46b9ff6894c43d313023d448a42deef867e7f7f3b797c4379d4fa58422">
-            <input type="hidden" name="viewFrom" value="URL_ACTION">
             <button type="submit" class="btn-submit">Send Me the Guide</button>
             <p class="privacy">No spam, ever. Unsubscribe anytime. Your information is safe.</p>
           </form>
@@ -486,5 +473,51 @@
   </footer>
 
   <script src="/js/main.js" defer></script>
+  <script>
+    document.getElementById('reclamation-optin-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('optin-name').value.trim();
+      const email = document.getElementById('optin-email').value.trim();
+      if (!name || !email) return;
+
+      const btn = this.querySelector('.btn-submit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const iframe = document.createElement('iframe');
+      iframe.name = 'zoho_target';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'https://zujep-zgpm.maillist-manage.com/weboptin.zc';
+      form.target = 'zoho_target';
+
+      const fields = {
+        FIRSTNAME: name, CONTACT_EMAIL: email,
+        submitType: 'optinCustomView', emailReportId: '',
+        formType: 'QuickForm', zx: '133b9bf30', zcvers: '3.0',
+        oldListIds: '', mode: 'OptinCreateView',
+        zcld: '112b6b96937d13f59', zctd: '112b6b96937a107a9',
+        zc_Url: 'zujep-zgpm.maillist-manage.com',
+        zc_trackCode: 'ZCFORMVIEW',
+        zc_formIx: '3z5ae69b46b9ff6894c43d313023d448a42deef867e7f7f3b797c4379d4fa58422',
+        viewFrom: 'URL_ACTION'
+      };
+
+      for (const [k, v] of Object.entries(fields)) {
+        const input = document.createElement('input');
+        input.type = 'hidden'; input.name = k; input.value = v;
+        form.appendChild(input);
+      }
+      document.body.appendChild(form);
+      form.submit();
+
+      setTimeout(() => {
+        window.location.href = '/reclamation-assessment/thank-you/';
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
