@@ -86,6 +86,8 @@ if (form) {
       });
       form.style.display = 'none';
       document.querySelector('.form-success').style.display = 'block';
+      // GA4 conversion: contact form lead
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact' });
     } catch (err) {
       document.querySelector('.form-error').style.display = 'block';
       btn.textContent = original;
@@ -145,6 +147,8 @@ if (intensiveForm) {
       });
       intensiveForm.style.display = 'none';
       intensiveForm.closest('.content-narrow').querySelector('.form-success').style.display = 'block';
+      // GA4 conversion: intensive inquiry lead
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'intensive_inquiry' });
     } catch (err) {
       intensiveForm.closest('.content-narrow').querySelector('.form-error').style.display = 'block';
       btn.textContent = original;
