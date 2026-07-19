@@ -338,6 +338,22 @@
     @media (max-width: 768px) {
       .invitation-grid { grid-template-columns: 1fr; }
     }
+
+    .invitation-dark {
+      position: relative;
+      background: #1e1c18 url('/images/calm-nervous-system-after-trigger.jpg') center center / cover no-repeat;
+    }
+    .invitation-dark::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 17, 14, 0.80);
+    }
+    .invitation-dark > .container { position: relative; z-index: 1; }
+    .invitation-dark h2 { color: #fff; }
+    .invitation-dark p { color: rgba(255,255,255,0.72); }
+    .invitation-dark .invitation-card h3 { color: #fff; }
+    .invitation-dark .invitation-card p { color: rgba(255,255,255,0.70); }
   </style>
 
   <!-- Schema.org -->
@@ -641,7 +657,7 @@
     </section>
 
     <!-- An Invitation (Remember / Return / Reclaim) -->
-    <section class="section" aria-label="An invitation">
+    <section class="section invitation-dark" aria-label="An invitation">
       <div class="container">
         <div class="content-narrow fade-in" style="text-align:center;max-width:680px;margin:0 auto;">
           <p style="font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6b8a74;margin:0 0 20px;">An Invitation</p>
@@ -649,22 +665,24 @@
           <p style="margin-top:16px;">The parts of you that learned to please, perfect, protect, achieve, withdraw, or stay small were trying to help you survive and belong.</p>
         </div>
 
-        <div class="invitation-grid fade-in" style="max-width:900px;margin:40px auto 0;">
+        <div class="invitation-grid fade-in" style="max-width:900px;margin:44px auto 0;">
           <div class="invitation-card">
-            <p class="phase-num">Remember</p>
             <h3>Remember</h3>
             <p>You are not broken. Beneath the survival patterns is a self that has been waiting for your attention.</p>
           </div>
           <div class="invitation-card">
-            <p class="phase-num">Return</p>
             <h3>Return</h3>
             <p>Pause for a moment. Place your feet on the ground and notice what is supporting you. Ask gently: &ldquo;What part of me has been waiting to be heard?&rdquo;</p>
           </div>
           <div class="invitation-card">
-            <p class="phase-num">Reclaim</p>
             <h3>Reclaim</h3>
             <p>This week, choose one small action that feels like a return to yourself &mdash; resting without earning it, an honest no, or making something with your hands. Reclamation often begins with one moment in which you stop abandoning yourself.</p>
           </div>
+        </div>
+
+        <div class="fade-in" style="text-align:center;max-width:640px;margin:56px auto 0;">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.8);line-height:1.65;margin:0 0 24px;">This is a glimpse of my <em>Letters of Reclamation</em> &mdash; the kind of reflections, practices, and invitations I share on Substack.</p>
+          <a href="https://embodiedreclamation.substack.com/" target="_blank" rel="noopener" class="btn-gold" title="Read Letters of Reclamation on Substack">Read Letters of Reclamation &rarr;</a>
         </div>
       </div>
     </section>
