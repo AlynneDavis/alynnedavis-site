@@ -194,18 +194,21 @@ p { margin-bottom: 1rem; }
 }
 .hero .container { position: relative; }
 .hero-content { position: relative; z-index: 1; max-width: 680px; }
-.hero-ginkgo {
+.hero-photo {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 55%;
-  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36%;
+  max-width: 400px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: right center;
-  opacity: 0.7;
-  pointer-events: none;
+  object-position: center 28%;
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(44,36,32,0.16);
   z-index: 0;
 }
+.hero .hero-content { max-width: 620px; }
 .hero h1 { margin-bottom: 24px; letter-spacing: -0.02em; }
 .hero p { font-size: 1.15rem; color: var(--color-text-light); margin-bottom: 8px; line-height: 1.8; }
 .hero .location { font-size: 0.95rem; color: var(--color-gold-dark); font-weight: 500; margin-top: 20px; }
@@ -272,6 +275,42 @@ p { margin-bottom: 1rem; }
 }
 .testimonial p { padding-top: 20px; font-style: italic; color: var(--color-text); line-height: 1.8; }
 .testimonial .attribution { font-style: normal; color: var(--color-text-light); font-size: 0.88rem; margin-top: 16px; }
+
+/* ---- Homepage Pathway Cards (Three Doors) ---- */
+#three-doors .card {
+  background: var(--color-bg-warm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 32px;
+}
+#three-doors .card h3 { font-size: 1.9rem; margin-bottom: 14px; }
+#three-doors .card p { flex: 1 0 auto; margin-bottom: 26px; }
+#three-doors .pathway-btn {
+  display: inline-block;
+  background: var(--color-gold);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border-radius: 40px;
+  transition: background 0.2s, transform 0.2s;
+  margin-bottom: 30px;
+}
+#three-doors .pathway-btn:hover { background: var(--color-gold-dark); color: var(--color-white); transform: translateY(-2px); }
+#three-doors .pathway-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f0e8d8, #e2d4bd);
+  margin-top: auto;
+}
+#three-doors .pathway-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---- About / Split Layout ---- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -487,7 +526,15 @@ p { margin-bottom: 1rem; }
 }
 
 @media (max-width: 1024px) {
-  .hero-ginkgo { display: none; }
+  .hero .container { display: flex; flex-direction: column; align-items: center; }
+  .hero .hero-content { max-width: 100%; }
+  .hero-photo {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 340px;
+    margin: 36px auto 0;
+  }
 }
 
 /* ---- Form Messages ---- */
