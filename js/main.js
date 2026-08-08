@@ -156,3 +156,16 @@ if (intensiveForm) {
     }
   });
 }
+
+/* ---- Track phone and text link clicks in GA4 ----
+   Fires on any tel: or sms: link sitewide, so calls and texts show up
+   alongside form submissions instead of being invisible. */
+document.addEventListener('click', function (e) {
+  const link = e.target.closest('a[href^="tel:"], a[href^="sms:"]');
+  if (!link || typeof gtag !== 'function') return;
+  const method = link.getAttribute('href').startsWith('sms:') ? 'text' : 'phone';
+  gtag('event', 'contact_click', {
+    method: method,
+    page_path: window.location.pathname
+  });
+});
