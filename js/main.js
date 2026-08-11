@@ -34,7 +34,7 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
@@ -168,4 +168,17 @@ document.addEventListener('click', function (e) {
     method: method,
     page_path: window.location.pathname
   });
+});
+
+
+/* ---- fade-in safety net ----
+   If the observer never fires, for any reason, content must still be
+   readable. Nothing on the page should depend on JavaScript to be seen. */
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    document.querySelectorAll('.fade-in:not(.visible)').forEach(function (el) {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('visible');
+    });
+  }, 1200);
 });
