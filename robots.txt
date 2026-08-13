@@ -25,3 +25,6 @@ Disallow: /coming-soon/
 Disallow: /coming-soon
 
 Sitemap: https://alynnedavis.com/sitemap.xml
+
+# Summary for AI answer engines
+# https://alynnedavis.com/llms.txt
