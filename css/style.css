@@ -705,6 +705,41 @@ p { margin-bottom: 1rem; }
   background: var(--color-gold-light);
   margin: 52px auto;
 }
+.letter h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 8px 0 24px;
+  line-height: 1.3;
+}
+.letter .letter-sign {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-top: 44px;
+  line-height: 1.7;
+}
+.letter-practice h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-gold);
+  margin: 40px 0 14px;
+  letter-spacing: 0.02em;
+}
+.letter-practice h3:first-of-type { margin-top: 28px; }
+.letter-practice blockquote {
+  margin: 0 0 1.15rem;
+  padding: 16px 22px;
+  border-left: 2px solid var(--color-gold-light);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a443f;
+  font-style: italic;
+}
 .letter-img { margin: 44px 0; }
 .letter-img img {
   max-width: 100%;
