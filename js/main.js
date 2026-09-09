@@ -55,6 +55,12 @@ function splitName(fullName) {
   return { first: parts.slice(0, -1).join(' '), last: parts[parts.length - 1] };
 }
 
+// Bot time trap. A human cannot read and complete these forms in under three
+// seconds; automated submissions routinely do. Measured from page load.
+const formPageLoadedAt = Date.now();
+const MIN_FILL_MS = 3000;
+function tooFastToBeHuman() { return Date.now() - formPageLoadedAt < MIN_FILL_MS; }
+
 // Contact form handler
 const form = document.getElementById('contact-form');
 if (form) {
@@ -67,8 +73,10 @@ if (form) {
 
     const data = Object.fromEntries(new FormData(form));
 
-    // Honeypot check — if the hidden field is filled in, it's a bot
-    if (data.website) {
+    // Honeypot check — if the hidden field is filled in, it's a bot.
+    // Time trap — submitted too fast to have been typed by a person.
+    // Both show the normal success state so bots get no signal they were caught.
+    if (data.website || tooFastToBeHuman()) {
       form.style.display = 'none';
       document.querySelector('.form-success').style.display = 'block';
       return;
@@ -108,8 +116,8 @@ if (intensiveForm) {
 
     const raw = Object.fromEntries(new FormData(intensiveForm));
 
-    // Honeypot check
-    if (raw.website) {
+    // Honeypot check, plus the time trap. Both fail silently.
+    if (raw.website || tooFastToBeHuman()) {
       intensiveForm.style.display = 'none';
       intensiveForm.closest('.content-narrow').querySelector('.form-success').style.display = 'block';
       return;
