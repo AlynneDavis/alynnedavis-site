@@ -206,7 +206,8 @@ if (form) {
     const data = {};
     for (const key of new Set(fd.keys())) {
       const all = fd.getAll(key).filter(v => v !== '');
-      data[key] = all.length > 1 ? all.join(', ') : (all[0] || '');
+      // Joined with a slash, not a comma: several option values contain commas.
+      data[key] = all.length > 1 ? all.join(' / ') : (all[0] || '');
     }
 
     if (data.website || tooFastToBeHuman()) {
@@ -244,9 +245,14 @@ if (form) {
       group_hope: 'HOPES FOR A GROUP', retreat_hope: 'HOPES FOR A RETREAT',
       anything_else: 'ANYTHING ELSE'
     };
+    // Zoho's Web-to-Lead notification email is HTML, so plain newlines in the
+    // Description collapse into spaces by the time it reaches Alynne's inbox.
+    // Each line therefore carries its own visible marker, which keeps the block
+    // scannable in the email AND as a list in the CRM record, where the
+    // newlines do survive.
     let body = '';
-    for (const k of Object.keys(LABELS)) if (data[k]) body += LABELS[k] + ': ' + data[k] + '\n';
-    for (const k of Object.keys(LONG)) if (data[k]) body += '\n' + LONG[k] + ':\n' + data[k] + '\n';
+    for (const k of Object.keys(LABELS)) if (data[k]) body += '\u2022 ' + LABELS[k] + ': ' + data[k] + '\n';
+    for (const k of Object.keys(LONG)) if (data[k]) body += '\n\u25B8 ' + LONG[k] + ': ' + data[k] + '\n';
 
     try {
       const { first, last } = splitName(data.name || '');
