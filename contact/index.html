@@ -594,7 +594,7 @@
                 <div class="fee-row"><span class="fee-label">Extended sessions</span><span class="fee-amount">Available when clinically appropriate</span></div>
                 <div class="fee-row"><span class="fee-label">Therapy intensives</span><span class="fee-amount">Discussed during consultation</span></div>
               </div>
-              <p class="fieldset-note">This practice is primarily private pay. Aetna is the only panel I am currently on. I can provide a superbill after each session if you want to pursue out-of-network reimbursement, and HSA and FSA cards are accepted.</p>
+              <p class="fieldset-note">This practice is primarily private pay. I do not bill insurance directly, though I can provide a superbill after each session if you want to pursue out-of-network reimbursement, and HSA and FSA cards are accepted.</p>
               <p class="fieldset-note">Please look at these numbers before requesting a consultation, so that the financial side feels workable before we speak rather than after. I would rather tell you now than spend your time and mine discovering it at the end of a call.</p>
               <div class="form-group" id="grp-fees_workable" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
                 <div class="radio-group" role="radiogroup">
@@ -610,14 +610,13 @@
                 <select id="payment" name="payment" required>
                   <option value="" disabled selected>Select one</option>
                   <option value="Private pay">Private pay</option>
-                  <option value="Aetna">Aetna</option>
                   <option value="Out-of-network benefits and superbill">Out-of-network benefits and superbill</option>
                   <option value="HSA or FSA">HSA or FSA</option>
-                  <option value="Another insurance plan">Another insurance plan</option>
+                  <option value="Hoping to use insurance">I was hoping to use insurance</option>
                   <option value="Still determining">Still determining</option>
                 </select>
               </div>
-              <p class="field-note" id="payment-note" hidden>Aetna is the only plan I am currently able to bill. I can still provide a superbill you may submit to your insurer for possible out-of-network reimbursement, though what comes back depends entirely on your plan.</p>
+              <p class="field-note" id="payment-note" hidden>I do not bill insurance directly. I can provide a superbill you may submit to your insurer yourself for possible out-of-network reimbursement, though what comes back depends entirely on your plan. If insurance is essential for you, say so and I will point you toward clinicians who take it.</p>
             </fieldset>
 
             <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy">
@@ -781,6 +780,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=8" defer></script>
+  <script src="/js/main.js?v=9" defer></script>
 </body>
 </html>

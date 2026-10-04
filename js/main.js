@@ -165,7 +165,7 @@ if (form) {
   form.addEventListener('change', (e) => {
     const t = e.target;
     if (t.name === 'fees_workable') toggle('fees-note', t.value !== 'Yes');
-    if (t.name === 'payment') toggle('payment-note', t.value === 'Another insurance plan');
+    if (t.name === 'payment') toggle('payment-note', t.value === 'Hoping to use insurance');
     // Alynne's adolescent work is with older teens only.
     if (t.id === 'teen_age') toggle('teen-age-note', ['12 or younger', '13 to 15'].includes(t.value));
     // A formal diagnosis goes to the partner assessment; self-understanding is therapy.
