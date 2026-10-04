@@ -113,6 +113,7 @@
                   <option value="Couples or relationship therapy">Couples or relationship therapy</option>
                   <option value="Therapy intensive">Therapy intensive</option>
                   <option value="Adolescent or family therapy">Therapy for my teen, or family work</option>
+                  <option value="Diagnostic assessment">An ADHD or diagnostic assessment</option>
                   <option value="Professional case consultation">Professional case consultation</option>
                   <option value="Private practice consultation">Private practice consultation</option>
                   <option value="Group coaching or upcoming programs">Group coaching or upcoming programs</option>
@@ -283,6 +284,39 @@
                   <label class="radio-option"><input type="radio" name="teen_parent_capacity" value="Not sure yet" data-req> <span>I am not sure yet</span></label>
                 </div>
                 <p class="field-note">There is no right answer, and I want to be honest about what this question is really asking. If a family genuinely cannot do what the work requires, that is usually not a sign to try harder at outpatient. It is a sign that a higher level of care is the safer place to start. Families are stretched, and telling me the real constraints now is how we get your teen to the right place rather than simply the available one.</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Diagnostic assessment">
+              <legend>About the assessment</legend>
+              <p class="fieldset-note">There are two different things people mean by this, and they go to two different places. If you are starting therapy with me, assessment is already part of how we begin, and we do that work in the first session rather than as a separate purchase. If what you need is a formal diagnosis on paper, for a prescriber or for accommodations, that is a different process and I can point you straight to it without you waiting on a call with me.</p>
+              <div class="form-group">
+                <label for="assess_purpose">What do you need it for? <span aria-hidden="true">*</span></label>
+                <select id="assess_purpose" name="assess_purpose" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Formal diagnosis for a prescriber">A formal diagnosis I can take to a prescriber for medication</option>
+                  <option value="Documentation for school or work accommodations">Documentation for school or workplace accommodations</option>
+                  <option value="Understanding myself, diagnosis not the point">To understand myself better, where a formal diagnosis is not really the point</option>
+                  <option value="Not sure what is needed">I am not sure what I need</option>
+                </select>
+                <p class="field-note" id="assess-formal-note" hidden>For that, the fastest route is the online diagnostic assessment I partner with. It is done at your own pace, there is no waitlist, and it produces the documentation a prescriber or an employer will actually accept. You can read about it and start on the <a href="/diagnostic-assessments/">diagnostic assessments page</a> without needing to speak to me first. Send this form anyway if you would like me involved, or if you are also thinking about therapy.</p>
+                <p class="field-note" id="assess-therapy-note" hidden>That is the kind of understanding therapy is built for, and it is work we would do together rather than something you buy separately. You are welcome to send this as it is, and in my reply I will tell you honestly whether therapy or a formal assessment makes more sense for what you are after.</p>
+              </div>
+              <div class="form-group check-grid-wrap">
+                <span class="radio-group-label">What are you wanting to understand? <span aria-hidden="true">*</span></span>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="assess_areas" value="ADHD"> <span>ADHD</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="assess_areas" value="Anxiety"> <span>Anxiety</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="assess_areas" value="Depression"> <span>Depression</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="assess_areas" value="OCD"> <span>OCD</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="assess_areas" value="Eating or food concerns"> <span>Eating or food concerns</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="assess_areas" value="Not sure"> <span>Not sure yet</span></label>
+                </div>
+                <p class="field-note" id="assess-ed-note" hidden>Eating and food concerns are not part of that online assessment, and I would not want to send you somewhere that cannot see them. That is squarely my own work, so let us talk about it directly rather than routing you through a questionnaire.</p>
+              </div>
+              <div class="form-group">
+                <label for="assess_context">What has been going on that brought this up?</label>
+                <textarea id="assess_context" name="assess_context" rows="3" placeholder="Optional, and useful. Often what sends someone looking for an assessment tells me more than the assessment would."></textarea>
               </div>
             </fieldset>
 

@@ -163,6 +163,17 @@ if (form) {
     if (t.name === 'payment') toggle('payment-note', t.value === 'Another insurance plan');
     // Alynne's adolescent work is with older teens only.
     if (t.id === 'teen_age') toggle('teen-age-note', ['12 or younger', '13 to 15'].includes(t.value));
+    // A formal diagnosis goes to the partner assessment; self-understanding is therapy.
+    if (t.id === 'assess_purpose') {
+      const formal = ['Formal diagnosis for a prescriber', 'Documentation for school or work accommodations'];
+      toggle('assess-formal-note', formal.includes(t.value));
+      toggle('assess-therapy-note', t.value === 'Understanding myself, diagnosis not the point');
+    }
+    // The partner assessment does not cover eating concerns. That work is Alynne's own.
+    if (t.name === 'assess_areas') {
+      const ed = form.querySelector('input[name="assess_areas"][value="Eating or food concerns"]');
+      toggle('assess-ed-note', !!(ed && ed.checked));
+    }
     if (t.name === 'referral_source') {
       toggle('grp-referral_name', t.value === 'Referred by another therapist or healthcare provider');
       toggle('grp-referral_other', t.value === 'Somewhere else');
@@ -227,6 +238,7 @@ if (form) {
       intensive_current_therapist: 'CURRENT THERAPIST', intensive_scope: 'INTENSIVE SCOPE',
       teen_age: 'TEEN AGE', teen_initiator: 'WHO IS LEADING', teen_medical: 'MEDICAL FOLLOW-UP',
       teen_history: 'TEEN TREATMENT HISTORY', teen_parent_capacity: 'PARENT CAPACITY',
+      assess_purpose: 'ASSESSMENT PURPOSE', assess_areas: 'ASSESSMENT AREAS',
       case_role: 'ROLE OR LICENSE', case_areas: 'CONSULT AREAS', case_cadence: 'CADENCE',
       prac_stage: 'PRACTICE STAGE', prac_support: 'WANTS SUPPORT WITH',
       group_interest: 'GROUP INTEREST', group_format: 'GROUP FORMAT', group_notify: 'NOTIFY ABOUT GROUPS',
@@ -241,7 +253,7 @@ if (form) {
       unsure_notes: 'WHAT THEY ARE LOOKING FOR', therapy_bringing: 'WHAT BRINGS THEM NOW',
       therapy_different: 'WHAT THEY WANT TO BE DIFFERENT', therapy_prior: 'PRIOR THERAPY, HELPFUL OR NOT',
       intensive_focus: 'INTENSIVE FOCUS', intensive_why: 'WHY A LONGER SESSION',
-      teen_situation: 'WHAT IS GOING ON WITH THE TEEN', case_issue: 'CASE OR CLINICAL QUESTION', prac_success: 'WHAT SUCCESS LOOKS LIKE',
+      teen_situation: 'WHAT IS GOING ON WITH THE TEEN', assess_context: 'WHAT PROMPTED THE ASSESSMENT', case_issue: 'CASE OR CLINICAL QUESTION', prac_success: 'WHAT SUCCESS LOOKS LIKE',
       group_hope: 'HOPES FOR A GROUP', retreat_hope: 'HOPES FOR A RETREAT',
       anything_else: 'ANYTHING ELSE'
     };
