@@ -538,7 +538,36 @@ p { margin-bottom: 1rem; }
 }
 
 /* ---- Form Messages ---- */
-.form-success { display: none; padding: 20px; background: #e8f5e8; border-radius: 8px; color: #2e6b2e; text-align: center; }
+.form-success {
+  display: none;
+  padding: 56px 40px;
+  margin: 40px auto;
+  max-width: 620px;
+  background: #f1f6ee;
+  border: 1px solid #cfe0c4;
+  border-radius: 12px;
+  color: #2e6b2e;
+  text-align: center;
+}
+.form-success h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: #2e6b2e;
+  margin: 0 0 18px;
+}
+.form-success p {
+  color: #37603a;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 auto 14px;
+  max-width: 46ch;
+}
+.form-success .form-success-sub {
+  font-size: 0.9rem;
+  color: #5c7f5e;
+  font-style: italic;
+  margin-bottom: 0;
+}
 .form-error { display: none; padding: 20px; background: #fde8e8; border-radius: 8px; color: #8b2020; text-align: center; }
 
 /* ---- Animations ---- */

@@ -121,6 +121,18 @@ function subscribeToNewsletter(email, name) {
 
 const form = document.getElementById('contact-form');
 if (form) {
+  // Once this is sent, the form and its "these questions take three minutes"
+  // intro are both irrelevant, and leaving the intro up reads as though
+  // something failed. Clear both and show the confirmation in their place.
+  function showConfirmation() {
+    form.style.display = 'none';
+    const intro = document.querySelector('.screening-intro');
+    if (intro) intro.style.display = 'none';
+    const ok = document.querySelector('.form-success');
+    ok.style.display = 'block';
+    ok.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+
   const service = form.querySelector('#service');
   const stateField = form.querySelector('#state');
   const conditionals = [...form.querySelectorAll('[data-show-for]')];
@@ -239,10 +251,7 @@ if (form) {
     }
 
     if (data.website || tooFastToBeHuman()) {
-      form.style.display = 'none';
-      const ok = document.querySelector('.form-success');
-      ok.style.display = 'block';
-      ok.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      showConfirmation();
       return;
     }
     delete data.website;
@@ -298,12 +307,7 @@ if (form) {
 
       if (data.newsletter) subscribeToNewsletter(data.email, data.name);
 
-      form.style.display = 'none';
-      const ok = document.querySelector('.form-success');
-      ok.style.display = 'block';
-      // The form can be long, so the confirmation may be well above where they
-      // pressed submit. Take them to it.
-      ok.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      showConfirmation();
       if (typeof gtag === 'function') {
         gtag('event', 'generate_lead', {
           form_name: 'consultation_screening',
