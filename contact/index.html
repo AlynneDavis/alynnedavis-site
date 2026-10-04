@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=12">
+  <link rel="stylesheet" href="/css/style.css?v=13">
 </head>
 <body>
 
@@ -93,88 +93,213 @@
 
     <section class="section">
       <div class="container">
-        <div class="contact-split">
+        <div class="screening-intro content-section">
+          <h2>Before We Talk</h2>
+          <p>These questions take about three minutes. They let me understand what you are looking for before we speak, so that our consultation is spent on you rather than on logistics. I read every one of these personally and reply as soon as I can.</p>
+        </div>
 
-          <div class="content-section">
-            <h2>Send a Message</h2>
-            <form id="contact-form">
+        <div class="screening-wrap">
+          <form id="contact-form">
+
+            <fieldset class="form-fieldset">
+              <legend>What you are looking for</legend>
+
+              <div class="form-group">
+                <label for="inquiry_type">What brings you here? <span aria-hidden="true">*</span></label>
+                <select id="inquiry_type" name="inquiry_type" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Therapy for myself">Therapy for myself</option>
+                  <option value="Coaching">Coaching, which is not therapy</option>
+                  <option value="Self-Discovery Intensive">A Self-Discovery Intensive</option>
+                  <option value="Professional consultation">Professional consultation, I am a clinician or practice owner</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="grp-consult-type" hidden>
+                <label for="consult_type">What kind of consultation? <span aria-hidden="true">*</span></label>
+                <select id="consult_type" name="consult_type">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Case consultation, eating disorders">Case consultation, eating disorders</option>
+                  <option value="Case consultation, expressive arts therapy">Case consultation, expressive arts therapy</option>
+                  <option value="Starting or growing my own practice">Starting or growing my own practice</option>
+                  <option value="Speaking, training, or a workshop">Speaking, training, or a workshop</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="grp-focus">
+                <label for="focus">What is this most about right now? <span aria-hidden="true">*</span></label>
+                <select id="focus" name="focus">
+                  <option value="" disabled selected>Select the closest fit</option>
+                  <option value="Eating disorder or disordered eating">Eating disorder or disordered eating</option>
+                  <option value="Binge eating or emotional eating">Binge eating or emotional eating</option>
+                  <option value="Body image">Body image</option>
+                  <option value="Trauma or PTSD">Trauma or PTSD</option>
+                  <option value="ADHD">ADHD</option>
+                  <option value="Perinatal, postpartum, or fertility">Perinatal, postpartum, or fertility</option>
+                  <option value="Perimenopause or midlife transition">Perimenopause or midlife transition</option>
+                  <option value="Anxiety or nervous system overwhelm">Anxiety or nervous system overwhelm</option>
+                  <option value="Relationships or boundaries">Relationships or boundaries</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="outcome">If this went well, what would be different six months from now? <span aria-hidden="true">*</span></label>
+                <textarea id="outcome" name="outcome" rows="4" required placeholder="It does not have to be polished. A few sentences in your own words is plenty."></textarea>
+              </div>
+
+              <div class="form-group" id="grp-readiness">
+                <label for="readiness">Where are you in the process? <span aria-hidden="true">*</span></label>
+                <select id="readiness" name="readiness">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Ready to start, looking for availability">I am ready to start and looking for availability</option>
+                  <option value="Ready, but need to sort out cost or scheduling">I am ready, but need to sort out cost or scheduling first</option>
+                  <option value="Comparing a few therapists">I am comparing a few people before deciding</option>
+                  <option value="Gathering information, not ready yet">I am gathering information and not ready yet</option>
+                  <option value="Someone else suggested I reach out">Someone else suggested I reach out</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+              <legend>Logistics</legend>
+
               <div class="form-group">
                 <label for="name">Name <span aria-hidden="true">*</span></label>
                 <input type="text" id="name" name="name" required placeholder="Your full name">
               </div>
+
               <div class="form-group">
                 <label for="email">Email <span aria-hidden="true">*</span></label>
                 <input type="email" id="email" name="email" required placeholder="your@email.com">
               </div>
+
               <div class="form-group">
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
               </div>
+
               <div class="form-group">
-                <label for="service">Service of Interest</label>
-                <select id="service" name="service">
-                  <option value="" disabled selected>Select a service</option>
-                  <option value="Individual Therapy">Individual Therapy</option>
-                  <option value="Eating Disorder Therapy">Eating Disorder Therapy</option>
-                  <option value="Trauma-Informed Therapy">Trauma-Informed Therapy</option>
-                  <option value="Expressive Arts Therapy">Expressive Arts Therapy</option>
-                  <option value="ADHD Therapy">ADHD Therapy</option>
-                  <option value="Other">Other</option>
+                <label for="state">What state will you be in during our sessions? <span aria-hidden="true">*</span></label>
+                <select id="state" name="state" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="North Carolina">North Carolina</option>
+                  <option value="South Carolina">South Carolina</option>
+                  <option value="Another state or country">Another state or country</option>
+                </select>
+                <p class="field-note" id="state-note" hidden>I am licensed to provide therapy only to clients located in North Carolina and South Carolina, so I would not be able to work with you therapeutically. Coaching has no such restriction and is available wherever you are. You are welcome to change your selection above to coaching if that interests you, or send this as it is and I will point you toward someone licensed where you live.</p>
+              </div>
+
+              <div class="form-group" id="grp-format">
+                <label for="format">How would you prefer to meet?</label>
+                <select id="format" name="format">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="In person in Charlotte">In person in Charlotte</option>
+                  <option value="Virtual">Virtual</option>
+                  <option value="Either works">Either works</option>
                 </select>
               </div>
+
+              <div class="form-group" id="grp-history">
+                <label for="history">Have you worked with a therapist before?</label>
+                <select id="history" name="history">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="No, first time">No, this would be my first time</option>
+                  <option value="Yes, briefly">Yes, briefly</option>
+                  <option value="Yes, for an extended period">Yes, for an extended period</option>
+                  <option value="Currently working with a therapist">I am currently working with a therapist</option>
+                  <option value="Higher level of care (IOP, PHP, residential)">I have been in a higher level of care, such as IOP, PHP, or residential</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset" id="grp-payment">
+              <legend>How payment works here</legend>
+              <p class="fieldset-note">This is a private pay practice. I do not bill insurance directly, though for therapy I can provide a superbill after each session that you may submit to your plan for possible out&#8209;of&#8209;network reimbursement. Coaching and consultation are not eligible for insurance reimbursement at all.</p>
+              <p class="fieldset-note">The work I do is typically weekly, and it unfolds over months rather than weeks. With eating disorders in particular, treatment moves through phases that cannot be skipped or rushed. I want to be straightforward about that now so that you can decide whether the commitment fits your life before we ever get on the phone.</p>
+
+              <div class="radio-group" role="radiogroup" aria-labelledby="payment-label">
+                <span class="radio-group-label" id="payment-label">Which is true for you? <span aria-hidden="true">*</span></span>
+                <label class="radio-option"><input type="radio" name="payment" value="Private pay works for me"> <span>Yes, private pay works for me</span></label>
+                <label class="radio-option"><input type="radio" name="payment" value="Has Aetna, wants to use it"> <span>I have Aetna and would like to use it</span></label>
+                <label class="radio-option"><input type="radio" name="payment" value="Needs a different insurance plan"> <span>I would need to use a different insurance plan</span></label>
+                <label class="radio-option"><input type="radio" name="payment" value="Asking about sliding scale"> <span>I would like to ask about sliding scale availability</span></label>
+              </div>
+              <p class="field-note" id="payment-note" hidden>Thank you for saying so. A small number of sliding scale spots are set aside each year and they are not always open, so I cannot promise one, but I will tell you honestly where things stand when I reply.</p>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+              <legend>Last two things</legend>
+
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell me a little about what you're looking for..."></textarea>
+                <label for="referral_source">How did you find me?</label>
+                <select id="referral_source" name="referral_source">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Google or another search engine">Google or another search engine</option>
+                  <option value="Psychology Today">Psychology Today</option>
+                  <option value="Instagram or Facebook">Instagram or Facebook</option>
+                  <option value="A friend or family member">A friend or family member</option>
+                  <option value="Another therapist or provider">Another therapist or provider</option>
+                  <option value="A doctor, dietitian, or treatment program">A doctor, dietitian, or treatment program</option>
+                  <option value="A podcast">A podcast</option>
+                  <option value="Alynne's newsletter or Substack">Alynne&rsquo;s newsletter or Substack</option>
+                  <option value="Something else">Something else</option>
+                </select>
               </div>
-              <!-- Honeypot field, hidden from real users, catches bots -->
-              <div class="form-group" style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true">
-                <label for="website">Website</label>
-                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+
+              <div class="form-group">
+                <label for="notes">Anything else you want me to know before we talk?</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Optional. Only if there is something that would help me prepare."></textarea>
               </div>
-              <button type="submit" class="btn">Send Message</button>
-              <div class="form-success" style="display:none;">Thank you for reaching out! I will get back to you within 24&ndash;48 hours.</div>
-              <div class="form-error" style="display:none;">Something went wrong. Please try again or contact me directly at info@alynnedavis.com.</div>
-            </form>
-          </div>
 
-          <div class="contact-info">
-            <h2>Get in Touch</h2>
+              <div class="form-group">
+                <label class="checkbox-option"><input type="checkbox" name="newsletter" value="Yes"> <span>Add me to Alynne&rsquo;s letters. A reflection every few weeks on reclamation, bodies, and coming back to yourself. You can leave at any time, and reaching out here does not subscribe you to anything unless you check this box.</span></label>
+              </div>
+            </fieldset>
 
-            <div class="content-section">
-              <h3>Phone</h3>
-              <p><a href="tel:+17047652480">(704) 765-2480</a></p>
+            <!-- Honeypot field, hidden from real users, catches bots -->
+            <div class="form-group" style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
             </div>
 
-            <div class="content-section">
-              <h3>Email</h3>
-              <p><a href="mailto:info@alynnedavis.com">info@alynnedavis.com</a></p>
-            </div>
-
-            <div class="content-section">
-              <h3>Location</h3>
-              <p>Charlotte, NC 28277</p>
-            </div>
-
-            <div class="content-section">
-              <h3>Hours</h3>
-              <p>Monday &ndash; Friday, 9:00 AM &ndash; 5:00 PM</p>
-            </div>
-
-            <div class="content-section">
-              <h3>Telehealth Available</h3>
-              <p>I provide telehealth therapy services to clients throughout North Carolina and South Carolina, so you can receive support from the comfort of your own home.</p>
-            </div>
-          </div>
-
+            <button type="submit" class="btn">Send This to Alynne</button>
+            <p class="field-note" style="margin-top:14px;">Please do not include clinical detail you would not want sent by email. We can go into all of that once we are working together.</p>
+            <div class="form-success" style="display:none;">Thank you. This came through, and I read these myself. I will reply within 24&ndash;48 hours with next steps, whether that is setting up a consultation or pointing you toward someone who is a better fit.</div>
+            <div class="form-error" style="display:none;">Something went wrong. Please try again or contact me directly at info@alynnedavis.com.</div>
+          </form>
         </div>
+
+        <div class="contact-info-row">
+          <div>
+            <h3>Phone</h3>
+            <p><a href="tel:+17047652480">(704) 765-2480</a></p>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p><a href="mailto:info@alynnedavis.com">info@alynnedavis.com</a></p>
+          </div>
+          <div>
+            <h3>Location</h3>
+            <p>Charlotte, NC 28277</p>
+          </div>
+          <div>
+            <h3>Hours</h3>
+            <p>Monday &ndash; Friday, 9:00 AM &ndash; 5:00 PM</p>
+          </div>
+        </div>
+
+        <p class="field-note" style="max-width:720px;margin:28px auto 0;text-align:center;">I see clients in person in Charlotte, North Carolina and provide telehealth therapy to clients located anywhere in North Carolina and South Carolina. Coaching and professional consultation are available wherever you are.</p>
+
       </div>
     </section>
 
     <section class="cta-banner">
       <div class="container">
-        <h2 class="fade-in">Free 15-Minute Consultation</h2>
-        <p class="fade-in">Not sure if therapy is right for you? Schedule a free 15-minute phone consultation to ask questions, share what you are going through, and see if we are a good fit, no pressure, no commitment.</p>
-        <a href="tel:+17047652480" class="btn fade-in" title="Call to schedule a free consultation">Call (704) 765-2480</a>
+        <h2 class="fade-in">What Happens Next</h2>
+        <p class="fade-in">I read every inquiry myself and reply within 24 to 48 hours. If it looks like a good fit, we will set up a free 15-minute call so you can ask questions and get a sense of whether my approach feels right for you. If I am not the right person, I will say so and point you somewhere better. Either way, you will hear back.</p>
+        <a href="#contact-form" class="btn fade-in" title="Go to the inquiry form">Start the Form</a>
       </div>
     </section>
 
@@ -223,6 +348,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=5" defer></script>
+  <script src="/js/main.js?v=6" defer></script>
 </body>
 </html>

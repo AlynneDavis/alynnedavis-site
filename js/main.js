@@ -61,9 +61,113 @@ const formPageLoadedAt = Date.now();
 const MIN_FILL_MS = 3000;
 function tooFastToBeHuman() { return Date.now() - formPageLoadedAt < MIN_FILL_MS; }
 
-// Contact form handler
+// ---- Consultation screening form ----
+// Posts twice on submit: once to Zoho CRM (creates the Lead, which is what fires
+// Alynne's autoresponder), and once to Zoho Campaigns if the newsletter box is
+// checked. The two are separate Zoho products and do not sync on their own.
+const NEWSLETTER_LIST_ID = '112b6b96937c6fa86';   // Zoho Campaigns list (zcld)
+const NEWSLETTER_HOST = 'zujep-zgph.maillist-manage.net';
+
+// Fires the Campaigns web-optin the same way Zoho's own embed does: a real form
+// POST into a hidden iframe. A fetch() gets blocked by CORS on this endpoint.
+function subscribeToNewsletter(email, name) {
+  try {
+    let frame = document.getElementById('zc-optin-sink');
+    if (!frame) {
+      frame = document.createElement('iframe');
+      frame.id = 'zc-optin-sink';
+      frame.name = 'zc-optin-sink';
+      frame.style.display = 'none';
+      document.body.appendChild(frame);
+    }
+    const f = document.createElement('form');
+    f.method = 'POST';
+    f.action = 'https://' + NEWSLETTER_HOST + '/weboptin.zc';
+    f.target = 'zc-optin-sink';
+    f.style.display = 'none';
+    const fields = {
+      CONTACT_EMAIL: email,
+      LASTNAME: name || '',
+      zcld: NEWSLETTER_LIST_ID,
+      zctd: '112b6b96937a107a9',
+      zx: '133b9bf30',
+      zcvers: '3.0',
+      submitType: 'optinCustomView',
+      mode: 'OptinCreateView',
+      formType: 'QuickForm',
+      zc_trackCode: 'ZCFORMVIEW',
+      oldListIds: '',
+      emailReportId: '',
+      document_domain: '',
+      zc_Url: NEWSLETTER_HOST,
+      new_optin_response_in: '0',
+      duplicate_optin_response_in: '0'
+    };
+    for (const [k, v] of Object.entries(fields)) {
+      const i = document.createElement('input');
+      i.type = 'hidden'; i.name = k; i.value = v;
+      f.appendChild(i);
+    }
+    document.body.appendChild(f);
+    f.submit();
+    setTimeout(() => f.remove(), 2000);
+  } catch (err) {
+    // A failed newsletter signup must never cost Alynne the lead itself.
+  }
+}
+
 const form = document.getElementById('contact-form');
 if (form) {
+  const inquiryType = form.querySelector('#inquiry_type');
+  const stateField = form.querySelector('#state');
+  const stateNote = form.querySelector('#state-note');
+  const paymentNote = form.querySelector('#payment-note');
+
+  // Groups shown only to people seeking care, not to clinicians booking consultation.
+  const clientOnly = ['grp-focus', 'grp-readiness', 'grp-format', 'grp-history', 'grp-payment'];
+  const professionalOnly = ['grp-consult-type'];
+  // Fields that are required, but only while their group is visible. A hidden
+  // required field blocks submit with no visible message, so visibility and
+  // the required flag have to move together.
+  const requiredWhenVisible = { 'grp-focus': '#focus', 'grp-readiness': '#readiness', 'grp-consult-type': '#consult_type' };
+
+  function setGroup(id, visible) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.hidden = !visible;
+    // Disabled controls are skipped by validation and left out of FormData.
+    el.querySelectorAll('input, select, textarea').forEach(c => { c.disabled = !visible; });
+    const sel = requiredWhenVisible[id];
+    if (sel) {
+      const field = el.querySelector(sel);
+      if (field) field.required = visible;
+    }
+    if (id === 'grp-payment') {
+      el.querySelectorAll('input[type="radio"]').forEach(r => { r.required = visible; });
+    }
+  }
+
+  function applyRouting() {
+    const isProfessional = inquiryType.value === 'Professional consultation';
+    clientOnly.forEach(id => setGroup(id, !isProfessional));
+    professionalOnly.forEach(id => setGroup(id, isProfessional));
+
+    // Therapy is limited to NC and SC by licensure. Say so before they submit.
+    const wantsTherapy = inquiryType.value === 'Therapy for myself' || inquiryType.value === 'Self-Discovery Intensive';
+    const outOfState = stateField.value === 'Another state or country';
+    if (stateNote) stateNote.hidden = !(wantsTherapy && outOfState);
+  }
+
+  inquiryType.addEventListener('change', applyRouting);
+  stateField.addEventListener('change', applyRouting);
+  applyRouting();
+
+  form.querySelectorAll('input[name="payment"]').forEach(r => {
+    r.addEventListener('change', () => {
+      if (paymentNote) paymentNote.hidden = r.value !== 'Asking about sliding scale';
+    });
+  });
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
@@ -73,15 +177,31 @@ if (form) {
 
     const data = Object.fromEntries(new FormData(form));
 
-    // Honeypot check — if the hidden field is filled in, it's a bot.
-    // Time trap — submitted too fast to have been typed by a person.
-    // Both show the normal success state so bots get no signal they were caught.
+    // Honeypot check and time trap. Both show the normal success state so bots
+    // get no signal they were caught.
     if (data.website || tooFastToBeHuman()) {
       form.style.display = 'none';
       document.querySelector('.form-success').style.display = 'block';
       return;
     }
     delete data.website;
+
+    // The decision-making answers go first so Alynne can triage at a glance.
+    const line = (label, val) => val ? label + ': ' + val + '\n' : '';
+    let body = '';
+    body += line('INQUIRY TYPE', data.inquiry_type);
+    body += line('CONSULTATION TYPE', data.consult_type);
+    body += line('LOCATED IN', data.state);
+    body += line('READINESS', data.readiness);
+    body += line('PAYMENT', data.payment);
+    body += '\n';
+    body += line('FOCUS', data.focus);
+    body += line('FORMAT', data.format);
+    body += line('THERAPY HISTORY', data.history);
+    body += line('FOUND ME VIA', data.referral_source);
+    body += line('NEWSLETTER OPT-IN', data.newsletter);
+    if (data.outcome) body += '\nWHAT THEY WANT TO BE DIFFERENT IN SIX MONTHS:\n' + data.outcome + '\n';
+    if (data.notes) body += '\nANYTHING ELSE:\n' + data.notes + '\n';
 
     try {
       const { first, last } = splitName(data.name || '');
@@ -90,12 +210,22 @@ if (form) {
         'Last Name': last || data.name,
         'Email': data.email || '',
         'Phone': data.phone || '',
-        'Description': (data.service ? 'Service: ' + data.service + '\n\n' : '') + (data.message || '')
+        'Description': body
       });
+
+      if (data.newsletter) subscribeToNewsletter(data.email, data.name);
+
       form.style.display = 'none';
       document.querySelector('.form-success').style.display = 'block';
-      // GA4 conversion: contact form lead
-      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact' });
+      // GA4 conversion: screened consultation inquiry
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          form_name: 'consultation_screening',
+          inquiry_type: data.inquiry_type || '',
+          readiness: data.readiness || '',
+          payment_fit: data.payment || ''
+        });
+      }
     } catch (err) {
       document.querySelector('.form-error').style.display = 'block';
       btn.textContent = original;

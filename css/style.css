@@ -787,3 +787,84 @@ p { margin-bottom: 1rem; }
 @media (max-width: 700px) {
   .letters-hero::after { width: 300px; height: 300px; right: -50px; bottom: -60px; opacity: 0.28; }
 }
+
+/* ---- Screening Form (consultation intake) ---- */
+.screening-wrap { max-width: 720px; margin: 0 auto; }
+.screening-intro { max-width: 720px; margin: 0 auto 36px; }
+
+.form-fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 28px 28px 8px;
+  margin: 0 0 28px;
+}
+.form-fieldset legend {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-text);
+  padding: 0 10px;
+  margin-left: -10px;
+}
+.fieldset-note {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+.field-note {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin: 8px 0 0;
+}
+
+/* Radio and checkbox inputs must not inherit the full-width text-input rule */
+.form-group input[type="checkbox"],
+.form-group input[type="radio"],
+.radio-group input[type="radio"] {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--color-gold);
+}
+
+.radio-group { margin-bottom: 4px; }
+.radio-group-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+.radio-option,
+.checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.radio-option input,
+.checkbox-option input { margin-top: 4px; }
+.radio-option span,
+.checkbox-option span { color: var(--color-text); }
+
+.contact-info-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border);
+}
+.contact-info-row h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.contact-info-row p { color: var(--color-text-light); font-size: 0.95rem; margin: 0; }
+
+@media (max-width: 768px) {
+  .form-fieldset { padding: 22px 18px 4px; }
+  .contact-info-row { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
