@@ -302,6 +302,10 @@ if (form) {
         'Last Name': last || data.name,
         'Email': data.email || '',
         'Phone': data.phone || '',
+        // Stamps the lead so Zoho's auto-reply workflow can tell a website
+        // inquiry from one Alynne added by hand or imported. "Website Form" is
+        // a Lead Source picklist value added for this.
+        'Lead Source': 'Website Form',
         'Description': body
       });
 
