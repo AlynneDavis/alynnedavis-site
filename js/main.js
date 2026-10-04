@@ -168,6 +168,11 @@ if (form) {
     if (t.name === 'payment') toggle('payment-note', t.value === 'Hoping to use insurance');
     // Alynne's adolescent work is with older teens only.
     if (t.id === 'teen_age') toggle('teen-age-note', ['12 or younger', '13 to 15'].includes(t.value));
+    // Medical clearance is a prerequisite, not a preference. Say so early
+    // rather than discovering it on the call.
+    if (t.id === 'teen_medical') {
+      toggle('teen-medical-note', ['No physician yet, can arrange it', 'No physician yet, unsure where to start'].includes(t.value));
+    }
     // A formal diagnosis goes to the partner assessment; self-understanding is therapy.
     if (t.id === 'assess_purpose') {
       const formal = ['Formal diagnosis for a prescriber', 'Documentation for school or work accommodations'];
