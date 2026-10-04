@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=13">
+  <link rel="stylesheet" href="/css/style.css?v=14">
 </head>
 <body>
 
@@ -95,92 +95,354 @@
       <div class="container">
         <div class="screening-intro content-section">
           <h2>Before We Talk</h2>
-          <p>These questions take about three minutes. They let me understand what you are looking for before we speak, so that our consultation is spent on you rather than on logistics. I will get back to you as soon as I can, usually within 24 to 48 hours.</p>
+          <p>These questions help me understand what you are looking for before we speak, so that our time together is spent on you rather than on logistics. You will only see the questions that apply to what you are interested in, so this is shorter than it looks.</p>
+          <p>I will get back to you as soon as I can, usually within 24 to 48 hours.</p>
         </div>
 
         <div class="screening-wrap">
           <form id="contact-form">
 
             <fieldset class="form-fieldset">
-              <legend>What you are looking for</legend>
-
-              <div class="form-group">
-                <label for="inquiry_type">What brings you here? <span aria-hidden="true">*</span></label>
-                <select id="inquiry_type" name="inquiry_type" required>
-                  <option value="" disabled selected>Select one</option>
-                  <option value="Therapy for myself">Therapy for myself</option>
-                  <option value="Coaching">Coaching, which is not therapy</option>
-                  <option value="Intensive">An Intensive</option>
-                  <option value="Professional consultation">Professional consultation, for a case or for business development</option>
-                </select>
-              </div>
-
-              <div class="form-group" id="grp-consult-type" hidden>
-                <label for="consult_type">What kind of consultation? <span aria-hidden="true">*</span></label>
-                <select id="consult_type" name="consult_type">
-                  <option value="" disabled selected>Select one</option>
-                  <option value="Case consultation, eating disorders">Case consultation, eating disorders</option>
-                  <option value="Case consultation, expressive arts therapy">Case consultation, expressive arts therapy</option>
-                  <option value="Starting or growing my own practice">Starting or growing my own practice</option>
-                  <option value="Speaking, training, or a workshop">Speaking, training, or a workshop</option>
+              <legend>Where to begin</legend>
+              <p class="fieldset-note">There are several ways of working together, and they are more connected than they might look. Choose whichever feels closest. If none of them is quite right, the last option is a real answer.</p>
+              <div class="form-group" id="grp-service">
+                <label for="service">What are you interested in exploring? <span aria-hidden="true">*</span></label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select what you are drawn to</option>
+                  <option value="Individual psychotherapy">Individual psychotherapy</option>
+                  <option value="Couples or relationship therapy">Couples or relationship therapy</option>
+                  <option value="Therapy intensive">Therapy intensive</option>
+                  <option value="Professional case consultation">Professional case consultation</option>
+                  <option value="Private practice consultation">Private practice consultation</option>
+                  <option value="Group coaching or upcoming programs">Group coaching or upcoming programs</option>
+                  <option value="Workshops">Workshops</option>
+                  <option value="Retreats">Retreats</option>
                   <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
+              <div class="form-group" id="grp-unsure_notes" data-show-for="Not sure yet">
+                <label for="unsure_notes">Tell me a little about what you are looking for <span aria-hidden="true">*</span></label>
+                <textarea id="unsure_notes" name="unsure_notes" rows="4" required placeholder="A few sentences is plenty. I will help you work out which direction makes sense."></textarea>
+              </div>
+            </fieldset>
 
-              <div class="form-group" id="grp-focus">
-                <label for="focus">What is this most about right now? <span aria-hidden="true">*</span></label>
-                <select id="focus" name="focus">
-                  <option value="" disabled selected>Select the closest fit</option>
-                  <option value="Eating disorder or disordered eating">Eating disorder or disordered eating</option>
-                  <option value="Binge eating or emotional eating">Binge eating or emotional eating</option>
-                  <option value="Body image">Body image</option>
-                  <option value="Trauma or PTSD">Trauma or PTSD</option>
-                  <option value="ADHD">ADHD</option>
-                  <option value="Perinatal, postpartum, or fertility">Perinatal, postpartum, or fertility</option>
-                  <option value="Perimenopause or midlife transition">Perimenopause or midlife transition</option>
-                  <option value="Anxiety or nervous system overwhelm">Anxiety or nervous system overwhelm</option>
-                  <option value="Relationships or boundaries">Relationships or boundaries</option>
-                  <option value="Not sure yet">Not sure yet</option>
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+              <legend>What brings you here</legend>
+              <div class="form-group" id="grp-therapy_bringing" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="therapy_bringing">What brings you to therapy right now? <span aria-hidden="true">*</span></label>
+                <textarea id="therapy_bringing" name="therapy_bringing" rows="4" required placeholder="It does not have to be polished or organized. Say it however it comes out."></textarea>
+              </div>
+              <div class="form-group" id="grp-therapy_different" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="therapy_different">What are you hoping will be different as a result of therapy? <span aria-hidden="true">*</span></label>
+                <textarea id="therapy_different" name="therapy_different" rows="3" required placeholder="Even a vague sense of this is useful."></textarea>
+              </div>
+              <div class="form-group check-grid-wrap" id="grp-therapy_concerns" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <span class="radio-group-label">What would you like support with?</span>
+                <p class="field-note" style="margin:0 0 10px;">Check as many as apply.</p>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Eating disorder or disordered eating"> <span>Eating disorder or disordered eating</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Binge eating or emotional eating"> <span>Binge eating or emotional eating</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Body image"> <span>Body image</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Trauma or PTSD"> <span>Trauma or PTSD</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="ADHD"> <span>ADHD</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Anxiety or nervous system overwhelm"> <span>Anxiety or nervous system overwhelm</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Perinatal, postpartum, or fertility"> <span>Perinatal, postpartum, or fertility</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Perimenopause or midlife transition"> <span>Perimenopause or midlife transition</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Relationships or boundaries"> <span>Relationships or boundaries</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Grief or loss"> <span>Grief or loss</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Life transition"> <span>Life transition</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapy_concerns" value="Still working that out"> <span>Still working that out</span></label>
+                </div>
+              </div>
+              <div class="form-group" id="grp-therapy_history" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="therapy_history">Have you participated in therapy before? <span aria-hidden="true">*</span></label>
+                <select id="therapy_history" name="therapy_history" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="No, this would be my first time">No, this would be my first time</option>
+                  <option value="Yes, briefly">Yes, briefly</option>
+                  <option value="Yes, for an extended period">Yes, for an extended period</option>
+                  <option value="I am currently working with a therapist">I am currently working with a therapist</option>
+                  <option value="I have been in a higher level of care, such as IOP, PHP, or residential">I have been in a higher level of care, such as IOP, PHP, or residential</option>
                 </select>
               </div>
-
-              <div class="form-group">
-                <label for="outcome">If this went well, what would be different six months from now? <span aria-hidden="true">*</span></label>
-                <textarea id="outcome" name="outcome" rows="4" required placeholder="It does not have to be polished. A few sentences in your own words is plenty."></textarea>
+              <div class="form-group" id="grp-therapy_prior" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="therapy_prior">What was helpful, or unhelpful, about that experience?</label>
+                <textarea id="therapy_prior" name="therapy_prior" rows="3" placeholder="Optional, and genuinely useful. Knowing what has not worked tells me as much as knowing what has."></textarea>
               </div>
+              <div class="form-group check-grid-wrap" id="grp-therapist_priority" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <span class="radio-group-label">What matters most to you when choosing a therapist? <span aria-hidden="true">*</span></span>
+                <p class="field-note" style="margin:0 0 10px;">Choose as many as are true. There is no wrong answer here, and it helps me tell you honestly whether I am the right fit.</p>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Expertise in my specific concerns"> <span>Expertise in my specific concerns</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Feeling emotionally comfortable and understood"> <span>Feeling emotionally comfortable and understood</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Trauma-informed care"> <span>Trauma-informed care</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="A somatic, experiential, or expressive approach"> <span>A somatic, experiential, or expressive approach</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Practical strategies and tools"> <span>Practical strategies and tools</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Depth-oriented work rather than symptom management alone"> <span>Depth-oriented work rather than symptom management alone</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Insurance coverage"> <span>Insurance coverage</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Affordability"> <span>Affordability</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Scheduling convenience"> <span>Scheduling convenience</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="therapist_priority" value="Something else"> <span>Something else</span></label>
+                </div>
+              </div>
+            </fieldset>
 
-              <div class="form-group" id="grp-readiness">
-                <label for="readiness">Where are you in the process? <span aria-hidden="true">*</span></label>
-                <select id="readiness" name="readiness">
+            <fieldset class="form-fieldset" data-show-for="Therapy intensive">
+              <legend>About the intensive</legend>
+              <p class="fieldset-note">An intensive gives us several uninterrupted hours instead of a therapy hour. That length is what makes deeper experiential, somatic, expressive arts, trauma, and pattern-focused work possible, because we are not stopping just as something begins to open.</p>
+              <div class="form-group" id="grp-intensive_focus" data-show-for="Therapy intensive">
+                <label for="intensive_focus">What are you hoping to focus on during an intensive? <span aria-hidden="true">*</span></label>
+                <textarea id="intensive_focus" name="intensive_focus" rows="3" required placeholder=""></textarea>
+              </div>
+              <div class="form-group" id="grp-intensive_why" data-show-for="Therapy intensive">
+                <label for="intensive_why">Why does a longer session appeal to you?</label>
+                <textarea id="intensive_why" name="intensive_why" rows="3" placeholder="Optional."></textarea>
+              </div>
+              <div class="form-group" id="grp-intensive_current_therapist" data-show-for="Therapy intensive">
+                <label for="intensive_current_therapist">Are you currently working with another therapist? <span aria-hidden="true">*</span></label>
+                <select id="intensive_current_therapist" name="intensive_current_therapist" required>
                   <option value="" disabled selected>Select one</option>
-                  <option value="Ready to start, looking for availability">I am ready to start and looking for availability</option>
-                  <option value="Ready, but need to sort out cost or scheduling">I am ready, but need to sort out cost or scheduling first</option>
-                  <option value="Comparing a few therapists">I am comparing a few people before deciding</option>
-                  <option value="Gathering information, not ready yet">I am gathering information and not ready yet</option>
-                  <option value="Someone else suggested I reach out">Someone else suggested I reach out</option>
+                  <option value="No">No</option>
+                  <option value="Yes, and they know I am exploring this">Yes, and they know I am exploring this</option>
+                  <option value="Yes, and I have not discussed it with them yet">Yes, and I have not discussed it with them yet</option>
+                  <option value="I recently finished with one">I recently finished with one</option>
+                </select>
+              </div>
+              <div class="form-group" id="grp-intensive_scope" data-show-for="Therapy intensive">
+                <label for="intensive_scope">Are you looking for a one-time intensive, or potentially several? <span aria-hidden="true">*</span></label>
+                <select id="intensive_scope" name="intensive_scope" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="One time">One time</option>
+                  <option value="Potentially several">Potentially several</option>
+                  <option value="I am not sure yet">I am not sure yet</option>
                 </select>
               </div>
             </fieldset>
 
-            <fieldset class="form-fieldset">
-              <legend>Logistics</legend>
+            <fieldset class="form-fieldset" data-show-for="Professional case consultation">
+              <legend>About the consultation</legend>
+              <p class="fieldset-note">Case consultation is educational and consultative. It is not clinical supervision, unless we have set up a separate formal supervision agreement in writing.</p>
+              <div class="form-group" id="grp-case_role" data-show-for="Professional case consultation">
+                <label for="case_role">What is your professional role or license? <span aria-hidden="true">*</span></label>
+                <input type="text" id="case_role" name="case_role" required placeholder="For example: LCMHC, LCSW, RD, LMFT, associate licensed and under supervision">
+              </div>
+              <div class="form-group" id="grp-case_issue" data-show-for="Professional case consultation">
+                <label for="case_issue">What kind of case or clinical question would you like consultation around? <span aria-hidden="true">*</span></label>
+                <textarea id="case_issue" name="case_issue" rows="4" required placeholder="Please leave out anything that would identify the client."></textarea>
+              </div>
+              <div class="form-group check-grid-wrap" id="grp-case_areas" data-show-for="Professional case consultation">
+                <span class="radio-group-label">Which areas are most relevant?</span>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Eating disorders or disordered eating"> <span>Eating disorders or disordered eating</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Body image"> <span>Body image</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="ADHD"> <span>ADHD</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Trauma"> <span>Trauma</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Expressive arts"> <span>Expressive arts</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Somatic or embodiment work"> <span>Somatic or embodiment work</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Difficult clinical dynamics"> <span>Difficult clinical dynamics</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Treatment planning"> <span>Treatment planning</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Private-pay practice considerations"> <span>Private-pay practice considerations</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="case_areas" value="Something else"> <span>Something else</span></label>
+                </div>
+              </div>
+              <div class="form-group" id="grp-case_cadence" data-show-for="Professional case consultation">
+                <label for="case_cadence">What are you looking for? <span aria-hidden="true">*</span></label>
+                <select id="case_cadence" name="case_cadence" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="One-time consultation">One-time consultation</option>
+                  <option value="Occasional consultation">Occasional consultation</option>
+                  <option value="Ongoing consultation">Ongoing consultation</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+            </fieldset>
 
-              <div class="form-group">
+            <fieldset class="form-fieldset" data-show-for="Private practice consultation">
+              <legend>About your practice</legend>
+              <p class="fieldset-note">This is consultation for clinicians who are starting, growing, restructuring, or refining a private practice. It is collaborative and relational rather than corporate, and it tends to be as much about confidence and decision-making as about systems.</p>
+              <div class="form-group" id="grp-prac_stage" data-show-for="Private practice consultation">
+                <label for="prac_stage">Where are you currently in your private practice? <span aria-hidden="true">*</span></label>
+                <select id="prac_stage" name="prac_stage" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Considering starting a practice">Considering starting a practice</option>
+                  <option value="Just getting started">Just getting started</option>
+                  <option value="Established but wanting to grow">Established but wanting to grow</option>
+                  <option value="Restructuring or rebranding">Restructuring or rebranding</option>
+                  <option value="Moving toward more private-pay work">Moving toward more private-pay work</option>
+                  <option value="Developing programs or additional services">Developing programs or additional services</option>
+                  <option value="Somewhere else entirely">Somewhere else entirely</option>
+                </select>
+              </div>
+              <div class="form-group check-grid-wrap" id="grp-prac_support" data-show-for="Private practice consultation">
+                <span class="radio-group-label">What would you most like support with? <span aria-hidden="true">*</span></span>
+                <p class="field-note" style="margin:0 0 10px;">Check as many as apply.</p>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Starting a private practice"> <span>Starting a private practice</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Clarifying niche and services"> <span>Clarifying niche and services</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Fees and pricing"> <span>Fees and pricing</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Policies and boundaries"> <span>Policies and boundaries</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Client onboarding"> <span>Client onboarding</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Website and messaging"> <span>Website and messaging</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Systems and workflow"> <span>Systems and workflow</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Moving toward private pay"> <span>Moving toward private pay</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Developing workshops, programs, or additional revenue streams"> <span>Developing workshops, programs, or additional revenue streams</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Business confidence and decision-making"> <span>Business confidence and decision-making</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="prac_support" value="Something else"> <span>Something else</span></label>
+                </div>
+              </div>
+              <div class="form-group" id="grp-prac_success" data-show-for="Private practice consultation">
+                <label for="prac_success">What would make our work together feel successful? <span aria-hidden="true">*</span></label>
+                <textarea id="prac_success" name="prac_success" rows="3" required placeholder=""></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Group coaching or upcoming programs">
+              <legend>About group coaching</legend>
+              <p class="fieldset-note">Group coaching is educational, experiential, and growth-oriented. It is not psychotherapy and it is not mental health treatment, which also means it is not restricted by state licensure and is open to you wherever you live.</p>
+              <p class="fieldset-note">These programs are still being built, so this is a way of telling me what you would actually want rather than signing up for something.</p>
+              <div class="form-group check-grid-wrap" id="grp-group_interest" data-show-for="Group coaching or upcoming programs">
+                <span class="radio-group-label">What kind of group experience are you most interested in? <span aria-hidden="true">*</span></span>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Women's emotional healing and reclamation"> <span>Women&rsquo;s emotional healing and reclamation</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="ADHD and emotional regulation"> <span>ADHD and emotional regulation</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Body image and relationship with food"> <span>Body image and relationship with food</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Embodiment and nervous system regulation"> <span>Embodiment and nervous system regulation</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Trauma-informed personal growth"> <span>Trauma-informed personal growth</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Relationships and attachment patterns"> <span>Relationships and attachment patterns</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Creativity and expressive arts"> <span>Creativity and expressive arts</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Private practice or clinician group coaching"> <span>Private practice or clinician group coaching</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Interested but not sure yet"> <span>Interested but not sure yet</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_interest" value="Something else"> <span>Something else</span></label>
+                </div>
+              </div>
+              <div class="form-group check-grid-wrap" id="grp-group_format" data-show-for="Group coaching or upcoming programs">
+                <span class="radio-group-label">What format would appeal to you most?</span>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="group_format" value="Weekly live virtual group"> <span>Weekly live virtual group</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_format" value="In-person group"> <span>In-person group</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_format" value="Short-term structured program"> <span>Short-term structured program</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_format" value="Ongoing group"> <span>Ongoing group</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_format" value="Workshop-style series"> <span>Workshop-style series</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="group_format" value="Open to different formats"> <span>Open to different formats</span></label>
+                </div>
+              </div>
+              <div class="form-group" id="grp-group_hope" data-show-for="Group coaching or upcoming programs">
+                <label for="group_hope">What would you most hope to receive from a group experience?</label>
+                <textarea id="group_hope" name="group_hope" rows="3" placeholder="Optional."></textarea>
+              </div>
+              <div class="form-group" id="grp-group_notify" data-show-for="Group coaching or upcoming programs">
+                <div class="radio-group" role="radiogroup">
+                  <span class="radio-group-label">Would you like to be notified when the next group program opens? <span aria-hidden="true">*</span></span>
+                  <label class="radio-option"><input type="radio" name="group_notify" value="Yes" data-req> <span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="group_notify" value="Maybe, I would like more information first" data-req> <span>Maybe, I would like more information first</span></label>
+                  <label class="radio-option"><input type="radio" name="group_notify" value="No" data-req> <span>No</span></label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Workshops">
+              <legend>About workshops</legend>
+              <div class="form-group" id="grp-workshop_role" data-show-for="Workshops">
+                <label for="workshop_role">Are you interested in attending, or in bringing a workshop to your group? <span aria-hidden="true">*</span></label>
+                <select id="workshop_role" name="workshop_role" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Attending an upcoming workshop">Attending an upcoming workshop</option>
+                  <option value="Bringing a workshop to my organization or group">Bringing a workshop to my organization or group</option>
+                  <option value="Being notified about future workshops">Being notified about future workshops</option>
+                </select>
+              </div>
+              <div class="form-group check-grid-wrap" id="grp-workshop_topics" data-show-for="Workshops">
+                <span class="radio-group-label">Which topics interest you?</span>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Embodiment"> <span>Embodiment</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Nervous system regulation"> <span>Nervous system regulation</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Expressive arts and creativity"> <span>Expressive arts and creativity</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="ADHD"> <span>ADHD</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Body image"> <span>Body image</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Relationship with food"> <span>Relationship with food</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Trauma-informed healing"> <span>Trauma-informed healing</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Women's wellness"> <span>Women&rsquo;s wellness</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Life transitions"> <span>Life transitions</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Professional or clinician education"> <span>Professional or clinician education</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="A custom topic"> <span>A custom topic</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="workshop_topics" value="Something else"> <span>Something else</span></label>
+                </div>
+              </div>
+              <div class="form-group" id="grp-workshop_org" data-show-for="Workshops">
+                <label for="workshop_org">Organization or group name</label>
+                <input type="text" id="workshop_org" name="workshop_org" placeholder="Only if you are bringing a workshop to a group.">
+              </div>
+              <div class="form-group" id="grp-workshop_size" data-show-for="Workshops">
+                <label for="workshop_size">Approximate group size</label>
+                <input type="text" id="workshop_size" name="workshop_size" placeholder="Optional.">
+              </div>
+              <div class="form-group" id="grp-workshop_when" data-show-for="Workshops">
+                <label for="workshop_when">Preferred date or timeframe</label>
+                <input type="text" id="workshop_when" name="workshop_when" placeholder="Optional.">
+              </div>
+              <div class="form-group" id="grp-workshop_format" data-show-for="Workshops">
+                <label for="workshop_format">In person or virtual?</label>
+                <select id="workshop_format" name="workshop_format">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="In person">In person</option>
+                  <option value="Virtual">Virtual</option>
+                  <option value="Either works">Either works</option>
+                </select>
+              </div>
+              <div class="form-group" id="grp-workshop_location" data-show-for="Workshops">
+                <label for="workshop_location">Location</label>
+                <input type="text" id="workshop_location" name="workshop_location" placeholder="Optional, if in person.">
+              </div>
+              <div class="form-group" id="grp-workshop_budget" data-show-for="Workshops">
+                <label for="workshop_budget">Approximate budget range</label>
+                <input type="text" id="workshop_budget" name="workshop_budget" placeholder="Optional. A rough range is fine and saves us both time.">
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Retreats">
+              <legend>About retreats</legend>
+              <p class="fieldset-note">Retreats are an emerging part of this work and dates are not yet open, so this is an interest list rather than a booking.</p>
+              <div class="form-group check-grid-wrap" id="grp-retreat_interest" data-show-for="Retreats">
+                <span class="radio-group-label">What kind of retreat would you want? <span aria-hidden="true">*</span></span>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="Women's retreat"> <span>Women&rsquo;s retreat</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="Embodiment and nervous system healing"> <span>Embodiment and nervous system healing</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="Creativity and expressive arts"> <span>Creativity and expressive arts</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="Trauma recovery and reclamation"> <span>Trauma recovery and reclamation</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="Body image and relationship with self"> <span>Body image and relationship with self</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="ADHD, burnout, and restoration"> <span>ADHD, burnout, and restoration</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="Professional retreat for therapists and helping professionals"> <span>Professional retreat for therapists and helping professionals</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="retreat_interest" value="Something else"> <span>Something else</span></label>
+                </div>
+              </div>
+              <div class="form-group" id="grp-retreat_hope" data-show-for="Retreats">
+                <label for="retreat_hope">What would you most hope to receive from a retreat?</label>
+                <textarea id="retreat_hope" name="retreat_hope" rows="3" placeholder="Optional."></textarea>
+              </div>
+              <div class="form-group" id="grp-retreat_notify" data-show-for="Retreats">
+                <div class="radio-group" role="radiogroup">
+                  <span class="radio-group-label">Would you like to be notified about upcoming Embodied Reclamation retreats? <span aria-hidden="true">*</span></span>
+                  <label class="radio-option"><input type="radio" name="retreat_notify" value="Yes" data-req> <span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="retreat_notify" value="No" data-req> <span>No</span></label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+              <legend>How to reach you</legend>
+              <div class="form-group" id="grp-name">
                 <label for="name">Name <span aria-hidden="true">*</span></label>
                 <input type="text" id="name" name="name" required placeholder="Your full name">
               </div>
-
-              <div class="form-group">
+              <div class="form-group" id="grp-email">
                 <label for="email">Email <span aria-hidden="true">*</span></label>
                 <input type="email" id="email" name="email" required placeholder="your@email.com">
               </div>
-
-              <div class="form-group">
+              <div class="form-group" id="grp-phone">
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
               </div>
-
-              <div class="form-group">
+              <div class="form-group" id="grp-state">
                 <label for="state">What state will you be in during our sessions? <span aria-hidden="true">*</span></label>
                 <select id="state" name="state" required>
                   <option value="" disabled selected>Select one</option>
@@ -188,71 +450,127 @@
                   <option value="South Carolina">South Carolina</option>
                   <option value="Another state or country">Another state or country</option>
                 </select>
-                <p class="field-note" id="state-note" hidden>I am licensed to provide therapy only to clients located in North Carolina and South Carolina, so I would not be able to work with you therapeutically. Coaching has no such restriction and is available wherever you are. You are welcome to change your selection above to coaching if that interests you, or send this as it is and I will point you toward someone licensed where you live.</p>
               </div>
+              <p class="field-note" id="state-note" hidden>I am licensed to provide therapy only to clients located in North Carolina and South Carolina, so I would not be able to work with you therapeutically. Coaching, consultation, group programs, workshops, and retreats carry no such restriction and are open to you wherever you are. You are welcome to change your selection above, or send this as it is and I will point you toward someone licensed where you live.</p>
+            </fieldset>
 
-              <div class="form-group" id="grp-format">
-                <label for="format">How would you prefer to meet?</label>
-                <select id="format" name="format">
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+              <legend>Scheduling</legend>
+              <p class="fieldset-note">I see clients Monday through Thursday. Mondays and Wednesdays are virtual, Tuesdays and Thursdays are in person. I do not hold Friday appointments. Where it is possible, I prefer to do the initial assessment in person.</p>
+              <div class="form-group" id="grp-format" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="format">Are you looking for in person, virtual, or either? <span aria-hidden="true">*</span></label>
+                <select id="format" name="format" required>
                   <option value="" disabled selected>Select one</option>
                   <option value="In person in Charlotte">In person in Charlotte</option>
                   <option value="Virtual">Virtual</option>
                   <option value="Either works">Either works</option>
                 </select>
               </div>
-
-              <div class="form-group" id="grp-history">
-                <label for="history">Have you worked with a therapist before?</label>
-                <select id="history" name="history">
-                  <option value="" disabled selected>Select one</option>
-                  <option value="No, first time">No, this would be my first time</option>
-                  <option value="Yes, briefly">Yes, briefly</option>
-                  <option value="Yes, for an extended period">Yes, for an extended period</option>
-                  <option value="Currently working with a therapist">I am currently working with a therapist</option>
-                  <option value="Higher level of care (IOP, PHP, residential)">I have been in a higher level of care, such as IOP, PHP, or residential</option>
-                </select>
+              <div class="form-group check-grid-wrap" id="grp-availability" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <span class="radio-group-label">What days are realistically possible for you? <span aria-hidden="true">*</span></span>
+                <p class="field-note" style="margin:0 0 10px;">Check every day that could genuinely work. This is the single most common reason a good fit falls apart, so it is worth being honest rather than optimistic.</p>
+                <div class="check-grid">
+                  <label class="checkbox-option"><input type="checkbox" name="availability" value="Monday, virtual"> <span>Monday, virtual</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="availability" value="Tuesday, in person"> <span>Tuesday, in person</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="availability" value="Wednesday, virtual"> <span>Wednesday, virtual</span></label>
+                  <label class="checkbox-option"><input type="checkbox" name="availability" value="Thursday, in person"> <span>Thursday, in person</span></label>
+                </div>
+              </div>
+              <div class="form-group" id="grp-times" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="times">What times of day work best?</label>
+                <textarea id="times" name="times" rows="2" placeholder="For example: mornings before 10, or anything after 3."></textarea>
               </div>
             </fieldset>
 
-            <fieldset class="form-fieldset" id="grp-payment">
-              <legend>How payment works here</legend>
-              <p class="fieldset-note">This is a private pay practice. I do not bill insurance directly, though for therapy I can provide a superbill after each session that you may submit to your plan for possible out&#8209;of&#8209;network reimbursement. Coaching and consultation are not eligible for insurance reimbursement at all.</p>
-              <p class="fieldset-note">The work I do is typically weekly, and it unfolds over months rather than weeks. With eating disorders in particular, treatment moves through phases that cannot be skipped or rushed. I want to be straightforward about that now so that you can decide whether the commitment fits your life before we ever get on the phone.</p>
-
-              <div class="radio-group" role="radiogroup" aria-labelledby="payment-label">
-                <span class="radio-group-label" id="payment-label">Which is true for you? <span aria-hidden="true">*</span></span>
-                <label class="radio-option"><input type="radio" name="payment" value="Private pay works for me"> <span>Yes, private pay works for me</span></label>
-                <label class="radio-option"><input type="radio" name="payment" value="Has Aetna, wants to use it"> <span>I have Aetna and would like to use it</span></label>
-                <label class="radio-option"><input type="radio" name="payment" value="Needs a different insurance plan"> <span>I would need to use a different insurance plan</span></label>
-                <label class="radio-option"><input type="radio" name="payment" value="Asking about sliding scale"> <span>I would like to ask about sliding scale availability</span></label>
+            <fieldset class="form-fieldset" id="grp-fees" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+              <legend>Fees and payment</legend>
+              <div class="fee-table">
+                <div class="fee-row"><span class="fee-label">Initial assessment</span><span class="fee-amount">$300</span></div>
+                <div class="fee-row"><span class="fee-label">Individual psychotherapy</span><span class="fee-amount">$210</span></div>
+                <div class="fee-row"><span class="fee-label">Couples or relationship therapy</span><span class="fee-amount">$225</span></div>
+                <div class="fee-row"><span class="fee-label">Extended sessions</span><span class="fee-amount">Available when clinically appropriate</span></div>
+                <div class="fee-row"><span class="fee-label">Therapy intensives</span><span class="fee-amount">Discussed during consultation</span></div>
               </div>
-              <p class="field-note" id="payment-note" hidden>Thank you for saying so. A small number of sliding scale spots are set aside each year and they are not always open, so I cannot promise one, but I will tell you honestly where things stand when I reply.</p>
+              <p class="fieldset-note">This practice is primarily private pay. I am currently on Aetna, and I accept Lyra, which is an employee assistance program some workplaces offer. I can provide a superbill after each session if you want to pursue out-of-network reimbursement, and HSA and FSA cards are accepted.</p>
+              <p class="fieldset-note">Please look at these numbers before requesting a consultation, so that the financial side feels workable before we speak rather than after. I would rather tell you now than spend your time and mine discovering it at the end of a call.</p>
+              <div class="form-group" id="grp-fees_workable" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <div class="radio-group" role="radiogroup">
+                  <span class="radio-group-label">If we turn out to be a good clinical fit, are these fees workable for you? <span aria-hidden="true">*</span></span>
+                  <label class="radio-option"><input type="radio" name="fees_workable" value="Yes" data-req> <span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="fees_workable" value="Possibly, and I would like to discuss options" data-req> <span>Possibly, and I would like to discuss options</span></label>
+                  <label class="radio-option"><input type="radio" name="fees_workable" value="No" data-req> <span>No</span></label>
+                </div>
+              </div>
+              <p class="field-note" id="fees-note" hidden>Thank you for being straight with me. A small number of sliding scale spots are set aside each year and they are not always open, so I cannot promise one, but I will tell you honestly where things stand when I reply, and if I am not the right fit financially I will point you toward people who may be.</p>
+              <div class="form-group" id="grp-payment" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="payment">How are you planning to pay for services? <span aria-hidden="true">*</span></label>
+                <select id="payment" name="payment" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Private pay">Private pay</option>
+                  <option value="Aetna">Aetna</option>
+                  <option value="Lyra (EAP)">Lyra, through my employer</option>
+                  <option value="Out-of-network benefits and superbill">Out-of-network benefits and superbill</option>
+                  <option value="HSA or FSA">HSA or FSA</option>
+                  <option value="Another insurance plan">Another insurance plan</option>
+                  <option value="Still determining">Still determining</option>
+                </select>
+              </div>
+              <p class="field-note" id="payment-note" hidden>Aetna and Lyra are the only two I am currently able to bill. I can still provide a superbill you may submit to your insurer for possible out-of-network reimbursement, though what comes back depends entirely on your plan.</p>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Therapy intensive">
+              <legend>Timing</legend>
+              <div class="form-group" id="grp-readiness" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+                <label for="readiness">If we determine that we are a good fit, when would you ideally like to begin? <span aria-hidden="true">*</span></label>
+                <select id="readiness" name="readiness" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="As soon as possible">As soon as possible</option>
+                  <option value="Within the next few weeks">Within the next few weeks</option>
+                  <option value="Within one to two months">Within one to two months</option>
+                  <option value="I am mainly gathering information right now">I am mainly gathering information right now</option>
+                </select>
+              </div>
+              <p class="fieldset-note">Gathering information is a legitimate answer and it will not count against you. It just helps me know whether to hold time for you.</p>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+              <legend>What the consultation is for</legend>
+              <p class="fieldset-note">The free consultation is a short call to work out whether my expertise, approach, availability, and services line up with what you are looking for. It is not a therapy session or a full clinical assessment, and that is on purpose. The real work deserves more room than a 15-minute call can give it.</p>
             </fieldset>
 
             <fieldset class="form-fieldset">
-              <legend>Last two things</legend>
-
-              <div class="form-group">
-                <label for="referral_source">How did you find me?</label>
-                <select id="referral_source" name="referral_source">
+              <legend>Last few things</legend>
+              <div class="form-group" id="grp-referral_source">
+                <label for="referral_source">How did you hear about me? <span aria-hidden="true">*</span></label>
+                <select id="referral_source" name="referral_source" required>
                   <option value="" disabled selected>Select one</option>
-                  <option value="Google or another search engine">Google or another search engine</option>
+                  <option value="Referred by a current or former client">Referred by a current or former client</option>
+                  <option value="Referred by another therapist or healthcare provider">Referred by another therapist or healthcare provider</option>
                   <option value="Psychology Today">Psychology Today</option>
-                  <option value="Instagram or Facebook">Instagram or Facebook</option>
-                  <option value="A friend or family member">A friend or family member</option>
-                  <option value="Another therapist or provider">Another therapist or provider</option>
-                  <option value="A doctor, dietitian, or treatment program">A doctor, dietitian, or treatment program</option>
-                  <option value="A podcast">A podcast</option>
-                  <option value="Alynne's newsletter or Substack">Alynne&rsquo;s newsletter or Substack</option>
-                  <option value="Something else">Something else</option>
+                  <option value="Lyra">Lyra</option>
+                  <option value="Google search">Google search</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="Workshop or event">Workshop or event</option>
+                  <option value="Professional networking or a colleague">Professional networking or a colleague</option>
+                  <option value="Friend or family member">Friend or family member</option>
+                  <option value="Embodied Reclamation content">Embodied Reclamation content</option>
+                  <option value="Somewhere else">Somewhere else</option>
                 </select>
               </div>
-
-              <div class="form-group">
-                <label for="notes">Anything else you want me to know before we talk?</label>
-                <textarea id="notes" name="notes" rows="3" placeholder="Optional. Only if there is something that would help me prepare."></textarea>
+              <div class="form-group" id="grp-referral_name">
+                <label for="referral_name">Who referred you?</label>
+                <input type="text" id="referral_name" name="referral_name" placeholder="Optional, and it lets me thank them.">
               </div>
-
+              <div class="form-group" id="grp-referral_other">
+                <label for="referral_other">Where did you find me?</label>
+                <input type="text" id="referral_other" name="referral_other" placeholder="Optional.">
+              </div>
+              <div class="form-group" id="grp-anything_else">
+                <label for="anything_else">Is there anything else you would like me to know before we speak?</label>
+                <textarea id="anything_else" name="anything_else" rows="3" placeholder="Optional."></textarea>
+              </div>
               <div class="form-group">
                 <label class="checkbox-option"><input type="checkbox" name="newsletter" value="Yes"> <span>Add me to Alynne&rsquo;s letters. A reflection every few weeks on reclamation, bodies, and coming back to yourself. You can leave at any time, and reaching out here does not subscribe you to anything unless you check this box.</span></label>
               </div>
@@ -265,7 +583,7 @@
             </div>
 
             <button type="submit" class="btn">Send This to Alynne</button>
-            <p class="field-note" style="margin-top:14px;">Please do not include clinical detail you would not want sent by email. We can go into all of that once we are working together.</p>
+            <p class="field-note" style="margin-top:14px;">Please leave out clinical detail you would not want sent by email. There is room for all of it once we are working together.</p>
             <div class="form-success" style="display:none;">Thank you. This came through. I will get back to you as soon as I can, usually within 24 to 48 hours, with next steps, whether that is setting up a consultation or pointing you toward someone who is a better fit.</div>
             <div class="form-error" style="display:none;">Something went wrong. Please try again or contact me directly at info@alynnedavis.com.</div>
           </form>
@@ -348,6 +666,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=6" defer></script>
+  <script src="/js/main.js?v=7" defer></script>
 </body>
 </html>

@@ -62,11 +62,19 @@ const MIN_FILL_MS = 3000;
 function tooFastToBeHuman() { return Date.now() - formPageLoadedAt < MIN_FILL_MS; }
 
 // ---- Consultation screening form ----
-// Posts twice on submit: once to Zoho CRM (creates the Lead, which is what fires
-// Alynne's autoresponder), and once to Zoho Campaigns if the newsletter box is
-// checked. The two are separate Zoho products and do not sync on their own.
+// Nine service paths share one form. Every block carries data-show-for with a
+// pipe-separated list of the services it belongs to; blocks with no attribute
+// are shown to everyone. Hidden blocks are disabled as well as hidden, because
+// a hidden required field blocks submit with no visible message.
+//
+// Posts twice: once to Zoho CRM (creating the Lead, which is what fires the
+// autoresponder), and once to Zoho Campaigns if the newsletter box is checked.
+// The two are separate Zoho products and do not sync on their own.
 const NEWSLETTER_LIST_ID = '112b6b96937c6fa86';   // Zoho Campaigns list (zcld)
 const NEWSLETTER_HOST = 'zujep-zgph.maillist-manage.net';
+
+// Services that are psychotherapy, and therefore limited to NC and SC by licensure.
+const LICENSED_ONLY = ['Individual psychotherapy', 'Couples or relationship therapy', 'Therapy intensive'];
 
 // Fires the Campaigns web-optin the same way Zoho's own embed does: a real form
 // POST into a hidden iframe. A fetch() gets blocked by CORS on this endpoint.
@@ -86,22 +94,12 @@ function subscribeToNewsletter(email, name) {
     f.target = 'zc-optin-sink';
     f.style.display = 'none';
     const fields = {
-      CONTACT_EMAIL: email,
-      LASTNAME: name || '',
-      zcld: NEWSLETTER_LIST_ID,
-      zctd: '112b6b96937a107a9',
-      zx: '133b9bf30',
-      zcvers: '3.0',
-      submitType: 'optinCustomView',
-      mode: 'OptinCreateView',
-      formType: 'QuickForm',
-      zc_trackCode: 'ZCFORMVIEW',
-      oldListIds: '',
-      emailReportId: '',
-      document_domain: '',
-      zc_Url: NEWSLETTER_HOST,
-      new_optin_response_in: '0',
-      duplicate_optin_response_in: '0'
+      CONTACT_EMAIL: email, LASTNAME: name || '',
+      zcld: NEWSLETTER_LIST_ID, zctd: '112b6b96937a107a9', zx: '133b9bf30',
+      zcvers: '3.0', submitType: 'optinCustomView', mode: 'OptinCreateView',
+      formType: 'QuickForm', zc_trackCode: 'ZCFORMVIEW', oldListIds: '',
+      emailReportId: '', document_domain: '', zc_Url: NEWSLETTER_HOST,
+      new_optin_response_in: '0', duplicate_optin_response_in: '0'
     };
     for (const [k, v] of Object.entries(fields)) {
       const i = document.createElement('input');
@@ -118,69 +116,97 @@ function subscribeToNewsletter(email, name) {
 
 const form = document.getElementById('contact-form');
 if (form) {
-  const inquiryType = form.querySelector('#inquiry_type');
+  const service = form.querySelector('#service');
   const stateField = form.querySelector('#state');
-  const stateNote = form.querySelector('#state-note');
-  const paymentNote = form.querySelector('#payment-note');
+  const conditionals = [...form.querySelectorAll('[data-show-for]')];
 
-  // Groups shown only to people seeking care, not to clinicians booking consultation.
-  const clientOnly = ['grp-focus', 'grp-readiness', 'grp-format', 'grp-history', 'grp-payment'];
-  const professionalOnly = ['grp-consult-type'];
-  // Fields that are required, but only while their group is visible. A hidden
-  // required field blocks submit with no visible message, so visibility and
-  // the required flag have to move together.
-  const requiredWhenVisible = { 'grp-focus': '#focus', 'grp-readiness': '#readiness', 'grp-consult-type': '#consult_type' };
-
-  function setGroup(id, visible) {
-    const el = document.getElementById(id);
-    if (!el) return;
+  function setVisible(el, visible) {
     el.hidden = !visible;
-    // Disabled controls are skipped by validation and left out of FormData.
-    el.querySelectorAll('input, select, textarea').forEach(c => { c.disabled = !visible; });
-    const sel = requiredWhenVisible[id];
-    if (sel) {
-      const field = el.querySelector(sel);
-      if (field) field.required = visible;
-    }
-    if (id === 'grp-payment') {
-      el.querySelectorAll('input[type="radio"]').forEach(r => { r.required = visible; });
-    }
+    el.querySelectorAll('input, select, textarea').forEach(c => {
+      if (c.name === 'website') return;              // honeypot stays as it is
+      if (!visible && c.required) { c.dataset.wasRequired = '1'; c.required = false; }
+      else if (visible && c.dataset.wasRequired) { c.required = true; }
+      c.disabled = !visible;
+    });
+  }
+
+  // A radio group is required only as a group, so it cannot use the required
+  // attribute per input without demanding all four. Validated by hand instead.
+  function radioGroupsIn(scope) {
+    const names = new Set();
+    scope.querySelectorAll('input[type="radio"][data-req]').forEach(r => {
+      if (!r.disabled && !r.closest('[hidden]')) names.add(r.name);
+    });
+    return [...names];
   }
 
   function applyRouting() {
-    const isProfessional = inquiryType.value === 'Professional consultation';
-    clientOnly.forEach(id => setGroup(id, !isProfessional));
-    professionalOnly.forEach(id => setGroup(id, isProfessional));
+    const chosen = service.value;
+    conditionals.forEach(el => {
+      const list = el.dataset.showFor.split('|');
+      setVisible(el, list.includes(chosen));
+    });
 
-    // Therapy is limited to NC and SC by licensure, and an Intensive is therapy.
-    // Coaching and clinician-to-clinician consultation carry no such limit.
-    const LICENSED_ONLY = ['Therapy for myself', 'Intensive'];
-    const wantsTherapy = LICENSED_ONLY.includes(inquiryType.value);
-    const outOfState = stateField.value === 'Another state or country';
-    if (stateNote) stateNote.hidden = !(wantsTherapy && outOfState);
+    // Therapy is limited to NC and SC. Everything else travels.
+    const note = document.getElementById('state-note');
+    if (note) note.hidden = !(LICENSED_ONLY.includes(chosen) && stateField.value === 'Another state or country');
   }
 
-  inquiryType.addEventListener('change', applyRouting);
+  service.addEventListener('change', applyRouting);
   stateField.addEventListener('change', applyRouting);
-  applyRouting();
 
-  form.querySelectorAll('input[name="payment"]').forEach(r => {
-    r.addEventListener('change', () => {
-      if (paymentNote) paymentNote.hidden = r.value !== 'Asking about sliding scale';
-    });
+  // Conditional follow-ups that depend on an answer rather than on the service.
+  function toggle(id, on) { const e = document.getElementById(id); if (e) e.hidden = !on; }
+  form.addEventListener('change', (e) => {
+    const t = e.target;
+    if (t.name === 'fees_workable') toggle('fees-note', t.value !== 'Yes');
+    if (t.name === 'payment') toggle('payment-note', t.value === 'Another insurance plan');
+    if (t.name === 'referral_source') {
+      toggle('grp-referral_name', t.value === 'Referred by another therapist or healthcare provider');
+      toggle('grp-referral_other', t.value === 'Somewhere else');
+    }
   });
+  toggle('grp-referral_name', false);
+  toggle('grp-referral_other', false);
+  applyRouting();
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // Required radio groups, checked by hand since the attribute cannot express
+    // "one of these four".
+    for (const name of radioGroupsIn(form)) {
+      if (!form.querySelector('input[name="' + name + '"]:checked')) {
+        const first = form.querySelector('input[name="' + name + '"]');
+        first.closest('.form-group').scrollIntoView({ block: 'center', behavior: 'smooth' });
+        first.focus();
+        return;
+      }
+    }
+    // Required checkbox groups behave the same way.
+    for (const grp of form.querySelectorAll('.check-grid-wrap')) {
+      if (grp.hidden) continue;
+      const label = grp.querySelector('.radio-group-label');
+      if (!label || !label.querySelector('span[aria-hidden]')) continue;
+      if (!grp.querySelector('input:checked')) {
+        grp.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        return;
+      }
+    }
+
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    const data = Object.fromEntries(new FormData(form));
+    // Checkbox groups share a name, so collect every value rather than the last.
+    const fd = new FormData(form);
+    const data = {};
+    for (const key of new Set(fd.keys())) {
+      const all = fd.getAll(key).filter(v => v !== '');
+      data[key] = all.length > 1 ? all.join(', ') : (all[0] || '');
+    }
 
-    // Honeypot check and time trap. Both show the normal success state so bots
-    // get no signal they were caught.
     if (data.website || tooFastToBeHuman()) {
       form.style.display = 'none';
       document.querySelector('.form-success').style.display = 'block';
@@ -188,22 +214,35 @@ if (form) {
     }
     delete data.website;
 
-    // The decision-making answers go first so Alynne can triage at a glance.
-    const line = (label, val) => val ? label + ': ' + val + '\n' : '';
+    // Triage answers first so Alynne can sort a lead at a glance, then the rest
+    // in the order it was asked, then the long-form answers.
+    const LABELS = {
+      service: 'INTERESTED IN', state: 'LOCATED IN', readiness: 'TIMELINE',
+      fees_workable: 'FEES WORKABLE', payment: 'PAYMENT METHOD', format: 'FORMAT',
+      availability: 'AVAILABLE DAYS', times: 'TIMES', therapy_history: 'THERAPY HISTORY',
+      therapy_concerns: 'CONCERNS', therapist_priority: 'PRIORITIES WHEN CHOOSING',
+      intensive_current_therapist: 'CURRENT THERAPIST', intensive_scope: 'INTENSIVE SCOPE',
+      case_role: 'ROLE OR LICENSE', case_areas: 'CONSULT AREAS', case_cadence: 'CADENCE',
+      prac_stage: 'PRACTICE STAGE', prac_support: 'WANTS SUPPORT WITH',
+      group_interest: 'GROUP INTEREST', group_format: 'GROUP FORMAT', group_notify: 'NOTIFY ABOUT GROUPS',
+      workshop_role: 'WORKSHOP ROLE', workshop_topics: 'WORKSHOP TOPICS', workshop_org: 'ORGANIZATION',
+      workshop_size: 'GROUP SIZE', workshop_when: 'TIMEFRAME', workshop_format: 'WORKSHOP FORMAT',
+      workshop_location: 'LOCATION', workshop_budget: 'BUDGET',
+      retreat_interest: 'RETREAT INTEREST', retreat_notify: 'NOTIFY ABOUT RETREATS',
+      referral_source: 'FOUND ME VIA', referral_name: 'REFERRED BY', referral_other: 'FOUND ME VIA (OTHER)',
+      newsletter: 'NEWSLETTER OPT-IN'
+    };
+    const LONG = {
+      unsure_notes: 'WHAT THEY ARE LOOKING FOR', therapy_bringing: 'WHAT BRINGS THEM NOW',
+      therapy_different: 'WHAT THEY WANT TO BE DIFFERENT', therapy_prior: 'PRIOR THERAPY, HELPFUL OR NOT',
+      intensive_focus: 'INTENSIVE FOCUS', intensive_why: 'WHY A LONGER SESSION',
+      case_issue: 'CASE OR CLINICAL QUESTION', prac_success: 'WHAT SUCCESS LOOKS LIKE',
+      group_hope: 'HOPES FOR A GROUP', retreat_hope: 'HOPES FOR A RETREAT',
+      anything_else: 'ANYTHING ELSE'
+    };
     let body = '';
-    body += line('INQUIRY TYPE', data.inquiry_type);
-    body += line('CONSULTATION TYPE', data.consult_type);
-    body += line('LOCATED IN', data.state);
-    body += line('READINESS', data.readiness);
-    body += line('PAYMENT', data.payment);
-    body += '\n';
-    body += line('FOCUS', data.focus);
-    body += line('FORMAT', data.format);
-    body += line('THERAPY HISTORY', data.history);
-    body += line('FOUND ME VIA', data.referral_source);
-    body += line('NEWSLETTER OPT-IN', data.newsletter);
-    if (data.outcome) body += '\nWHAT THEY WANT TO BE DIFFERENT IN SIX MONTHS:\n' + data.outcome + '\n';
-    if (data.notes) body += '\nANYTHING ELSE:\n' + data.notes + '\n';
+    for (const k of Object.keys(LABELS)) if (data[k]) body += LABELS[k] + ': ' + data[k] + '\n';
+    for (const k of Object.keys(LONG)) if (data[k]) body += '\n' + LONG[k] + ':\n' + data[k] + '\n';
 
     try {
       const { first, last } = splitName(data.name || '');
@@ -219,13 +258,12 @@ if (form) {
 
       form.style.display = 'none';
       document.querySelector('.form-success').style.display = 'block';
-      // GA4 conversion: screened consultation inquiry
       if (typeof gtag === 'function') {
         gtag('event', 'generate_lead', {
           form_name: 'consultation_screening',
-          inquiry_type: data.inquiry_type || '',
+          service: data.service || '',
           readiness: data.readiness || '',
-          payment_fit: data.payment || ''
+          fees_workable: data.fees_workable || ''
         });
       }
     } catch (err) {
