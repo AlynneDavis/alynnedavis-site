@@ -240,7 +240,9 @@ if (form) {
 
     if (data.website || tooFastToBeHuman()) {
       form.style.display = 'none';
-      document.querySelector('.form-success').style.display = 'block';
+      const ok = document.querySelector('.form-success');
+      ok.style.display = 'block';
+      ok.scrollIntoView({ block: 'center', behavior: 'smooth' });
       return;
     }
     delete data.website;
@@ -297,7 +299,11 @@ if (form) {
       if (data.newsletter) subscribeToNewsletter(data.email, data.name);
 
       form.style.display = 'none';
-      document.querySelector('.form-success').style.display = 'block';
+      const ok = document.querySelector('.form-success');
+      ok.style.display = 'block';
+      // The form can be long, so the confirmation may be well above where they
+      // pressed submit. Take them to it.
+      ok.scrollIntoView({ block: 'center', behavior: 'smooth' });
       if (typeof gtag === 'function') {
         gtag('event', 'generate_lead', {
           form_name: 'consultation_screening',
