@@ -154,7 +154,7 @@ if (form) {
 
     // Therapy is limited to NC and SC by licensure, and an Intensive is therapy.
     // Coaching and clinician-to-clinician consultation carry no such limit.
-    const LICENSED_ONLY = ['Therapy for myself', 'Therapy for a couple or family', 'Intensive'];
+    const LICENSED_ONLY = ['Therapy for myself', 'Couples therapy', 'Intensive'];
     const wantsTherapy = LICENSED_ONLY.includes(inquiryType.value);
     const outOfState = stateField.value === 'Another state or country';
     if (stateNote) stateNote.hidden = !(wantsTherapy && outOfState);
