@@ -74,7 +74,7 @@ const NEWSLETTER_LIST_ID = '112b6b96937c6fa86';   // Zoho Campaigns list (zcld)
 const NEWSLETTER_HOST = 'zujep-zgph.maillist-manage.net';
 
 // Services that are psychotherapy, and therefore limited to NC and SC by licensure.
-const LICENSED_ONLY = ['Individual psychotherapy', 'Couples or relationship therapy', 'Therapy intensive'];
+const LICENSED_ONLY = ['Individual psychotherapy', 'Couples or relationship therapy', 'Therapy intensive', 'Adolescent or family therapy'];
 
 // Fires the Campaigns web-optin the same way Zoho's own embed does: a real form
 // POST into a hidden iframe. A fetch() gets blocked by CORS on this endpoint.
@@ -161,6 +161,8 @@ if (form) {
     const t = e.target;
     if (t.name === 'fees_workable') toggle('fees-note', t.value !== 'Yes');
     if (t.name === 'payment') toggle('payment-note', t.value === 'Another insurance plan');
+    // Alynne's adolescent work is with older teens only.
+    if (t.id === 'teen_age') toggle('teen-age-note', t.value === '12 or younger');
     if (t.name === 'referral_source') {
       toggle('grp-referral_name', t.value === 'Referred by another therapist or healthcare provider');
       toggle('grp-referral_other', t.value === 'Somewhere else');
@@ -222,6 +224,8 @@ if (form) {
       availability: 'AVAILABLE DAYS', times: 'TIMES', therapy_history: 'THERAPY HISTORY',
       therapy_concerns: 'CONCERNS', therapist_priority: 'PRIORITIES WHEN CHOOSING',
       intensive_current_therapist: 'CURRENT THERAPIST', intensive_scope: 'INTENSIVE SCOPE',
+      teen_age: 'TEEN AGE', teen_initiator: 'WHO IS LEADING', teen_medical: 'MEDICAL FOLLOW-UP',
+      teen_history: 'TEEN TREATMENT HISTORY', teen_parent_capacity: 'PARENT CAPACITY',
       case_role: 'ROLE OR LICENSE', case_areas: 'CONSULT AREAS', case_cadence: 'CADENCE',
       prac_stage: 'PRACTICE STAGE', prac_support: 'WANTS SUPPORT WITH',
       group_interest: 'GROUP INTEREST', group_format: 'GROUP FORMAT', group_notify: 'NOTIFY ABOUT GROUPS',
@@ -236,7 +240,7 @@ if (form) {
       unsure_notes: 'WHAT THEY ARE LOOKING FOR', therapy_bringing: 'WHAT BRINGS THEM NOW',
       therapy_different: 'WHAT THEY WANT TO BE DIFFERENT', therapy_prior: 'PRIOR THERAPY, HELPFUL OR NOT',
       intensive_focus: 'INTENSIVE FOCUS', intensive_why: 'WHY A LONGER SESSION',
-      case_issue: 'CASE OR CLINICAL QUESTION', prac_success: 'WHAT SUCCESS LOOKS LIKE',
+      teen_situation: 'WHAT IS GOING ON WITH THE TEEN', case_issue: 'CASE OR CLINICAL QUESTION', prac_success: 'WHAT SUCCESS LOOKS LIKE',
       group_hope: 'HOPES FOR A GROUP', retreat_hope: 'HOPES FOR A RETREAT',
       anything_else: 'ANYTHING ELSE'
     };

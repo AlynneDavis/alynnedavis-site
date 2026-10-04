@@ -112,6 +112,7 @@
                   <option value="Individual psychotherapy">Individual psychotherapy</option>
                   <option value="Couples or relationship therapy">Couples or relationship therapy</option>
                   <option value="Therapy intensive">Therapy intensive</option>
+                  <option value="Adolescent or family therapy">Therapy for my teen, or family work</option>
                   <option value="Professional case consultation">Professional case consultation</option>
                   <option value="Private practice consultation">Private practice consultation</option>
                   <option value="Group coaching or upcoming programs">Group coaching or upcoming programs</option>
@@ -216,6 +217,72 @@
                   <option value="Potentially several">Potentially several</option>
                   <option value="I am not sure yet">I am not sure yet</option>
                 </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Adolescent or family therapy">
+              <legend>About your teen</legend>
+              <p class="fieldset-note">I take a small number of adolescent and family cases, and I am particular about which ones, because this work only does what it is meant to do under the right conditions. These questions are how I tell. None of them is a test you can fail.</p>
+              <div class="form-group">
+                <label for="teen_age">How old is your teen? <span aria-hidden="true">*</span></label>
+                <select id="teen_age" name="teen_age" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="12 or younger">12 or younger</option>
+                  <option value="13 to 15">13 to 15</option>
+                  <option value="16 to 17">16 to 17</option>
+                  <option value="18 to 20, living at home">18 to 20, living at home</option>
+                  <option value="18 or older, living independently">18 or older, living independently</option>
+                </select>
+                <p class="field-note" id="teen-age-note" hidden>My adolescent work is with older teens, so for a child this age I am very likely not the right person. I would rather say that now than after a call. Send this anyway if you would like, and I will point you toward clinicians here who do this work well.</p>
+              </div>
+              <div class="form-group">
+                <label for="teen_initiator">Who is leading this? <span aria-hidden="true">*</span></label>
+                <select id="teen_initiator" name="teen_initiator" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="I am, as the parent">I am, as the parent</option>
+                  <option value="My teen asked for therapy">My teen asked for therapy</option>
+                  <option value="A doctor or dietitian recommended it">A doctor or dietitian recommended it</option>
+                  <option value="A treatment team or program recommended it">A treatment team or program recommended it</option>
+                  <option value="The school raised it">The school raised it</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="teen_situation">What is going on right now? <span aria-hidden="true">*</span></label>
+                <textarea id="teen_situation" name="teen_situation" rows="4" required placeholder="What you have noticed, roughly how long it has been going on, and what worries you most."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="teen_medical">Is your teen currently being followed medically? <span aria-hidden="true">*</span></label>
+                <select id="teen_medical" name="teen_medical" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Yes, by a pediatrician or physician">Yes, by a pediatrician or physician</option>
+                  <option value="Yes, by a full team including a dietitian">Yes, by a full team including a dietitian</option>
+                  <option value="Not currently, but we could arrange it">Not currently, but we could arrange it</option>
+                  <option value="No, and I am not sure it is needed">No, and I am not sure it is needed</option>
+                  <option value="I am not sure">I am not sure</option>
+                </select>
+                <p class="field-note">If food, weight, or eating is any part of this, I work alongside a physician rather than instead of one. That is not a formality. It is what makes the work safe.</p>
+              </div>
+              <div class="form-group">
+                <label for="teen_history">Has your teen been in treatment before?</label>
+                <select id="teen_history" name="teen_history">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="No, this would be the first">No, this would be the first</option>
+                  <option value="Yes, outpatient therapy">Yes, outpatient therapy</option>
+                  <option value="Yes, IOP or PHP">Yes, IOP or PHP</option>
+                  <option value="Yes, residential or inpatient">Yes, residential or inpatient</option>
+                  <option value="Currently in treatment elsewhere">Currently in treatment elsewhere</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div class="radio-group" role="radiogroup">
+                  <span class="radio-group-label">Family-based work asks a great deal of parents, including being in the room and being present at meals. Is that possible in your household right now? <span aria-hidden="true">*</span></span>
+                  <label class="radio-option"><input type="radio" name="teen_parent_capacity" value="Both parents can be fully involved" data-req> <span>Yes, we can both be fully involved</span></label>
+                  <label class="radio-option"><input type="radio" name="teen_parent_capacity" value="One parent can be fully involved" data-req> <span>One of us can be fully involved</span></label>
+                  <label class="radio-option"><input type="radio" name="teen_parent_capacity" value="Involvement limited by work or logistics" data-req> <span>Our involvement would be limited by work or logistics</span></label>
+                  <label class="radio-option"><input type="radio" name="teen_parent_capacity" value="Hoping the teen can be seen alone" data-req> <span>I was hoping my teen could be seen on their own</span></label>
+                  <label class="radio-option"><input type="radio" name="teen_parent_capacity" value="Not sure yet" data-req> <span>I am not sure yet</span></label>
+                </div>
+                <p class="field-note">There is no right answer here. Families are stretched, and knowing the real constraints up front is what lets me tell you honestly whether this will work.</p>
               </div>
             </fieldset>
 
@@ -454,7 +521,7 @@
               <p class="field-note" id="state-note" hidden>I am licensed to provide therapy only to clients located in North Carolina and South Carolina, so I would not be able to work with you therapeutically. Coaching, consultation, group programs, workshops, and retreats carry no such restriction and are open to you wherever you are. You are welcome to change your selection above, or send this as it is and I will point you toward someone licensed where you live.</p>
             </fieldset>
 
-            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy">
               <legend>Scheduling</legend>
               <p class="fieldset-note">I see clients Monday through Thursday. Mondays and Wednesdays are virtual, Tuesdays and Thursdays are in person. I do not hold Friday appointments. Where it is possible, I prefer to do the initial assessment in person.</p>
               <div class="form-group" id="grp-format" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
@@ -482,16 +549,17 @@
               </div>
             </fieldset>
 
-            <fieldset class="form-fieldset" id="grp-fees" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+            <fieldset class="form-fieldset" id="grp-fees" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy">
               <legend>Fees and payment</legend>
               <div class="fee-table">
                 <div class="fee-row"><span class="fee-label">Initial assessment</span><span class="fee-amount">$300</span></div>
                 <div class="fee-row"><span class="fee-label">Individual psychotherapy</span><span class="fee-amount">$210</span></div>
                 <div class="fee-row"><span class="fee-label">Couples or relationship therapy</span><span class="fee-amount">$225</span></div>
                 <div class="fee-row"><span class="fee-label">Extended sessions</span><span class="fee-amount">Available when clinically appropriate</span></div>
+                <div class="fee-row"><span class="fee-label">Adolescent and family sessions</span><span class="fee-amount">Discussed during consultation</span></div>
                 <div class="fee-row"><span class="fee-label">Therapy intensives</span><span class="fee-amount">Discussed during consultation</span></div>
               </div>
-              <p class="fieldset-note">This practice is primarily private pay. I am currently on Aetna, and I accept Lyra, which is an employee assistance program some workplaces offer. I can provide a superbill after each session if you want to pursue out-of-network reimbursement, and HSA and FSA cards are accepted.</p>
+              <p class="fieldset-note">This practice is primarily private pay. Aetna is the only panel I am currently on. I can provide a superbill after each session if you want to pursue out-of-network reimbursement, and HSA and FSA cards are accepted.</p>
               <p class="fieldset-note">Please look at these numbers before requesting a consultation, so that the financial side feels workable before we speak rather than after. I would rather tell you now than spend your time and mine discovering it at the end of a call.</p>
               <div class="form-group" id="grp-fees_workable" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
                 <div class="radio-group" role="radiogroup">
@@ -508,17 +576,16 @@
                   <option value="" disabled selected>Select one</option>
                   <option value="Private pay">Private pay</option>
                   <option value="Aetna">Aetna</option>
-                  <option value="Lyra (EAP)">Lyra, through my employer</option>
                   <option value="Out-of-network benefits and superbill">Out-of-network benefits and superbill</option>
                   <option value="HSA or FSA">HSA or FSA</option>
                   <option value="Another insurance plan">Another insurance plan</option>
                   <option value="Still determining">Still determining</option>
                 </select>
               </div>
-              <p class="field-note" id="payment-note" hidden>Aetna and Lyra are the only two I am currently able to bill. I can still provide a superbill you may submit to your insurer for possible out-of-network reimbursement, though what comes back depends entirely on your plan.</p>
+              <p class="field-note" id="payment-note" hidden>Aetna is the only plan I am currently able to bill. I can still provide a superbill you may submit to your insurer for possible out-of-network reimbursement, though what comes back depends entirely on your plan.</p>
             </fieldset>
 
-            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Therapy intensive">
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy">
               <legend>Timing</legend>
               <div class="form-group" id="grp-readiness" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
                 <label for="readiness">If we determine that we are a good fit, when would you ideally like to begin? <span aria-hidden="true">*</span></label>
@@ -533,7 +600,7 @@
               <p class="fieldset-note">Gathering information is a legitimate answer and it will not count against you. It just helps me know whether to hold time for you.</p>
             </fieldset>
 
-            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive">
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy">
               <legend>What the consultation is for</legend>
               <p class="fieldset-note">The free consultation is a short call to work out whether my expertise, approach, availability, and services line up with what you are looking for. It is not a therapy session or a full clinical assessment, and that is on purpose. The real work deserves more room than a 15-minute call can give it.</p>
             </fieldset>
