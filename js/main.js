@@ -162,7 +162,7 @@ if (form) {
     if (t.name === 'fees_workable') toggle('fees-note', t.value !== 'Yes');
     if (t.name === 'payment') toggle('payment-note', t.value === 'Another insurance plan');
     // Alynne's adolescent work is with older teens only.
-    if (t.id === 'teen_age') toggle('teen-age-note', t.value === '12 or younger');
+    if (t.id === 'teen_age') toggle('teen-age-note', ['12 or younger', '13 to 15'].includes(t.value));
     if (t.name === 'referral_source') {
       toggle('grp-referral_name', t.value === 'Referred by another therapist or healthcare provider');
       toggle('grp-referral_other', t.value === 'Somewhere else');
