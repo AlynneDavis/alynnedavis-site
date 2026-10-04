@@ -70,8 +70,12 @@ function tooFastToBeHuman() { return Date.now() - formPageLoadedAt < MIN_FILL_MS
 // Posts twice: once to Zoho CRM (creating the Lead, which is what fires the
 // autoresponder), and once to Zoho Campaigns if the newsletter box is checked.
 // The two are separate Zoho products and do not sync on their own.
-const NEWSLETTER_LIST_ID = '112b6b96937c6fa86';   // Zoho Campaigns list (zcld)
-const NEWSLETTER_HOST = 'zujep-zgph.maillist-manage.net';
+// Zoho Campaigns, "Newsletter sign ups" list. Note this list lives on the .com
+// host; the three lead-magnet lists are on .net. Values taken from the live
+// embed code for the Website Newsletter Signup form.
+const NEWSLETTER_LIST_ID = '112b6b96937a57851';
+const NEWSLETTER_HOST = 'zujep-zgpm.maillist-manage.com';
+const NEWSLETTER_FORM_IX = '3z6c6ea014af9749962d49456d4bc37d63766785112500f72d2b6c203d38bd8e8c';
 
 // Services that are psychotherapy, and therefore limited to NC and SC by licensure.
 const LICENSED_ONLY = ['Individual psychotherapy', 'Couples or relationship therapy', 'Therapy intensive', 'Adolescent or family therapy'];
@@ -96,6 +100,7 @@ function subscribeToNewsletter(email, name) {
     const fields = {
       CONTACT_EMAIL: email, LASTNAME: name || '',
       zcld: NEWSLETTER_LIST_ID, zctd: '112b6b96937a107a9', zx: '133b9bf30',
+      zc_formIx: NEWSLETTER_FORM_IX, viewFrom: 'URL_ACTION',
       zcvers: '3.0', submitType: 'optinCustomView', mode: 'OptinCreateView',
       formType: 'QuickForm', zc_trackCode: 'ZCFORMVIEW', oldListIds: '',
       emailReportId: '', document_domain: '', zc_Url: NEWSLETTER_HOST,
