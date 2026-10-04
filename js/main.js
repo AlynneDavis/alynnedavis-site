@@ -191,25 +191,32 @@ if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Required radio groups, checked by hand since the attribute cannot express
-    // "one of these four".
+    // Radio and checkbox groups cannot express "one of these" with the required
+    // attribute without demanding all of them, so they are checked by hand.
+    // A group only counts if it is genuinely on screen: the wrapper itself is
+    // never hidden, its parent fieldset is, and hidden inputs are disabled.
+    const errBox = document.querySelector('.form-error');
+    errBox.style.display = 'none';
+    const isLive = (el) => !el.closest('[hidden]') && !el.querySelector('input').disabled;
+    const fail = (el, what) => {
+      errBox.textContent = 'Just one thing before this can send: ' + what;
+      errBox.style.display = 'block';
+      el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    };
+
     for (const name of radioGroupsIn(form)) {
-      if (!form.querySelector('input[name="' + name + '"]:checked')) {
-        const first = form.querySelector('input[name="' + name + '"]');
-        first.closest('.form-group').scrollIntoView({ block: 'center', behavior: 'smooth' });
-        first.focus();
-        return;
-      }
+      if (form.querySelector('input[name="' + name + '"]:checked')) continue;
+      const grp = form.querySelector('input[name="' + name + '"]').closest('.form-group');
+      fail(grp, 'please choose one of the options highlighted below.');
+      return;
     }
-    // Required checkbox groups behave the same way.
     for (const grp of form.querySelectorAll('.check-grid-wrap')) {
-      if (grp.hidden) continue;
+      if (!isLive(grp)) continue;
       const label = grp.querySelector('.radio-group-label');
-      if (!label || !label.querySelector('span[aria-hidden]')) continue;
-      if (!grp.querySelector('input:checked')) {
-        grp.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        return;
-      }
+      if (!label || !label.querySelector('span[aria-hidden]')) continue;   // not required
+      if (grp.querySelector('input:checked')) continue;
+      fail(grp, 'please tick at least one box below.');
+      return;
     }
 
     const btn = form.querySelector('button[type="submit"]');
