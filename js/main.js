@@ -41,8 +41,8 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 // Submit form data to Zoho CRM Web-to-Lead
 function postToZoho(fields) {
   const fd = new FormData();
-  fd.append('xnQsjsdp', '438ba04b77681d7713f5393235a0faf3068b83adb61a6a1ace2f45e1481e5088');
-  fd.append('xmIwtLD', 'f8c5b63d6cca8ce26432ba5b108efac4dc5a45bedeb6cb42fa5ca20f1115127b2eb84c2804a12b7c7a8e1d423de13ea5');
+  fd.append('xnQsjsdp', '8425ac2239dca3158a6dc88baeb011135c65cfdb091276a6084ec8fcaf555b26');
+  fd.append('xmIwtLD', 'd8842fa0a69510b1291cb8dc592c21d6c8764e90e64ecb1881712d94b6b8474793f7cdc52c37fffe48c8313e1ae646e1');
   fd.append('actionType', 'TGVhZHM=');
   fd.append('returnURL', 'null');
   for (const [key, val] of Object.entries(fields)) fd.append(key, val);
@@ -302,10 +302,6 @@ if (form) {
         'Last Name': last || data.name,
         'Email': data.email || '',
         'Phone': data.phone || '',
-        // Stamps the lead so Zoho's auto-reply workflow can tell a website
-        // inquiry from one Alynne added by hand or imported. "Website Form" is
-        // a Lead Source picklist value added for this.
-        'Lead Source': 'Website Form',
         'Description': body
       });
 
