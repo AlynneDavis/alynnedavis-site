@@ -196,6 +196,9 @@ if (form) {
       const ed = form.querySelector('input[name="assess_areas"][value="Eating or food concerns"]');
       toggle('assess-ed-note', !!(ed && ed.checked));
     }
+    // Someone who says they are only gathering information is exactly who the
+    // letters are for, so make the offer at the moment they say it.
+    if (t.id === 'readiness') toggle('gathering-note', t.value === 'I am mainly gathering information right now');
     if (t.name === 'referral_source') {
       toggle('grp-referral_name', t.value === 'Referred by another therapist or healthcare provider');
       toggle('grp-referral_other', t.value === 'Somewhere else');
