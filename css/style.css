@@ -340,6 +340,8 @@ p { margin-bottom: 1rem; }
 .content-narrow { max-width: 760px; margin: 0 auto; }
 .content-narrow h2 { margin: 48px 0 16px; }
 .content-narrow h3 { margin: 36px 0 12px; }
+.content-narrow .card h3 { margin-top: 0; }
+.content-narrow .card-grid { margin: 8px 0 8px; }
 .content-narrow h4 { margin: 28px 0 10px; font-family: var(--font-body); font-weight: 600; }
 .content-narrow p { color: var(--color-text-light); }
 .content-narrow ul, .content-narrow ol { color: var(--color-text-light); padding-left: 24px; margin-bottom: 16px; }
