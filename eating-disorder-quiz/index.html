@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=16">
+  <link rel="stylesheet" href="/css/style.css?v=17">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Is My Relationship With Food Normal?">
@@ -678,7 +678,7 @@
           <div class="quiz-gate-error" id="quiz-gate-error">Something went wrong. Please try again.</div>
           <form id="quiz-email-form" class="quiz-gate-form" novalidate>
             <!-- Honeypot -->
-            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+            <input type="text" name="confirm_ref" style="display:none;" tabindex="-1" autocomplete="off">
             <div class="form-group">
               <label for="quiz-first-name">First Name</label>
               <input type="text" id="quiz-first-name" name="name" placeholder="Your first name" required autocomplete="given-name">
@@ -762,7 +762,7 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=16" defer></script>
+  <script src="/js/main.js?v=17" defer></script>
   <script>
   (function() {
 
@@ -827,12 +827,9 @@
 
       var data = Object.fromEntries(new FormData(form));
 
-      // Honeypot
-      if (data.website) {
-        showResults(data.name);
-        return;
-      }
-      delete data.website;
+      // Flags rather than discards: browser autofill trips offscreen inputs.
+      var suspected = !!data.confirm_ref;
+      delete data.confirm_ref;
 
       // Build score summary
       var total = Object.values(scores).reduce(function(a,b){ return a+b; }, 0);
@@ -849,7 +846,7 @@
             email: data.email,
             phone: '',
             service: 'Eating Disorder Quiz Lead',
-            message: 'Quiz completed \u2014 ' + total + ' items checked. Scores: ' + scoresSummary + '. Dominant pattern: ' + dominant + '.'
+            message: (suspected ? '[FLAGGED: possible automated submission] ' : '') + 'Quiz completed \u2014 ' + total + ' items checked. Scores: ' + scoresSummary + '. Dominant pattern: ' + dominant + '.'
           })
         });
       } catch(err) {

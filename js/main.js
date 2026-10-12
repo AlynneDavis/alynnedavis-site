@@ -253,11 +253,12 @@ if (form) {
       data[key] = all.length > 1 ? all.join(' / ') : (all[0] || '');
     }
 
-    if (data.website || tooFastToBeHuman()) {
-      showConfirmation();
-      return;
-    }
-    delete data.website;
+    // This trap used to discard the submission outright. Browsers autofill
+    // offscreen inputs regardless of autocomplete="off", and a real client was
+    // silently lost that way, so a tripped trap now only flags the lead.
+    // Reading a spam message costs far less than losing a client.
+    const suspected = !!data.confirm_ref || tooFastToBeHuman();
+    delete data.confirm_ref;
 
     // Triage answers first so Alynne can sort a lead at a glance, then the rest
     // in the order it was asked, then the long-form answers.
@@ -297,6 +298,7 @@ if (form) {
     let body = '';
     for (const k of Object.keys(LABELS)) if (data[k]) body += '\u2022 ' + LABELS[k] + ': ' + data[k] + '\n';
     for (const k of Object.keys(LONG)) if (data[k]) body += '\n\u25B8 ' + LONG[k] + ': ' + data[k] + '\n';
+    if (suspected) body = '[FLAGGED: possible automated submission, check before replying]\n\n' + body;
 
     try {
       const { first, last } = splitName(data.name || '');
@@ -339,15 +341,12 @@ if (intensiveForm) {
 
     const raw = Object.fromEntries(new FormData(intensiveForm));
 
-    // Honeypot check, plus the time trap. Both fail silently.
-    if (raw.website || tooFastToBeHuman()) {
-      intensiveForm.style.display = 'none';
-      intensiveForm.closest('.content-narrow').querySelector('.form-success').style.display = 'block';
-      return;
-    }
-    delete raw.website;
+    // Flags rather than discards, for the same reason as the screening form.
+    const suspected = !!raw.confirm_ref || tooFastToBeHuman();
+    delete raw.confirm_ref;
 
     const description = [
+      suspected ? '[FLAGGED: possible automated submission, check before replying]' : '',
       '--- SELF-DISCOVERY INTENSIVE INQUIRY ---',
       '',
       'Location: ' + (raw.location || 'Not provided'),
