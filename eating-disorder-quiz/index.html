@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=17">
+  <link rel="stylesheet" href="/css/style.css?v=18">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Is My Relationship With Food Normal?">
@@ -762,7 +762,7 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=17" defer></script>
+  <script src="/js/main.js?v=18" defer></script>
   <script>
   (function() {
 
@@ -836,21 +836,28 @@
       var dominant = getDominantPattern();
       var scoresSummary = Object.entries(scores).map(function(e){ return e[0] + ':' + e[1]; }).join(', ');
 
-      // Submit lead to Supabase (silent fail, always show results)
+      // Goes to Zoho CRM, the same place every other form on the site lands.
+      // This used to post to a Supabase function whose project no longer
+      // exists, inside a try/catch that swallowed the failure, so every quiz
+      // lead from 15 Mar 2026 onwards was lost without trace.
       try {
-        await fetch('https://ikqsrxpbhuaobztrnjqz.supabase.co/functions/v1/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: data.name,
-            email: data.email,
-            phone: '',
-            service: 'Eating Disorder Quiz Lead',
-            message: (suspected ? '[FLAGGED: possible automated submission] ' : '') + 'Quiz completed \u2014 ' + total + ' items checked. Scores: ' + scoresSummary + '. Dominant pattern: ' + dominant + '.'
-          })
+        var nameParts = (data.name || '').trim().split(/\s+/);
+        await postToZoho({
+          'First Name': nameParts.length > 1 ? nameParts.slice(0, -1).join(' ') : '',
+          'Last Name': nameParts[nameParts.length - 1] || data.name || 'Quiz lead',
+          'Email': data.email || '',
+          'Phone': '',
+          'Description': (suspected ? '[FLAGGED: possible automated submission, check before replying]\n\n' : '')
+            + '\u2022 SOURCE: Food & Body Quiz\n'
+            + '\u2022 ITEMS CHECKED: ' + total + '\n'
+            + '\u2022 DOMINANT PATTERN: ' + dominant + '\n'
+            + '\u2022 SCORES: ' + scoresSummary + '\n'
         });
-      } catch(err) {
-        // silent fail
+      } catch (err) {
+        if (errorEl) {
+          errorEl.textContent = 'Your results are below, but I could not record your email. If you would like me to see this, please email info@alynnedavis.com.';
+          errorEl.style.display = 'block';
+        }
       }
 
       showResults(data.name);
