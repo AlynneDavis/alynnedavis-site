@@ -160,6 +160,21 @@
     ]
   }
   </script>
+  <style>
+    .creative-banner { padding: 0 20px 72px; }
+    .creative-box { max-width: 1040px; margin: 0 auto; background: linear-gradient(150deg,#f5efe4 0%,#ebdfcb 100%); border-radius: 16px; padding: 44px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+    .creative-box h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.6vw, 2.3rem); font-weight: 500; color: #2c2420; line-height: 1.2; margin: 0 0 14px; }
+    .creative-box p { color: var(--color-text-light); font-size: 0.97rem; line-height: 1.75; margin: 0 0 22px; }
+    .creative-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .creative-tile { display: block; text-decoration: none; text-align: center; color: #2c2420; }
+    .creative-tile img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block; margin-bottom: 8px; transition: transform 0.3s ease; }
+    .creative-tile:hover img { transform: translateY(-3px); }
+    .creative-tile span { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
+    @media (max-width: 768px) {
+      .creative-box { grid-template-columns: 1fr; padding: 32px 22px; gap: 28px; }
+      .creative-banner { padding-bottom: 56px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -322,6 +337,32 @@
             <a href="/embodied-reclamation-coaching" class="pathway-btn" title="Explore Embodied Reclamation coaching">Explore Coaching</a>
             <div class="pathway-img"><img src="/images/pathway-coaching.jpg" alt="Woman outdoors with arms open in golden sunlight, reflecting embodied reclamation coaching" width="400" height="300" loading="lazy" onerror="this.style.display='none'"></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative side: journal, art, jewelry -->
+    <section class="creative-banner" aria-label="Journal, art, and handmade jewelry by Alynne">
+      <div class="creative-box">
+        <div>
+          <span style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold-dark);margin-bottom:10px;">The Creative Side</span>
+          <h2>I Create Things, Too</h2>
+          <p>Most of what I create comes from my own deeper processing. Art, jewelry making, writing, and pottery are how I stay connected to my body and to my work. They are how I practice embodiment, and how I keep living my own embodied reclamation. Some of what I make is here for you to take home: the Soul Nourishment journal, original art, and handmade jewelry.</p>
+          <a href="/shop/" class="pathway-btn" title="Shop the Soul Nourishment journal, original art, and handmade jewelry by Alynne Davis">Visit the Shop</a>
+        </div>
+        <div class="creative-tiles">
+          <a href="/shop/#journal" class="creative-tile" title="The Soul Nourishment journal">
+            <img src="/images/soul-nourishment-journal-cover.jpg" alt="Soul Nourishment journal by Alynne Davis" width="2000" height="1239" loading="lazy">
+            <span>Journal</span>
+          </a>
+          <a href="/shop/#art" class="creative-tile" title="Original healing art by Alynne Davis">
+            <img src="/images/art-roosted-and-resting.jpg" alt="Roosted and Resting, original process art by Alynne Davis" width="417" height="640" loading="lazy">
+            <span>Art</span>
+          </a>
+          <a href="/shop/#jewelry" class="creative-tile" title="Handmade jewelry by Alynne Davis">
+            <img src="/images/jewelry-wishbone-layered-necklace.jpg" alt="Handmade beaded wishbone necklace by Alynne Davis" width="494" height="1024" loading="lazy">
+            <span>Jewelry</span>
+          </a>
         </div>
       </div>
     </section>
