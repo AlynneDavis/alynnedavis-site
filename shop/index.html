@@ -195,6 +195,78 @@
     .etsy-art-tile img:hover {
       transform: scale(1.04);
     }
+    .jewelry-intro {
+      max-width: 680px;
+      margin-bottom: 36px;
+    }
+    .jewelry-intro h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--color-heading);
+      margin-bottom: 12px;
+    }
+    .jewelry-intro p {
+      color: var(--color-text-light);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .jewelry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1000px) {
+      .jewelry-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .jewelry-grid { grid-template-columns: 1fr; }
+    }
+    .jewelry-card {
+      background: var(--color-bg-warm);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .jewelry-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 494 / 1024;
+      object-fit: cover;
+      display: block;
+    }
+    .jewelry-card img.jewelry-img-flat {
+      object-fit: contain;
+      background: #e8d6c5;
+    }
+    .jewelry-card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .jewelry-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--color-heading);
+      margin-bottom: 8px;
+    }
+    .jewelry-card p {
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .jewelry-card .shop-btn { align-self: flex-start; }
+    .jewelry-note {
+      margin-top: 28px;
+      color: var(--color-text-light);
+      font-size: 0.92rem;
+    }
   </style>
 </head>
 <body>
@@ -349,6 +421,56 @@
             </div>
           </div>
         </div>
+
+        <hr class="shop-divider">
+
+        <!-- Jewelry Section -->
+        <p class="shop-section-label">Jewelry</p>
+        <div class="jewelry-intro">
+          <h2>Handmade Jewelry</h2>
+          <p>Beading is one of the quiet ways I create. One bead at a time, color by color, it is slow, hands-on work that keeps me present. Each piece is one of a kind, made by hand, and meant to be worn and enjoyed.</p>
+          <p>To purchase a piece or ask a question about it, email me and I will reply with pricing and shipping details.</p>
+        </div>
+
+        <div class="jewelry-grid">
+          <div class="jewelry-card">
+            <img src="/images/jewelry-pink-cobalt-necklace-bracelets.jpg" width="494" height="1024" alt="Handmade beaded necklace in pink, cobalt blue, and bronze, with matching pink, turquoise, and blue stacking bracelets, by Alynne Davis" loading="lazy">
+            <div class="jewelry-card-body">
+              <h3>Pink &amp; Cobalt Necklace and Bracelets</h3>
+              <p>A bright beaded necklace in pink, cobalt, and bronze with a clasp closure, shown with matching stretch bracelets in pink and turquoise.</p>
+              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Pink%20and%20Cobalt%20Necklace%20and%20Bracelets" class="shop-btn shop-btn-primary" title="Email Alynne about the Pink and Cobalt Necklace and Bracelets">Email to Purchase</a>
+            </div>
+          </div>
+
+          <div class="jewelry-card">
+            <img src="/images/jewelry-turquoise-coral-wrap-necklace.jpg" width="494" height="1024" alt="Long handmade beaded wrap necklace in turquoise and red on a dress form, by Alynne Davis" loading="lazy">
+            <div class="jewelry-card-body">
+              <h3>Turquoise &amp; Red Wrap Necklace</h3>
+              <p>A long, playful strand of turquoise and red beads with sculptural accents. Wear it long or wrap it for a layered look.</p>
+              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Turquoise%20and%20Red%20Wrap%20Necklace" class="shop-btn shop-btn-primary" title="Email Alynne about the Turquoise and Red Wrap Necklace">Email to Purchase</a>
+            </div>
+          </div>
+
+          <div class="jewelry-card">
+            <img src="/images/jewelry-wishbone-layered-necklace.jpg" width="494" height="1024" alt="Layered handmade beaded necklace in green, amber, and smoke with a bronze wishbone pendant, on a dress form, by Alynne Davis" loading="lazy">
+            <div class="jewelry-card-body">
+              <h3>Wishbone Layered Necklace</h3>
+              <p>Two long strands in green, amber, and smoky tones, finished with a bronze wishbone pendant and carved red statement beads.</p>
+              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Wishbone%20Layered%20Necklace" class="shop-btn shop-btn-primary" title="Email Alynne about the Wishbone Layered Necklace">Email to Purchase</a>
+            </div>
+          </div>
+
+          <div class="jewelry-card">
+            <img src="/images/jewelry-honey-bronze-necklace.jpg" class="jewelry-img-flat" width="1000" height="1000" alt="Handmade beaded necklace in honey, amber brown, and bronze with a gold rose clasp, by Alynne Davis" loading="lazy">
+            <div class="jewelry-card-body">
+              <h3>Honey &amp; Bronze Necklace</h3>
+              <p>Soft honey-toned beads mixed with warm browns, bronze rounds, and gold accents, with a single pink bead and a little gold rose at the clasp.</p>
+              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Honey%20and%20Bronze%20Necklace" class="shop-btn shop-btn-primary" title="Email Alynne about the Honey and Bronze Necklace">Email to Purchase</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="jewelry-note">Every piece is one of a kind. If something you love has already sold, email me and I can let you know about similar pieces.</p>
 
       </div>
     </section>
