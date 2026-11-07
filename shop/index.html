@@ -230,16 +230,90 @@
       display: flex;
       flex-direction: column;
     }
+    .jewelry-zoom {
+      display: block;
+      position: relative;
+      cursor: zoom-in;
+      overflow: hidden;
+    }
     .jewelry-card img {
       width: 100%;
       height: auto;
-      aspect-ratio: 494 / 1024;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       display: block;
+      transition: transform 0.4s ease;
     }
+    .jewelry-zoom:hover img { transform: scale(1.04); }
     .jewelry-card img.jewelry-img-flat {
       object-fit: contain;
       background: #e8d6c5;
+    }
+    .jewelry-zoom-hint {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background: rgba(255,255,255,0.88);
+      color: var(--color-heading);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+    .jewelry-card p.jewelry-price {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--color-heading);
+      margin-bottom: 8px;
+      flex-grow: 0;
+    }
+    .jewelry-price span {
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: var(--color-text-light);
+    }
+    .jewelry-lightbox {
+      position: fixed;
+      inset: 0;
+      margin: auto;
+      width: fit-content;
+      height: fit-content;
+      border: none;
+      padding: 0;
+      background: transparent;
+      max-width: 94vw;
+      max-height: 94vh;
+      overflow: visible;
+    }
+    .jewelry-lightbox::backdrop { background: rgba(30, 24, 20, 0.85); }
+    .jewelry-lightbox img {
+      display: block;
+      max-width: 94vw;
+      max-height: 86vh;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+    }
+    .jewelry-lightbox-caption {
+      color: #fff;
+      text-align: center;
+      margin-top: 12px;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+    }
+    .jewelry-lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: #fff;
+      color: var(--color-heading);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
     }
     .jewelry-card-body {
       padding: 22px;
@@ -429,43 +503,72 @@
         <div class="jewelry-intro">
           <h2>Handmade Jewelry</h2>
           <p>Beading is one of the quiet ways I create. One bead at a time, color by color, it is slow, hands-on work that keeps me present. Each piece is one of a kind, made by hand, and meant to be worn and enjoyed.</p>
-          <p>To purchase a piece or ask a question about it, email me and I will reply with pricing and shipping details.</p>
+          <p>To purchase a piece or ask a question about it, email me and I will reply with your total, including tax and shipping.</p>
         </div>
 
         <div class="jewelry-grid">
           <div class="jewelry-card">
-            <img src="/images/jewelry-pink-cobalt-necklace-bracelets.jpg" width="494" height="1024" alt="Handmade beaded necklace in pink, cobalt blue, and bronze, with matching pink, turquoise, and blue stacking bracelets, by Alynne Davis" loading="lazy">
+            <a href="/images/jewelry-pink-cobalt-necklace-bracelets.jpg" class="jewelry-zoom" data-caption="Pink &amp; Cobalt Choker and Bracelet Set" aria-label="View a larger photo of the Pink &amp; Cobalt Choker and Bracelet Set">
+              <img src="/images/jewelry-pink-cobalt-necklace-bracelets.jpg" width="494" height="1024" alt="Handmade beaded choker in pink, cobalt blue, and bronze, with three matching pink, turquoise, and blue stacking bracelets, by Alynne Davis" loading="lazy">
+              <span class="jewelry-zoom-hint" aria-hidden="true">Tap to enlarge</span>
+            </a>
             <div class="jewelry-card-body">
-              <h3>Pink &amp; Cobalt Necklace and Bracelets</h3>
-              <p>A bright beaded necklace in pink, cobalt, and bronze with a clasp closure, shown with matching stretch bracelets in pink and turquoise.</p>
-              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Pink%20and%20Cobalt%20Necklace%20and%20Bracelets" class="shop-btn shop-btn-primary" title="Email Alynne about the Pink and Cobalt Necklace and Bracelets">Email to Purchase</a>
+              <h3>Pink &amp; Cobalt Choker and Bracelet Set</h3>
+              <p class="jewelry-price">$160 <span>plus tax and shipping</span></p>
+              <p>A four-piece set: a bright beaded choker in pink, cobalt, and bronze with a clasp closure, plus three matching stretch bracelets in pink, turquoise, and cobalt.</p>
+              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Pink%20and%20Cobalt%20Choker%20and%20Bracelet%20Set" class="shop-btn shop-btn-primary" title="Email Alynne about the Pink and Cobalt Choker and Bracelet Set">Email to Purchase</a>
             </div>
           </div>
 
           <div class="jewelry-card">
-            <img src="/images/jewelry-turquoise-coral-wrap-necklace.jpg" width="494" height="1024" alt="Long handmade beaded wrap necklace in turquoise and red on a dress form, by Alynne Davis" loading="lazy">
+            <a href="/images/jewelry-turquoise-coral-wrap-necklace.jpg" class="jewelry-zoom" data-caption="Turquoise &amp; Red Wrap Necklace" aria-label="View a larger photo of the Turquoise &amp; Red Wrap Necklace">
+              <img src="/images/jewelry-turquoise-coral-wrap-necklace.jpg" width="494" height="1024" alt="Long handmade beaded wrap necklace in turquoise and red on a dress form, by Alynne Davis" loading="lazy">
+              <span class="jewelry-zoom-hint" aria-hidden="true">Tap to enlarge</span>
+            </a>
             <div class="jewelry-card-body">
               <h3>Turquoise &amp; Red Wrap Necklace</h3>
+              <p class="jewelry-price">$195 <span>plus tax and shipping</span></p>
               <p>A long, playful strand of turquoise and red beads with sculptural accents. Wear it long or wrap it for a layered look.</p>
               <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Turquoise%20and%20Red%20Wrap%20Necklace" class="shop-btn shop-btn-primary" title="Email Alynne about the Turquoise and Red Wrap Necklace">Email to Purchase</a>
             </div>
           </div>
 
           <div class="jewelry-card">
-            <img src="/images/jewelry-wishbone-layered-necklace.jpg" width="494" height="1024" alt="Layered handmade beaded necklace in green, amber, and smoke with a bronze wishbone pendant, on a dress form, by Alynne Davis" loading="lazy">
+            <a href="/images/jewelry-wishbone-layered-necklace.jpg" class="jewelry-zoom" data-caption="Wishbone Layered Necklace" aria-label="View a larger photo of the Wishbone Layered Necklace">
+              <img src="/images/jewelry-wishbone-layered-necklace.jpg" width="494" height="1024" alt="Layered handmade beaded necklace in green, amber, and smoke with a bronze wishbone pendant, on a dress form, by Alynne Davis" loading="lazy">
+              <span class="jewelry-zoom-hint" aria-hidden="true">Tap to enlarge</span>
+            </a>
             <div class="jewelry-card-body">
               <h3>Wishbone Layered Necklace</h3>
+              <p class="jewelry-price">$325 <span>plus tax and shipping</span></p>
               <p>Two long strands in green, amber, and smoky tones, finished with a bronze wishbone pendant and carved red statement beads.</p>
               <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Wishbone%20Layered%20Necklace" class="shop-btn shop-btn-primary" title="Email Alynne about the Wishbone Layered Necklace">Email to Purchase</a>
             </div>
           </div>
 
           <div class="jewelry-card">
-            <img src="/images/jewelry-honey-bronze-necklace.jpg" class="jewelry-img-flat" width="1000" height="1000" alt="Handmade beaded necklace in honey, amber brown, and bronze with a gold rose clasp, by Alynne Davis" loading="lazy">
+            <a href="/images/jewelry-honey-bronze-necklace.jpg" class="jewelry-zoom" data-caption="Honey &amp; Bronze Choker" aria-label="View a larger photo of the Honey &amp; Bronze Choker">
+              <img src="/images/jewelry-honey-bronze-necklace.jpg" class="jewelry-img-flat" width="1000" height="1000" alt="Handmade beaded choker in honey, amber brown, and bronze with a gold rose clasp, by Alynne Davis" loading="lazy">
+              <span class="jewelry-zoom-hint" aria-hidden="true">Tap to enlarge</span>
+            </a>
             <div class="jewelry-card-body">
-              <h3>Honey &amp; Bronze Necklace</h3>
+              <h3>Honey &amp; Bronze Choker</h3>
+              <p class="jewelry-price">$85 <span>plus tax and shipping</span></p>
               <p>Soft honey-toned beads mixed with warm browns, bronze rounds, and gold accents, with a single pink bead and a little gold rose at the clasp.</p>
-              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Honey%20and%20Bronze%20Necklace" class="shop-btn shop-btn-primary" title="Email Alynne about the Honey and Bronze Necklace">Email to Purchase</a>
+              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Honey%20and%20Bronze%20Choker" class="shop-btn shop-btn-primary" title="Email Alynne about the Honey and Bronze Choker">Email to Purchase</a>
+            </div>
+          </div>
+
+          <div class="jewelry-card">
+            <a href="/images/jewelry-terracotta-bronze-necklace.jpg" class="jewelry-zoom" data-caption="Terracotta &amp; Bronze Necklace" aria-label="View a larger photo of the Terracotta &amp; Bronze Necklace">
+              <img src="/images/jewelry-terracotta-bronze-necklace.jpg" class="jewelry-img-flat" width="1000" height="1000" alt="Handmade beaded necklace in terracotta, deep red-brown, and bronze with ornate bronze spacers, by Alynne Davis" loading="lazy">
+              <span class="jewelry-zoom-hint" aria-hidden="true">Tap to enlarge</span>
+            </a>
+            <div class="jewelry-card-body">
+              <h3>Terracotta &amp; Bronze Necklace</h3>
+              <p class="jewelry-price">$85 <span>plus tax and shipping</span></p>
+              <p>Earthy terracotta disc beads stacked between deep red-brown rounds, with bronze spacers, two ornate bronze accents, and a clasp closure.</p>
+              <a href="mailto:info@alynnedavis.com?subject=Jewelry%20inquiry%3A%20Terracotta%20and%20Bronze%20Necklace" class="shop-btn shop-btn-primary" title="Email Alynne about the Terracotta and Bronze Necklace">Email to Purchase</a>
             </div>
           </div>
         </div>
@@ -530,6 +633,31 @@
     </div>
   </footer>
 
+  <dialog class="jewelry-lightbox" id="jewelry-lightbox" aria-label="Larger jewelry photo">
+    <button type="button" class="jewelry-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
+    <p class="jewelry-lightbox-caption"></p>
+  </dialog>
+  <script>
+    (function () {
+      var box = document.getElementById('jewelry-lightbox');
+      if (!box || typeof box.showModal !== 'function') return;
+      var img = box.querySelector('img');
+      var cap = box.querySelector('.jewelry-lightbox-caption');
+      document.querySelectorAll('.jewelry-zoom').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          var thumb = link.querySelector('img');
+          img.src = link.getAttribute('href');
+          img.alt = thumb ? thumb.alt : '';
+          cap.innerHTML = link.getAttribute('data-caption') || '';
+          box.showModal();
+        });
+      });
+      box.querySelector('.jewelry-lightbox-close').addEventListener('click', function () { box.close(); });
+      box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+    })();
+  </script>
   <script src="/js/main.js?v=18" defer></script>
 </body>
 </html>
