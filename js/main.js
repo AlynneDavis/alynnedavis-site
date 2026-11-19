@@ -347,8 +347,9 @@ if (intensiveForm) {
 
     const description = [
       suspected ? '[FLAGGED: possible automated submission, check before replying]' : '',
-      '--- EMBODIED SELF-DISCOVERY SERIES INQUIRY ---',
+      '--- INTENSIVE INQUIRY ---',
       '',
+      'Interested In: ' + (raw.interest || 'Not provided'),
       'Location: ' + (raw.location || 'Not provided'),
       'Format Preference: ' + (raw.format_preference || 'Not provided'),
       'Age Range: ' + (raw.age_range || 'Not provided'),
