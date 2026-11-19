@@ -267,7 +267,7 @@ if (form) {
       fees_workable: 'FEES WORKABLE', payment: 'PAYMENT METHOD', format: 'FORMAT',
       availability: 'AVAILABLE DAYS', times: 'TIMES', therapy_history: 'THERAPY HISTORY',
       therapy_concerns: 'CONCERNS', therapist_priority: 'PRIORITIES WHEN CHOOSING',
-      intensive_current_therapist: 'CURRENT THERAPIST', intensive_scope: 'INTENSIVE SCOPE',
+      intensive_type: 'INTENSIVE TYPE', intensive_current_therapist: 'CURRENT THERAPIST', intensive_scope: 'INTENSIVE SCOPE',
       teen_age: 'TEEN AGE', teen_initiator: 'WHO IS LEADING', teen_medical: 'MEDICAL FOLLOW-UP',
       teen_history: 'TEEN TREATMENT HISTORY', teen_caregivers: 'CAREGIVER ALIGNMENT',
       teen_parent_capacity: 'PARENT CAPACITY',

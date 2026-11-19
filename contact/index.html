@@ -193,6 +193,17 @@
             <fieldset class="form-fieldset" data-show-for="Therapy intensive">
               <legend>About the intensive</legend>
               <p class="fieldset-note">An intensive gives us several uninterrupted hours instead of a therapy hour. That length is what makes deeper experiential, somatic, expressive arts, trauma, and pattern-focused work possible, because we are not stopping just as something begins to open.</p>
+              <div class="form-group" id="grp-intensive_type" data-show-for="Therapy intensive">
+                <label for="intensive_type">Which are you interested in? <span aria-hidden="true">*</span></label>
+                <select id="intensive_type" name="intensive_type" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="The Foundation">The Foundation (assessment and MARI, two sessions)</option>
+                  <option value="The Foundation, then the Self-Discovery Series">The Foundation, then the Embodied Self-Discovery Series</option>
+                  <option value="Extended session">An extended session</option>
+                  <option value="Half-day intensive">A half-day intensive</option>
+                  <option value="Not sure yet">I am not sure yet</option>
+                </select>
+              </div>
               <div class="form-group" id="grp-intensive_focus" data-show-for="Therapy intensive">
                 <label for="intensive_focus">What are you hoping to focus on during an intensive? <span aria-hidden="true">*</span></label>
                 <textarea id="intensive_focus" name="intensive_focus" rows="3" required placeholder=""></textarea>
@@ -608,8 +619,11 @@
                 <div class="fee-row"><span class="fee-label">Family and adolescent sessions</span><span class="fee-amount">$275 per session</span></div>
                 <div class="fee-row"><span class="fee-label">Family based treatment for an eating disorder</span><span class="fee-amount">$1,600 per month</span></div>
                 <div class="fee-row"><span class="fee-label">Extended sessions</span><span class="fee-amount">Available when clinically appropriate</span></div>
-                <div class="fee-row"><span class="fee-label">Therapy intensives</span><span class="fee-amount">Discussed during consultation</span></div>
+                <div class="fee-row"><span class="fee-label">The Foundation (assessment and MARI, two sessions)</span><span class="fee-amount">$1,100</span></div>
+                <div class="fee-row"><span class="fee-label">Embodied Self-Discovery Series (three sessions, follows The Foundation)</span><span class="fee-amount">$2,250</span></div>
+                <div class="fee-row"><span class="fee-label">Half-day intensives</span><span class="fee-amount">Discussed during consultation</span></div>
               </div>
+              <p class="fieldset-note">The Foundation and the Self-Discovery Series each require a $500 non-refundable deposit at booking.</p>
               <p class="fieldset-note">Family based treatment for an adolescent eating disorder is billed monthly rather than by the session. It moves through phases, the schedule changes as you go, and the monthly rate covers every session plus the coordination with your teen&rsquo;s physician, school and dietitian that happens between them. It steps down to ordinary session billing once the intensive phases are behind you. I will walk you through the whole structure before you commit to anything.</p>
               <p class="fieldset-note">This practice is primarily private pay. I do not bill insurance directly, though I can provide a superbill after each session if you want to pursue out-of-network reimbursement, and HSA and FSA cards are accepted.</p>
               <p class="fieldset-note">Please look at these numbers before requesting a consultation, so that the financial side feels workable before we speak rather than after. I would rather tell you now than spend your time and mine discovering it at the end of a call.</p>
@@ -801,6 +815,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=19" defer></script>
+  <script src="/js/main.js?v=20" defer></script>
 </body>
 </html>
