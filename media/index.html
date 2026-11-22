@@ -37,6 +37,25 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Reclaiming Yourself: Healing, Expression & Empowerment with Alynne Davis | Unpacking with Michelle",
+    "description": "Alynne Davis, M.A., LCMHC, joins host Michelle Raney on Unpacking with Michelle to talk about reclaiming yourself, embracing your authentic identity, and finding empowerment through self-expression and healing.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/cNltb5jKUBA/hqdefault.jpg",
+    "uploadDate": "2026-11-17T17:47:00-08:00",
+    "duration": "PT1H26M42S",
+    "embedUrl": "https://www.youtube.com/embed/cNltb5jKUBA",
+    "contentUrl": "https://www.youtube.com/watch?v=cNltb5jKUBA",
+    "actor": {
+      "@type": "Person",
+      "name": "Alynne Davis, LCMHC",
+      "url": "https://alynnedavis.com"
+    }
+  }
+  </script>
+
   <style>
     .media-hero {
       background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-warm) 50%, var(--color-bg-accent) 100%);
@@ -199,6 +218,34 @@
       transform: translateY(-1px);
       color: var(--color-white) !important;
     }
+    .listen-btn-youtube {
+      background: #c4302b;
+      color: var(--color-white) !important;
+    }
+    .listen-btn-youtube:hover {
+      background: #a82824;
+      transform: translateY(-1px);
+      color: var(--color-white) !important;
+    }
+    .podcast-card-video {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .video-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #1a1410;
+    }
+    .video-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
     .listen-btn svg {
       width: 18px;
       height: 18px;
@@ -325,6 +372,41 @@
       <div class="container">
         <p class="section-label">Podcast Episodes</p>
         <h2>Listen to Recent Appearances</h2>
+
+        <article class="podcast-card podcast-card-video" aria-label="Unpacking with Michelle episode">
+          <div class="video-embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/cNltb5jKUBA"
+                    title="Reclaiming Yourself: Healing, Expression and Empowerment with Alynne Davis, Unpacking with Michelle"
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="podcast-meta">
+            <p class="show-name">Unpacking with Michelle</p>
+            <h3>Reclaiming Yourself: Healing, Expression &amp; Empowerment</h3>
+            <div class="topics-list" aria-label="Topics covered">
+              <span class="topic-tag">Self-Reclamation</span>
+              <span class="topic-tag">Expressive Arts Therapy</span>
+              <span class="topic-tag">Authentic Identity</span>
+              <span class="topic-tag">Personal Transformation</span>
+              <span class="topic-tag">Healing</span>
+            </div>
+            <p>Alynne joins host Michelle Raney to talk about what it really means to reclaim yourself: coming back to who you are underneath the roles you learned to play, and finding your voice again through self-expression and healing. A warm, honest conversation about the courage it takes to stop abandoning yourself and start living as the person you were always meant to be.</p>
+            <div class="listen-links">
+              <a href="https://www.youtube.com/watch?v=cNltb5jKUBA"
+                 class="listen-btn listen-btn-youtube"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 title="Watch on YouTube, Unpacking with Michelle">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                Watch on YouTube
+              </a>
+            </div>
+          </div>
+        </article>
 
         <article class="podcast-card" aria-label="Health and Wellness Trailblazers episode">
           <div class="podcast-icon">
