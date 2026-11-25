@@ -123,6 +123,7 @@
                   <option value="Therapy intensive">Therapy intensive</option>
                   <option value="Adolescent or family therapy">Therapy for my teen, or family work</option>
                   <option value="Diagnostic assessment">An ADHD or diagnostic assessment</option>
+                  <option value="Coaching">1:1 coaching or the Embodied Reclamation Series</option>
                   <option value="Professional case consultation">Professional case consultation</option>
                   <option value="Private practice consultation">Private practice consultation</option>
                   <option value="Group coaching or upcoming programs">Group coaching or upcoming programs</option>
@@ -205,10 +206,9 @@
                 <label for="intensive_type">Which are you interested in? <span aria-hidden="true">*</span></label>
                 <select id="intensive_type" name="intensive_type" required>
                   <option value="" disabled selected>Select one</option>
-                  <option value="The Foundation, then the Self-Discovery Series">Embodied Foundations Series, then the Embodied Self-Discovery Series (coaching)</option>
-                  <option value="The Foundation only">Embodied Foundations Series only (MARI and coaching blueprint, two sessions)</option>
                   <option value="Eating disorder intensive, extended session">An eating disorder intensive: extended session</option>
                   <option value="Eating disorder intensive, half-day">An eating disorder intensive: half-day</option>
+                  <option value="Trauma or relational intensive">A trauma or relational intensive (extended or half-day)</option>
                   <option value="Not sure yet">I am not sure yet</option>
                 </select>
               </div>
@@ -238,6 +238,39 @@
                   <option value="Potentially several">Potentially several</option>
                   <option value="I am not sure yet">I am not sure yet</option>
                 </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-fieldset" data-show-for="Coaching">
+              <legend>About coaching</legend>
+              <p class="fieldset-note">Coaching through the Embodied Reclamation Studio is personal growth work, not therapy, and it is available wherever you live. Every coaching relationship begins with a free discovery call, a relaxed conversation about what you are longing for and whether coaching is the right support for you right now.</p>
+              <div class="form-group" id="grp-coaching_type" data-show-for="Coaching">
+                <label for="coaching_type">What are you drawn to? <span aria-hidden="true">*</span></label>
+                <select id="coaching_type" name="coaching_type" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Foundations, then the Self-Discovery Series">Embodied Foundations Series, then the Embodied Self-Discovery Series</option>
+                  <option value="Foundations only">Embodied Foundations Series only</option>
+                  <option value="Ongoing 1:1 coaching">Ongoing 1:1 coaching</option>
+                  <option value="Not sure yet">I am not sure yet</option>
+                </select>
+              </div>
+              <div class="form-group" id="grp-coaching_hope" data-show-for="Coaching">
+                <label for="coaching_hope">What are you longing for right now?</label>
+                <textarea id="coaching_hope" name="coaching_hope" rows="3" placeholder="A few words is plenty."></textarea>
+              </div>
+              <div class="fee-table">
+                <div class="fee-row"><span class="fee-label">Embodied Foundations Series (two sessions, about 3.5 hours of 1:1 time, ending in your coaching blueprint)</span><span class="fee-amount">$1,100</span></div>
+                <div class="fee-row"><span class="fee-label">Embodied Self-Discovery Series (three two-hour sessions and companion journal, follows Foundations)</span><span class="fee-amount">$2,250</span></div>
+                <div class="fee-row"><span class="fee-label">Ongoing 1:1 coaching</span><span class="fee-amount">Discussed on your discovery call</span></div>
+              </div>
+              <p class="fieldset-note">The Self-Discovery Series is offered at a reduced rate if you begin within 30 days of completing Foundations. Each Series requires a $500 non-refundable deposit at booking. Coaching is private pay and is not covered by insurance.</p>
+              <div class="form-group" id="grp-coaching_fees_workable" data-show-for="Coaching">
+                <div class="radio-group" role="radiogroup">
+                  <span class="radio-group-label">Are these fees workable for you? <span aria-hidden="true">*</span></span>
+                  <label class="radio-option"><input type="radio" name="coaching_fees_workable" value="Yes" data-req> <span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="coaching_fees_workable" value="Possibly, would like to talk about it" data-req> <span>Possibly, and I would like to talk about it</span></label>
+                  <label class="radio-option"><input type="radio" name="coaching_fees_workable" value="No" data-req> <span>No</span></label>
+                </div>
               </div>
             </fieldset>
 
@@ -627,11 +660,8 @@
                 <div class="fee-row"><span class="fee-label">Family and adolescent sessions</span><span class="fee-amount">$275 per session</span></div>
                 <div class="fee-row"><span class="fee-label">Family based treatment for an eating disorder</span><span class="fee-amount">$1,600 per month</span></div>
                 <div class="fee-row"><span class="fee-label">Extended sessions</span><span class="fee-amount">Available when clinically appropriate</span></div>
-                <div class="fee-row"><span class="fee-label">Embodied Foundations Series (coaching: MARI and blueprint, two sessions)</span><span class="fee-amount">$1,100</span></div>
-                <div class="fee-row"><span class="fee-label">Embodied Self-Discovery Series (coaching: three sessions, follows Foundations)</span><span class="fee-amount">$2,250</span></div>
                 <div class="fee-row"><span class="fee-label">Half-day intensives</span><span class="fee-amount">Discussed during consultation</span></div>
               </div>
-              <p class="fieldset-note">The Embodied Foundations Series and the Embodied Self-Discovery Series each require a $500 non-refundable deposit at booking.</p>
               <p class="fieldset-note">Family based treatment for an adolescent eating disorder is billed monthly rather than by the session. It moves through phases, the schedule changes as you go, and the monthly rate covers every session plus the coordination with your teen&rsquo;s physician, school and dietitian that happens between them. It steps down to ordinary session billing once the intensive phases are behind you. I will walk you through the whole structure before you commit to anything.</p>
               <p class="fieldset-note">This practice is primarily private pay. I do not bill insurance directly, though I can provide a superbill after each session if you want to pursue out-of-network reimbursement, and HSA and FSA cards are accepted.</p>
               <p class="fieldset-note">Please look at these numbers before requesting a consultation, so that the financial side feels workable before we speak rather than after. I would rather tell you now than spend your time and mine discovering it at the end of a call.</p>
@@ -658,9 +688,9 @@
               <p class="field-note" id="payment-note" hidden>I do not bill insurance directly. I can provide a superbill you may submit to your insurer yourself for possible out-of-network reimbursement, though what comes back depends entirely on your plan. If insurance is essential for you, say so and I will point you toward clinicians who take it.</p>
             </fieldset>
 
-            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy">
+            <fieldset class="form-fieldset" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy|Coaching">
               <legend>Timing</legend>
-              <div class="form-group" id="grp-readiness" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy">
+              <div class="form-group" id="grp-readiness" data-show-for="Individual psychotherapy|Couples or relationship therapy|Therapy intensive|Adolescent or family therapy|Coaching">
                 <label for="readiness">If we determine that we are a good fit, when would you ideally like to begin? <span aria-hidden="true">*</span></label>
                 <select id="readiness" name="readiness" required>
                   <option value="" disabled selected>Select one</option>
@@ -823,6 +853,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=21" defer></script>
+  <script src="/js/main.js?v=22" defer></script>
 </body>
 </html>

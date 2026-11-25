@@ -267,6 +267,7 @@ if (form) {
       fees_workable: 'FEES WORKABLE', payment: 'PAYMENT METHOD', format: 'FORMAT',
       availability: 'AVAILABLE DAYS', times: 'TIMES', therapy_history: 'THERAPY HISTORY',
       therapy_concerns: 'CONCERNS', therapist_priority: 'PRIORITIES WHEN CHOOSING',
+      coaching_type: 'COACHING INTEREST', coaching_fees_workable: 'COACHING FEES WORKABLE',
       intensive_type: 'INTENSIVE TYPE', intensive_current_therapist: 'CURRENT THERAPIST', intensive_scope: 'INTENSIVE SCOPE',
       teen_age: 'TEEN AGE', teen_initiator: 'WHO IS LEADING', teen_medical: 'MEDICAL FOLLOW-UP',
       teen_history: 'TEEN TREATMENT HISTORY', teen_caregivers: 'CAREGIVER ALIGNMENT',
@@ -287,6 +288,7 @@ if (form) {
       therapy_different: 'WHAT THEY WANT TO BE DIFFERENT', therapy_prior: 'PRIOR THERAPY, HELPFUL OR NOT',
       intensive_focus: 'INTENSIVE FOCUS', intensive_why: 'WHY A LONGER SESSION',
       teen_situation: 'WHAT IS GOING ON WITH THE TEEN', assess_context: 'WHAT PROMPTED THE ASSESSMENT', case_issue: 'CASE OR CLINICAL QUESTION', prac_success: 'WHAT SUCCESS LOOKS LIKE',
+      coaching_hope: 'WHAT THEY ARE LONGING FOR',
       group_hope: 'HOPES FOR A GROUP', retreat_hope: 'HOPES FOR A RETREAT',
       anything_else: 'ANYTHING ELSE'
     };
