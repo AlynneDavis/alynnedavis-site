@@ -239,6 +239,12 @@
       overflow: hidden;
       background: #1a1410;
     }
+    .video-cover { position:absolute; inset:0; display:block; cursor:pointer; }
+    .video-cover img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease; }
+    .video-cover:hover img { transform:scale(1.02); }
+    .video-play { position:absolute; left:30%; top:42%; width:clamp(48px, 9vw, 76px); transform:translate(-50%,-50%); filter:drop-shadow(0 6px 18px rgba(0,0,0,0.35)); transition:transform 0.2s ease; }
+    .video-play svg { width:100%; height:auto; display:block; }
+    .video-cover:hover .video-play, .video-cover:focus-visible .video-play { transform:translate(-50%,-50%) scale(1.08); }
     .video-embed iframe {
       position: absolute;
       inset: 0;
@@ -383,12 +389,10 @@
 
         <article class="podcast-card podcast-card-video" aria-label="Unpacking with Michelle episode">
           <div class="video-embed">
-            <iframe src="https://www.youtube-nocookie.com/embed/cNltb5jKUBA"
-                    title="Reclaiming Yourself: Healing, Expression and Empowerment with Alynne Davis, Unpacking with Michelle"
-                    loading="lazy"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
+            <a class="video-cover" href="https://www.youtube.com/watch?v=cNltb5jKUBA" data-video-id="cNltb5jKUBA" data-video-title="Reclaiming Yourself: Healing, Expression and Empowerment with Alynne Davis, Unpacking with Michelle" aria-label="Play the interview: Reclaiming Yourself, on Unpacking with Michelle">
+              <img src="/images/unpacking-with-michelle-cover.jpg" alt="Alynne Davis laughing as she speaks into a microphone during a podcast interview" width="1280" height="720" loading="lazy">
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3s-21.2 0-26.5 1.4a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="#b89c6e"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg></span>
+            </a>
           </div>
           <div class="podcast-meta">
             <p class="show-name">Unpacking with Michelle</p>
@@ -564,5 +568,21 @@
   </footer>
 
   <script src="/js/main.js?v=22" defer></script>
+  <script>
+    // Click-to-play: show Alynne's own cover image, load YouTube only on click.
+    // Without JS the cover is a plain link to the video on YouTube.
+    document.querySelectorAll('.video-cover').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.videoId + '?autoplay=1&rel=0';
+        f.title = a.dataset.videoTitle;
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        f.referrerPolicy = 'strict-origin-when-cross-origin';
+        f.allowFullscreen = true;
+        a.replaceWith(f);
+      });
+    });
+  </script>
 </body>
 </html>
